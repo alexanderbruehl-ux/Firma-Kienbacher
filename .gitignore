@@ -1,0 +1,8 @@
+# Build-Artefakte
+*.pdf.bak
+node_modules/
+*.log
+
+# Rendering-Zwischendateien (falls beim Prüfen erzeugt)
+page-*.jpg
+*_preview.pdf
