@@ -4,7 +4,10 @@ Status: **in Bearbeitung**, Diskussion pausiert bei „Organisation / Überwachu
 der Wartung und Instandhaltung" (nächster Punkt aus Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
-und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
+und Claude und sind bereits in `working/7V-5-1_Auftragsabwicklung_Produktion_ENTWURF.docx`
+eingearbeitet (Abschnitt 7.5.3.1, gegliedert nach Verantwortung/Aufgaben/Kompetenzen).
+Die noch offenen Punkte aus Version k (siehe unten) stehen dort unverändert unter
+einer eigenen Zwischenüberschrift „Noch offen – Diskussion ausständig".
 
 ---
 

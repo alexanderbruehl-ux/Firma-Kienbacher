@@ -34,7 +34,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 
 | Rolle (Dok. 7.5.3.x) | Status |
 |---|---|
-| 1 Produktionsleiter | 🔶 In Bearbeitung — siehe `PRODUKTIONSLEITER.md` |
+| 1 Produktionsleiter | 🔶 In Bearbeitung — Themenblöcke 1–5 bereits in `working/*.docx` eingearbeitet, siehe `PRODUKTIONSLEITER.md` |
 | 2 Schichtführer | ⬜ Noch nicht begonnen |
 | 3 Maschinenpersonal (Werker) | ⬜ Noch nicht begonnen |
 | 4 Fertigung Montage → **Montage** (Umbenennung bereits beschlossen) | ⬜ Noch nicht begonnen |
