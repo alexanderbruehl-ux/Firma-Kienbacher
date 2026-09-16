@@ -1,7 +1,7 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Sperren von fehlerhaften
-Produkten" (nächster Punkt aus Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Bemusterungs-
+Nachbesprechung mit Technik" (nächster Punkt aus Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -233,9 +233,27 @@ durch zwei separate Lehrlingsausbildner wahrgenommen:
 
 ---
 
+## Themenblock 10: Sperren von fehlerhaften Produkten
+
+**Regelfall (Aufgabe):** Umsetzung der Sperrentscheidung von QS/PQB — der
+Produktionsleiter folgt hier zu 100 % der fachlichen Beurteilung durch
+QS/PQB (siehe Themenblock 8: Sperren ist interner Q-Belang der QS).
+
+**Unklare/strittige Fälle (Kompetenz, gemeinsame Entscheidung mit QS/PQB):**
+Abwägung zwischen dem Risiko einer tatsächlichen Reklamation und den Kosten
+einer Sperrung. Dabei möglich:
+- Vertagung der endgültigen Entscheidung (z. B. Rücksprache mit Kunde/GF am
+  Folgetag), während die Produktion in der Zwischenzeit weiterläuft
+- **Trennung zwischen Produktions- und Lieferfreigabe:** Teile werden
+  weiterproduziert (z. B. um die Kapazität einer Engpassanlage nicht zu
+  verlieren), aber zunächst nur für die Auslieferung gesperrt — auch wenn
+  sie im Ergebnis später verschrottet werden müssen
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Sperren von fehlerhaften Produkten ← **nächster Punkt**
+- [ ] Bemusterungs Nachbesprechung mit Technik ← **nächster Punkt**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik
