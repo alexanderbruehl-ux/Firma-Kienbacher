@@ -46,6 +46,11 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 - Ablauf Korrekturmaßnahmen: **QS stellt Bedarf fest** → Produktionsleitung
   entscheidet Maßnahme → **QS prüft und gibt frei** (z. B. Entsperren von
   Teilen/Prozessen) — siehe PRODUKTIONSLEITER.md, Themenblock 5
+- Deckt die **internen** Qualitätsbelange ab: Sperren, Beurteilung,
+  Grenzmusterkataloge, Erststückfreigaben sowie interne Maßnahmen zur
+  Verbesserung und Vermeidung von Reklamationen — Abgrenzung zu QMB, der die
+  **externe** Vertretung (Kunden, Lieferanten, Netzwerkpartner/Lohnfertiger)
+  übernimmt, siehe PRODUKTIONSLEITER.md, Themenblock 8
 
 ## 4. Digitale Prozessentwicklung & Lean Management (ersetzt „Arbeitsvorbereitung", bisher 7.5.3.8)
 

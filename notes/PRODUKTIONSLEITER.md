@@ -1,8 +1,7 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „In Zusammenarbeit mit
-QMB Maßnahmen nach Reklamationen durchführen" (nächster Punkt aus
-Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Verantwortlich für die
+Lehrlingsausbildung" (nächster Punkt aus Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -198,10 +197,34 @@ Produkt-/Projekttechnik verortet, nicht in der Produktion.
 
 ---
 
+## Themenblock 8: Reklamationen / QMB-Zusammenarbeit (ex „In Zusammenarbeit mit QMB Maßnahmen nach Reklamationen durchführen")
+
+**Kontext:** QMB ist eine normativ geforderte Funktion (IATF 16949 §5.3.1/
+§5.3.2, Supplemental zu ISO 9001 §5.3) und vertritt die Organisation nach
+außen in Qualitätsangelegenheiten — **nicht nur gegenüber Kunden**, sondern
+auch:
+- gegenüber **Lieferanten** (z. B. Reklamation mangelhafter Zukaufteile)
+- bei der **Überwachung von Partnern im Produktionsnetzwerk**, die
+  ausgelagerte Wertschöpfung im Auftrag der Firma übernehmen (Lohnfertigung,
+  z. B. Lackieren/Grundieren von Ersatzteilen oder Montage/Komplettierung)
+
+QS (Qualitätssicherung Produktion) deckt demgegenüber die **internen**
+Qualitätsbelange ab: Sperren, Beurteilung, Grenzmusterkataloge,
+Erststückfreigaben sowie interne Maßnahmen zur Verbesserung und Vermeidung
+von Reklamationen (Detailausarbeitung der Rolle QS: siehe OFFENE_ROLLEN.md).
+
+**Aufgabe:** Unterstützung von QMB bei der Bearbeitung von Reklamationen
+(Kunden, Lieferanten, Netzwerkpartner/Lohnfertiger) durch Bereitstellung
+produktionsseitiger Informationen (Ursachenanalyse, Sofort-/
+Korrekturmaßnahmen) für die externe Kommunikation. Die inhaltliche
+Entscheidung über und Umsetzung von Korrekturmaßnahmen auf Produktionsseite
+erfolgt weiterhin gemäß Themenblock 5 (QS-Zusammenarbeit, Gesamtebene).
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] In Zusammenarbeit mit QMB Maßnahmen nach Reklamationen durchführen
-      (ggf. bereits durch Themenblock 5 mit abgedeckt — prüfen) ← **nächster Punkt**
+- [ ] Verantwortlich für die Lehrlingsausbildung ← **nächster Punkt**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik
