@@ -89,6 +89,8 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 - Teamleitung Montage
 - Teamleitung Lager
 - Teamleitung Endfertigung
+- Teamleitung Instandhaltung
+- Teamleitung Werkzeugbau
 
 → Sollte im Dokument an geeigneter Stelle (z. B. Anfang 7.5.3 oder als
 Fußnote/Begriffsdefinition) einmalig definiert werden, damit der Sammelbegriff

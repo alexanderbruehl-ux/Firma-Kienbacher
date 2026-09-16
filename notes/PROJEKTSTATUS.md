@@ -57,13 +57,13 @@ Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 Weiter in der Punkteliste **Produktionsleiter**, nächster noch offener Punkt aus
 dem Originaldokument (Version k):
 
-> **„Organisation / Überwachung der Wartung und Instandhaltung"**
+> **„Prüfung der Produktionsaufzeichnungen"**
 
-(Danach folgen aus der Originalliste noch: Prüfung der Produktionsaufzeichnungen,
-Verantwortlich für die Lehrlingsausbildung, Sperren von fehlerhaften Produkten,
-Bemusterungs-Nachbesprechung mit Technik, Werkzeugoptimierungen in Absprache mit PT,
-Optimieren der technischen Produktprozessentwicklung, Schulungsplanung der
-Schichtführer u. Einsteller.)
+(Danach folgen aus der Originalliste noch: In Zusammenarbeit mit QMB Maßnahmen
+nach Reklamationen durchführen, Verantwortlich für die Lehrlingsausbildung,
+Sperren von fehlerhaften Produkten, Bemusterungs-Nachbesprechung mit Technik,
+Werkzeugoptimierungen in Absprache mit PT, Optimieren der technischen
+Produktprozessentwicklung, Schulungsplanung der Schichtführer u. Einsteller.)
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
