@@ -1,7 +1,8 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Prüfung der
-Produktionsaufzeichnungen" (nächster Punkt aus Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „In Zusammenarbeit mit
+QMB Maßnahmen nach Reklamationen durchführen" (nächster Punkt aus
+Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -171,11 +172,36 @@ diese verbleibt bei den jeweiligen Teamleitungen).
 
 ---
 
+## Themenblock 7: Produktionsaufzeichnungen (ex „Prüfung der Produktionsaufzeichnungen")
+
+**Verantwortung:** Organisatorische Sicherstellung, dass Produktionsaufzeichnungen
+den Anforderungen aus ISO 9001 (§7.5.2/7.5.3) und IATF 16949 (§7.5.3.2.1)
+entsprechen:
+- **Vorhanden/vollständig** – erforderliche Aufzeichnungen werden tatsächlich
+  erstellt und geführt
+- **Eindeutig/korrekt identifizierbar** – Kennzeichnung (Titel, Datum,
+  Ersteller, Referenznummer)
+- **Versioniert** – Änderungen sind nachvollziehbar (Versions-/Änderungskontrolle)
+- **Aufbewahrung** – Einhaltung der unternehmensinternen Aufbewahrungsfristen
+  gemäß Record-Retention-Policy (IATF 16949 §7.5.3.2.1)
+- **Zugänglich/lesbar/geschützt** – auffindbar und geschützt vor
+  Verlust/unbefugtem Zugriff (z. B. im Auditfall)
+
+**Aufgabe:** Regelmäßige/stichprobenhafte Kontrolle der produktionsrelevanten
+Aufzeichnungen (z. B. Schichtprotokolle, Prüf-/Freigabeaufzeichnungen,
+Maschinen-/Prozessdaten, Wartungsprotokolle) auf diese Kriterien; Veranlassung
+von Korrekturen bei Abweichungen.
+
+**Abgrenzung:** Vorserienbezogene Dokumente (z. B. Erstmusterprüfberichte,
+FMEAs) sind **nicht** Teil dieser Aufgabe — sie sind in der
+Produkt-/Projekttechnik verortet, nicht in der Produktion.
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Prüfung der Produktionsaufzeichnungen ← **nächster Punkt**
 - [ ] In Zusammenarbeit mit QMB Maßnahmen nach Reklamationen durchführen
-      (ggf. bereits durch Themenblock 5 mit abgedeckt — prüfen)
+      (ggf. bereits durch Themenblock 5 mit abgedeckt — prüfen) ← **nächster Punkt**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik
