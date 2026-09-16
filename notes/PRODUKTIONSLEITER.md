@@ -1,7 +1,7 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Verantwortlich für die
-Lehrlingsausbildung" (nächster Punkt aus Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Sperren von fehlerhaften
+Produkten" (nächster Punkt aus Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -222,9 +222,20 @@ erfolgt weiterhin gemäß Themenblock 5 (QS-Zusammenarbeit, Gesamtebene).
 
 ---
 
+## Themenblock 9: Lehrlingsausbildung (ex „Verantwortlich für die Lehrlingsausbildung")
+
+**Verantwortung (keine operative Aufgabe):** Verantwortlich für die
+Lehrlingsausbildung im Bereich Produktion. Operativ wird die Ausbildung
+durch zwei separate Lehrlingsausbildner wahrgenommen:
+- **Kunststofftechniker** – Ausbildner: Techniker im Bereich
+  Automatisierung/Instandhaltung
+- **Werkzeugbautechniker** – Ausbildner: Teamleitung Werkzeugbau
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Verantwortlich für die Lehrlingsausbildung ← **nächster Punkt**
+- [ ] Sperren von fehlerhaften Produkten ← **nächster Punkt**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik

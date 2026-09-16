@@ -57,12 +57,12 @@ Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 Weiter in der Punkteliste **Produktionsleiter**, nächster noch offener Punkt aus
 dem Originaldokument (Version k):
 
-> **„Verantwortlich für die Lehrlingsausbildung"**
+> **„Sperren von fehlerhaften Produkten"**
 
-(Danach folgen aus der Originalliste noch: Sperren von fehlerhaften Produkten,
-Bemusterungs-Nachbesprechung mit Technik, Werkzeugoptimierungen in Absprache
-mit PT, Optimieren der technischen Produktprozessentwicklung,
-Schulungsplanung der Schichtführer u. Einsteller.)
+(Danach folgen aus der Originalliste noch: Bemusterungs-Nachbesprechung mit
+Technik, Werkzeugoptimierungen in Absprache mit PT, Optimieren der
+technischen Produktprozessentwicklung, Schulungsplanung der Schichtführer
+u. Einsteller.)
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
