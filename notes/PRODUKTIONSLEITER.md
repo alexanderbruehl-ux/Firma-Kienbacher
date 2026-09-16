@@ -1,7 +1,7 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Organisation / Überwachung
-der Wartung und Instandhaltung" (nächster Punkt aus Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Prüfung der
+Produktionsaufzeichnungen" (nächster Punkt aus Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -146,10 +146,34 @@ Wirksamkeitsnachweis.)*
 
 ---
 
+## Themenblock 6: Wartung und Instandhaltung (ex „Organisation / Überwachung der Wartung und Instandhaltung")
+
+**Struktur:** Zwei getrennte Teams mit eigener Teamleitung, beide berichten im
+Regelbetrieb direkt an den Produktionsleiter (keine Zwischenstation über
+Prozesstechnik und Bemusterung):
+- **Teamleitung Instandhaltung** – Maschinen, Anlagen und Infrastruktur,
+  inkl. Betriebsmittel, Fertigungshilfsmittel, Roboter und automatisierte Anlagen
+- **Teamleitung Werkzeugbau** – Werkzeugbau sowie Werkzeugwartung, -reparatur
+  und -instandhaltung
+
+**Aufgabe:**
+Überwachung der Wartung und Instandhaltung von Maschinen, Anlagen und
+Infrastruktur — inkl. Betriebsmittel, Fertigungshilfsmittel, Robotern und
+automatisierten Anlagen (Teamleitung Instandhaltung) — sowie von Werkzeugen
+inkl. Werkzeugwartung, -reparatur und -instandhaltung (Teamleitung
+Werkzeugbau). Bei technischen Eskalationsfällen: Priorisierung der
+erforderlichen Maßnahmen.
+
+**Kompetenz:**
+Entscheidungsbefugnis über die Umsetzung der bestgeeigneten Variante bei
+Eskalationsthemen (keine Terminierung/Ressourcenzuteilung im Regelbetrieb —
+diese verbleibt bei den jeweiligen Teamleitungen).
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Organisation / Überwachung der Wartung und Instandhaltung ← **nächster Punkt**
-- [ ] Prüfung der Produktionsaufzeichnungen
+- [ ] Prüfung der Produktionsaufzeichnungen ← **nächster Punkt**
 - [ ] In Zusammenarbeit mit QMB Maßnahmen nach Reklamationen durchführen
       (ggf. bereits durch Themenblock 5 mit abgedeckt — prüfen)
 - [ ] Verantwortlich für die Lehrlingsausbildung
