@@ -345,11 +345,24 @@ Fachabteilungen (z. B. HR, QS, SVP, SFK) erfolgt.
 
 Alle Punkte der Originalliste sind bearbeitet (Themenblöcke 1–14).
 
-## Noch zu ergänzen (aus Vertretungsdiskussion, bisher nur als Kompetenz-Stichwort notiert)
+## Vertretung
 
-- **Kompetenz:** Festlegung der Vertretungsregelung nach Fachbereichen
-  (Organisation/Personal, Technik, Qualität)
-- **Kompetenz:** Übertragung von Teilbefugnissen an die jeweiligen
-  Vertretungsfunktionen
-- Ggf. eigener Abschnitt „Vertretung" mit Verweis auf die drei Vertretungsrollen
-  (siehe OFFENE_ROLLEN.md)
+**Struktur:** Dreiteilige, fest zugeordnete Vertretung nach Fachbereichen
+(keine situative oder von der Abwesenheitsdauer abhängige Unterscheidung der
+Zuständigkeit selbst):
+1. **Organisation/Personal** → Produktionskoordination
+2. **Technik** → Prozesstechnik und Bemusterung
+3. **Qualität** → QS Produktion
+
+**Kompetenz:** Festlegung dieser Vertretungsregelung sowie Übertragung der
+jeweiligen Teilbefugnisse an die drei Vertretungsfunktionen (Details der
+einzelnen Vertretungsrollen: siehe `OFFENE_ROLLEN.md`).
+
+**Umfang der übertragenen Befugnisse:**
+- **Regelfall (kurzfristige Abwesenheit):** Die Vertretung übt die im
+  jeweiligen Fachbereich beschriebenen Aufgaben und Kompetenzen aus, jedoch
+  **nicht** die weitreichendsten Entscheidungsbefugnisse (z. B.
+  Neueinstellungen, Themenblock 4)
+- **Bei längerer Abwesenheit** (Richtwert: 4–6 Wochen): **erweiterte
+  Befugnisse** — auch diese weitreichenden Entscheidungen gehen auf die
+  jeweilige Vertretung über
