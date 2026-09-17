@@ -57,11 +57,10 @@ Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 Weiter in der Punkteliste **Produktionsleiter**, nächster noch offener Punkt aus
 dem Originaldokument (Version k):
 
-> **„Werkzeugoptimierungen in Absprache mit PT"**
+> **„Optimieren der technischen Produktprozessentwicklung"**
 
-(Danach folgen aus der Originalliste noch: Optimieren der technischen
-Produktprozessentwicklung, Schulungsplanung der Schichtführer u.
-Einsteller.)
+(Danach folgt aus der Originalliste noch: Schulungsplanung der
+Schichtführer u. Einsteller.)
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 

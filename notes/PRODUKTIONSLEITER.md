@@ -1,7 +1,8 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Werkzeugoptimierungen in
-Absprache mit PT" (nächster Punkt aus Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Optimieren der
+technischen Produktprozessentwicklung" (nächster Punkt aus Originalliste
+Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -284,9 +285,31 @@ Themenblocks.
 
 ---
 
+## Themenblock 12: Werkzeugoptimierungen in Absprache mit PT (PT = Prozesstechnik und Bemusterung)
+
+**Fall 1 – vor Serienstart:** Läuft im Rahmen des Vorserienprozesses (siehe
+Themenblock 11 – Bemusterungs-Eskalation).
+
+**Fall 2 – nach Serienstart, aus Produktionssicht** (Qualitäts- oder
+Kostengründe, technische Werkzeugänderung und/oder erneute Kundenfreigabe
+erforderlich):
+
+**Aufgabe:**
+- Entgegennahme des Optimierungsbedarfs, herangetragen von Prozesstechnik
+  und Bemusterung, Werkzeugbau oder (seltener) direkt von Schichtführern
+- Grobe Nutzen-/Kostenbewertung als Gesamtkosten- und Qualitätsverantwortlicher
+  der Produktion
+
+**Kompetenz:**
+- Entscheidung, ob das Thema bei der Produkt-/Projekttechnik eingesteuert
+  wird (weitere technische Bearbeitung, ggf. erneute Kundenfreigabe analog
+  Themenblock 11)
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Werkzeugoptimierungen in Absprache mit PT ← **nächster Punkt**
+- [ ] Optimieren der technischen Produktprozessentwicklung ← **nächster Punkt**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik
