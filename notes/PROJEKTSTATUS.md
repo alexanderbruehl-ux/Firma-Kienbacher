@@ -49,21 +49,20 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: Automatisierung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 
 Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 
 ## Nächster konkreter Schritt
 
-Weiter in der Punkteliste **Produktionsleiter**, nächster noch offener Punkt aus
-dem Originaldokument (Version k) — **letzter offener Punkt der Originalliste**:
+Die Punkteliste aus Version k für die Rolle **Produktionsleiter** ist
+vollständig durchgearbeitet (Themenblöcke 1–14, siehe PRODUKTIONSLEITER.md).
 
-> **„Schulungsplanung der Schichtführer u. Einsteller"**
-
-Danach ist die Punkteliste aus Version k für die Rolle Produktionsleiter
-vollständig durchgearbeitet (Themenblöcke 1–13); es folgen dann die neuen
-Themen aus der Vertretungsdiskussion (siehe PRODUKTIONSLEITER.md, Abschnitt
-„Noch zu ergänzen") sowie die übrigen Rollen (siehe Bearbeitungsstand-Tabelle
-oben).
+Als Nächstes: die Punkte aus der Vertretungsdiskussion abschließen (siehe
+PRODUKTIONSLEITER.md, Abschnitt „Noch zu ergänzen" — Vertretungsregelung
+nach Fachbereichen, Übertragung von Teilbefugnissen, ggf. eigener
+Abschnitt „Vertretung"), danach Übergang zu den übrigen Rollen (siehe
+Bearbeitungsstand-Tabelle oben).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
