@@ -70,6 +70,18 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
   als überdenkenswert markiert** — bei Bedarf später zu Produktionsplanung
   oder Prozesstechnik und Bemusterung verschieben.
 
+## 5. Automatisierung
+
+- Neue, eigenständige Funktion — bisher nicht im Dokument abgebildet
+- Besetzung: 1 fixer Mitarbeiter zu 100 % für Automatisierung zuständig
+  (teilweise Zusammenarbeit mit externen Partnern) + eine 50 %-Ressource aus
+  der Instandhaltung (diese Person ist zugleich Lehrlingsausbildner für
+  Kunststofftechniker, siehe PRODUKTIONSLEITER.md Themenblock 9)
+- Agiert bei der Optimierung der technischen Produktprozessentwicklung als
+  eigenständige, parallele Disziplin neben Prozesstechnik und Bemusterung
+  sowie Digitale Prozessentwicklung & Lean Management (siehe
+  PRODUKTIONSLEITER.md Themenblock 13)
+
 ---
 
 ## Umbenennungen bestehender Rollen
