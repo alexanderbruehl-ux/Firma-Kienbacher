@@ -35,7 +35,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | Rolle (Dok. 7.5.3.x) | Status |
 |---|---|
 | 1 Produktionsleiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–14 + Vertretung), siehe `PRODUKTIONSLEITER.md` — noch nicht in `working/*.docx` eingearbeitet |
-| 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | ⬜ Noch nicht begonnen |
+| 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | 🔶 In Bearbeitung — siehe `SCHICHTFUEHRER.md` |
 | 3 Maschinenpersonal (Werker) | ⬜ Noch nicht begonnen |
 | 4 Fertigung Montage → **Montage** (Umbenennung bereits beschlossen) | ⬜ Noch nicht begonnen |
 | 5 Boxenbauer | ⬜ Noch nicht begonnen |
@@ -78,10 +78,15 @@ Rolle **Produktionsleiter** ist inhaltlich vollständig abgestimmt
 (Themenblöcke 1–14 + Abschnitt „Vertretung", siehe PRODUKTIONSLEITER.md) —
 noch nicht in `working/*.docx` eingearbeitet.
 
-Als Nächstes: gemeinsame AKV-Basis für die Gruppe **Führungsrollen im
-Hauptprozess** erarbeiten (siehe `FUEHRUNG_HAUPTPROZESS.md` und Abschnitt
-„Gruppierung der Führungsrollen" oben), danach Schichtführer mit
-schichtspezifischen Ergänzungen.
+Zur leichteren Einordnung wird zunächst **Teamleitung Spritzguss-Produktion
+(Schichtführer)** konkret ausgearbeitet (siehe `SCHICHTFUEHRER.md`,
+Themenblock 1 abgeschlossen); die gemeinsame AKV-Basis für die Gruppe
+**Führungsrollen im Hauptprozess** (`FUEHRUNG_HAUPTPROZESS.md`) wird erst
+danach daraus abgeleitet — im fertigen Dokument soll die gemeinsame Basis
+aber vor den einzelnen Rollen stehen.
+
+Nächster Punkt in `SCHICHTFUEHRER.md`: „Sicherstellen der produzierten
+Qualität und Quantität" (Punkt 3 der Originalliste).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
