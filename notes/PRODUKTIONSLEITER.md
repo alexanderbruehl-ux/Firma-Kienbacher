@@ -1,7 +1,7 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Bemusterungs-
-Nachbesprechung mit Technik" (nächster Punkt aus Originalliste Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Werkzeugoptimierungen in
+Absprache mit PT" (nächster Punkt aus Originalliste Version k).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -251,9 +251,42 @@ einer Sperrung. Dabei möglich:
 
 ---
 
+## Themenblock 11: Bemusterungs-Eskalation (multidisziplinäre Abstimmung) (ex „Bemusterungs-Nachbesprechung mit Technik")
+
+**Kontext:** Bemusterung (Werkzeug, Automatisierung, Material,
+Spritzgussparameter) und deren iterative Abstimmung mit der Technik obliegen
+der Rolle **Prozesstechnik und Bemusterung** (Muster-Auftragsbericht,
+Wiederholbemusterungen bis Kunden-/interne Anforderungen erfüllt sind). Die
+Kundenfreigabe nach Vorstellung serienfallender Teile entspricht dem
+normativ geforderten Produktfreigabeprozess (IATF 16949 §8.3.4.4). Danach
+ist Prozess/Referenznummer/Werkzeug zur Vorserie frei (z. B. für
+Run@Rate) – mangels ausreichender Kundenbedarfe wird jedoch oft schon
+vorproduziert, bevor Run@Rate abgeschlossen ist; das Herstellungsrisiko
+dieser Vorproduktion liegt bei der Produktion (vergleichbar der „Interim
+Approval" im PPAP-Prozess).
+
+**Aufgabe:** Kontrolle des Bemusterungsprozesses aus Produktionssicht.
+
+**Kompetenz:** Eskalationsinstanz bei mehreren Varianten oder Risikofragen,
+die von Prozesstechnik und Bemusterung auf die nächste Entscheiderebene
+gehoben werden – gemeinsame Abstimmung/Entscheidung (multidisziplinärer
+Ansatz, IATF 16949 §8.3.2.1) zwischen:
+- Produktionsleitung
+- Abteilungsleitung Produkt-/Projekttechnik
+- ggf. QMB
+- in seltenen Fällen Leitung SCM (z. B. Auslieferbehälter,
+  Verpackungsvorschriften)
+
+**Abgrenzung:** Der formale Projektabschluss (Prozessreview/Workflow aller
+Abteilungsleiter, dokumentiert in DocuWare) ist ein separater, bereits
+etablierter formaler Schritt – kein inhaltlicher Bestandteil dieses
+Themenblocks.
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Bemusterungs Nachbesprechung mit Technik ← **nächster Punkt**
+- [ ] Werkzeugoptimierungen in Absprache mit PT ← **nächster Punkt**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik
