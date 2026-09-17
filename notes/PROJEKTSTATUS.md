@@ -35,7 +35,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | Rolle (Dok. 7.5.3.x) | Status |
 |---|---|
 | 1 Produktionsleiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–14 + Vertretung), siehe `PRODUKTIONSLEITER.md` — noch nicht in `working/*.docx` eingearbeitet |
-| 2 Schichtführer | ⬜ Noch nicht begonnen |
+| 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | ⬜ Noch nicht begonnen |
 | 3 Maschinenpersonal (Werker) | ⬜ Noch nicht begonnen |
 | 4 Fertigung Montage → **Montage** (Umbenennung bereits beschlossen) | ⬜ Noch nicht begonnen |
 | 5 Boxenbauer | ⬜ Noch nicht begonnen |
@@ -62,7 +62,8 @@ Bereitstellung/Transformation/Output-Versand; Unterstützungsprozess =
 Ressourcen-Bereitstellung „Mit was"):
 
 - **Hauptprozess** (`FUEHRUNG_HAUPTPROZESS.md`): Teamleitung Lager,
-  Schichtführer, Teamleitung Montage, Teamleitung Endfertigung
+  Teamleitung Spritzguss-Produktion (Schichtführer), Teamleitung Montage,
+  Teamleitung Endfertigung
 - **Unterstützungsprozesse** (`FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md`):
   Teamleitung Instandhaltung, Teamleitung Werkzeugbau
 

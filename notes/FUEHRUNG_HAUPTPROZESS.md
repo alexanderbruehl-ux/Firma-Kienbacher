@@ -8,7 +8,10 @@ Kernprozesses, nicht der Unterstützung).
 **Zugehörige Rollen:**
 - Teamleitung Lager (Input: Materialbereitstellung / Output: Versand —
   vor- und nachgelagerter Schritt im E2E-Auftragsabwicklungsprozess)
-- Schichtführer
+- **Teamleitung Spritzguss-Produktion (Schichtführer)** — Umbenennung von
+  „Schichtführer" zur eindeutigen Klarstellung, analog zu den anderen
+  Teamleitungsfunktionen; „Schichtführer" bleibt als geläufige
+  Kurzbezeichnung in Klammer erhalten
 - Teamleitung Montage
 - Teamleitung Endfertigung
 
