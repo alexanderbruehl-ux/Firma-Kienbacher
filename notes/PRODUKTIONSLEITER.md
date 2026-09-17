@@ -1,8 +1,9 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Schulungsplanung der
-Schichtführer u. Einsteller" (nächster Punkt aus Originalliste Version k —
-letzter noch offener Punkt).
+Status: **in Bearbeitung** — Originalliste Version k vollständig abgearbeitet
+(Themenblöcke 1–14). Offen sind noch die Punkte aus der
+Vertretungsdiskussion (Abschnitt „Noch zu ergänzen") sowie ggf. weitere,
+bisher nicht in Version k enthaltene Ergänzungen.
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -104,7 +105,8 @@ Rahmen:
 - Personalanforderung
 - Führung von Mitarbeitergesprächen
 - Bildungsbedarfsermittlung
-- Sicherstellung der produktionsrelevanten Schulungen
+- Aus- und Weiterbildung sowie Unterweisung der unterstellten Mitarbeiter:
+  Details siehe Themenblock 14
 - Mitwirkung an der Einführung geeigneter (flexibler) Arbeitszeitmodelle
   (gemeinsam mit HR)
 - Sicherstellung der Urlaubsplanung
@@ -320,15 +322,28 @@ werden.
 
 ---
 
-## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
+## Themenblock 14: Aus- und Weiterbildung / Unterweisung (ex „Schulungsplanung der Schichtführer u. Einsteller")
 
-- [ ] Schulungsplanung der Schichtführer u. Einsteller ← **nächster Punkt (letzter offener Punkt der Originalliste)**
-- [ ] Verantwortlich für die Lehrlingsausbildung
-- [ ] Sperren von fehlerhaften Produkten
-- [ ] Bemusterungs Nachbesprechung mit Technik
-- [ ] Werkzeugoptimierungen in Absprache mit PT
-- [ ] Optimieren der technischen Produktprozessentwicklung
-- [ ] Schulungsplanung der Schichtführer u. Einsteller
+**Klarstellung:** Schichtführer sind eine Teamleitungsfunktion (siehe
+„Teamleiter" in BEGRIFFE.md), keine eigene Hierarchieebene.
+
+**Aufgabe** (bezogen auf die direkt unterstellten Mitarbeiter =
+TeamleiterInnen):
+- Konkrete Schulungsbedarfsermittlung
+- Sicherstellung der Aus- und Weiterbildung sowie Unterweisung
+- Kontrolle der Umsetzung im Sinne einer Wirksamkeitsprüfung
+
+**Verantwortung** (alle unterstellten Mitarbeiter, auch die der
+TeamleiterInnen, z. B. Einsteller): Grundsätzliche Verantwortung für Aus- und
+Weiterbildung sowie Unterweisung — hier liegt der Schwerpunkt auf der
+Sicherstellung, dass die Durchführung durch die TeamleiterInnen oder andere
+Fachabteilungen (z. B. HR, QS, SVP, SFK) erfolgt.
+
+---
+
+## Originalliste (Version k) — Status
+
+Alle Punkte der Originalliste sind bearbeitet (Themenblöcke 1–14).
 
 ## Noch zu ergänzen (aus Vertretungsdiskussion, bisher nur als Kompetenz-Stichwort notiert)
 
