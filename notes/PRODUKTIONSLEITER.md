@@ -190,7 +190,7 @@ entsprechen:
   Verlust/unbefugtem Zugriff (z. B. im Auditfall)
 
 **Aufgabe:** Regelmäßige/stichprobenhafte Kontrolle der produktionsrelevanten
-Aufzeichnungen (z. B. Schichtprotokolle, Prüf-/Freigabeaufzeichnungen,
+Aufzeichnungen (z. B. Prüfbegleitkarte, Schichtlogbuch [Schichtführer],
 Maschinen-/Prozessdaten, Wartungsprotokolle) auf diese Kriterien; Veranlassung
 von Korrekturen bei Abweichungen.
 
