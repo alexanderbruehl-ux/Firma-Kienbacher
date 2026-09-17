@@ -12,3 +12,4 @@
 | **Teamleiter** | Sammelbegriff für alle dem Produktionsleiter unterstellten Führungskräfte | Schichtführer, Teamleitung Montage, Teamleitung Lager, Teamleitung Endfertigung |
 | **AKV-Prinzip** | Aufgaben – Kompetenzen – Verantwortung | Organisierendes Prinzip der gesamten Dokumentrevision; siehe PROJEKTSTATUS.md |
 | **ASchG** | ArbeitnehmerInnenschutzgesetz (Österreich) | Wird im Produktionsleiter-Block unter Verantwortung/Sicherheit referenziert (gesamthaft, kein spezifischer Paragraph) |
+| **PT** | Prozesstechnik und Bemusterung | Abkürzung wie in Version k verwendet („Werkzeugoptimierungen in Absprache mit PT"); siehe PRODUKTIONSLEITER.md Themenblock 12 |
