@@ -53,16 +53,34 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 
 Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 
+### Gruppierung der Führungsrollen (Teamleiter)
+
+Um Doppelungen zu vermeiden, werden die Teamleitungsfunktionen nicht einzeln
+und unabhängig voneinander ausgearbeitet, sondern in zwei Gruppen mit
+jeweils gemeinsamer AKV-Basis (Turtle-Diagramm-Logik: Hauptprozess = Input-
+Bereitstellung/Transformation/Output-Versand; Unterstützungsprozess =
+Ressourcen-Bereitstellung „Mit was"):
+
+- **Hauptprozess** (`FUEHRUNG_HAUPTPROZESS.md`): Teamleitung Lager,
+  Schichtführer, Teamleitung Montage, Teamleitung Endfertigung
+- **Unterstützungsprozesse** (`FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md`):
+  Teamleitung Instandhaltung, Teamleitung Werkzeugbau
+
+Reihenfolge: zunächst gemeinsame AKV-Basis Hauptprozess erarbeiten, danach
+Schichtführer als nächste konkrete Rolle (schichtspezifische Ergänzungen),
+anschließend Montage/Endfertigung/Lager, danach die Gruppe
+Unterstützungsprozesse.
+
 ## Nächster konkreter Schritt
 
 Rolle **Produktionsleiter** ist inhaltlich vollständig abgestimmt
 (Themenblöcke 1–14 + Abschnitt „Vertretung", siehe PRODUKTIONSLEITER.md) —
 noch nicht in `working/*.docx` eingearbeitet.
 
-Als Nächstes: Auswahl der nächsten zu bearbeitenden Rolle aus der
-Bearbeitungsstand-Tabelle oben (z. B. Schichtführer als nächste bestehende
-Rolle, oder eine der neuen Rollen wie Produktionskoordination,
-Prozesstechnik und Bemusterung, QS oder Automatisierung).
+Als Nächstes: gemeinsame AKV-Basis für die Gruppe **Führungsrollen im
+Hauptprozess** erarbeiten (siehe `FUEHRUNG_HAUPTPROZESS.md` und Abschnitt
+„Gruppierung der Führungsrollen" oben), danach Schichtführer mit
+schichtspezifischen Ergänzungen.
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
