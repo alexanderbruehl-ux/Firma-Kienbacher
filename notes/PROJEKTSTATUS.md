@@ -34,7 +34,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 
 | Rolle (Dok. 7.5.3.x) | Status |
 |---|---|
-| 1 Produktionsleiter | 🔶 In Bearbeitung — siehe `PRODUKTIONSLEITER.md` |
+| 1 Produktionsleiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–14 + Vertretung), siehe `PRODUKTIONSLEITER.md` — noch nicht in `working/*.docx` eingearbeitet |
 | 2 Schichtführer | ⬜ Noch nicht begonnen |
 | 3 Maschinenpersonal (Werker) | ⬜ Noch nicht begonnen |
 | 4 Fertigung Montage → **Montage** (Umbenennung bereits beschlossen) | ⬜ Noch nicht begonnen |
@@ -55,14 +55,14 @@ Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 
 ## Nächster konkreter Schritt
 
-Die Punkteliste aus Version k für die Rolle **Produktionsleiter** ist
-vollständig durchgearbeitet (Themenblöcke 1–14, siehe PRODUKTIONSLEITER.md).
+Rolle **Produktionsleiter** ist inhaltlich vollständig abgestimmt
+(Themenblöcke 1–14 + Abschnitt „Vertretung", siehe PRODUKTIONSLEITER.md) —
+noch nicht in `working/*.docx` eingearbeitet.
 
-Als Nächstes: die Punkte aus der Vertretungsdiskussion abschließen (siehe
-PRODUKTIONSLEITER.md, Abschnitt „Noch zu ergänzen" — Vertretungsregelung
-nach Fachbereichen, Übertragung von Teilbefugnissen, ggf. eigener
-Abschnitt „Vertretung"), danach Übergang zu den übrigen Rollen (siehe
-Bearbeitungsstand-Tabelle oben).
+Als Nächstes: Auswahl der nächsten zu bearbeitenden Rolle aus der
+Bearbeitungsstand-Tabelle oben (z. B. Schichtführer als nächste bestehende
+Rolle, oder eine der neuen Rollen wie Produktionskoordination,
+Prozesstechnik und Bemusterung, QS oder Automatisierung).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
