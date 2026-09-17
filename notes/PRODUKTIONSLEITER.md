@@ -1,8 +1,8 @@
 # Rolle: Produktionsleiter — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung**, Diskussion pausiert bei „Optimieren der
-technischen Produktprozessentwicklung" (nächster Punkt aus Originalliste
-Version k).
+Status: **in Bearbeitung**, Diskussion pausiert bei „Schulungsplanung der
+Schichtführer u. Einsteller" (nächster Punkt aus Originalliste Version k —
+letzter noch offener Punkt).
 
 Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
 und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
@@ -307,9 +307,22 @@ erforderlich):
 
 ---
 
+## Themenblock 13: Optimieren der technischen Produktprozessentwicklung
+
+**Aufgabe (Top-Down):** Vorgabe von Optimierungszielen/-schwerpunkten
+(z. B. Zykluszeiten, Verfahrens-/Prozessparameter, Automatisierungsgrad
+o. Ä.) an Prozesstechnik und Bemusterung, Automatisierung bzw. Digitale
+Prozessentwicklung & Lean Management, je nach Thema.
+
+**Kompetenz (Bottom-Up):** Bewertung, Priorisierung und Freigabe von
+Optimierungsvorschlägen, die von diesen drei Disziplinen herangetragen
+werden.
+
+---
+
 ## Noch offene/unbearbeitete Punkte aus der Originalliste (Version k)
 
-- [ ] Optimieren der technischen Produktprozessentwicklung ← **nächster Punkt**
+- [ ] Schulungsplanung der Schichtführer u. Einsteller ← **nächster Punkt (letzter offener Punkt der Originalliste)**
 - [ ] Verantwortlich für die Lehrlingsausbildung
 - [ ] Sperren von fehlerhaften Produkten
 - [ ] Bemusterungs Nachbesprechung mit Technik

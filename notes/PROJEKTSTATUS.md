@@ -55,12 +55,15 @@ Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 ## Nächster konkreter Schritt
 
 Weiter in der Punkteliste **Produktionsleiter**, nächster noch offener Punkt aus
-dem Originaldokument (Version k):
+dem Originaldokument (Version k) — **letzter offener Punkt der Originalliste**:
 
-> **„Optimieren der technischen Produktprozessentwicklung"**
+> **„Schulungsplanung der Schichtführer u. Einsteller"**
 
-(Danach folgt aus der Originalliste noch: Schulungsplanung der
-Schichtführer u. Einsteller.)
+Danach ist die Punkteliste aus Version k für die Rolle Produktionsleiter
+vollständig durchgearbeitet (Themenblöcke 1–13); es folgen dann die neuen
+Themen aus der Vertretungsdiskussion (siehe PRODUKTIONSLEITER.md, Abschnitt
+„Noch zu ergänzen") sowie die übrigen Rollen (siehe Bearbeitungsstand-Tabelle
+oben).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
