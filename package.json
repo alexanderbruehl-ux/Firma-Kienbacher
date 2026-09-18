@@ -1,0 +1,23 @@
+{
+  "name": "firma-kienbacher",
+  "version": "1.0.0",
+  "description": "Revision der IATF-16949-Verfahrensanweisung 7V-5-1 (Version k → l), Kienbacher. Ziel: Anpassung an den gelebten Ist-Zustand, strukturiert nach dem **AKV-Prinzip** (Aufgaben / Kompetenzen / Verantwortung), ergänzt um Führung / Sicherheit / Umwelt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderbruehl-ux/Firma-Kienbacher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderbruehl-ux/Firma-Kienbacher/issues"
+  },
+  "homepage": "https://github.com/alexanderbruehl-ux/Firma-Kienbacher#readme",
+  "dependencies": {
+    "docx": "^9.7.1"
+  }
+}
