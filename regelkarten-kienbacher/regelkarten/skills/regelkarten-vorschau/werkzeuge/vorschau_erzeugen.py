@@ -131,20 +131,33 @@ def shape_html(s: dict, logo_b64: str) -> str:
     return "\n".join(out)
 
 
-def bauen(pfade: list[Path], titel: str) -> str:
+PPTX_MIME = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+
+
+def bauen(pfade: list[Path], titel: str, mit_download: bool = True) -> str:
     track_b64 = base64.b64encode(TRACK_TTF.read_bytes()).decode() if TRACK_TTF.exists() else ""
     logo_b64 = base64.b64encode(LOGO_PNG.read_bytes()).decode() if LOGO_PNG.exists() else ""
 
-    karten = [(p.stem, karte_lesen(p)) for p in pfade]
+    karten = [(p.stem, p, karte_lesen(p)) for p in pfade]
     tabs, sections = [], []
-    for i, (name, karte) in enumerate(karten):
+    for i, (name, pfad, karte) in enumerate(karten):
         aktiv = " active" if i == 0 else ""
         ausgewaehlt = "true" if i == 0 else "false"
         tabs.append(f'<button class="tab" role="tab" data-target="card-{name}" '
                    f'aria-selected="{ausgewaehlt}">{esc(name)}</button>')
         shapes = "\n".join(shape_html(s, logo_b64) for s in karte["shapes"])
+
+        toolbar = '<div class="toolbar">'
+        if mit_download:
+            pptx_b64 = base64.b64encode(pfad.read_bytes()).decode()
+            toolbar += (f'<a class="btn" download="{esc(pfad.name)}" '
+                       f'href="data:{PPTX_MIME};base64,{pptx_b64}">PPTX herunterladen</a>')
+        toolbar += '<button class="btn btn-print" type="button" data-print-one>Diese Karte drucken</button>'
+        toolbar += '</div>'
+
         sections.append(f'''
 <section class="card-block{aktiv}" id="card-{name}">
+  {toolbar}
   <div class="sheet-outer">
     <div class="sheet" style="width:{karte["width_mm"]}mm;height:{karte["height_mm"]}mm;">
       {shapes}
@@ -175,16 +188,41 @@ TEMPLATE = '''<title>{titel}</title>
   .tab[aria-selected="true"] {{ color:var(--accent-ink); border-bottom-color:var(--accent); }}
   .card-block {{ display:none; }}
   .card-block.active {{ display:block; }}
+  .toolbar {{ display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap; }}
+  .btn {{
+    font-family:inherit; font-size:13px; font-weight:700; letter-spacing:.01em;
+    padding:8px 14px; border-radius:6px; border:1px solid var(--accent);
+    background:var(--accent); color:#FFFFFF; text-decoration:none; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px;
+  }}
+  .btn-print {{ background:transparent; color:var(--accent-ink); border-color:var(--line); }}
+  .btn[aria-disabled="true"] {{ opacity:.5; cursor:not-allowed; pointer-events:none; }}
   .sheet-outer {{ background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:0 8px 28px -14px rgba(0,0,0,.35); overflow:hidden; padding:14px; }}
   .sheet {{ position:relative; background:#FFFFFF; transform-origin:top left; margin:0 auto; }}
+  .print-all-btn {{ margin-left:auto; }}
   footer {{ margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }}
+
+  @media print {{
+    body {{ background:#FFFFFF; padding:0; }}
+    .wrap {{ max-width:none; }}
+    header, .tabs, .toolbar, footer {{ display:none !important; }}
+    .card-block {{ display:none !important; }}
+    body.print-all .card-block {{ display:block !important; break-after:page; }}
+    body.print-active .card-block.active {{ display:block !important; }}
+    .sheet-outer {{ border:none; box-shadow:none; padding:0; border-radius:0; }}
+    .sheet {{ transform:none !important; margin:0; }}
+    @page {{ size:A4; margin:0; }}
+  }}
 </style>
 <div class="wrap">
   <header>
     <h1>{titel}</h1>
     <p class="sub">Facsimile der Regelkarten im Kienbacher-CI, originalgetreu aus den PPTX-Dateien nachgebaut. Ersetzt nicht die Sichtpruefung in PowerPoint.</p>
   </header>
-  <div class="tabs" role="tablist">{tabs}</div>
+  <div class="tabs" role="tablist">
+    {tabs}
+    <button class="btn btn-print print-all-btn" type="button" data-print-all>Alle Karten drucken</button>
+  </div>
   {sections}
   <footer>Kienbacher Akademie - Regelkarten-Plugin (Rudi)</footer>
 </div>
@@ -198,6 +236,23 @@ TEMPLATE = '''<title>{titel}</title>
     fitAll();
   }}
   tabs.forEach(function(t) {{ t.addEventListener('click', function() {{ activate(t.dataset.target); }}); }});
+
+  document.querySelectorAll('[data-print-one]').forEach(function(btn) {{
+    btn.addEventListener('click', function() {{
+      document.body.classList.add('print-active');
+      window.print();
+    }});
+  }});
+  document.querySelectorAll('[data-print-all]').forEach(function(btn) {{
+    btn.addEventListener('click', function() {{
+      document.body.classList.add('print-all');
+      window.print();
+    }});
+  }});
+  window.addEventListener('afterprint', function() {{
+    document.body.classList.remove('print-all', 'print-active');
+  }});
+
   function fitAll() {{
     document.querySelectorAll('.card-block.active .sheet-outer').forEach(function(outer) {{
       var sheet = outer.querySelector('.sheet');
@@ -223,9 +278,13 @@ def main() -> int:
     parser.add_argument("karten", type=Path, nargs="+", help="Eine oder mehrere Karten-PPTX")
     parser.add_argument("--out", type=Path, default=Path("vorschau.html"))
     parser.add_argument("--titel", default="Regelkarten Vorschau")
+    parser.add_argument("--ohne-download", action="store_true",
+                        help="Keine PPTX-Downloadlinks einbetten - fuer gehostete "
+                             "Ansichten (z. B. Artifact), in denen Downloads aus der "
+                             "Seite heraus ohnehin blockiert sind.")
     args = parser.parse_args()
 
-    html = bauen(args.karten, args.titel)
+    html = bauen(args.karten, args.titel, mit_download=not args.ohne_download)
     args.out.write_text(html, encoding="utf-8")
     print(f"Vorschau erzeugt: {args.out} ({len(html)} Bytes, {len(args.karten)} Karten)")
     return 0

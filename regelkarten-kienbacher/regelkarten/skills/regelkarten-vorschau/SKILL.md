@@ -33,19 +33,25 @@ werden muessen.
 1. **Als Artifact veroeffentlichen** (Publish-Werkzeug dieser Umgebung) -
    praktisch fuer die schnelle Ansicht und Rueckmeldung im Gespraech. Ein
    Artifact ist **privat**, bis der Ersteller es ueber das Share-Menue der
-   Seite freigibt - das kann Claude nicht selbst umstellen. Wer die Vorschau
-   an Kolleginnen und Kollegen ohne Claude-Zugang weitergeben will, braucht
-   den zweiten Weg.
-2. **Die HTML-Datei selbst herausgeben** (`SendUserFile` oder aequivalent) -
-   die Datei ist vollstaendig eigenstaendig (Schrift und Logo eingebettet,
-   keine externen Ressourcen) und laesst sich direkt per E-Mail, Chat oder
-   ueber das Firmen-OneDrive weiterreichen. Jede und jeder oeffnet sie im
-   Browser, ganz ohne Claude-Konto. Das ist der Standardweg fuer die
-   Weitergabe an Kolleginnen und Kollegen.
+   Seite freigibt - das kann Claude nicht selbst umstellen. Downloads, die
+   die Seite selbst ausloest (auch Data-URI-Links), sind in der
+   Artifact-Ansicht **blockiert** - dafuer mit `--ohne-download` bauen, sonst
+   haengen dort tote Download-Buttons. Drucken (`window.print()`)
+   funktioniert dort trotzdem.
+2. **Die HTML-Datei selbst herausgeben** (`SendUserFile` oder aequivalent,
+   ohne `--ohne-download`) - die Datei ist vollstaendig eigenstaendig
+   (Schrift, Logo und je Karte die PPTX als Download-Link eingebettet, keine
+   externen Ressourcen) und laesst sich direkt per E-Mail, Chat oder ueber
+   das Firmen-OneDrive weiterreichen. Jede und jeder oeffnet sie im Browser,
+   ganz ohne Claude-Konto, kann die PPTX herunterladen und ueber „Diese
+   Karte drucken" / „Alle Karten drucken" direkt im A4-Format ausdrucken
+   (Druck-CSS ist eingebaut, kein Zurechtschneiden noetig). Das ist der
+   Standardweg fuer die Weitergabe an Kolleginnen und Kollegen und zum
+   Ausdrucken/Laminieren.
 
 **Immer beide Wege anbieten**, wenn eine Vorschau fuer mehr als eine Person
-gedacht ist: das Artifact fuer die schnelle Ruecksprache, die Datei fuer die
-Verteilung.
+gedacht ist: das Artifact fuer die schnelle Ruecksprache, die Datei fuer
+Verteilung und Druck.
 
 ## Zusaetzlich bei jeder fertigen Karte
 
