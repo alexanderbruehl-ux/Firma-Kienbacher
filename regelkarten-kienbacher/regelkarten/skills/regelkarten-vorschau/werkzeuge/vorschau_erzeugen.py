@@ -176,8 +176,7 @@ def bauen(pfade: list[Path], titel: str, mit_download: bool = True) -> str:
                            tabs="\n".join(tabs), sections="\n".join(sections))
 
 
-TEMPLATE = '''<title>{titel}</title>
-<meta name="description" content="Facsimile-Vorschau von Kienbacher-Regelkarten im Originalformat." />
+TEMPLATE = '''<title>Vorschaufenster</title>
 <style>
   @font-face {{ font-family: 'Track'; src: url(data:font/ttf;base64,{track_b64}) format('truetype'); font-display: swap; }}
   :root {{ --bg:#EFEEEA; --panel:#FFFFFF; --ink:#1B1F22; --muted:#6B6F73; --accent:#0079A7; --accent-ink:#00435C; --line:#D8DBDD; }}
@@ -190,7 +189,7 @@ TEMPLATE = '''<title>{titel}</title>
   .wrap {{ max-width:900px; margin:0 auto; }}
   h1 {{ font-family:'Track', Arial, sans-serif; font-size:clamp(22px,4vw,30px); letter-spacing:.02em; color:var(--accent-ink); margin:0 0 6px; text-wrap:balance; }}
   .sub {{ color:var(--muted); font-size:14px; margin:0; max-width:60ch; }}
-  .tabs {{ display:flex; gap:6px; margin:22px 0 14px; border-bottom:1px solid var(--line); overflow-x:auto; }}
+  .tabs {{ display:flex; flex-wrap:wrap; gap:6px; margin:22px 0 14px; border-bottom:1px solid var(--line); }}
   .tab {{ flex:none; padding:9px 16px; font-size:13px; font-weight:700; letter-spacing:.02em; color:var(--muted); background:none; border:none; border-bottom:2px solid transparent; cursor:pointer; font-family:inherit; }}
   .tab[aria-selected="true"] {{ color:var(--accent-ink); border-bottom-color:var(--accent); }}
   .card-block {{ display:none; }}
@@ -210,8 +209,7 @@ TEMPLATE = '''<title>{titel}</title>
 </style>
 <div class="wrap">
   <header>
-    <h1>{titel}</h1>
-    <p class="sub">Facsimile der Regelkarten im Kienbacher-CI, originalgetreu aus den PPTX-Dateien nachgebaut. Ersetzt nicht die Sichtpruefung in PowerPoint. Bearbeiten und Drucken passiert in PowerPoint selbst - siehe Download-Button je Karte.</p>
+    <h1>Vorschaufenster</h1>
   </header>
   <div class="tabs" role="tablist">
     {tabs}
