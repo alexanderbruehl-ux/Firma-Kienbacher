@@ -1,0 +1,13 @@
+{
+  "name": "regelkarten-kienbacher",
+  "owner": {
+    "name": "Kienbacher - Michael Tillian"
+  },
+  "plugins": [
+    {
+      "name": "regelkarten",
+      "source": "./regelkarten",
+      "description": "Regelkarten Rudi - fuehrt Schritt fuer Schritt durch die Erstellung einer Wenn-Dann-Regelkarte und erzeugt sie als bearbeitbare A4-PPTX im Kienbacher-CI."
+    }
+  ]
+}

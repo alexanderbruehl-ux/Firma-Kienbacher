@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kienbacher Regelkarte",
+  "description": "Definition einer Regelkarte. Enthaelt bewusst keine Farben, Koordinaten oder Schriftgrade - die kommen aus dem Design-System.",
+  "type": "object",
+  "required": ["karte", "kopf", "bloecke"],
+  "additionalProperties": false,
+  "properties": {
+    "karte": {
+      "type": "object",
+      "required": ["revision", "datum", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": ["string", "null"],
+          "pattern": "^RK-[0-9]{3}$",
+          "description": "Leer lassen, dann vergibt der Generator die naechste freie ID."
+        },
+        "revision": { "type": "string", "examples": ["0.1", "1.0"] },
+        "datum": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "status": {
+          "enum": ["entwurf", "in_pruefung", "freigegeben", "zurueckgezogen"],
+          "description": "'freigegeben' verlangt Pruefer, Freigeber und keine offenen Fragen."
+        },
+        "bereich": { "type": "string", "examples": ["PRODUKTION", "MONTAGE", "WERKZEUGBAU"] },
+        "verfasser": { "type": ["string", "null"] },
+        "pruefer": { "type": ["string", "null"] },
+        "freigeber": { "type": ["string", "null"] },
+        "offene_fragen": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Nicht bestaetigte Punkte. Erscheinen im Markdown-Zwilling, nie auf der Karte."
+        }
+      }
+    },
+
+    "kopf": {
+      "type": "object",
+      "required": ["eyebrow", "titel"],
+      "additionalProperties": false,
+      "properties": {
+        "eyebrow": { "type": "string", "examples": ["KIENBACHER AKADEMIE   /   PRODUKTION"] },
+        "titel": {
+          "type": "string",
+          "description": "Eine konkrete Frage, kein Schlagwort. Ueber rund 45 Zeichen wird es im Kopfband eng.",
+          "examples": ["Was mache ich bei einem Werkzeugbruch?"]
+        },
+        "untertitel": { "type": "string" }
+      }
+    },
+
+    "bloecke": {
+      "type": "array",
+      "minItems": 2,
+      "description": "Geordnete Liste. Genau ein 'wer_macht_was' und genau ein 'abschluss' sind Pflicht, hoechstens zwei 'entscheidung'.",
+      "items": {
+        "oneOf": [
+          {
+            "title": "anlass",
+            "type": "object",
+            "required": ["typ", "text"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "anlass" },
+              "label": { "type": "string", "default": "WENN" },
+              "text": { "type": "string" }
+            }
+          },
+          {
+            "title": "schritt",
+            "type": "object",
+            "required": ["typ", "titel"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "schritt" },
+              "titel": { "type": "string", "description": "Kurz, in Versalien, mit Taetigkeitswort." },
+              "rolle": { "type": "string", "description": "Ausfuehrende Rolle, steht rechts auf der Titelzeile." },
+              "text": { "type": "string" }
+            }
+          },
+          {
+            "title": "entscheidung",
+            "type": "object",
+            "required": ["typ", "frage", "ja", "nein"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "entscheidung" },
+              "frage": { "type": "string", "description": "Eindeutig, mit ja oder nein zu beantworten." },
+              "ja": { "$ref": "#/$defs/zweig" },
+              "nein": { "$ref": "#/$defs/zweig" }
+            }
+          },
+          {
+            "title": "hinweis",
+            "type": "object",
+            "required": ["typ", "text"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "hinweis" },
+              "titel": { "type": "string" },
+              "text": { "type": "string" },
+              "gewicht": { "enum": ["normal", "stark"], "default": "normal" }
+            }
+          },
+          {
+            "title": "zwei_spalten",
+            "type": "object",
+            "required": ["typ", "links", "rechts"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "zwei_spalten" },
+              "links": { "$ref": "#/$defs/spalte" },
+              "rechts": { "$ref": "#/$defs/spalte" }
+            }
+          },
+          {
+            "title": "wer_macht_was",
+            "type": "object",
+            "required": ["typ", "zeilen"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "wer_macht_was" },
+              "titel": { "type": "string", "default": "WER MACHT WAS?" },
+              "zeilen": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["rolle", "aufgabe"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "rolle": { "type": "string" },
+                    "aufgabe": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "title": "abschluss",
+            "type": "object",
+            "required": ["typ", "label", "kriterien"],
+            "additionalProperties": false,
+            "properties": {
+              "typ": { "const": "abschluss" },
+              "label": {
+                "enum": ["WEITERARBEITEN WENN", "FERTIG WENN"],
+                "description": "'WEITERARBEITEN WENN' bei Unterbrechung oder Entscheidung, 'FERTIG WENN' bei abgeschlossener Taetigkeit."
+              },
+              "kriterien": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "items": { "type": "string" },
+                "description": "Ueberpruefbar. Nicht den Ablauf wiederholen."
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+
+  "$defs": {
+    "zweig": {
+      "type": "object",
+      "required": ["titel", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "description": "JA beziehungsweise NEIN. Wird immer ausgeschrieben - Farbe allein traegt nie die Bedeutung." },
+        "titel": { "type": "string" },
+        "text": { "type": "string", "description": "Muss bei einer klaren Handlung oder Uebergabe enden." }
+      }
+    },
+    "spalte": {
+      "type": "object",
+      "required": ["titel", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "titel": { "type": "string" },
+        "text": { "type": "string" }
+      }
+    }
+  }
+}

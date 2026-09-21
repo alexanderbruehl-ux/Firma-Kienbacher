@@ -1,0 +1,94 @@
+{
+  "karte": {
+    "id": "RK-010",
+    "revision": "0.1",
+    "datum": "2026-09-16",
+    "status": "entwurf",
+    "bereich": "PRODUKTION",
+    "verfasser": "M. Tillian",
+    "pruefer": null,
+    "freigeber": null,
+    "offene_fragen": [
+      "Wer entscheidet über Reparatur im Haus gegen externe Instandsetzung?",
+      "Ist nach jedem Werkzeugbruch eine erneute Erststueckfreigabe nötig, oder erst ab einer bestimmten Stillstandsdauer?",
+      "In welchem Modul wird die Werkzeugstoerung erfasst? Noch nicht bestätigt, deshalb steht auf der Karte kein Modulname."
+    ]
+  },
+  "kopf": {
+    "eyebrow": "KIENBACHER AKADEMIE   /   PRODUKTION",
+    "titel": "Was mache ich bei einem Werkzeugbruch?",
+    "untertitel": "Maschine stoppen, melden, Werkzeug beurteilen lassen"
+  },
+  "bloecke": [
+    {
+      "typ": "anlass",
+      "label": "WENN",
+      "text": "Am Werkzeug ist ein Bruch sichtbar oder hörbar, Teile sind unvollständig, oder das Bauteil klebt im Werkzeug."
+    },
+    {
+      "typ": "schritt",
+      "titel": "MASCHINE STOPPEN UND TEILE SICHERN",
+      "rolle": "Mitarbeitende",
+      "text": "Sofort anhalten, nicht erneut starten. Teile des laufenden Zyklus gesondert ablegen und kennzeichnen."
+    },
+    {
+      "typ": "schritt",
+      "titel": "SCHICHTFÜHRER INFORMIEREN",
+      "rolle": "Mitarbeitende",
+      "text": "Angeben: Maschine, Auftrag, Werkzeug, Auffälligkeit. Der Schichtführer zieht den Werkzeugbau hinzu."
+    },
+    {
+      "typ": "entscheidung",
+      "frage": "Kann der Werkzeugbau das Werkzeug an der Maschine instand setzen?",
+      "ja": {
+        "label": "JA",
+        "titel": "REPARATUR AN DER MASCHINE",
+        "text": "Werkzeugbau setzt instand. Schichtführer plant das Personal für die Wartezeit ein."
+      },
+      "nein": {
+        "label": "NEIN",
+        "titel": "WERKZEUG AUSBAUEN",
+        "text": "Werkzeugbau baut aus. Schichtführer stimmt mit der Produktionsplanung ab, ob umgerüstet wird."
+      }
+    },
+    {
+      "typ": "schritt",
+      "titel": "WIEDERANLAUF FREIGEBEN LASSEN",
+      "rolle": "Schichtführer",
+      "text": "Teile aus dem Bruchzeitraum kontrollieren lassen. Nach einer Änderung in der Kavität den FGA durchführen."
+    },
+    {
+      "typ": "wer_macht_was",
+      "zeilen": [
+        {
+          "rolle": "Mitarbeitende",
+          "aufgabe": "Maschine stoppen, Teile kennzeichnen, Werkzeugbruch sofort melden."
+        },
+        {
+          "rolle": "Schichtführer",
+          "aufgabe": "Werkzeugbau hinzuziehen, mit der Produktionsplanung abstimmen, Schichtlogbuch."
+        },
+        {
+          "rolle": "Werkzeugbau",
+          "aufgabe": "Schaden beurteilen, instand setzen oder ausbauen, Werkzeug wieder freigeben."
+        },
+        {
+          "rolle": "Produktionsplanung",
+          "aufgabe": "Über Umrüsten oder Verschieben des Auftrags entscheiden."
+        },
+        {
+          "rolle": "Rüster",
+          "aufgabe": "Nach Freigabe abrüsten und den nächsten Auftrag vorbereiten."
+        }
+      ]
+    },
+    {
+      "typ": "abschluss",
+      "label": "WEITERARBEITEN WENN",
+      "kriterien": [
+        "Werkzeugbau hat das Werkzeug freigegeben.",
+        "Teile aus dem Bruchzeitraum sind geklärt."
+      ]
+    }
+  ]
+}

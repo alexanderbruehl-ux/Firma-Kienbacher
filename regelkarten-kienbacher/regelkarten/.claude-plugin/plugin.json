@@ -1,0 +1,7 @@
+{
+  "name": "regelkarten",
+  "version": "0.1.0",
+  "description": "Regelkarten Rudi - Wenn-Dann-Regelkarten fuer die Kienbacher Akademie. Fuehrt den Ersteller Frage fuer Frage durch Anlass, Ablauf, Entscheidungen und Rollen und erzeugt daraus eine bearbeitbare A4-PPTX im Kienbacher-CI samt Markdown-Zwilling und Registereintrag. Ansprache: \"Rudi\".",
+  "author": { "name": "Kienbacher - Michael Tillian" },
+  "keywords": ["regelkarte", "wenn-dann", "produktion", "kienbacher-akademie", "arbeitsanweisung", "pptx", "a4", "lean"]
+}

@@ -1,0 +1,74 @@
+{
+  "karte": {
+    "id": null,
+    "revision": "0.1",
+    "datum": "2026-09-17",
+    "status": "entwurf",
+    "bereich": "RÜSTEN",
+    "verfasser": "M. Tillian",
+    "pruefer": null,
+    "freigeber": null,
+    "offene_fragen": [
+      "TESTKARTE. Der Ablauf wurde zur Erprobung des Werkzeugs erfasst und ist fachlich NICHT bestätigt. Vor jeder Verwendung in der Halle mit den Beteiligten durchgehen.",
+      "In welchem Modul des ERP-Systems sieht der Schichtführer, ob ein Werkzeug zum Artikel hinterlegt ist? Nicht bestätigt, deshalb steht auf der Karte nur 'ERP-System'.",
+      "Darf der Schichtführer den Werkzeugeintrag am Auftrag selbst setzen, oder braucht es dafür die Produktionsplanung?",
+      "Wird der fehlende Eintrag irgendwo dokumentiert, damit er nicht beim nächsten Auftrag wieder auftritt?"
+    ]
+  },
+  "kopf": {
+    "eyebrow": "KIENBACHER AKADEMIE   /   RÜSTEN",
+    "titel": "Was mache ich, wenn am Auftrag kein Werkzeug eingetragen ist?",
+    "untertitel": "Melden, im ERP prüfen, Werkzeug nachtragen lassen"
+  },
+  "bloecke": [
+    {
+      "typ": "anlass",
+      "label": "WENN",
+      "text": "Beim Rüsten ist am Auftrag kein Werkzeug eingetragen. Das Feld ist leer."
+    },
+    {
+      "typ": "schritt",
+      "titel": "SCHICHTFÜHRER INFORMIEREN",
+      "rolle": "Rüster",
+      "text": "Den fehlenden Werkzeugeintrag sofort melden. Angeben: Auftrag, Artikel und Maschine. Nicht auf Verdacht ein Werkzeug rüsten."
+    },
+    {
+      "typ": "entscheidung",
+      "frage": "Ist im ERP-System ein Werkzeug zum Artikel hinterlegt?",
+      "ja": {
+        "label": "JA",
+        "titel": "WERKZEUG NACHTRAGEN",
+        "text": "Schichtführer trägt das Werkzeug am Auftrag nach und gibt dem Rüster Bescheid."
+      },
+      "nein": {
+        "label": "NEIN",
+        "titel": "PRODUKTIONSPLANUNG EINSCHALTEN",
+        "text": "Schichtführer informiert die Produktionsplanung. Das Rüsten bleibt gestoppt, bis geklärt ist, welches Werkzeug gilt."
+      }
+    },
+    {
+      "typ": "wer_macht_was",
+      "zeilen": [
+        {
+          "rolle": "Rüster",
+          "aufgabe": "Fehlenden Werkzeugeintrag melden und mit dem Rüsten warten, bis das Werkzeug am Auftrag steht."
+        },
+        {
+          "rolle": "Schichtführer",
+          "aufgabe": "Im ERP-System prüfen, das Werkzeug am Auftrag nachtragen und den Rüster informieren."
+        },
+        {
+          "rolle": "Produktionsplanung",
+          "aufgabe": "Klären, welches Werkzeug gilt, wenn im System keines hinterlegt ist."
+        }
+      ]
+    },
+    {
+      "typ": "abschluss",
+      "label": "WEITERARBEITEN WENN",
+      "kriterien": [
+        "Am Auftrag ist das Werkzeug eingetragen und der Rüster ist informiert."
+      ]
+    }
+  ]
+}
