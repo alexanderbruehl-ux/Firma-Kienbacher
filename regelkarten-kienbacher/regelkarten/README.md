@@ -24,6 +24,7 @@ Als Slash-Befehl: `/regelkarten:regelkarte`
 | `skills/regelkarten-inhalt` | was auf eine Karte darf: Quellen, Rollen, Pflichtabschnitte, verbotene Überschriften — plus belegter `rollenkatalog.md` und `systemkatalog.md` |
 | `skills/regelkarten-design` | Raster, Kienbacher-CI, Typografie, Lesbarkeit — plus `references/raster.md` mit allen Werten und nachgerechneten Kontrasten |
 | `skills/regelkarten-erzeugen` | der Generator: JSON-Schema, Werkzeuge, Sichtprüfung, Register |
+| `skills/regelkarten-vorschau` | eigenständige HTML-Vorschau aus fertigen PPTX — zum Ansehen ohne PowerPoint und zum Weitergeben an Kolleginnen und Kollegen ohne Claude-Zugang |
 | `agents/Regelkarten-Rudi.md` | derselbe Rudi als abgesetzter Agent auf **Opus**, für Arbeitspakete mit fertiger Vorlage |
 
 **Warum der Ablauf eine Skill ist und kein Agent:** Ein abgesetzter Agent kann
