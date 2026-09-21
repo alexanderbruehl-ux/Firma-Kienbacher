@@ -36,22 +36,32 @@ werden muessen.
    Seite freigibt - das kann Claude nicht selbst umstellen. Downloads, die
    die Seite selbst ausloest (auch Data-URI-Links), sind in der
    Artifact-Ansicht **blockiert** - dafuer mit `--ohne-download` bauen, sonst
-   haengen dort tote Download-Buttons. Drucken (`window.print()`)
-   funktioniert dort trotzdem.
+   haengen dort tote Download-Buttons.
 2. **Die HTML-Datei selbst herausgeben** (`SendUserFile` oder aequivalent,
    ohne `--ohne-download`) - die Datei ist vollstaendig eigenstaendig
    (Schrift, Logo und je Karte die PPTX als Download-Link eingebettet, keine
    externen Ressourcen) und laesst sich direkt per E-Mail, Chat oder ueber
    das Firmen-OneDrive weiterreichen. Jede und jeder oeffnet sie im Browser,
-   ganz ohne Claude-Konto, kann die PPTX herunterladen und ueber „Diese
-   Karte drucken" / „Alle Karten drucken" direkt im A4-Format ausdrucken
-   (Druck-CSS ist eingebaut, kein Zurechtschneiden noetig). Das ist der
-   Standardweg fuer die Weitergabe an Kolleginnen und Kollegen und zum
-   Ausdrucken/Laminieren.
+   ganz ohne Claude-Konto, und kann die PPTX herunterladen. Das ist der
+   Standardweg fuer die Weitergabe an Kolleginnen und Kollegen.
 
 **Immer beide Wege anbieten**, wenn eine Vorschau fuer mehr als eine Person
-gedacht ist: das Artifact fuer die schnelle Ruecksprache, die Datei fuer
-Verteilung und Druck.
+gedacht ist: das Artifact fuer die schnelle Ruecksprache, die Datei fuer die
+Verteilung.
+
+## Bearbeiten und Drucken
+
+Kein Inline-Druck in der Vorschau. Serverseitiges PPTX-Rendering ist in
+dieser Umgebung nicht verlaesslich moeglich (LibreOffice-Headless-Konvertierung
+bricht ohne verwertbare Fehlermeldung ab, unabhaengig vom Inhalt), und ein
+Druckversuch ueber `window.print()` war in einer eingebetteten Ansicht
+blockiert. Stattdessen: **Download-Button je Karte**, Bearbeiten und Drucken
+passiert in PowerPoint selbst - zuverlaessiger und ehrlicher als ein
+Nachbau, der in Randfaellen abweichen koennte. Fuer Dateitypen ausserhalb
+von Regelkarten-PPTX (oder wenn nur Download ohne PPTX-Nachbau noetig ist)
+die allgemeine Skill `dateivorschau` (Repo-Wurzelverzeichnis
+`.claude/skills/`) verwenden - selbes Prinzip, ohne die
+Regelkarten-spezifische Shape-Rekonstruktion.
 
 ## Zusaetzlich bei jeder fertigen Karte
 

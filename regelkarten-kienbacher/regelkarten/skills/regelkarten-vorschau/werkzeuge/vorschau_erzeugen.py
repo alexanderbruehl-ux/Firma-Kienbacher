@@ -11,7 +11,12 @@ sich direkt an Kolleginnen und Kollegen weitergeben (E-Mail, OneDrive, Chat),
 auch ohne Claude-Zugang.
 
 Kein Ersatz fuer die Sichtpruefung in PowerPoint aus `regelkarten-erzeugen` -
-nur eine schnelle, teilbare Ansicht mehrerer Karten nebeneinander.
+nur eine schnelle, teilbare Ansicht mehrerer Karten nebeneinander. Bearbeiten
+und Drucken passiert im Original: jede Karte hat einen Download-Button fuer
+die PPTX, kein Inline-Druck (serverseitiges PPTX-Rendering ist in dieser
+Umgebung nicht verlaesslich moeglich, und ein Druck aus dem Browser heraus
+war in der eingebetteten Ansicht blockiert - siehe `dateivorschau` fuer die
+allgemeine, projektunabhaengige Variante desselben Download-Ansatzes).
 """
 from __future__ import annotations
 
@@ -152,8 +157,9 @@ def bauen(pfade: list[Path], titel: str, mit_download: bool = True) -> str:
             pptx_b64 = base64.b64encode(pfad.read_bytes()).decode()
             toolbar += (f'<a class="btn" download="{esc(pfad.name)}" '
                        f'href="data:{PPTX_MIME};base64,{pptx_b64}">PPTX herunterladen</a>')
-        toolbar += '<button class="btn btn-print" type="button" data-print-one>Diese Karte drucken</button>'
-        toolbar += '<span class="print-hint">Falls der Button nichts tut: Strg+P bzw. Cmd+P im Browser</span>'
+            toolbar += '<span class="print-hint">Bearbeiten und Drucken in PowerPoint</span>'
+        else:
+            toolbar += '<span class="print-hint">Download nur in der eigenstaendigen HTML-Datei verfuegbar</span>'
         toolbar += '</div>'
 
         sections.append(f'''
@@ -196,36 +202,19 @@ TEMPLATE = '''<title>{titel}</title>
     background:var(--accent); color:#FFFFFF; text-decoration:none; cursor:pointer;
     display:inline-flex; align-items:center; gap:6px;
   }}
-  .btn-print {{ background:transparent; color:var(--accent-ink); border-color:var(--line); }}
   .btn[aria-disabled="true"] {{ opacity:.5; cursor:not-allowed; pointer-events:none; }}
   .sheet-outer {{ background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:0 8px 28px -14px rgba(0,0,0,.35); overflow:hidden; padding:14px; }}
   .sheet {{ position:relative; background:#FFFFFF; transform-origin:top left; margin:0 auto; }}
-  .print-all-btn {{ margin-left:auto; }}
   .print-hint {{ font-size:12px; color:var(--muted); align-self:center; }}
   footer {{ margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }}
-
-  @media print {{
-    /* Ohne JS-Zutun: der gerade offene Reiter druckt immer, auch bei Strg+P/Cmd+P
-       oder wenn window.print() in einer eingebetteten Ansicht blockiert ist. */
-    body {{ background:#FFFFFF; padding:0; }}
-    .wrap {{ max-width:none; }}
-    header, .tabs, .toolbar, footer {{ display:none !important; }}
-    .card-block {{ display:none !important; }}
-    .card-block.active {{ display:block !important; }}
-    body.print-all .card-block {{ display:block !important; break-after:page; }}
-    .sheet-outer {{ border:none; box-shadow:none; padding:0; border-radius:0; }}
-    .sheet {{ transform:none !important; margin:0; }}
-    @page {{ size:A4; margin:0; }}
-  }}
 </style>
 <div class="wrap">
   <header>
     <h1>{titel}</h1>
-    <p class="sub">Facsimile der Regelkarten im Kienbacher-CI, originalgetreu aus den PPTX-Dateien nachgebaut. Ersetzt nicht die Sichtpruefung in PowerPoint.</p>
+    <p class="sub">Facsimile der Regelkarten im Kienbacher-CI, originalgetreu aus den PPTX-Dateien nachgebaut. Ersetzt nicht die Sichtpruefung in PowerPoint. Bearbeiten und Drucken passiert in PowerPoint selbst - siehe Download-Button je Karte.</p>
   </header>
   <div class="tabs" role="tablist">
     {tabs}
-    <button class="btn btn-print print-all-btn" type="button" data-print-all>Alle Karten drucken</button>
   </div>
   {sections}
   <footer>Kienbacher Akademie - Regelkarten-Plugin (Rudi)</footer>
@@ -240,31 +229,6 @@ TEMPLATE = '''<title>{titel}</title>
     fitAll();
   }}
   tabs.forEach(function(t) {{ t.addEventListener('click', function() {{ activate(t.dataset.target); }}); }});
-
-  function versuchDrucken() {{
-    try {{
-      window.print();
-      return true;
-    }} catch (e) {{
-      return false;
-    }}
-  }}
-  // Der aktive Reiter druckt ueber die @media-print-Regel von selbst - der
-  // Button loest nur den Dialog aus. Klappt window.print() in einer
-  // eingebetteten Ansicht nicht, bleibt der Hinweistext (Strg+P/Cmd+P) die
-  // Rettung, ohne dass der Button selbst etwas kaputt machen kann.
-  document.querySelectorAll('[data-print-one]').forEach(function(btn) {{
-    btn.addEventListener('click', versuchDrucken);
-  }});
-  document.querySelectorAll('[data-print-all]').forEach(function(btn) {{
-    btn.addEventListener('click', function() {{
-      document.body.classList.add('print-all');
-      versuchDrucken();
-    }});
-  }});
-  window.addEventListener('afterprint', function() {{
-    document.body.classList.remove('print-all');
-  }});
 
   function fitAll() {{
     document.querySelectorAll('.card-block.active .sheet-outer').forEach(function(outer) {{
