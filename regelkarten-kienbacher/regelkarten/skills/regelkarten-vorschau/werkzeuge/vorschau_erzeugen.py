@@ -153,6 +153,7 @@ def bauen(pfade: list[Path], titel: str, mit_download: bool = True) -> str:
             toolbar += (f'<a class="btn" download="{esc(pfad.name)}" '
                        f'href="data:{PPTX_MIME};base64,{pptx_b64}">PPTX herunterladen</a>')
         toolbar += '<button class="btn btn-print" type="button" data-print-one>Diese Karte drucken</button>'
+        toolbar += '<span class="print-hint">Falls der Button nichts tut: Strg+P bzw. Cmd+P im Browser</span>'
         toolbar += '</div>'
 
         sections.append(f'''
@@ -200,15 +201,18 @@ TEMPLATE = '''<title>{titel}</title>
   .sheet-outer {{ background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:0 8px 28px -14px rgba(0,0,0,.35); overflow:hidden; padding:14px; }}
   .sheet {{ position:relative; background:#FFFFFF; transform-origin:top left; margin:0 auto; }}
   .print-all-btn {{ margin-left:auto; }}
+  .print-hint {{ font-size:12px; color:var(--muted); align-self:center; }}
   footer {{ margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }}
 
   @media print {{
+    /* Ohne JS-Zutun: der gerade offene Reiter druckt immer, auch bei Strg+P/Cmd+P
+       oder wenn window.print() in einer eingebetteten Ansicht blockiert ist. */
     body {{ background:#FFFFFF; padding:0; }}
     .wrap {{ max-width:none; }}
     header, .tabs, .toolbar, footer {{ display:none !important; }}
     .card-block {{ display:none !important; }}
+    .card-block.active {{ display:block !important; }}
     body.print-all .card-block {{ display:block !important; break-after:page; }}
-    body.print-active .card-block.active {{ display:block !important; }}
     .sheet-outer {{ border:none; box-shadow:none; padding:0; border-radius:0; }}
     .sheet {{ transform:none !important; margin:0; }}
     @page {{ size:A4; margin:0; }}
@@ -237,20 +241,29 @@ TEMPLATE = '''<title>{titel}</title>
   }}
   tabs.forEach(function(t) {{ t.addEventListener('click', function() {{ activate(t.dataset.target); }}); }});
 
-  document.querySelectorAll('[data-print-one]').forEach(function(btn) {{
-    btn.addEventListener('click', function() {{
-      document.body.classList.add('print-active');
+  function versuchDrucken() {{
+    try {{
       window.print();
-    }});
+      return true;
+    }} catch (e) {{
+      return false;
+    }}
+  }}
+  // Der aktive Reiter druckt ueber die @media-print-Regel von selbst - der
+  // Button loest nur den Dialog aus. Klappt window.print() in einer
+  // eingebetteten Ansicht nicht, bleibt der Hinweistext (Strg+P/Cmd+P) die
+  // Rettung, ohne dass der Button selbst etwas kaputt machen kann.
+  document.querySelectorAll('[data-print-one]').forEach(function(btn) {{
+    btn.addEventListener('click', versuchDrucken);
   }});
   document.querySelectorAll('[data-print-all]').forEach(function(btn) {{
     btn.addEventListener('click', function() {{
       document.body.classList.add('print-all');
-      window.print();
+      versuchDrucken();
     }});
   }});
   window.addEventListener('afterprint', function() {{
-    document.body.classList.remove('print-all', 'print-active');
+    document.body.classList.remove('print-all');
   }});
 
   function fitAll() {{
