@@ -26,6 +26,8 @@ automatisierte Anlagen).
 **Aufgabe:**
 - Durchführung von Reparaturen an Anlagen, Maschinen, Infrastruktur und
   Betriebsmitteln (reaktive Instandsetzung)
+- Planung, Anfertigung und Installation neuer/geänderter Betriebsmittel
+  (z. B. Vorrichtungen, Anbaugeräte, Temperiergeräte)
 - Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan
 - Verwaltung von Ersatzteilen für Schlüsselanlagen, inkl. ordnungsgemäßer
   Lagerung (Verpackung, Konservierung)
