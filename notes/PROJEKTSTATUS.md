@@ -147,3 +147,34 @@ Als Nächstes: **Produktionsplanung** (7.5.3.7).
   2. Technik → Prozesstechnik und Bemusterung
   3. Qualität → QS Produktion (bewusst AUSSERHALB der Produktionsabteilung
      angesiedelt — 4-Augen-Prinzip)
+
+### Organisationsteam (Stabsfunktionen des Produktionsleiters)
+
+Stabsfunktionen, die dem Produktionsleiter zuarbeiten (im Unterschied zu
+den operativen Teamleitungen im Haupt-/Unterstützungsprozess), gegliedert
+in zwei Ebenen:
+
+- **Ebene A – Vertretungsfunktionen** (mit Eskalations-/
+  Entscheidungsbefugnis bei Abwesenheit des Produktionsleiters; entspricht
+  der dreiteiligen Vertretungsstruktur):
+  - Produktionskoordination (Organisation/Personal)
+  - Prozesstechnik und Bemusterung (Technik)
+  - QS – Qualitätssicherung Produktion (Qualität); **Besonderheit:** Der
+    Produktionsleiter hat **keine Weisungsbefugnis gegenüber QS**
+    (bewusst organisatorisch außerhalb der Produktionsabteilung
+    angesiedelt, 4-Augen-Prinzip). Umgekehrt hat QS **fachliche
+    Weisungsbefugnis gegenüber dem Produktionsleiter in Q-Themen**
+    (spätestens über den QMB durchsetzbar).
+- **Ebene B – unterstützende Fachfunktionen** (keine formale
+  Vertretungsbefugnis):
+  - **Produktionsplanung und -steuerung** — Sonderstellung: funktional
+    allen anderen vorgelagert, zeitliche Taktgeber-Funktion ("Gehirn der
+    Produktion"); niemand führt etwas zeitlich unabhängig von dieser
+    Instanz durch, auch relevant für Personalkapazitäten
+  - Digitale Prozessentwicklung & Lean Management
+
+**Automatisierung** gehört NICHT zum Organisationsteam, sondern
+konzeptionell zur Gruppe Unterstützungsprozesse (neben Werkzeugbau,
+Instandhaltung) — ähnliche Logik der Ressourcen-/Technikbereitstellung;
+zusätzlich enge Vernetzung mit Prozesstechnik und Bemusterung bei
+Neuprojekten/Änderungen (technisch prozessgestaltend).

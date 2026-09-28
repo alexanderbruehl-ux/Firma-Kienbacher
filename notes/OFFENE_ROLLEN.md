@@ -81,6 +81,12 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
   eigenständige, parallele Disziplin neben Prozesstechnik und Bemusterung
   sowie Digitale Prozessentwicklung & Lean Management (siehe
   PRODUKTIONSLEITER.md Themenblock 13)
+- **Gruppenzuordnung (siehe PROJEKTSTATUS.md, Abschnitt
+  „Organisationsteam"):** gehört NICHT zum Organisationsteam
+  (Stabsfunktionen des PL), sondern konzeptionell zur Gruppe
+  **Unterstützungsprozesse** (analog Werkzeugbau/Instandhaltung —
+  Ressourcen-/Technikbereitstellung). Zusätzlich enge Vernetzung mit
+  Prozesstechnik und Bemusterung bei Neuprojekten/Änderungen.
 
 ---
 
