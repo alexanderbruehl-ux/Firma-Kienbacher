@@ -21,13 +21,17 @@ Produktionsleiter.
 **Verantwortung:** Betrieb eines dokumentierten, geplanten
 Instandhaltungssystems für die prozessrelevanten Anlagen (Maschinen,
 Anlagen, Infrastruktur, Betriebsmittel, Fertigungshilfsmittel, Roboter,
-automatisierte Anlagen).
+automatisierte Anlagen); Einhaltung sicherheitstechnischer und
+gesetzlicher Bestimmungen.
 
 **Aufgabe:**
 - Durchführung von Reparaturen an Anlagen, Maschinen, Infrastruktur und
   Betriebsmitteln (reaktive Instandsetzung)
 - Planung, Anfertigung und Installation neuer/geänderter Betriebsmittel
   (z. B. Vorrichtungen, Anbaugeräte, Temperiergeräte)
+- Optimierung bestehender Anlagen (laufende Verbesserung, nicht nur
+  Neubau/Wartung)
+- Mitwirkung an KVP/5S/Kaizen
 - Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan
 - Verwaltung von Ersatzteilen für Schlüsselanlagen, inkl. ordnungsgemäßer
   Lagerung (Verpackung, Konservierung)
@@ -41,7 +45,10 @@ automatisierte Anlagen).
   `FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md` Themenblock B)
 
 **Kompetenz:** Festlegung von Instandhaltungszielen/-kennzahlen (z. B.
-OEE, MTBF, MTTR, Einhaltung des Wartungsplans).
+OEE, MTBF, MTTR, Einhaltung des Wartungsplans); bei Gefahr im Verzug
+Anlagen abstellen (Not-Halt-Kompetenz), mit Informationspflicht an die
+vorgesetzte Stelle. Meldepflicht bei Anlagenstörungen/Unfällen an die
+vorgesetzte Stelle.
 
 ---
 
