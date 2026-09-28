@@ -177,15 +177,14 @@ diese verbleibt bei den jeweiligen Teamleitungen).
 ## Themenblock 7: Produktionsaufzeichnungen (ex „Prüfung der Produktionsaufzeichnungen")
 
 **Verantwortung:** Organisatorische Sicherstellung, dass Produktionsaufzeichnungen
-den Anforderungen aus ISO 9001 (§7.5.2/7.5.3) und IATF 16949 (§7.5.3.2.1)
-entsprechen:
+den Anforderungen aus ISO 9001 (§7.5.2/7.5.3) entsprechen:
 - **Vorhanden/vollständig** – erforderliche Aufzeichnungen werden tatsächlich
   erstellt und geführt
 - **Eindeutig/korrekt identifizierbar** – Kennzeichnung (Titel, Datum,
   Ersteller, Referenznummer)
 - **Versioniert** – Änderungen sind nachvollziehbar (Versions-/Änderungskontrolle)
 - **Aufbewahrung** – Einhaltung der unternehmensinternen Aufbewahrungsfristen
-  gemäß Record-Retention-Policy (IATF 16949 §7.5.3.2.1)
+  gemäß Record-Retention-Policy
 - **Zugänglich/lesbar/geschützt** – auffindbar und geschützt vor
   Verlust/unbefugtem Zugriff (z. B. im Auditfall)
 
@@ -202,9 +201,8 @@ Produkt-/Projekttechnik verortet, nicht in der Produktion.
 
 ## Themenblock 8: Reklamationen / QMB-Zusammenarbeit (ex „In Zusammenarbeit mit QMB Maßnahmen nach Reklamationen durchführen")
 
-**Kontext:** QMB ist eine normativ geforderte Funktion (IATF 16949 §5.3.1/
-§5.3.2, Supplemental zu ISO 9001 §5.3) und vertritt die Organisation nach
-außen in Qualitätsangelegenheiten — **nicht nur gegenüber Kunden**, sondern
+**Kontext:** QMB ist eine normativ geforderte Funktion (siehe ISO 9001
+§5.3) und vertritt die Organisation nach außen in Qualitätsangelegenheiten — **nicht nur gegenüber Kunden**, sondern
 auch:
 - gegenüber **Lieferanten** (z. B. Reklamation mangelhafter Zukaufteile)
 - bei der **Überwachung von Partnern im Produktionsnetzwerk**, die
@@ -261,7 +259,7 @@ Spritzgussparameter) und deren iterative Abstimmung mit der Technik obliegen
 der Rolle **Prozesstechnik und Bemusterung** (Muster-Auftragsbericht,
 Wiederholbemusterungen bis Kunden-/interne Anforderungen erfüllt sind). Die
 Kundenfreigabe nach Vorstellung serienfallender Teile entspricht dem
-normativ geforderten Produktfreigabeprozess (IATF 16949 §8.3.4.4). Danach
+normativ geforderten Produktfreigabeprozess. Danach
 ist Prozess/Referenznummer/Werkzeug zur Vorserie frei (z. B. für
 Run@Rate) – mangels ausreichender Kundenbedarfe wird jedoch oft schon
 vorproduziert, bevor Run@Rate abgeschlossen ist; das Herstellungsrisiko
@@ -273,7 +271,7 @@ Approval" im PPAP-Prozess).
 **Kompetenz:** Eskalationsinstanz bei mehreren Varianten oder Risikofragen,
 die von Prozesstechnik und Bemusterung auf die nächste Entscheiderebene
 gehoben werden – gemeinsame Abstimmung/Entscheidung (multidisziplinärer
-Ansatz, IATF 16949 §8.3.2.1) zwischen:
+Ansatz) zwischen:
 - Produktionsleitung
 - Abteilungsleitung Produkt-/Projekttechnik
 - ggf. QMB

@@ -138,8 +138,7 @@ Gilt für Bereiche mit integrierten (In-Line-)Prüfanlagen.
 **Aufgabe:** Regelmäßige Durchführung der vorgeschriebenen
 Funktionsprüfung dieser Prüfanlagen mittels Referenz-/Prüfteilen
 (Gut-/Schlechtteile), um sicherzustellen, dass fehlerhafte Teile
-zuverlässig erkannt werden (IATF 16949 §10.2.4 „Error-proofing").
-Prüffrequenz gemäß Lenkungsplan (Control Plan).
+zuverlässig erkannt werden. Prüffrequenz gemäß Lenkungsplan (Control Plan).
 
 ---
 

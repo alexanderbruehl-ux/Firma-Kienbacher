@@ -16,7 +16,7 @@ Themenblock 9).
 
 ---
 
-## Themenblock 1: Werkzeug-/Betriebsmittelmanagement (IATF 16949 §8.5.1.6)
+## Themenblock 1: Werkzeug-/Betriebsmittelmanagement
 
 **Verantwortung:** Werkzeugbau sowie Wartung/Reparatur/Instandhaltung der
 Werkzeuge (inkl. Kundenwerkzeuge).
