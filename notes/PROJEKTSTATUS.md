@@ -29,6 +29,16 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   raten, unternehmensspezifische Begriffe klären bevor sie ins Dokument kommen.
 - Alexander ergänzt nach dem gemeinsamen Grobentwurf noch weitere
   unternehmensspezifische Details selbst.
+- **Arbeitsregel SharePoint-Sync (Token-/Zeit-Effizienz):** Inhaltliche
+  Arbeit läuft laufend in den `notes/*.md`-Dateien (günstig, reiner Text);
+  `scripts/build.js` und das Word-Dokument in `working/*.docx` werden
+  NICHT automatisch nach jeder einzelnen Ergänzung neu generiert. Ein
+  Neu-Generieren von `working/*.docx` sowie ein Re-Upload zum SharePoint
+  (Ordner „Claude Dateien") erfolgen nur auf explizite Anfrage von
+  Alexander („ändere das DOC am SharePoint" o. ä.) — Grund: der Upload
+  einer Binärdatei (.docx) erfordert eine vollständige Base64-Übertragung
+  des gesamten Dateiinhalts und ist dadurch pro Vorgang token-/zeitintensiv,
+  unabhängig vom Umfang der einzelnen inhaltlichen Änderung.
 
 ## Bearbeitungsstand
 
