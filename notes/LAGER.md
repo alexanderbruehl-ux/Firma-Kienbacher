@@ -85,6 +85,11 @@ Ware von internen Gebinden in Auslieferungsgebinde.
 
 ## Themenblock 7: Kundenspezifische Komplettierungen (Ausnahmefall)
 
+**Kontext:** Um unnötigen Aufwand in der Produktion durch Varianten zu
+vermeiden (kundenspezifische Variantenbildung möglichst spät im Prozess),
+werden manche kleinere, kundenspezifische Komplettierungsschritte erst im
+Lager statt in der Montage durchgeführt.
+
 **Aufgabe:** Selten Durchführung kleinerer, kundenspezifischer
 Komplettierungsschritte im Lager gemäß Arbeitsanweisung — eigentlich
 Montagetätigkeiten (siehe `MONTAGE.md` Themenblock 1), die hier
