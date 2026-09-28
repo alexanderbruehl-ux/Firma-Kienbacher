@@ -119,7 +119,7 @@ const doc = new Document({
         p("Dieser umfasst die Auftragsplanung, Vorbereitung von Materialien u. Einbauteilen, Werkzeugen und der gesamten maschinellen Einrichtung inklusive der Wartung und Instandhaltung und Qualitätskontrollen."),
 
         h("7.5.3 Verantwortung und Befugnisse", HeadingLevel.HEADING_2),
-        note("Struktur je Rolle: AKV-Prinzip (Aufgaben / Kompetenzen / Verantwortung), gegliedert nach Themenblöcken. Details und Diskussionsstand siehe notes/PRODUKTIONSLEITER.md bzw. notes/SCHICHTFUEHRER.md."),
+        note("Struktur je Rolle: AKV-Prinzip (Aufgaben / Kompetenzen / Verantwortung), gegliedert nach Themenblöcken. Details und Diskussionsstand siehe notes/*.md."),
 
         // ============ 7.5.3.1 PRODUKTIONSLEITER ============
         roleHeading("7.5.3.1 Produktionsleiter"),
@@ -175,17 +175,17 @@ const doc = new Document({
         akv("Kompetenz:", "Entscheidungsbefugnis über die Umsetzung der bestgeeigneten Variante bei Eskalationsthemen (keine Terminierung/Ressourcenzuteilung im Regelbetrieb)."),
 
         blockHeading("7. Produktionsaufzeichnungen"),
-        akvLabel("Verantwortung: Organisatorische Sicherstellung, dass Produktionsaufzeichnungen den Anforderungen aus ISO 9001 (§7.5.2/7.5.3) und IATF 16949 (§7.5.3.2.1) entsprechen:"),
+        akvLabel("Verantwortung: Organisatorische Sicherstellung, dass Produktionsaufzeichnungen den Anforderungen aus ISO 9001 (§7.5.2/7.5.3) entsprechen:"),
         bullet("Vorhanden/vollständig – erforderliche Aufzeichnungen werden tatsächlich erstellt und geführt"),
         bullet("Eindeutig/korrekt identifizierbar – Kennzeichnung (Titel, Datum, Ersteller, Referenznummer)"),
         bullet("Versioniert – Änderungen sind nachvollziehbar"),
-        bullet("Aufbewahrung – gemäß Record-Retention-Policy (IATF 16949 §7.5.3.2.1)"),
+        bullet("Aufbewahrung – gemäß Record-Retention-Policy"),
         bullet("Zugänglich/lesbar/geschützt – auffindbar und geschützt vor Verlust/unbefugtem Zugriff"),
         akv("Aufgabe:", "Regelmäßige/stichprobenhafte Kontrolle der produktionsrelevanten Aufzeichnungen (z. B. Prüfbegleitkarte, Schichtlogbuch [Schichtführer], Maschinen-/Prozessdaten, Wartungsprotokolle) auf diese Kriterien; Veranlassung von Korrekturen bei Abweichungen."),
         note("Abgrenzung: Vorserienbezogene Dokumente (z. B. Erstmusterprüfberichte, FMEAs) sind nicht Teil dieser Aufgabe – sie sind in der Produkt-/Projekttechnik verortet."),
 
         blockHeading("8. Reklamationen / QMB-Zusammenarbeit"),
-        p("QMB ist eine normativ geforderte Funktion (IATF 16949 §5.3.1/§5.3.2) und vertritt die Organisation nach außen in Qualitätsangelegenheiten – nicht nur gegenüber Kunden, sondern auch gegenüber Lieferanten und bei der Überwachung von Partnern im Produktionsnetzwerk (Lohnfertigung). QS deckt demgegenüber die internen Qualitätsbelange ab: Sperren, Beurteilung, Grenzmusterkataloge, Erststückfreigaben sowie interne Maßnahmen zur Verbesserung und Vermeidung von Reklamationen."),
+        p("QMB ist eine normativ geforderte Funktion und vertritt die Organisation nach außen in Qualitätsangelegenheiten – nicht nur gegenüber Kunden, sondern auch gegenüber Lieferanten und bei der Überwachung von Partnern im Produktionsnetzwerk (Lohnfertigung). QS deckt demgegenüber die internen Qualitätsbelange ab: Sperren, Beurteilung, Grenzmusterkataloge, Erststückfreigaben sowie interne Maßnahmen zur Verbesserung und Vermeidung von Reklamationen."),
         akv("Aufgabe:", "Unterstützung von QMB bei der Bearbeitung von Reklamationen (Kunden, Lieferanten, Netzwerkpartner/Lohnfertiger) durch Bereitstellung produktionsseitiger Informationen (Ursachenanalyse, Sofort-/Korrekturmaßnahmen) für die externe Kommunikation. Die inhaltliche Entscheidung über und Umsetzung von Korrekturmaßnahmen auf Produktionsseite erfolgt gemäß Themenblock 5."),
 
         blockHeading("9. Lehrlingsausbildung"),
@@ -198,9 +198,9 @@ const doc = new Document({
         bullet("Trennung zwischen Produktions- und Lieferfreigabe: Teile werden weiterproduziert (z. B. Engpassanlage), aber zunächst nur für die Auslieferung gesperrt"),
 
         blockHeading("11. Bemusterungs-Eskalation (multidisziplinäre Abstimmung)"),
-        p("Bemusterung (Werkzeug, Automatisierung, Material, Spritzgussparameter) obliegt der Rolle Prozesstechnik und Bemusterung. Die Kundenfreigabe nach Vorstellung serienfallender Teile entspricht dem normativ geforderten Produktfreigabeprozess (IATF 16949 §8.3.4.4). Danach ist Prozess/Referenznummer/Werkzeug zur Vorserie frei (z. B. für Run@Rate) – das Herstellungsrisiko einer etwaigen Vorproduktion liegt bei der Produktion (vergleichbar der „Interim Approval“ im PPAP-Prozess)."),
+        p("Bemusterung (Werkzeug, Automatisierung, Material, Spritzgussparameter) obliegt der Rolle Prozesstechnik und Bemusterung. Die Kundenfreigabe nach Vorstellung serienfallender Teile entspricht dem normativ geforderten Produktfreigabeprozess. Danach ist Prozess/Referenznummer/Werkzeug zur Vorserie frei (z. B. für Run@Rate) – das Herstellungsrisiko einer etwaigen Vorproduktion liegt bei der Produktion (vergleichbar der „Interim Approval“ im PPAP-Prozess)."),
         akv("Aufgabe:", "Kontrolle des Bemusterungsprozesses aus Produktionssicht."),
-        akvLabel("Kompetenz: Eskalationsinstanz bei mehreren Varianten oder Risikofragen – multidisziplinäre Abstimmung (IATF 16949 §8.3.2.1) zwischen:"),
+        akvLabel("Kompetenz: Eskalationsinstanz bei mehreren Varianten oder Risikofragen – multidisziplinäre Abstimmung zwischen:"),
         bullet("Produktionsleitung"),
         bullet("Abteilungsleitung Produkt-/Projekttechnik"),
         bullet("ggf. QMB"),
@@ -236,11 +236,55 @@ const doc = new Document({
         bullet("Regelfall (kurzfristige Abwesenheit): Vertretung übt die Aufgaben/Kompetenzen des Fachbereichs aus, jedoch nicht die weitreichendsten Entscheidungsbefugnisse (z. B. Neueinstellungen)"),
         bullet("Bei längerer Abwesenheit (Richtwert 4–6 Wochen): erweiterte Befugnisse – auch weitreichende Entscheidungen gehen auf die Vertretung über"),
 
+        // ============ GEMEINSAME BASIS: FÜHRUNGSROLLEN IM HAUPTPROZESS ============
+        h("Gemeinsame AKV-Basis: Führungsrollen im Hauptprozess", HeadingLevel.HEADING_2),
+        note("Gilt für Teamleitung Spritzguss-Produktion (Schichtführer), Teamleitung Montage, Teamleitung Endfertigung, Teamleitung Lager (End2End-Auftragsabwicklung, Turtle-Diagramm-Logik: Input-Bereitstellung/Transformation/Output-Versand). Allgemeine Punkte werden hier einmal dokumentiert; die einzelnen Rollen unten enthalten nur noch ihre spezifischen Ergänzungen."),
+
+        blockHeading("A. Prozessmittelüberwachung und Parametrierung"),
+        akvLabel("Aufgabe:"),
+        bullet("Überwachung der im jeweiligen Prozessschritt eingesetzten Maschinen, Anlagen, Werkzeuge und Vorrichtungen auf ordnungsgemäßen Zustand und korrekte Einstellung/Parametrierung – z. B. Spritzgussmaschinen (Teamleitung Spritzguss-Produktion), Montageautomaten/Vorrichtungen (Teamleitung Montage), Bearbeitungs-/Klebeanlagen (Teamleitung Endfertigung), Kommissionier-/Wiege-/Fördertechnik (Teamleitung Lager)"),
+        bullet("Feinjustierung innerhalb definierter Grenzen auf Basis der Ergebnisqualität, soweit für den Bereich zutreffend"),
+        akvLabel("Kompetenz:"),
+        bullet("Eigenständige fachliche Entscheidung im Rahmen der bereichseigenen Prozessmittel"),
+        bullet("Bei technischen Störungen: Eskalation an die zuständige Fachrolle (Teamleitung Instandhaltung für Maschinen/Anlagen, Teamleitung Werkzeugbau für Werkzeuge, Automatisierung für automatisierte Systeme) – konkret durch Eintrag in die jeweilige Aufgabenliste von Instandhaltung bzw. Werkzeugbau"),
+
+        blockHeading("B. Ergebnisverantwortung Qualität/Quantität"),
+        akv("Verantwortung:", "Sicherstellung der geplanten Produktionsmenge und der geforderten Qualität im jeweiligen Verantwortungsbereich. Bei Abweichungen von der Produktionsplanung (z. B. durch Störungen): Rückmeldung an Produktionsplanung/Produktionsleitung."),
+
+        blockHeading("C. Fehlerbewertung, Sperren, Transport gesperrter Ware"),
+        akv("Aufgabe:", "Bewertung gemeldeter Fehler gemeinsam mit PQB auf Schicht-/Team-Ebene; Entscheidung über Sperrung fehlerhafter Produkte. Anweisung an Lager bzw. Produktionslogistiker zum Transport gesperrter Ware ins gesperrte Lager. Zusätzlich: Rückmeldung fehlerhafter Kaufteile an PQB/Wareneingangskontrolle – da die Wareneingangsprüfung überwiegend stichprobenartig erfolgt, werden Fehler bei Kaufteilen häufig erst bei der Weiterverarbeitung festgestellt (bei Teamleitung Montage aufgrund des hohen Kaufteilanteils verstärkt relevant)."),
+
+        blockHeading("D. Personalverantwortung"),
+        akv("Verantwortung:", "Personalverantwortung für die unterstellten Mitarbeiter des Bereichs, inkl. Sicherheit, Ordnung und Sauberkeit am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen (Produktionsleiter als Eskalationsstufe)."),
+        akv("Aufgabe:", "Personalführung des Bereichs (Einteilung, Feedback, Konfliktmanagement)."),
+
+        blockHeading("E. Produktions- und Qualitätsaufzeichnungen"),
+        akv("Aufgabe:", "Durchführung/Erstellung der vereinbarten Produktions- und Qualitätsaufzeichnungen des Bereichs (z. B. Prüfbegleitkarte)."),
+
+        blockHeading("F. Reststoff-/Abfallentsorgung"),
+        akv("Aufgabe:", "Sortenreine Entsorgung der im jeweiligen Prozessschritt anfallenden Reststoffe/Abfälle in die vorgeschriebenen Behälter/Container – z. B. ausgespritztes Material (Teamleitung Spritzguss-Produktion), Verpackungsreste/Stanzabfälle (Teamleitung Montage), Schleifstaub/Klebstoffreste (Teamleitung Endfertigung)."),
+
+        blockHeading("G. Einfache Wartungstätigkeiten"),
+        akv("Aufgabe:", "Durchführung einfacher Wartungstätigkeiten an den bereichseigenen Betriebs-/Hilfsmitteln (z. B. Reinigung, Schmierung). Tiefergehende Wartung/Reparatur/Instandhaltung obliegt Teamleitung Instandhaltung bzw. Teamleitung Werkzeugbau."),
+
+        blockHeading("H. Freigabeprüfungen"),
+        akv("Aufgabe:", "Erststück-/Letztstückfreigabe sowie erneute Freigabe nach geplanten/ungeplanten Produktionsunterbrechungen >30 min, jeweils gemeinsam mit PQB lt. Prüfbegleitkarte."),
+
+        blockHeading("I. Poka-Yoke-Verifizierung („Dummy-Prüfung“)"),
+        p("Gilt für Bereiche mit integrierten (In-Line-)Prüfanlagen."),
+        akv("Aufgabe:", "Regelmäßige Durchführung der vorgeschriebenen Funktionsprüfung dieser Prüfanlagen mittels Referenz-/Prüfteilen (Gut-/Schlechtteile), um sicherzustellen, dass fehlerhafte Teile zuverlässig erkannt werden. Prüffrequenz gemäß Lenkungsplan (Control Plan)."),
+
+        blockHeading("J. Kundenreklamationen – Sofortmaßnahmen"),
+        akvLabel("Aufgabe:"),
+        bullet("Umsetzung von Sofortmaßnahmen bei Kundenreklamationen: 100%-Kontrolle der betroffenen Teile/Bestände, Sensibilisierung und Unterweisung der Mitarbeiter, Mithilfe bei der Eingrenzung des Fehlerzeitraums bzw. des ersten Auftretens"),
+        bullet("Sicherstellung der Einhaltung geänderter Arbeitsanweisungen, die im Zuge der Reklamation angepasst wurden (Unterweisung durch Teamleitung oder QS)"),
+        akv("Kompetenz:", "Gemeinsame Definition (mit QS/QMB) von Vermeidungs- und Abstellmaßnahmen sowie Sicherstellung von deren Einhaltung."),
+
         // ============ 7.5.3.2 SCHICHTFÜHRER ============
         roleHeading("7.5.3.2 Teamleitung Spritzguss-Produktion (Schichtführer)"),
-        note("Gehört zur Gruppe „Führungsrollen im Hauptprozess“ (End2End-Auftragsabwicklung, gemeinsam mit Teamleitung Lager, Montage, Endfertigung). Schichtführer und andere TeamleiterInnen unterscheiden sich grundsätzlich nicht; der relevanteste Unterschied ist die Schichtarbeit."),
+        note("Führungsrolle im Hauptprozess (siehe oben). Schichtführer und andere TeamleiterInnen unterscheiden sich grundsätzlich nicht; der relevanteste Unterschied ist die Schichtarbeit. Nachfolgend nur die Spritzguss-spezifischen Ausprägungen sowie die schichtspezifische Besonderheit Schichtübergabe."),
 
-        blockHeading("1. Maschinenüberwachung und Parametrierung"),
+        blockHeading("1. Maschinenüberwachung und Parametrierung – Spritzguss-spezifisch"),
         akvLabel("Aufgabe:"),
         bullet("Überwachung der laufenden Produktionsmaschinen während der Schicht – inkl. der (teilweise automatisierten) Materialzuführung – auf Einhaltung der vorgegebenen Prozessparameter (Einstelldatenblatt)"),
         bullet("Auswahl der richtigen Einstelldaten und Übertragen der gültigen Parametersätze auf die Maschine (Umbau/Einstellung)"),
@@ -248,32 +292,126 @@ const doc = new Document({
         akvLabel("Kompetenz:"),
         bullet("Eigenständige fachliche Entscheidung über Parameteranpassungen – beruht auf erlerntem Wissen und Erfahrung, da keine generelle/pauschale Lösung möglich ist (Vielzahl an Parametern und Wechselwirkungen, z. B. Materialchargen)"),
         bullet("Bei technischen Störungen: Eskalation an Teamleitung Instandhaltung (Maschine, automatisierte Materialförderung) bzw. Teamleitung Werkzeugbau (Werkzeugprobleme) bzw. Automatisierung"),
-        note("Hinweis: Die „Produktionsfreigabe“ ist derselbe Schritt wie die Erststückfreigabe – siehe Themenblock 7."),
+        note("Hinweis: Die „Produktionsfreigabe“ ist derselbe Schritt wie die Erststückfreigabe (siehe Themenblock H oben)."),
 
-        blockHeading("2. Schichtergebnis Qualität/Quantität"),
-        akv("Verantwortung:", "Sicherstellung der geplanten Produktionsmenge und der geforderten Bauteilqualität während der Schicht. Bei Abweichungen von der Produktionsplanung (z. B. durch Störungen): Rückmeldung an Produktionsplanung/Produktionsleitung."),
-
-        blockHeading("3. Fehlerbewertung, Sperren, Transport gesperrter Ware"),
-        akv("Aufgabe:", "Bewertung gemeldeter Fehler (Fehlermeldungen der Werker) gemeinsam mit PQB auf Schicht-/Team-Ebene; Entscheidung über Sperrung fehlerhafter Produkte. Anweisung an Lager bzw. Produktionslogistiker zum Transport gesperrter Ware ins gesperrte Lager."),
-
-        blockHeading("4. Personalverantwortung Schicht"),
-        akv("Verantwortung:", "Personalverantwortung für die unterstellten Werker der Schicht, inkl. Sicherheit, Ordnung und Sauberkeit am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen bei den unterstellten Werkern (Produktionsleiter als Eskalationsstufe)."),
-        akv("Aufgabe:", "Personalführung der Schicht (Einteilung, Feedback, Konfliktmanagement)."),
-
-        blockHeading("5. Produktions- und Qualitätsaufzeichnungen"),
-        akv("Aufgabe:", "Durchführung/Erstellung der vereinbarten Produktions- und Qualitätsaufzeichnungen der Schicht (z. B. Schichtlogbuch, Prüfbegleitkarte)."),
-
-        blockHeading("6. Restmaterialentsorgung"),
+        blockHeading("6. Restmaterialentsorgung – Spritzguss-spezifisch"),
         akv("Aufgabe:", "Ausgespritztes Material sortenrein in Restmüllgebinde bzw. vorgeschriebene Container entsorgen."),
 
-        blockHeading("7. Freigabeprüfungen"),
-        akv("Aufgabe:", "Erststück-/Letztstückfreigabe sowie erneute Freigabe nach geplanten/ungeplanten Produktionsunterbrechungen >30 min, jeweils gemeinsam mit PQB lt. Prüfbegleitkarte. Dies ist derselbe Schritt wie die Produktionsfreigabe nach der Parametrierung (Themenblock 1) – kein separater, vorgelagerter Freigabeschritt."),
-
-        blockHeading("8. Einfache Werkzeug-Wartungstätigkeiten"),
+        blockHeading("8. Einfache Werkzeug-Wartungstätigkeiten – Spritzguss-spezifisch"),
         akv("Aufgabe:", "Durchführung einfacher Werkzeug-Wartungstätigkeiten am eingebauten Werkzeug (z. B. Reinigung, Schmierung beim Rüstvorgang). Tiefergehende Wartung, Reparatur und Instandhaltung obliegt der Teamleitung Werkzeugbau."),
 
         blockHeading("9. Schichtübergabe"),
-        akv("Aufgabe:", "Durchführung der Schichtübergabe an den nachfolgenden Schichtführer: Weitergabe des aktuellen Produktions- und Qualitätsstatus je Maschine, offener Vorkommnisse und laufender Maßnahmen, dokumentiert im Schichtlogbuch."),
+        akv("Aufgabe:", "Durchführung der Schichtübergabe an den nachfolgenden Schichtführer: Weitergabe des aktuellen Produktions- und Qualitätsstatus je Maschine, offener Vorkommnisse und laufender Maßnahmen, dokumentiert im Schichtlogbuch (einziges Dokumentationsmittel für die Schichtübergabe)."),
+
+        // ============ 7.5.3.4 MONTAGE ============
+        roleHeading("7.5.3.4 Teamleitung Montage"),
+        note("Führungsrolle im Hauptprozess (siehe oben). Besonderheit gegenüber Teamleitung Spritzguss-Produktion: Die Teamleitung Montage arbeitet operativ mit (kein reines Führungs-/Überwachungsprofil)."),
+
+        blockHeading("1. Ausführung der Montagetätigkeiten"),
+        akv("Aufgabe:", "Durchführung der Montagetätigkeiten – sowohl an manuellen Montagetischen als auch an Montageautomaten (integrierter Bestandteil der Montage, ebenfalls durch Montagepersonal betreut) – gemäß Produktions- bzw. Auftragsplanung. Bei Montageautomaten zusätzlich: Betrieb, Überprüfung des störungsfreien Betriebs, kleinere Wartungsarbeiten und Störungsmeldung an Instandhaltung."),
+        note("Abgrenzung zu Teamleitung Spritzguss-Produktion: Dort überwacht/parametriert die Teamleitung die Maschinen, die Werker führen die Handarbeiten aus. Bei Montage arbeitet die Teamleitung selbst aktiv operativ mit."),
+
+        blockHeading("2. Qualitätskontrolle"),
+        akv("Aufgabe:", "Qualitätskontrolle der montierten Produkte gemäß Arbeitsanweisung."),
+
+        blockHeading("3. Materialbereitstellung am Arbeitsplatz"),
+        p("Die Montage verfügt über zwei bereichsnahe Lagerbereiche – ein Lager für Halbfertigfabrikate und ein vergleichsweise großes Kaufteilelager. Einlagerung, Organisation, Lagerstand und Kennzeichnung dieser Lagerbereiche erfolgen durch die Produktionslogistik, nicht durch die Montage."),
+        akv("Aufgabe:", "Entnahme der benötigten Materialien (Kaufteile, Halbfertigfabrikate) aus den bereichsnahen Regalen/Blocklagern zu den Montagetischen, für den aktuellen und die nachfolgenden Aufträge – durch Montage-Mitarbeiter und die Teamleitung Montage selbst."),
+
+        blockHeading("4. Verpackung in Ausliefergebinde"),
+        p("Da sowohl an den Montagetischen als auch an den Montageautomaten größtenteils fertige, versandfähige Teile produziert werden, die direkt ins Versandlager und anschließend zum Kunden gehen, fällt bei einem Großteil der Montage-Teile die Verpackung an."),
+        akv("Aufgabe:", "Verpackung der fertigen Teile (aus Montagetischen und Montageautomaten) in die vorgesehenen Ausliefergebinde."),
+
+        // ============ NEU: ENDFERTIGUNG ============
+        roleHeading("7.5.3.12 Teamleitung Endfertigung"),
+        note("Führungsrolle im Hauptprozess (siehe oben); neuer Bereich, in Version k nicht enthalten. Teamleitung Endfertigung = Teamleitung Produktionskoordination in Personalunion, daher keine regelmäßige operative Mitarbeit wie bei Teamleitung Montage."),
+
+        blockHeading("1. Aufgabenbereich Fertigungsschritte"),
+        p("Endfertigung übernimmt Fertigungsschritte, die nicht bereits im Spritzguss integriert sind – insbesondere nachträgliches Entgraten/Schleifen von Spritzgussteilen, Stanzen sowie Kleben von Zusatzteilen (unlösbares Fügen). Abgrenzung zu Montage: Montage komplettiert/fügt lösbar (z. B. Verschrauben), Endfertigung führt Fertigungsschritte aus bzw. fügt unlösbar. Der Aufgabenumfang ist dynamisch, da Fertigungsschritte nach Möglichkeit vorgelagert in den Spritzguss integriert werden."),
+        akv("Aufgabe:", "Im Unterschied zu Teamleitung Montage arbeitet die Teamleitung Endfertigung nicht regelmäßig operativ mit – sie übernimmt zusätzlich die Funktion Produktionskoordination (Personalunion). Operative Mitarbeit erfolgt nur ausnahmsweise bei Bedarfsspitzen, im Sinne ihrer Verantwortung für die Liefertreue."),
+
+        blockHeading("2. Überwachung Produktionsparameter und Vormaterialien/Betriebsstoffe"),
+        akv("Aufgabe:", "Überwachung und Einhaltung der Produktionsparameter sowie der ausschließlichen Verwendung geeigneter Vormaterialien/Betriebsstoffe – insbesondere Sicherstellung der Haltbarkeit/Gültigkeit des verwendeten Klebstoffs (kein Einsatz abgelaufener Klebstoffchargen)."),
+
+        // ============ 7.5.3.10 LAGER ============
+        roleHeading("7.5.3.10 Teamleitung Lager"),
+        note("Führungsrolle im Hauptprozess (siehe oben). Hinweis zum Umfang: Der Produktionsleiter ist nicht für die Lagerprozesse allgemein zuständig – hier wird nur der Teil beschrieben, der im Auftragsabwicklungsprozess der Produktion relevant ist."),
+
+        blockHeading("1. Warenannahme und -ausgang"),
+        akv("Aufgabe:", "Be- und Entladen von LKWs (Wareneingang/-ausgang); Kommissionierung und Versand der Aufträge."),
+
+        blockHeading("2. Lagerorganisation"),
+        akv("Aufgabe:", "Organisation der (zentralen) Lagerbereiche, Lagerstand und Kennzeichnung; Einlagerung der von den Produktionsbereichen (Spritzguss, Montage, Endfertigung) produzierten Ware."),
+
+        blockHeading("3. Materialvorbereitung Spritzguss"),
+        akv("Aufgabe:", "Vortrocknung und Bereitstellung der Rohstoffe (Granulat) sowie Verwaltung und Vorbereitung der Einlegeteile für den Spritzguss."),
+
+        blockHeading("4. Administrative Tätigkeiten"),
+        akv("Aufgabe:", "Buchungen im ERP-System (FOSS); Bestellanforderungen an den Einkauf; Bedarfsmeldung bei der Abfallentsorgung."),
+
+        blockHeading("5. Transport gesperrter Ware"),
+        akv("Aufgabe:", "Durchführung des Transports gesperrter Ware ins Gesperrt-Lager, auf Anweisung der jeweiligen Teamleitung/Schichtführung."),
+
+        blockHeading("6. Gebinde-Versorgung"),
+        akv("Aufgabe:", "Versorgung der Produktion mit Gebinden – bevorzugt möglichst direkt mit Ausliefergebinden, zur Vermeidung von Umpackaufwänden. Falls Auslieferbehälter nicht rechtzeitig zur Verfügung standen: Umpacken der Ware von internen Gebinden in Auslieferungsgebinde."),
+
+        blockHeading("7. Kundenspezifische Komplettierungen (Ausnahmefall)"),
+        p("Um unnötigen Aufwand in der Produktion durch Varianten zu vermeiden (kundenspezifische Variantenbildung möglichst spät im Prozess), werden manche kleinere, kundenspezifische Komplettierungsschritte erst im Lager statt in der Montage durchgeführt."),
+        akv("Aufgabe:", "Selten Durchführung kleinerer, kundenspezifischer Komplettierungsschritte im Lager gemäß Arbeitsanweisung – eigentlich Montagetätigkeiten, die hier ausnahmsweise vor Versand erledigt werden."),
+
+        // ============ GEMEINSAME BASIS: FÜHRUNGSROLLEN IN UNTERSTÜTZUNGSPROZESSEN ============
+        h("Gemeinsame AKV-Basis: Führungsrollen in Unterstützungsprozessen", HeadingLevel.HEADING_2),
+        note("Gilt für Teamleitung Instandhaltung und Teamleitung Werkzeugbau – Fach-/Führungsrollen, die Ressourcen/Betriebsmittel bereitstellen bzw. betriebsbereit halten, aber nicht Teil des Material-/Auftragsflusses selbst sind (im Unterschied zu den Rollen oben)."),
+
+        blockHeading("A. Personalverantwortung"),
+        akv("Verantwortung:", "Personalverantwortung für die unterstellten Mitarbeiter des Bereichs, inkl. Sicherheit, Ordnung und Sauberkeit am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen (Produktionsleiter als Eskalationsstufe)."),
+        akv("Aufgabe:", "Personalführung des Bereichs (Einteilung, Feedback, Konfliktmanagement)."),
+
+        blockHeading("B. Aufgabenliste als zentraler Eingangskanal"),
+        akv("Aufgabe:", "Abarbeitung/Priorisierung der Aufgabenliste, in die verschiedene Stakeholder (andere Teamleitungen, Produktionsleitung) Störungen/Anliegen eintragen."),
+
+        // ============ NEU: INSTANDHALTUNG ============
+        roleHeading("7.5.3.13 Teamleitung Instandhaltung"),
+        note("Fach-/Führungsrolle in Unterstützungsprozessen (siehe oben); neue Rolle, in Version k nicht enthalten. Zuständig für Maschinen, Anlagen und Infrastruktur inkl. Betriebsmittel, Fertigungshilfsmittel, Roboter und automatisierte Anlagen. Berichtet im Regelbetrieb direkt an den Produktionsleiter."),
+
+        blockHeading("1. Instandhaltungssystem"),
+        akv("Verantwortung:", "Betrieb eines dokumentierten, geplanten Instandhaltungssystems für die prozessrelevanten Anlagen; Einhaltung sicherheitstechnischer und gesetzlicher Bestimmungen."),
+        akvLabel("Aufgabe:"),
+        bullet("Durchführung von Reparaturen an Anlagen, Maschinen, Infrastruktur und Betriebsmitteln (reaktive Instandsetzung)"),
+        bullet("Planung, Anfertigung und Installation neuer/geänderter Betriebsmittel (z. B. Vorrichtungen, Anbaugeräte, Temperiergeräte)"),
+        bullet("Optimierung bestehender Anlagen"),
+        bullet("Mitwirkung an KVP/5S/Kaizen"),
+        bullet("Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan"),
+        bullet("Verwaltung von Ersatzteilen für Schlüsselanlagen, inkl. ordnungsgemäßer Lagerung (Verpackung, Konservierung)"),
+        bullet("Jährliche Überprüfung des Wartungsplans"),
+        bullet("Anlage und Pflege der Objektstammdaten (FOSS) für alle relevanten Anlagen, Betriebsmittel, Vorrichtungen etc."),
+        bullet("Beauftragung und Beaufsichtigung relevanter Prüfstellen für gesetzlich vorgeschriebene Prüfungen (z. B. Leitern, Hebezeuge, Anschlagmittel)"),
+        bullet("Abarbeitung der Aufgabenliste (Störungsmeldungen)"),
+        akv("Kompetenz:", "Festlegung von Instandhaltungszielen/-kennzahlen (z. B. OEE, MTBF, MTTR); bei Gefahr im Verzug Anlagen abstellen (Not-Halt-Kompetenz), mit Informationspflicht an die vorgesetzte Stelle. Meldepflicht bei Anlagenstörungen/Unfällen an die vorgesetzte Stelle."),
+
+        blockHeading("2. Abgrenzung zu Hersteller und Automatisierung"),
+        p("Instandhaltung deckt Wartung/Reparatur im Rahmen der eigenen Kapazitäten und Fachkenntnisse ab. Bei Reparaturen, die spezielles Herstellerwissen/-ersatzteile erfordern, erfolgt eine Beauftragung/Koordination mit dem jeweiligen Anlagenhersteller. Bei automatisierten Anlagen: mechanische/elektrische Instandhaltung liegt bei Instandhaltung, Programmierung/Konfiguration und tiefergehende automatisierungstechnische Themen liegen bei der Rolle Automatisierung."),
+
+        // ============ NEU: WERKZEUGBAU ============
+        roleHeading("7.5.3.14 Teamleitung Werkzeugbau"),
+        note("Fach-/Führungsrolle in Unterstützungsprozessen (siehe oben); neue Rolle, in Version k nicht enthalten. Zuständig für Werkzeugbau sowie Werkzeugwartung, -reparatur und -instandhaltung. Berichtet im Regelbetrieb direkt an den Produktionsleiter. Zusätzlich Lehrlingsausbildner für Werkzeugbautechniker."),
+
+        blockHeading("1. Werkzeug-/Betriebsmittelmanagement"),
+        akv("Verantwortung:", "Werkzeugbau sowie Wartung/Reparatur/Instandhaltung der Werkzeuge (inkl. Kundenwerkzeuge)."),
+        akvLabel("Aufgabe:"),
+        bullet("Werkzeugkennzeichnung (Kennnummer, Status, Eigentümer, Standort) – Kundenwerkzeuge dauerhaft/sichtbar gekennzeichnet"),
+        bullet("Lagerung und Schutz der Werkzeuge vor Beschädigung/Verschleiß"),
+        bullet("Rüst-/Werkzeugwechselprozesse"),
+        bullet("Verschleißteil-Programm"),
+        bullet("Dokumentation von Werkzeugänderungen/-modifikationen inkl. Änderungsstand"),
+        bullet("Bedarfserhebung und Bestellabwicklung von Roh-, Hilfs- und Betriebsstoffen/-mitteln für den Werkzeugbau"),
+        bullet("Gestaltung der Arbeitsplätze und Arbeitsvorbereitung im Werkzeugbau"),
+        bullet("Fehlermeldung bei Produktionsstörungen durch Werkzeuge an den Produktionsleiter"),
+        bullet("Abarbeitung der Aufgabenliste"),
+        akv("Kompetenz:", "Entscheidung über Werkzeugstatus (Produktion/Reparatur/Aussonderung); Sperren von Werkzeugen/Vorrichtungen und Einleitung von Korrekturmaßnahmen; Produktionsstopp bei Gefahr oder Formbeschädigung (Not-Halt-Kompetenz)."),
+
+        blockHeading("2. Abgrenzung zu Prozesstechnik und Bemusterung/Produkt-Projekttechnik"),
+        p("Werkzeugbau ist zuständig für Bau, Wartung, Reparatur und Instandhaltung der Werkzeuge auf Basis der bestehenden, freigegebenen technischen Spezifikation. Technische Änderungen am Werkzeug (Designänderungen, die Form/Funktion betreffen und ggf. eine erneute Kundenfreigabe erfordern) liegen nicht in der Entscheidungskompetenz des Werkzeugbaus, sondern werden über Prozesstechnik und Bemusterung bzw. die Produkt-/Projekttechnik entschieden."),
 
         // ============ übrige Rollen: noch unverändert Version k (Rohgerüst) ============
         new Paragraph({ children: [new PageBreak()] }),
@@ -286,15 +424,6 @@ const doc = new Document({
         bullet("Teile entgraten oder montieren (lt. Anweisung)"),
         bullet("Teile verpacken, etikettieren lt. Verpackungsvorschrift"),
         bullet("Mitwirkung Erststück / Letztstückfreigabe"),
-
-        roleHeading("7.5.3.4 Aufgaben Montage"),
-        bullet("Durchführen der Fertigungsarbeiten an Produkten der Produktionsmaschinen lt. Produktions- bzw. Auftragsplanung"),
-        bullet("Qualitätskontrolle der bearbeiteten Produkte lt. Arbeitsanweisung"),
-        bullet("Organisation der Lagerbereiche, Lagerstand u. Kennzeichnung"),
-        bullet("Verpackung der Produkte von Montageautomaten"),
-        bullet("Meldung an PQB / WE-Kontrolle bei festgestellten NIO Teilen / Lieferungen von Unterlieferanten"),
-        bullet("Sperren von fehlerhaften Produkten"),
-        bullet("Erststück / Letztstückfreigabe"),
 
         roleHeading("7.5.3.5 Aufgaben Boxenbauer"),
         bullet("Buchungen und Abtransport der Gebinde / Teile"),
@@ -347,19 +476,6 @@ const doc = new Document({
         bullet("Maßnahmenverfolgung bei Prozessänderungen"),
         bullet("Erststück / Letztstückfreigabe"),
         bullet("Erneute Freigabe nach Produktionsunterbrechung"),
-
-        roleHeading("7.5.3.10 Aufgaben Teamleitung Lager (Materialvorbereitung)"),
-        bullet("Be- und Entladen von LKWs"),
-        bullet("Organisation der Lagerbereiche, Lagerstand u. Kennzeichnung"),
-        bullet("Buchungen in FOSS ausführen"),
-        bullet("Sperren fehlerhafter Ware"),
-        bullet("Vortrocknung u. Bereitstellung der Rohstoffe"),
-        bullet("Verwaltung u. Vorbereitung der Einlegeteile"),
-        bullet("Einlagerung produzierter Ware"),
-        bullet("Transport gesperrter Ware ins Gesperrt-Lager"),
-        bullet("Kommissionierung und Versand"),
-        bullet("Bestellanforderungen an Einkauf"),
-        bullet("Bedarfsmeldung bei Abfallentsorgung"),
 
         roleHeading("7.5.3.11 Alle Mitarbeiter"),
         bullet("Informationen auf der Anschlagtafel beachten"),

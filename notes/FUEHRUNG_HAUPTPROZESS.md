@@ -78,7 +78,6 @@ stichprobenartig erfolgt, werden Fehler bei Kaufteilen häufig erst bei
 der Weiterverarbeitung festgestellt, nicht von der Produktionslogistik
 selbst (bei Teamleitung Montage tritt das aufgrund des hohen
 Kaufteilanteils verstärkt auf).
-Ware ins gesperrte Lager.
 
 ---
 
