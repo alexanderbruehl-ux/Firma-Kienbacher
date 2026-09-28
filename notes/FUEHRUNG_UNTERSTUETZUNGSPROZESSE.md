@@ -19,12 +19,30 @@ werden hier **einmal** dokumentiert, um Doppelungen zu vermeiden. Die
 einzelnen Rollen werden anschließend nur noch mit ihren bereichsspezifischen
 Ergänzungen versehen.
 
-**Status:** Grundgerüst angelegt, AKV-Inhalte noch nicht ausgearbeitet
-(wird nach Abschluss der Gruppe Hauptprozess bearbeitet, siehe
-PROJEKTSTATUS.md).
+**Status:** Themenblöcke der beiden Einzelrollen ausgearbeitet (siehe
+`INSTANDHALTUNG.md`, `WERKZEUGBAU.md`); normative Grundlage: IATF 16949
+§8.5.1.5 (Instandhaltung) bzw. §8.5.1.6 (Werkzeugbau), jeweils
+Supplemental Requirement zu ISO 9001 §7.1.3 (Infrastruktur).
 
 ---
 
-## Gemeinsame AKV-Basis (noch zu erarbeiten)
+## Themenblock A: Personalverantwortung
 
-*(wird in einer späteren Diskussionsrunde gemeinsam erarbeitet)*
+Analog zu `FUEHRUNG_HAUPTPROZESS.md` Themenblock D.
+
+**Verantwortung:** Personalverantwortung für die unterstellten Mitarbeiter
+des Bereichs, inkl. Sicherheit, Ordnung und Sauberkeit am Arbeitsplatz.
+Erstverantwortung für disziplinarische Maßnahmen (Produktionsleiter als
+Eskalationsstufe, siehe PRODUKTIONSLEITER.md Themenblock 4).
+
+**Aufgabe:** Personalführung des Bereichs (Einteilung, Feedback,
+Konfliktmanagement) — Themenfeld Führung.
+
+---
+
+## Themenblock B: Aufgabenliste als zentraler Eingangskanal
+
+**Aufgabe:** Abarbeitung/Priorisierung der Aufgabenliste, in die
+verschiedene Stakeholder (andere Teamleitungen, Produktionsleitung)
+Störungen/Anliegen eintragen (siehe `FUEHRUNG_HAUPTPROZESS.md`
+Themenblock A).
