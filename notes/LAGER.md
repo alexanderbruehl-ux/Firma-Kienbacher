@@ -83,6 +83,15 @@ Ware von internen Gebinden in Auslieferungsgebinde.
 
 ---
 
+## Themenblock 7: Kundenspezifische Komplettierungen (Ausnahmefall)
+
+**Aufgabe:** Selten Durchführung kleinerer, kundenspezifischer
+Komplettierungsschritte im Lager gemäß Arbeitsanweisung — eigentlich
+Montagetätigkeiten (siehe `MONTAGE.md` Themenblock 1), die hier
+ausnahmsweise vor Versand erledigt werden.
+
+---
+
 ## Sonstiger Punkt der Originalliste (allgemeine Basis, siehe FUEHRUNG_HAUPTPROZESS.md)
 
 - Punkt 4 (Sperren fehlerhafter Ware) → Themenblock C
