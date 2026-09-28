@@ -140,3 +140,22 @@ Funktionsprüfung dieser Prüfanlagen mittels Referenz-/Prüfteilen
 (Gut-/Schlechtteile), um sicherzustellen, dass fehlerhafte Teile
 zuverlässig erkannt werden (IATF 16949 §10.2.4 „Error-proofing").
 Prüffrequenz gemäß Lenkungsplan (Control Plan).
+
+---
+
+## Themenblock J: Kundenreklamationen — Sofortmaßnahmen
+
+**Aufgabe:**
+- Umsetzung von Sofortmaßnahmen bei Kundenreklamationen: 100%-Kontrolle
+  der betroffenen Teile/Bestände, Sensibilisierung und Unterweisung der
+  Mitarbeiter, Mithilfe bei der Eingrenzung des Fehlerzeitraums bzw. des
+  ersten Auftretens
+- Sicherstellung der Einhaltung geänderter Arbeitsanweisungen, die im
+  Zuge der Reklamation angepasst wurden (Unterweisung erfolgt durch
+  Teamleitung oder QS)
+
+**Kompetenz:** Gemeinsame Definition (mit QS/QMB) von Vermeidungs- und
+Abstellmaßnahmen sowie Sicherstellung von deren Einhaltung.
+
+(Anknüpfung an Themenblock C sowie an PRODUKTIONSLEITER.md
+Themenblock 5/8 auf Gesamtebene.)
