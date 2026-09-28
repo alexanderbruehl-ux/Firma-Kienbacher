@@ -14,6 +14,13 @@ Regelbetrieb direkt an den Produktionsleiter. Zusätzlich
 Lehrlingsausbildner für Werkzeugbautechniker (siehe PRODUKTIONSLEITER.md
 Themenblock 9).
 
+**Hinweis zur Rollenstruktur:** Es existieren zwei Stellenbeschreibungen
+(Schwerpunkt „Führung & Organisation" bzw. „Technik & Technologie"), im
+aktuellen Organigramm aber (wegen Eindeutigkeit) als eine Position
+„Teamleiter Werkzeugbau" geführt (aktuell Florian Fischereder). Hier
+daher als eine Rolle behandelt; die Aufteilung wird bei der separaten
+Diskussion von Organigramm/Stellenbeschreibungen erneut aufgegriffen.
+
 ---
 
 ## Themenblock 1: Werkzeug-/Betriebsmittelmanagement
@@ -33,11 +40,24 @@ Werkzeuge (inkl. Kundenwerkzeuge).
   `FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md` Themenblock B)
 
 **Kompetenz:** Entscheidung über Werkzeugstatus (Produktion/Reparatur/
-Aussonderung).
+Aussonderung); Sperren von Werkzeugen/Vorrichtungen und Einleitung von
+Korrekturmaßnahmen; Produktionsstopp bei Gefahr oder Formbeschädigung
+(Not-Halt-Kompetenz).
 
 ---
 
-## Themenblock 2: Abgrenzung zu Prozesstechnik und Bemusterung/Produkt-Projekttechnik
+## Themenblock 2: Ergänzende Aufgaben (aus Stellenbeschreibungen TL Werkzeugbau)
+
+**Aufgabe:**
+- Bedarfserhebung und Bestellabwicklung von Roh-, Hilfs- und
+  Betriebsstoffen/-mitteln für den Werkzeugbau
+- Gestaltung der Arbeitsplätze und Arbeitsvorbereitung im Werkzeugbau
+- Fehlermeldung bei Produktionsstörungen durch Werkzeuge an den
+  Produktionsleiter
+
+---
+
+## Themenblock 3: Abgrenzung zu Prozesstechnik und Bemusterung/Produkt-Projekttechnik
 
 Werkzeugbau ist zuständig für Bau, Wartung, Reparatur und Instandhaltung
 der Werkzeuge auf Basis der bestehenden, freigegebenen technischen
