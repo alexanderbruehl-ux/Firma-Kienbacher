@@ -48,7 +48,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: Produktionskoordination (Organisation/Personal)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
-| **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
 | **NEU: Automatisierung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 
 Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
@@ -88,9 +88,14 @@ Beide Rollen noch nicht in `working/*.docx` eingearbeitet.
 1–4, siehe `MONTAGE.md`); Themenblock C in `FUEHRUNG_HAUPTPROZESS.md`
 wurde um die Rückmeldung fehlerhafter Kaufteile ergänzt.
 
-Als Nächstes: **Teamleitung Endfertigung** bearbeiten (nur bereichs-
-spezifische Ergänzungen zur gemeinsamen Basis), danach Teamleitung Lager,
-danach die Gruppe Unterstützungsprozesse (Instandhaltung, Werkzeugbau).
+**Teamleitung Endfertigung** ist inhaltlich vollständig abgestimmt
+(Themenblöcke 1–2, siehe `ENDFERTIGUNG.md`).
+
+Als Nächstes: **Teamleitung Lager** bearbeiten, danach die Gruppe
+Unterstützungsprozesse (Instandhaltung, Werkzeugbau), danach die
+separate Rolle **Produktionskoordination** (Personalunion mit
+Teamleitung Endfertigung, aber inhaltlich eigenständig — Vertretung des
+Produktionsleiters Bereich Organisation/Personal).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
