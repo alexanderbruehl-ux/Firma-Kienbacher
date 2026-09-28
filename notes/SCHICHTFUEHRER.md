@@ -1,17 +1,18 @@
 # Rolle: Teamleitung Spritzguss-Produktion (Schichtführer) — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung** — Originalliste Version k vollständig abgearbeitet
-(Themenblöcke 1–8).
+Status: **inhaltlich abgeschlossen.** Originalliste Version k vollständig
+abgearbeitet. Allgemeine AKV-Punkte wurden nach `FUEHRUNG_HAUPTPROZESS.md`
+verallgemeinert (gemeinsame Basis für alle Führungsrollen im Hauptprozess);
+hier verbleiben nur die Spritzguss-spezifischen Details plus die
+schichtspezifische Besonderheit (Schichtübergabe).
 
-Alle nachfolgenden Punkte gelten als **inhaltlich abgestimmt** zwischen Alexander
-und Claude, sind aber noch **nicht** im working/*.docx eingearbeitet.
+Noch **nicht** im working/*.docx eingearbeitet.
 
 Diese Rolle gehört zur Gruppe **Führungsrollen im Hauptprozess** (siehe
 `FUEHRUNG_HAUPTPROZESS.md`) — allgemeine, für alle Rollen dieser Gruppe
-gültige AKV-Punkte werden dort zentral dokumentiert und hier nicht
-wiederholt, um Doppelungen zu vermeiden. Schichtführer und andere
-TeamleiterInnen unterscheiden sich grundsätzlich nicht; der relevanteste
-Unterschied ist die Schichtarbeit.
+gültige AKV-Punkte werden dort zentral dokumentiert. Schichtführer und
+andere TeamleiterInnen unterscheiden sich grundsätzlich nicht; der
+relevanteste Unterschied ist die Schichtarbeit.
 
 ---
 
@@ -33,9 +34,19 @@ Unterschied ist die Schichtarbeit.
 11. Erneute Freigabe nach geplanten/ungeplanten Produktionsunterbrechungen
     >30 min lt. Prüfbegleitkarte
 
+Zuordnung zu den Themenblöcken unten bzw. zur gemeinsamen Basis in
+`FUEHRUNG_HAUPTPROZESS.md`: 1+2 → Themenblock 1 (hier, Spritzguss-
+spezifisch) + Themenblock A (gemeinsame Basis); 3 → Themenblock B; 4+5 →
+Themenblock C; 6 → Themenblock D; 7 → Themenblock E; 8 → Themenblock G
+(hier, Spritzguss-spezifisch); 9 → Themenblock F (hier, Spritzguss-
+spezifisch); 10+11 → Themenblock H.
+
 ---
 
-## Themenblock 1: Maschinenüberwachung und Parametrierung (ex Punkt 1 „Überwachen der Produktionsmaschinen und richtige Materialförderung" + Punkt 2 „Umbau und Einstellung der Produktionsmaschinen und Produktionsfreigabe")
+## Themenblock 1: Maschinenüberwachung und Parametrierung — Spritzguss-spezifisch (ex Punkt 1 + 2)
+
+Spritzguss-spezifische Ausprägung von `FUEHRUNG_HAUPTPROZESS.md`
+Themenblock A.
 
 **Aufgabe:**
 - Überwachung der laufenden Produktionsmaschinen während der Schicht — inkl.
@@ -64,73 +75,29 @@ Unterschied ist die Schichtarbeit.
   Materialchargen) keine generelle/pauschale Lösung möglich ist
 - Bei technischen Störungen: Eskalation an Teamleitung Instandhaltung
   (Maschine, automatisierte Materialförderung) bzw. Teamleitung Werkzeugbau
-  (Werkzeugprobleme) bzw. Automatisierung
+  (Werkzeugprobleme) bzw. Automatisierung — per Eintrag in deren
+  Aufgabenliste (siehe FUEHRUNG_HAUPTPROZESS.md Themenblock A)
 
 **Hinweis:** Die „Produktionsfreigabe" aus Punkt 2 ist derselbe Schritt wie
-die Erststückfreigabe aus Punkt 10 — siehe Themenblock 7.
+die Erststückfreigabe aus Punkt 10 — siehe Themenblock 9 unten
+(Freigabeprüfungen, gemeinsame Basis Themenblock H).
 
 ---
 
-## Themenblock 2: Schichtergebnis Qualität/Quantität (ex Punkt 3 „Sicherstellen der produzierten Qualität und Quantität")
+## Themenblock 6: Restmaterialentsorgung — Spritzguss-spezifisch (ex Punkt 9)
 
-**Verantwortung:** Sicherstellung der geplanten Produktionsmenge und der
-geforderten Bauteilqualität während der Schicht — Klammer über die
-operativen Einzelaufgaben (Themenblock 1: Parametrierung; Themenblock 3:
-Fehlerbewertung/Sperren). Bei Abweichungen von der Produktionsplanung
-(z. B. durch Störungen): Rückmeldung an Produktionsplanung/Produktionsleitung.
-
----
-
-## Themenblock 3: Fehlerbewertung, Sperren, Transport gesperrter Ware (ex Punkt 4 + 5)
-
-**Aufgabe:** Bewertung gemeldeter Fehler (Fehlermeldungen der Werker)
-gemeinsam mit PQB auf Schicht-/Team-Ebene; Entscheidung über Sperrung
-fehlerhafter Produkte (analog Themenblock 10 beim Produktionsleiter, dort
-auf Gesamtebene mit QS). Anweisung an Lager bzw. Produktionslogistiker zum
-Transport gesperrter Ware ins gesperrte Lager.
-
----
-
-## Themenblock 4: Personalverantwortung Schicht (ex Punkt 6 „Verantwortlich der jeweilig unterstellten Werker einschl. Sicherheit, Ordnung und Sauberkeit")
-
-**Verantwortung:** Personalverantwortung für die unterstellten Werker der
-Schicht, inkl. Sicherheit (Arbeitssicherheit), Ordnung und Sauberkeit am
-Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen bei den
-unterstellten Werkern (Produktionsleiter als Eskalationsstufe, siehe
-PRODUKTIONSLEITER.md Themenblock 4).
-
-**Aufgabe:** Personalführung der Schicht (Einteilung, Feedback,
-Konfliktmanagement) — Themenfeld Führung.
-
----
-
-## Themenblock 5: Produktions- und Qualitätsaufzeichnungen (ex Punkt 7 „Durchführen der vereinbarten Produktions- u. Qualitätsaufzeichnungen")
-
-**Aufgabe:** Durchführung/Erstellung der vereinbarten Produktions- und
-Qualitätsaufzeichnungen der Schicht (z. B. Schichtprotokolle,
-Prüfbegleitkarte) — operative Umsetzung dessen, was der Produktionsleiter
-laut PRODUKTIONSLEITER.md Themenblock 7 organisatorisch sicherstellt.
-
----
-
-## Themenblock 6: Restmaterialentsorgung (ex Punkt 9 „Ausgespritztes Material in Restmüllgebinde und vorgeschriebene Container")
+Spritzguss-spezifische Ausprägung von `FUEHRUNG_HAUPTPROZESS.md`
+Themenblock F.
 
 **Aufgabe:** Ausgespritztes Material sortenrein in Restmüllgebinde bzw.
 vorgeschriebene Container entsorgen (Themenfeld Umwelt).
 
 ---
 
-## Themenblock 7: Freigabeprüfungen (ex Punkt 10 + 11, inkl. „Produktionsfreigabe" aus Punkt 2)
+## Themenblock 8: Einfache Werkzeug-Wartungstätigkeiten — Spritzguss-spezifisch (ex Punkt 8)
 
-**Aufgabe:** Erststück-/Letztstückfreigabe sowie erneute Freigabe nach
-geplanten/ungeplanten Produktionsunterbrechungen >30 min, jeweils gemeinsam
-mit PQB lt. Prüfbegleitkarte. Dies ist derselbe Schritt wie die
-„Produktionsfreigabe" nach der Parametrierung (Themenblock 1) — kein
-separater, vorgelagerter Freigabeschritt.
-
----
-
-## Themenblock 8: Einfache Werkzeug-Wartungstätigkeiten (ex Punkt 8 „Werkzeug-Wartungstätigkeiten durchführen")
+Spritzguss-spezifische Ausprägung von `FUEHRUNG_HAUPTPROZESS.md`
+Themenblock G.
 
 **Aufgabe:** Durchführung einfacher Werkzeug-Wartungstätigkeiten am
 eingebauten Werkzeug (z. B. Reinigung, Schmierung beim Rüstvorgang).
@@ -139,6 +106,20 @@ der Teamleitung Werkzeugbau (siehe PRODUKTIONSLEITER.md Themenblock 6).
 
 ---
 
-## Originalliste (Version k) — Status
+## Themenblock 9: Schichtübergabe (schichtspezifische Besonderheit, kein Punkt aus der Originalliste)
 
-Alle Punkte der Originalliste sind bearbeitet (Themenblöcke 1–8).
+**Aufgabe:** Durchführung der Schichtübergabe an den nachfolgenden
+Schichtführer: Weitergabe des aktuellen Produktions- und Qualitätsstatus
+je Maschine, offener Vorkommnisse und laufender Maßnahmen, dokumentiert im
+**Schichtlogbuch** (einziges Dokumentationsmittel für die Schichtübergabe —
+kein separates „Schichtbericht"-Dokument, siehe BEGRIFFE.md).
+
+---
+
+## Sonstige Punkte der Originalliste (allgemeine Basis, siehe FUEHRUNG_HAUPTPROZESS.md)
+
+- Punkt 3 (Qualität/Quantität) → Themenblock B
+- Punkt 4 + 5 (Fehlerbewertung, Sperren, Transport) → Themenblock C
+- Punkt 6 (Personalverantwortung) → Themenblock D
+- Punkt 7 (Aufzeichnungen) → Themenblock E
+- Punkt 10 + 11 (Freigabeprüfungen) → Themenblock H
