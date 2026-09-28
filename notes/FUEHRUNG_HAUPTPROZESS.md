@@ -128,3 +128,15 @@ Instandhaltung bzw. Teamleitung Werkzeugbau.
 **Aufgabe:** Erststück-/Letztstückfreigabe sowie erneute Freigabe nach
 geplanten/ungeplanten Produktionsunterbrechungen >30 min, jeweils
 gemeinsam mit PQB lt. Prüfbegleitkarte.
+
+---
+
+## Themenblock I: Poka-Yoke-Verifizierung („Dummy-Prüfung")
+
+Gilt für Bereiche mit integrierten (In-Line-)Prüfanlagen.
+
+**Aufgabe:** Regelmäßige Durchführung der vorgeschriebenen
+Funktionsprüfung dieser Prüfanlagen mittels Referenz-/Prüfteilen
+(Gut-/Schlechtteile), um sicherzustellen, dass fehlerhafte Teile
+zuverlässig erkannt werden (IATF 16949 §10.2.4 „Error-proofing").
+Prüffrequenz gemäß Lenkungsplan (Control Plan).
