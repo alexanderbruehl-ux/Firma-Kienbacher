@@ -43,7 +43,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 7 Produktionsplanung | ⬜ Noch nicht begonnen |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
 | 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
-| 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–6), siehe `LAGER.md` |
+| 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
 | **NEU: Produktionskoordination (Organisation/Personal)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
@@ -92,7 +92,7 @@ wurde um die Rückmeldung fehlerhafter Kaufteile ergänzt.
 (Themenblöcke 1–2, siehe `ENDFERTIGUNG.md`).
 
 **Teamleitung Lager** ist inhaltlich vollständig abgestimmt (Themenblöcke
-1–6, siehe `LAGER.md`) — damit ist die Gruppe **Führungsrollen im
+1–7, siehe `LAGER.md`) — damit ist die Gruppe **Führungsrollen im
 Hauptprozess** vollständig abgearbeitet.
 
 Als Nächstes: Gruppe **Unterstützungsprozesse** (Teamleitung
