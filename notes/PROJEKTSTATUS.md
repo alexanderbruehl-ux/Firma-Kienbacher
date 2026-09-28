@@ -67,25 +67,28 @@ Ressourcen-Bereitstellung „Mit was"):
 - **Unterstützungsprozesse** (`FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md`):
   Teamleitung Instandhaltung, Teamleitung Werkzeugbau
 
-Reihenfolge: zunächst gemeinsame AKV-Basis Hauptprozess erarbeiten, danach
-Schichtführer als nächste konkrete Rolle (schichtspezifische Ergänzungen),
-anschließend Montage/Endfertigung/Lager, danach die Gruppe
+Reihenfolge: gemeinsame AKV-Basis Hauptprozess ✅ erarbeitet (abgeleitet aus
+Schichtführer), danach Montage/Endfertigung/Lager, danach die Gruppe
 Unterstützungsprozesse.
 
 ## Nächster konkreter Schritt
 
 Rolle **Produktionsleiter** ist inhaltlich vollständig abgestimmt
-(Themenblöcke 1–14 + Abschnitt „Vertretung", siehe PRODUKTIONSLEITER.md) —
-noch nicht in `working/*.docx` eingearbeitet.
+(Themenblöcke 1–14 + Abschnitt „Vertretung", siehe PRODUKTIONSLEITER.md).
 
 **Teamleitung Spritzguss-Produktion (Schichtführer)** ist inhaltlich
-vollständig abgestimmt (Themenblöcke 1–8, siehe `SCHICHTFUEHRER.md`).
+vollständig abgestimmt: allgemeine AKV-Punkte in `FUEHRUNG_HAUPTPROZESS.md`
+(Themenblöcke A–H) verallgemeinert, `SCHICHTFUEHRER.md` enthält nur noch
+die Spritzguss-spezifischen Ausprägungen (Themenblöcke 1, 6, 8) sowie die
+schichtspezifische Besonderheit Schichtübergabe (Themenblock 9).
 
-Als Nächstes: gemeinsame AKV-Basis für die Gruppe **Führungsrollen im
-Hauptprozess** (`FUEHRUNG_HAUPTPROZESS.md`) aus Schichtführer ableiten,
-danach die übrigen Rollen dieser Gruppe (Teamleitung Montage, Teamleitung
-Endfertigung, Teamleitung Lager) jeweils nur mit ihren spezifischen
-Ergänzungen ausarbeiten.
+Beide Rollen noch nicht in `working/*.docx` eingearbeitet.
+
+Als Nächstes: **Teamleitung Montage** bearbeiten — nur noch die
+bereichsspezifischen Ergänzungen zur gemeinsamen Basis in
+`FUEHRUNG_HAUPTPROZESS.md` herausarbeiten (analog zum Vorgehen bei
+Schichtführer), danach Teamleitung Endfertigung und Teamleitung Lager,
+danach die Gruppe Unterstützungsprozesse (Instandhaltung, Werkzeugbau).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 

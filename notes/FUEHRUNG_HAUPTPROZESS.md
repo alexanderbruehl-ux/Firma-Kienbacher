@@ -24,11 +24,101 @@ und verweisen für alles Gemeinsame hierher — es soll im Dokument klar
 herauskommen, dass sich diese Führungsrollen grundsätzlich nicht
 unterscheiden.
 
-**Status:** Grundgerüst angelegt, AKV-Inhalte noch nicht ausgearbeitet
-(nächster Diskussionsschritt, siehe PROJEKTSTATUS.md).
+**Status:** Erarbeitet auf Basis der Schichtführer-Diskussion
+(siehe SCHICHTFUEHRER.md), noch zu prüfen/ergänzen bei Bearbeitung von
+Teamleitung Montage, Endfertigung und Lager.
 
 ---
 
-## Gemeinsame AKV-Basis (noch zu erarbeiten)
+## Themenblock A: Prozessmittelüberwachung und Parametrierung
 
-*(wird in der nächsten Diskussionsrunde gemeinsam erarbeitet)*
+**Aufgabe:**
+- Überwachung der im jeweiligen Prozessschritt eingesetzten Maschinen,
+  Anlagen, Werkzeuge und Vorrichtungen (Turtle-Dimension „Mit was") auf
+  ordnungsgemäßen Zustand und korrekte Einstellung/Parametrierung — z. B.
+  Spritzgussmaschinen (Teamleitung Spritzguss-Produktion), Montageautomaten/
+  Vorrichtungen (Teamleitung Montage), Bearbeitungs-/Klebeanlagen
+  (Teamleitung Endfertigung), Kommissionier-/Wiege-/Fördertechnik
+  (Teamleitung Lager)
+- Feinjustierung innerhalb definierter Grenzen auf Basis der
+  Ergebnisqualität, soweit für den Bereich zutreffend (z. B. bei
+  Spritzguss: Auswahl/Übertragen der Einstelldaten, Parameteranpassung
+  anhand Rückstellmustern/Prüfplan — siehe SCHICHTFUEHRER.md Themenblock 1
+  für das ausführliche Beispiel)
+
+**Kompetenz:**
+- Eigenständige fachliche Entscheidung im Rahmen der bereichseigenen
+  Prozessmittel
+- Bei technischen Störungen: Eskalation an die zuständige Fachrolle
+  (Teamleitung Instandhaltung für Maschinen/Anlagen, Teamleitung
+  Werkzeugbau für Werkzeuge, Automatisierung für automatisierte Systeme) —
+  konkret durch Eintrag in die jeweilige **Aufgabenliste** von
+  Instandhaltung bzw. Werkzeugbau (dort tragen verschiedene Stakeholder ein)
+
+---
+
+## Themenblock B: Ergebnisverantwortung Qualität/Quantität
+
+**Verantwortung:** Sicherstellung der geplanten Produktionsmenge und der
+geforderten Qualität im jeweiligen Verantwortungsbereich. Bei Abweichungen
+von der Produktionsplanung (z. B. durch Störungen): Rückmeldung an
+Produktionsplanung/Produktionsleitung.
+
+---
+
+## Themenblock C: Fehlerbewertung, Sperren, Transport gesperrter Ware
+
+**Aufgabe:** Bewertung gemeldeter Fehler gemeinsam mit PQB auf Schicht-/
+Team-Ebene; Entscheidung über Sperrung fehlerhafter Produkte (analog
+Themenblock 10 beim Produktionsleiter, dort auf Gesamtebene mit QS).
+Anweisung an Lager bzw. Produktionslogistiker zum Transport gesperrter
+Ware ins gesperrte Lager.
+
+---
+
+## Themenblock D: Personalverantwortung
+
+**Verantwortung:** Personalverantwortung für die unterstellten Mitarbeiter
+des Bereichs, inkl. Sicherheit (Arbeitssicherheit), Ordnung und Sauberkeit
+am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen bei den
+unterstellten Mitarbeitern (Produktionsleiter als Eskalationsstufe, siehe
+PRODUKTIONSLEITER.md Themenblock 4).
+
+**Aufgabe:** Personalführung des Bereichs (Einteilung, Feedback,
+Konfliktmanagement) — Themenfeld Führung.
+
+---
+
+## Themenblock E: Produktions- und Qualitätsaufzeichnungen
+
+**Aufgabe:** Durchführung/Erstellung der vereinbarten Produktions- und
+Qualitätsaufzeichnungen des Bereichs (z. B. Prüfbegleitkarte — die
+konkreten Aufzeichnungsmittel je Bereich sind bereichsspezifisch zu klären
+und **nicht** synonym zu verwenden, siehe BEGRIFFE.md).
+
+---
+
+## Themenblock F: Reststoff-/Abfallentsorgung
+
+**Aufgabe:** Sortenreine Entsorgung der im jeweiligen Prozessschritt
+anfallenden Reststoffe/Abfälle in die vorgeschriebenen Behälter/Container
+(Themenfeld Umwelt) — z. B. ausgespritztes Material (Teamleitung
+Spritzguss-Produktion), Verpackungsreste/Stanzabfälle (Teamleitung
+Montage), Schleifstaub/Klebstoffreste (Teamleitung Endfertigung).
+
+---
+
+## Themenblock G: Einfache Wartungstätigkeiten
+
+**Aufgabe:** Durchführung einfacher Wartungstätigkeiten an den
+bereichseigenen Betriebs-/Hilfsmitteln (z. B. Reinigung, Schmierung).
+Tiefergehende Wartung/Reparatur/Instandhaltung obliegt Teamleitung
+Instandhaltung bzw. Teamleitung Werkzeugbau.
+
+---
+
+## Themenblock H: Freigabeprüfungen
+
+**Aufgabe:** Erststück-/Letztstückfreigabe sowie erneute Freigabe nach
+geplanten/ungeplanten Produktionsunterbrechungen >30 min, jeweils
+gemeinsam mit PQB lt. Prüfbegleitkarte.
