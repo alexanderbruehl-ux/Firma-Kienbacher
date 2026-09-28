@@ -43,7 +43,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 7 Produktionsplanung | ⬜ Noch nicht begonnen |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
 | 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
-| 10 Lager (Materialvorbereitung) | ⬜ Noch nicht begonnen (Führung: Teamleitung Lager) |
+| 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–6), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
 | **NEU: Produktionskoordination (Organisation/Personal)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
@@ -91,11 +91,16 @@ wurde um die Rückmeldung fehlerhafter Kaufteile ergänzt.
 **Teamleitung Endfertigung** ist inhaltlich vollständig abgestimmt
 (Themenblöcke 1–2, siehe `ENDFERTIGUNG.md`).
 
-Als Nächstes: **Teamleitung Lager** bearbeiten, danach die Gruppe
-Unterstützungsprozesse (Instandhaltung, Werkzeugbau), danach die
-separate Rolle **Produktionskoordination** (Personalunion mit
-Teamleitung Endfertigung, aber inhaltlich eigenständig — Vertretung des
-Produktionsleiters Bereich Organisation/Personal).
+**Teamleitung Lager** ist inhaltlich vollständig abgestimmt (Themenblöcke
+1–6, siehe `LAGER.md`) — damit ist die Gruppe **Führungsrollen im
+Hauptprozess** vollständig abgearbeitet.
+
+Als Nächstes: Gruppe **Unterstützungsprozesse** (Teamleitung
+Instandhaltung, Teamleitung Werkzeugbau, siehe
+`FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md`), danach die separate Rolle
+**Produktionskoordination** (Personalunion mit Teamleitung Endfertigung,
+aber inhaltlich eigenständig — Vertretung des Produktionsleiters Bereich
+Organisation/Personal).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
