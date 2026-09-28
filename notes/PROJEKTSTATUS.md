@@ -46,7 +46,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 |---|---|
 | 1 Produktionsleiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–14 + Vertretung), siehe `PRODUKTIONSLEITER.md` — noch nicht in `working/*.docx` eingearbeitet |
 | 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–8), siehe `SCHICHTFUEHRER.md` — noch nicht in `working/*.docx` eingearbeitet |
-| 3 Maschinenpersonal (Werker) | ⬜ Noch nicht begonnen |
+| 3 Maschinenpersonal (Werker) | ✅ Inhaltlich fertig abgestimmt (Themenblock 1), siehe `WERKER.md` |
 | 4 Fertigung Montage → **Teamleitung Montage** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `MONTAGE.md` |
 | 5 Boxenbauer | ⬜ Noch nicht begonnen |
 | 6 Produktionslogistiker | ⬜ Noch nicht begonnen |
@@ -115,13 +115,17 @@ von Alexander noch zu ergänzen).
 Vertretung des Produktionsleiters Bereich Organisation/Personal) ist im
 wesentlichen Kern abgestimmt (siehe `PRODUKTIONSKOORDINATION.md`).
 
-Als Nächstes: eine der übrigen offenen Rollen, z. B. **Prozesstechnik und
-Bemusterung** oder **QS (Qualitätssicherung Produktion)** (beide Teil der
-Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`),
-oder eine der einfacheren Rollen ohne Vertretungsbezug (Werker,
-Boxenbauer, Produktionslogistiker, Produktionsplanung, Digitale
-Prozessentwicklung & Lean Management, PQB, Alle Mitarbeiter,
-Automatisierung).
+**Maschinenpersonal (Werker)** ist inhaltlich fertig abgestimmt (siehe
+`WERKER.md`).
+
+Alexander hat entschieden, zunächst die übrigen **einfacheren Rollen ohne
+Vertretungsbezug** durchzugehen: Boxenbauer, Produktionslogistiker,
+Produktionsplanung, Digitale Prozessentwicklung & Lean Management, PQB,
+Alle Mitarbeiter, Automatisierung. Danach folgen **Prozesstechnik und
+Bemusterung** sowie **QS (Qualitätssicherung Produktion)** (Teil der
+Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
+
+Als Nächstes: **Boxenbauer** (7.5.3.5).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
