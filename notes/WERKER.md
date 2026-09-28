@@ -1,7 +1,17 @@
-# Rolle: Maschinenpersonal (Werker) — AKV-Ausarbeitung (Zwischenstand)
+# Rolle: Werker — AKV-Ausarbeitung (Zwischenstand)
 
 Status: **inhaltlich abgeschlossen.** Basis: Version k (7.5.3.3), um
 Kompetenz-Abgrenzung sowie ergänzende Punkte erweitert.
+
+**Begriffsklärung:** „Werker" ist **kein Einzelbereich**, sondern der
+Sammelbegriff für das operativ tätige Fertigungspersonal in den
+Bereichen:
+- Maschinenpersonal (Spritzguss-Produktion)
+- Montagepersonal
+- Personal Endfertigung
+
+Der nachfolgende Themenblock gilt inhaltlich **identisch** für alle drei
+Bereiche.
 
 ---
 
