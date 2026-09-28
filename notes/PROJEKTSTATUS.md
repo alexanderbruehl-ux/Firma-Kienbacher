@@ -37,7 +37,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 1 Produktionsleiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–14 + Vertretung), siehe `PRODUKTIONSLEITER.md` — noch nicht in `working/*.docx` eingearbeitet |
 | 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–8), siehe `SCHICHTFUEHRER.md` — noch nicht in `working/*.docx` eingearbeitet |
 | 3 Maschinenpersonal (Werker) | ⬜ Noch nicht begonnen |
-| 4 Fertigung Montage → **Montage** (Umbenennung bereits beschlossen) | ⬜ Noch nicht begonnen |
+| 4 Fertigung Montage → **Teamleitung Montage** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `MONTAGE.md` |
 | 5 Boxenbauer | ⬜ Noch nicht begonnen |
 | 6 Produktionslogistiker | ⬜ Noch nicht begonnen |
 | 7 Produktionsplanung | ⬜ Noch nicht begonnen |
@@ -84,10 +84,12 @@ schichtspezifische Besonderheit Schichtübergabe (Themenblock 9).
 
 Beide Rollen noch nicht in `working/*.docx` eingearbeitet.
 
-Als Nächstes: **Teamleitung Montage** bearbeiten — nur noch die
-bereichsspezifischen Ergänzungen zur gemeinsamen Basis in
-`FUEHRUNG_HAUPTPROZESS.md` herausarbeiten (analog zum Vorgehen bei
-Schichtführer), danach Teamleitung Endfertigung und Teamleitung Lager,
+**Teamleitung Montage** ist inhaltlich vollständig abgestimmt (Themenblöcke
+1–4, siehe `MONTAGE.md`); Themenblock C in `FUEHRUNG_HAUPTPROZESS.md`
+wurde um die Rückmeldung fehlerhafter Kaufteile ergänzt.
+
+Als Nächstes: **Teamleitung Endfertigung** bearbeiten (nur bereichs-
+spezifische Ergänzungen zur gemeinsamen Basis), danach Teamleitung Lager,
 danach die Gruppe Unterstützungsprozesse (Instandhaltung, Werkzeugbau).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen

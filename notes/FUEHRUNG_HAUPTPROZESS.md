@@ -72,6 +72,12 @@ Produktionsplanung/Produktionsleitung.
 Team-Ebene; Entscheidung über Sperrung fehlerhafter Produkte (analog
 Themenblock 10 beim Produktionsleiter, dort auf Gesamtebene mit QS).
 Anweisung an Lager bzw. Produktionslogistiker zum Transport gesperrter
+Ware ins gesperrte Lager. Zusätzlich: Rückmeldung fehlerhafter Kaufteile
+an PQB/Wareneingangskontrolle — da die Wareneingangsprüfung überwiegend
+stichprobenartig erfolgt, werden Fehler bei Kaufteilen häufig erst bei
+der Weiterverarbeitung festgestellt, nicht von der Produktionslogistik
+selbst (bei Teamleitung Montage tritt das aufgrund des hohen
+Kaufteilanteils verstärkt auf).
 Ware ins gesperrte Lager.
 
 ---
