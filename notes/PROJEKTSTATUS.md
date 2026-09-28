@@ -46,7 +46,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 |---|---|
 | 1 Produktionsleiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–14 + Vertretung), siehe `PRODUKTIONSLEITER.md` — noch nicht in `working/*.docx` eingearbeitet |
 | 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–8), siehe `SCHICHTFUEHRER.md` — noch nicht in `working/*.docx` eingearbeitet |
-| 3 Maschinenpersonal (Werker) | ✅ Inhaltlich fertig abgestimmt (Themenblock 1), siehe `WERKER.md` |
+| 3 Maschinenpersonal (Werker) → **Werker** (Sammelbegriff für Maschinenpersonal, Montage- und Endfertigungspersonal) | ✅ Inhaltlich fertig abgestimmt (Themenblock 1, gilt identisch für alle drei Bereiche), siehe `WERKER.md` |
 | 4 Fertigung Montage → **Teamleitung Montage** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `MONTAGE.md` |
 | 5 Boxenbauer | ⬜ Noch nicht begonnen |
 | 6 Produktionslogistiker | ⬜ Noch nicht begonnen |
