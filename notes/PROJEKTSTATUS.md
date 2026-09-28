@@ -48,7 +48,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 2 Schichtführer → **Teamleitung Spritzguss-Produktion (Schichtführer)** (Umbenennung zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–8), siehe `SCHICHTFUEHRER.md` — noch nicht in `working/*.docx` eingearbeitet |
 | 3 Maschinenpersonal (Werker) → **Werker** (Sammelbegriff für Maschinenpersonal, Montage- und Endfertigungspersonal) | ✅ Inhaltlich fertig abgestimmt (Themenblock 1, gilt identisch für alle drei Bereiche), siehe `WERKER.md` |
 | 4 Fertigung Montage → **Teamleitung Montage** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `MONTAGE.md` |
-| 5 Boxenbauer | ⬜ Noch nicht begonnen |
+| 5 Boxenbauer | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `BOXENBAUER.md` |
 | 6 Produktionslogistiker | ⬜ Noch nicht begonnen |
 | 7 Produktionsplanung | ⬜ Noch nicht begonnen |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
@@ -125,7 +125,9 @@ Alle Mitarbeiter, Automatisierung. Danach folgen **Prozesstechnik und
 Bemusterung** sowie **QS (Qualitätssicherung Produktion)** (Teil der
 Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
 
-Als Nächstes: **Boxenbauer** (7.5.3.5).
+**Boxenbauer** ist inhaltlich fertig abgestimmt (siehe `BOXENBAUER.md`).
+
+Als Nächstes: **Produktionslogistiker** (7.5.3.6).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
