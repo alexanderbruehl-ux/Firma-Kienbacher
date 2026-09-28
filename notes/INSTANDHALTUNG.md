@@ -31,6 +31,8 @@ automatisierte Anlagen).
 - Jährliche Überprüfung des Wartungsplans
 - Anlage und Pflege der Objektstammdaten (FOSS) für alle relevanten
   Anlagen, Betriebsmittel, Vorrichtungen etc.
+- Beauftragung und Beaufsichtigung relevanter Prüfstellen für gesetzlich
+  vorgeschriebene Prüfungen (z. B. Leitern, Hebezeuge, Anschlagmittel)
 - Abarbeitung der Aufgabenliste (Störungsmeldungen, siehe
   `FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md` Themenblock B)
 
