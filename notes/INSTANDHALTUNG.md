@@ -25,7 +25,8 @@ automatisierte Anlagen).
 
 **Aufgabe:**
 - Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan
-- Verwaltung von Ersatzteilen für Schlüsselanlagen
+- Verwaltung von Ersatzteilen für Schlüsselanlagen, inkl. ordnungsgemäßer
+  Lagerung (Verpackung, Konservierung)
 - Verpackung/Konservierung von Anlagen/Betriebsmitteln bei Lagerung
 - Jährliche Überprüfung des Wartungsplans
 - Abarbeitung der Aufgabenliste (Störungsmeldungen, siehe
