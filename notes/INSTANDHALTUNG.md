@@ -16,7 +16,7 @@ Produktionsleiter.
 
 ---
 
-## Themenblock 1: TPM-System (IATF 16949 §8.5.1.5 „Total Productive Maintenance")
+## Themenblock 1: TPM-System
 
 **Verantwortung:** Betrieb eines dokumentierten, geplanten
 Instandhaltungssystems für die prozessrelevanten Anlagen (Maschinen,
@@ -29,6 +29,8 @@ automatisierte Anlagen).
   Lagerung (Verpackung, Konservierung)
 - Verpackung/Konservierung von Anlagen/Betriebsmitteln bei Lagerung
 - Jährliche Überprüfung des Wartungsplans
+- Anlage und Pflege der Objektstammdaten (FOSS) für alle relevanten
+  Anlagen, Betriebsmittel, Vorrichtungen etc.
 - Abarbeitung der Aufgabenliste (Störungsmeldungen, siehe
   `FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md` Themenblock B)
 

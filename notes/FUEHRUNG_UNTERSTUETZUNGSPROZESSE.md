@@ -43,9 +43,8 @@ einzelnen Rollen werden anschließend nur noch mit ihren bereichsspezifischen
 Ergänzungen versehen.
 
 **Status:** Themenblöcke der beiden Einzelrollen ausgearbeitet (siehe
-`INSTANDHALTUNG.md`, `WERKZEUGBAU.md`); normative Grundlage: IATF 16949
-§8.5.1.5 (Instandhaltung) bzw. §8.5.1.6 (Werkzeugbau), jeweils
-Supplemental Requirement zu ISO 9001 §7.1.3 (Infrastruktur).
+`INSTANDHALTUNG.md`, `WERKZEUGBAU.md`); normative Grundlage: ISO 9001
+§7.1.3 (Infrastruktur).
 
 ---
 
