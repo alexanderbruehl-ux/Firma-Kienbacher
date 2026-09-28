@@ -55,7 +55,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
-| **NEU: Produktionskoordination (Organisation/Personal)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: Produktionskoordination (Organisation/Personal)** | 🔶 Wesentlicher Kern abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
@@ -107,12 +107,21 @@ wurde um die Rückmeldung fehlerhafter Kaufteile ergänzt.
 1–7, siehe `LAGER.md`) — damit ist die Gruppe **Führungsrollen im
 Hauptprozess** vollständig abgearbeitet.
 
-Als Nächstes: Gruppe **Unterstützungsprozesse** (Teamleitung
-Instandhaltung, Teamleitung Werkzeugbau, siehe
-`FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md`), danach die separate Rolle
+Gruppe **Unterstützungsprozesse** (Teamleitung Instandhaltung, Teamleitung
+Werkzeugbau) ist mit Normrahmen abgestimmt (betriebsspezifische Details
+von Alexander noch zu ergänzen).
+
 **Produktionskoordination** (Personalunion mit Teamleitung Endfertigung,
-aber inhaltlich eigenständig — Vertretung des Produktionsleiters Bereich
-Organisation/Personal).
+Vertretung des Produktionsleiters Bereich Organisation/Personal) ist im
+wesentlichen Kern abgestimmt (siehe `PRODUKTIONSKOORDINATION.md`).
+
+Als Nächstes: eine der übrigen offenen Rollen, z. B. **Prozesstechnik und
+Bemusterung** oder **QS (Qualitätssicherung Produktion)** (beide Teil der
+Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`),
+oder eine der einfacheren Rollen ohne Vertretungsbezug (Werker,
+Boxenbauer, Produktionslogistiker, Produktionsplanung, Digitale
+Prozessentwicklung & Lean Management, PQB, Alle Mitarbeiter,
+Automatisierung).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
