@@ -236,6 +236,10 @@ const doc = new Document({
         bullet("Regelfall (kurzfristige Abwesenheit): Vertretung übt die Aufgaben/Kompetenzen des Fachbereichs aus, jedoch nicht die weitreichendsten Entscheidungsbefugnisse (z. B. Neueinstellungen)"),
         bullet("Bei längerer Abwesenheit (Richtwert 4–6 Wochen): erweiterte Befugnisse – auch weitreichende Entscheidungen gehen auf die Vertretung über"),
 
+        // ============ TEAMLEITUNGSFUNKTIONEN (GRUPPENÜBERSCHRIFT) ============
+        roleHeading("Teamleitungsfunktionen (Führungsrollen im Hauptprozess und in Unterstützungsprozessen)"),
+        note("Umfasst: Teamleitung Spritzguss-Produktion (Schichtführer), Montage, Endfertigung, Lager, Instandhaltung, Werkzeugbau."),
+
         // ============ GEMEINSAME BASIS: FÜHRUNGSROLLEN IM HAUPTPROZESS ============
         h("Gemeinsame AKV-Basis: Führungsrollen im Hauptprozess", HeadingLevel.HEADING_2),
         note("Gilt für Teamleitung Spritzguss-Produktion (Schichtführer), Teamleitung Montage, Teamleitung Endfertigung, Teamleitung Lager (End2End-Auftragsabwicklung, Turtle-Diagramm-Logik: Input-Bereitstellung/Transformation/Output-Versand). Allgemeine Punkte werden hier einmal dokumentiert; die einzelnen Rollen unten enthalten nur noch ihre spezifischen Ergänzungen."),
