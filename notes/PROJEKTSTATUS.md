@@ -49,7 +49,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 3 Maschinenpersonal (Werker) → **Werker** (Sammelbegriff für Maschinenpersonal, Montage- und Endfertigungspersonal) | ✅ Inhaltlich fertig abgestimmt (Themenblock 1, gilt identisch für alle drei Bereiche), siehe `WERKER.md` |
 | 4 Fertigung Montage → **Teamleitung Montage** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `MONTAGE.md` |
 | 5 Boxenbauer | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `BOXENBAUER.md` |
-| 6 Produktionslogistiker | ⬜ Noch nicht begonnen |
+| 6 Produktionslogistiker | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–3), siehe `PRODUKTIONSLOGISTIKER.md` |
 | 7 Produktionsplanung | ⬜ Noch nicht begonnen |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
 | 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
@@ -127,7 +127,10 @@ Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
 
 **Boxenbauer** ist inhaltlich fertig abgestimmt (siehe `BOXENBAUER.md`).
 
-Als Nächstes: **Produktionslogistiker** (7.5.3.6).
+**Produktionslogistiker** ist inhaltlich fertig abgestimmt (siehe
+`PRODUKTIONSLOGISTIKER.md`).
+
+Als Nächstes: **Produktionsplanung** (7.5.3.7).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
