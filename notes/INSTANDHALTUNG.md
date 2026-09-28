@@ -24,6 +24,8 @@ Anlagen, Infrastruktur, Betriebsmittel, Fertigungshilfsmittel, Roboter,
 automatisierte Anlagen).
 
 **Aufgabe:**
+- Durchführung von Reparaturen an Anlagen, Maschinen, Infrastruktur und
+  Betriebsmitteln (reaktive Instandsetzung)
 - Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan
 - Verwaltung von Ersatzteilen für Schlüsselanlagen, inkl. ordnungsgemäßer
   Lagerung (Verpackung, Konservierung)
