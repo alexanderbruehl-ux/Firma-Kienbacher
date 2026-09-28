@@ -24,7 +24,7 @@ Anlagen, Infrastruktur, Betriebsmittel, Fertigungshilfsmittel, Roboter,
 automatisierte Anlagen).
 
 **Aufgabe:**
-- Vorbeugende und ggf. vorausschauende Instandhaltung nach Wartungsplan
+- Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan
 - Verwaltung von Ersatzteilen für Schlüsselanlagen
 - Verpackung/Konservierung von Anlagen/Betriebsmitteln bei Lagerung
 - Jährliche Überprüfung des Wartungsplans
