@@ -216,7 +216,8 @@ def bauen(pfade: list[Path], titel: str) -> str:
     return TEMPLATE.format(titel=esc(titel), karten=karten)
 
 
-TEMPLATE = '''<title>{titel}</title>
+TEMPLATE = '''<meta charset="utf-8">
+<title>{titel}</title>
 <meta name="description" content="Dateien im Original herunterladen - zum Oeffnen, Bearbeiten und Drucken im jeweiligen Programm." />
 <style>
   :root {{ --bg:#EFEEEA; --panel:#FFFFFF; --ink:#1B1F22; --muted:#6B6F73; --accent:#0079A7; --accent-ink:#00435C; --line:#D8DBDD; }}

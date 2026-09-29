@@ -176,7 +176,8 @@ def bauen(pfade: list[Path], titel: str, mit_download: bool = True) -> str:
                            tabs="\n".join(tabs), sections="\n".join(sections))
 
 
-TEMPLATE = '''<title>Vorschaufenster</title>
+TEMPLATE = '''<meta charset="utf-8">
+<title>Vorschaufenster</title>
 <style>
   @font-face {{ font-family: 'Track'; src: url(data:font/ttf;base64,{track_b64}) format('truetype'); font-display: swap; }}
   :root {{ --bg:#EFEEEA; --panel:#FFFFFF; --ink:#1B1F22; --muted:#6B6F73; --accent:#0079A7; --accent-ink:#00435C; --line:#D8DBDD; }}
