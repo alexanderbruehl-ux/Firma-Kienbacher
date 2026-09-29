@@ -1,0 +1,67 @@
+{
+  "karte": {
+    "id": "RK-008",
+    "revision": "0.2",
+    "datum": "2026-09-29",
+    "status": "freigegeben",
+    "bereich": "PRODUKTION",
+    "verfasser": "A. Brühl",
+    "pruefer": "Anna Felcova",
+    "freigeber": "Alexander Brühl",
+    "offene_fragen": []
+  },
+  "kopf": {
+    "eyebrow": "KIENBACHER AKADEMIE   /   PRODUKTION",
+    "titel": "Was mache ich, wenn Material fehlt?",
+    "untertitel": "Melden, Bestand prüfen und Material bereitstellen"
+  },
+  "bloecke": [
+    {
+      "typ": "schritt",
+      "titel": "VOR PRODUKTIONSBEGINN",
+      "rolle": "Produktionslogistik",
+      "text": "Erhält die Stückliste von der Produktionsplanung und prüft in ARLG, ob genügend Material und Kaufteile vorhanden sind. Fehlmengen meldet sie an die Produktionsplanung und verantwortet die Materialbereitstellung."
+    },
+    {
+      "typ": "schritt",
+      "titel": "WÄHREND DER LAUFENDEN PRODUKTION",
+      "rolle": "Mitarbeitende",
+      "text": "Melden: „Ich habe kein Material.“ Ansprechpartner ist die Produktionslogistik."
+    },
+    {
+      "typ": "schritt",
+      "titel": "PRODUKTIONSLOGISTIK PRÜFT",
+      "rolle": "Produktionslogistik",
+      "text": "Kontrolliert den Bestand in ARLG und den tatsächlichen Bestand im Lager."
+    },
+    {
+      "typ": "entscheidung",
+      "frage": "Ist Material vorhanden?",
+      "ja": {
+        "label": "JA",
+        "titel": "MATERIAL BESCHAFFEN",
+        "text": "Produktionslogistik bringt Material oder beauftragt das Lager, es zum Übergabeplatz zu bringen. Sie organisiert die Bereitstellung und führt Systemumbuchungen durch."
+      },
+      "nein": {
+        "label": "NEIN",
+        "titel": "SCHICHTFÜHRER INFORMIEREN",
+        "text": "Produktionslogistik korrigiert bei bestätigter Bestandsabweichung den Systembestand und informiert den Schichtführer. Ist Weiterproduktion unmöglich, stoppt er die Produktion und informiert die Produktionsplanung: „Die Produktion wurde wegen fehlenden Materials gestoppt.“"
+      }
+    },
+    {
+      "typ": "wer_macht_was",
+      "zeilen": [
+        { "rolle": "Mitarbeitende", "aufgabe": "Materialmangel an Produktionslogistik melden." },
+        { "rolle": "Produktionslogistik", "aufgabe": "Bestände prüfen, Material bereitstellen, Umbuchungen und bestätigte Bestandskorrekturen durchführen; Mangel melden." },
+        { "rolle": "Lager", "aufgabe": "Material auf Anforderung zum Übergabeplatz bringen." },
+        { "rolle": "Schichtführer", "aufgabe": "Über Stopp entscheiden und Produktionsplanung informieren." },
+        { "rolle": "Produktionsplanung", "aufgabe": "Stückliste übergeben; Fehlmengen- und Stoppmeldung erhalten." }
+      ]
+    },
+    {
+      "typ": "abschluss",
+      "label": "WEITERARBEITEN WENN",
+      "kriterien": ["Benötigtes Material am Arbeitsplatz bereitsteht."]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "karte": {
+    "id": "RK-009",
+    "revision": "0.2",
+    "datum": "2026-09-29",
+    "status": "freigegeben",
+    "bereich": "PRODUKTION",
+    "verfasser": "A. Brühl",
+    "pruefer": "Anna Felcova",
+    "freigeber": "Alexander Brühl",
+    "offene_fragen": []
+  },
+  "kopf": {
+    "eyebrow": "KIENBACHER AKADEMIE   /   PRODUKTION",
+    "titel": "Was mache ich bei einer Maschinenstörung?",
+    "untertitel": "Melden, Reparatur organisieren und Personaleinsatz klären"
+  },
+  "bloecke": [
+    {
+      "typ": "entscheidung",
+      "frage": "Kann der Schichtführer die Störung selbst beheben?",
+      "ja": {
+        "label": "JA",
+        "titel": "SCHICHTFÜHRER BEHEBT DIE STÖRUNG",
+        "text": "Vor der Weiterproduktion die Regel zur Erststückfreigabe unten beachten."
+      },
+      "nein": {
+        "label": "NEIN",
+        "titel": "UNTERSTÜTZUNG ORGANISIEREN",
+        "text": "Fachkräfte anrufen (Elektriker, Werkzeugbau) und eintragen. Bei längerer Störung Personal nach AVOR-Priorität umverteilen, Planung aktualisieren."
+      }
+    },
+    {
+      "typ": "entscheidung",
+      "frage": "Reparatur abwarten?",
+      "ja": {
+        "label": "JA",
+        "titel": "REPARATUR ABWARTEN",
+        "text": "Personal für die Fortsetzung einplanen; danach Wiederanlauf/Freigabe beachten."
+      },
+      "nein": {
+        "label": "NEIN",
+        "titel": "UMRÜSTEN",
+        "text": "Rüster rüstet ab, bereitet nächsten Auftrag vor; Produktionslogistik schließt den alten ab."
+      }
+    },
+    {
+      "typ": "wer_macht_was",
+      "zeilen": [
+        { "rolle": "Mitarbeitende", "aufgabe": "Störung melden; bei Bedarf zugeteilte Tätigkeit übernehmen." },
+        { "rolle": "Schichtführer", "aufgabe": "Störung prüfen/beheben; Personal und Planung informieren." },
+        { "rolle": "Elektriker / Werkzeugbau", "aufgabe": "Fachliche Unterstützung bei der Reparatur leisten." },
+        { "rolle": "Produktionsplanung", "aufgabe": "Mit Schichtführer abklären: abwarten oder umrüsten." },
+        { "rolle": "PQB / Teamleader", "aufgabe": "Erststückfreigabe nach über 30 Minuten dokumentieren; Anfahrteile prüfen, nicht verwendbare als Anfahrausschuss buchen." },
+        { "rolle": "Rüster", "aufgabe": "Bei Umrüstung abrüsten." },
+        { "rolle": "Produktionslogistik", "aufgabe": "Alten Auftrag nach Abrüsten abschließen." }
+      ]
+    },
+    {
+      "typ": "abschluss",
+      "label": "WEITERARBEITEN WENN",
+      "kriterien": ["Störung behoben; erforderliche Erststückfreigabe durchgeführt und dokumentiert."]
+    }
+  ]
+}
