@@ -172,24 +172,25 @@
       "_hinweis": "Näherung aus Fotomontage, CAD-System (Korpus unverändert), nur oben/unten/links an Einfassung angepasst, Spalt 2 mm; Lage relativ zu Korpus/Ausschnitten um DX verschoben – vor Konstruktion nachmessen",
       "ecken": [
         [
-          19.6,
+          10.2,
           -0.9
         ],
         [
-          386.1,
-          10.7
+          386.2,
+          10.9
         ],
         [
-          461.5,
+          461.6,
           211.9
         ],
         [
-          80.9,
+          74.9,
           210.0
         ]
       ],
       "inhalt_versatz_dx": 11.4,
-      "steg_sub_links_min": 8.1
+      "steg_sub_links_min": 15.3,
+      "linke_kante": "automatisch erkannte Innenkante Edelstahleinfassung (Foto), Geradenfit 139 Zeilen"
     }
   }
 }

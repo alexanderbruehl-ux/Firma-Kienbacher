@@ -38,11 +38,14 @@ untere Ecke der Blendenvorderseite, mm):
 
 **Fotomontage** (Referenzfoto aus dem privaten Repo, hier nicht abgelegt): Der Maßstab stammt aus
 dem CAD (Blendenhöhe ≈ Öffnungshöhe). Nur die Blendenkontur oben, unten und links wurde optisch an
-die Einfassung angepasst (2 mm Spalt). Die rechte Kante ist die Deckelkante + 17,5 mm. Der Winkel der
-linken Kante passt so (bestätigt). Korpus und Ausschnitte sind gegenüber der ersten Montage um
-**≈ 11,4 mm nach rechts** versetzt. Dadurch bleibt zwischen Sub-Ausschnitt Ø 156 und linker
-Blendenkante wieder der CAD-Steg von 8,1 mm. Zurückgerechnete Kontur im CAD-System
-(≈, nur aus dem Foto): (19,6/−0,9) · (386,1/10,7) · (461,5/211,9) · (80,9/210,0).
+die Einfassung angepasst (2 mm Spalt). Die rechte Kante ist die Deckelkante + 17,5 mm. Korpus und
+Ausschnitte sind gegenüber der ersten Montage um **≈ 11,4 mm nach rechts** versetzt (bestätigt).
+Die **linke Kante folgt der im Foto automatisch erkannten Innenkante der Edelstahleinfassung**:
+Kantenpunkte aus 139 Bildzeilen (Übergang blauer Lack → Rahmen → Teak), Geradenfit mit
+1,6–3 px Streuung, keine messbare Krümmung. Die Kante ist dadurch etwas flacher als die frühere
+Handmessung. Der Steg zwischen Sub-Ausschnitt Ø 156 und linker Blendenkante beträgt jetzt ≈ 15 mm
+(CAD: 8,1 mm). Zurückgerechnete Kontur im CAD-System (≈, nur aus dem Foto):
+(10,2/−0,9) · (386,2/10,9) · (461,6/211,9) · (74,9/210,0).
 Vor der Konstruktion die Öffnung real nachmessen.
 
 ## Designvarianten
