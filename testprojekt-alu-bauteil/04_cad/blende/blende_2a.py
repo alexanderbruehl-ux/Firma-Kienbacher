@@ -23,19 +23,20 @@ BL=np.array(P['blende_vorgaben']['kontur_foto_angepasst']['ecken'])      # (0/0)
 HOLES=[(a['mitte'][0],a['mitte'][1],a['d']) for a in P['einbauschnittstelle']['ausschnitte']]
 DK=np.array(P['einbauschnittstelle']['deckel_front'])
 MAGNETS=[(23.2,16.1),(103.2,192.6),(364.5,38.1),(423.3,194.8)]
-STEPS=6                  # Bohrstufen
+DIAMS=[1.0,1.5,2.0,2.5]  # nur 4 Bohrdurchmesser für die ganze Blende (Werkzeugkosten)
 
 def phyllotaxis(cx,cy,D):
     R=D/2-1.8; big=D>60; pitch=3.1 if big else 2.2
     n=int((R/pitch)**2*math.pi*0.92); c=R/math.sqrt(n); g=math.radians(137.50776); pts=[]
     for i in range(1,n):
         r=c*math.sqrt(i); a=i*g; t=r/R
-        d=(0.9+1.9*t**1.25) if big else (0.7+0.9*t)
+        d=(1.0+1.6*t**1.25) if big else (1.0+0.6*t)
         if r+d/2>R: continue
         pts.append((cx+r*math.cos(a),cy+r*math.sin(a),d))
     return pts
 def quantize(pts):
-    ds=np.array([p[2] for p in pts]); lv=np.round(np.linspace(ds.min(),ds.max(),STEPS),1)
+    """Kontinuierlichen Verlauf auf die 4 Standard-Bohrdurchmesser abbilden (nächstliegender Wert)."""
+    lv=np.array(DIAMS)
     return [(x,y,float(lv[np.argmin(abs(lv-d))])) for x,y,d in pts], lv
 
 def poly_wp(pts,z=0.0):

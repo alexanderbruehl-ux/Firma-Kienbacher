@@ -153,7 +153,7 @@
         ],
         "abschlussleiste": "Edelstahl-Optik wie Einfassung Schwalbennest",
         "vorschau_farbe": "sattelbraun",
-        "abschlussleiste_breite": 9.0
+        "abschlussleiste_breite": 12.0
       },
       "2_alu_gefraest": {
         "logo": "eingefräst (keine LED)",
@@ -162,12 +162,19 @@
         "oberflaeche": "hochglanzpoliert",
         "kantennut": {
           "breite": 1.2,
-          "abstand_kante": 4.0
+          "abstand_kante": 12.0,
+          "tiefe": 0.6
         },
         "lochmuster_entwuerfe": [
           "A Sonnenblume",
           "B Welle",
           "C Strahlenkranz"
+        ],
+        "bohrdurchmesser": [
+          1.0,
+          1.5,
+          2.0,
+          2.5
         ]
       }
     },

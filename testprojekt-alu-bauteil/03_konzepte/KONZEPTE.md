@@ -6,10 +6,11 @@
 
 **Variante 1 – Leder sattelbraun:** Lautsprechergitter schwarz, Logo blind geprägt, Ziernaht, an der
 überstehenden rechten Kante eine **polierte Edelstahl-Abschlussleiste, 9 mm breit** (so breit wie die
-Einfassung des Schwalbennests im Rumpf, aus dem Foto gemessen: oben ≈ 9 mm, links ≈ 8 mm).
+Einfassung des Schwalbennests im Rumpf, aus dem Foto gemessen: oben ≈ 9 mm, links ≈ 8 mm; **auf Wunsch
+verbreitert auf 12 mm**).
 
 **Variante 2 – Aluminium hochglanzpoliert mit Lochmuster:** Logo eingefräst (ohne Farbe, keine LED),
-schlanke gefräste **Kantennut** (1,2 mm breit, 4 mm innen) parallel zur rechten Kante als optische Nähe zur
+schlanke gefräste **Kantennut** (1,2 mm breit, **12 mm** innen → 12-mm-Kantenband) parallel zur rechten Kante als optische Nähe zur
 Edelstahleinfassung, Diamantschnitt-Ring um jedes Lochfeld. Das Lochmuster soll ein **Blickfang** sein
 statt eines technischen Rasters (vgl. Burmester). Drei Entwürfe:
 
@@ -20,7 +21,7 @@ statt eines technischen Rasters (vgl. Burmester). Drei Entwürfe:
 | **2C „Strahlenkranz“** | Zentrum als Sonnenblumenfeld, außen Kranz aus Langlöchern im Wechsel lang/kurz | dynamisch, Blick zieht zur Treibermitte |
 
 Fertigung (für alle drei): Lochfelder von hinten auf 2,0–2,5 mm Restwand taschenfräsen, Verlaufsgrößen
-in 4–6 Stufen (Standardbohrer), Langlöcher mit Schaftfräser Ø 1,5 mm. Hochglanz: Polieren bzw.
+in **nur 4 Bohrdurchmessern Ø 1,0 / 1,5 / 2,0 / 2,5 mm** für die ganze Blende (Werkzeugkosten), Langlöcher mit Schaftfräser Ø 1,5 mm. Hochglanz: Polieren bzw.
 Diamantfräsen, danach Klarlack oder Glanzeloxal.
 
 ---

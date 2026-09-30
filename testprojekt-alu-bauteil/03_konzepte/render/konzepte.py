@@ -83,7 +83,7 @@ def _edge_offset(a,b,g):
     p=a+n*g
     lo=cut(p,d,BL[0],BL[1]-BL[0]); hi=cut(p,d,BL[3],BL[2]-BL[3])
     return lo,hi
-def edelstahlleiste(pen,breite=9.0):
+def edelstahlleiste(pen,breite=12.0):
     """Polierte Edelstahl-Abschlussleiste an der rechten (überstehenden) Kante, Breite wie die Einfassung des
     Schwalbennests im Rumpf (≈ 9 mm, aus dem Foto gemessen). Spiegelnd: dunkle Reflexkante außen, Glanzstreifen,
     Umgebungsreflex, Schattenfuge innen."""
@@ -93,7 +93,7 @@ def edelstahlleiste(pen,breite=9.0):
     for r0,r1,col in rel:
         l0,h0=_edge_offset(a,b,r0*breite); l1,h1=_edge_offset(a,b,r1*breite)
         pen.poly([l0,h0,h1,l1],fill=col)
-def nut(pen,abstand=4.0,breite=1.2):
+def nut(pen,abstand=12.0,breite=1.2):
     """Schlanke gefräste Nut parallel zur rechten Kante (optische Nähe zur Edelstahleinfassung), Glanzflanke."""
     a,b=BL[1],BL[2]
     l0,h0=_edge_offset(a,b,abstand); l1,h1=_edge_offset(a,b,abstand+breite)

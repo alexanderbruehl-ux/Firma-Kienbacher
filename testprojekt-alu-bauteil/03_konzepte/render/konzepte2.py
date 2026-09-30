@@ -1,6 +1,8 @@
 import numpy as np, math
 exec(open('konzepte.py').read().split("K_LIST=[")[0])
 GOLD=math.radians(137.50776)
+DIAMS=[1.0,1.5,2.0,2.5]   # nur 4 Bohrdurchmesser (Werkzeugkosten)
+def qd(d): return min(DIAMS,key=lambda v:abs(v-d))
 SADDLE=(128,74,38)
 
 def polished(img,poly):
@@ -33,18 +35,18 @@ def feld_sonnenblume(pen,cx,cy,D):
     c=R/math.sqrt(n)
     for i in range(1,n):
         r=c*math.sqrt(i); a=i*GOLD
-        t=r/R; d=(0.9+1.9*t**1.25) if big else (0.7+0.9*t)
+        t=r/R; d=qd((1.0+1.6*t**1.25) if big else (1.0+0.6*t))
         if r+d/2>R: continue
         hole(pen,(cx+r*math.cos(a),cy+r*math.sin(a)),d)
 
 def feld_welle(pen,cx,cy,D):
     """B: konzentrische Lochkreise, Loch-Ø wellenförmig moduliert – Ringe scheinen zu 'schwingen' (Schallwelle)."""
     R=D/2-1.8; big=D>60; ring=2.9 if big else 2.1
-    k=1; hole(pen,(cx,cy),1.4 if big else 1.0)
+    k=1; hole(pen,(cx,cy),1.5 if big else 1.0)
     while k*ring<R-1.2:
         r=k*ring; t=r/R
         d=((1.2+1.3*t)*(0.62+0.38*math.cos(2*math.pi*r/(R/2.6)))) if big else (0.8+0.6*t)*(0.7+0.3*math.cos(2*math.pi*r/(R/2)))
-        d=max(d,0.7); n=int(2*math.pi*r/max(d+1.0,1.9))
+        d=qd(max(d,1.0)); n=int(2*math.pi*r/max(d+1.0,1.9))
         for i in range(n):
             a=2*math.pi*i/n+k*0.21
             hole(pen,(cx+r*math.cos(a),cy+r*math.sin(a)),d)
@@ -90,7 +92,7 @@ def sheet_montage(items,path):
     ims=[label(fn(base.copy()),t) for t,fn in items]; stack(ims,path)
 
 if __name__=='__main__':
-    V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 9 mm", leder)
+    V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 12 mm", leder)
     items=[V1]+[(f"Variante 2{k} – Alu hochglanzpoliert · Lochmuster „{n}“", (lambda kk: (lambda im: alu_poliert(im,kk)))(k)) for k,(n,_) in MUSTER.items()]
     sheet(items,'Vorschau_flach.jpg',crop)
     sheet_montage(items,'Vorschau_Montage.jpg')
