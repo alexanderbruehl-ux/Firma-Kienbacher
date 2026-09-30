@@ -9,7 +9,7 @@
 Einfassung des Schwalbennests im Rumpf, aus dem Foto gemessen: oben ≈ 9 mm, links ≈ 8 mm; **auf Wunsch
 verbreitert auf 12 mm**).
 
-**Variante 2 – Aluminium hochglanzpoliert mit Lochmuster:** Logo eingefräst (ohne Farbe, keine LED),
+**Variante 2 – Aluminium hochglanzpoliert mit Lochmuster (gewählt: 2C+, siehe unten):** Logo eingefräst (ohne Farbe, keine LED),
 schlanke gefräste **Kantennut** (1,2 mm breit, **12 mm** innen → 12-mm-Kantenband) parallel zur rechten Kante als optische Nähe zur
 Edelstahleinfassung, Diamantschnitt-Ring um jedes Lochfeld. Das Lochmuster soll ein **Blickfang** sein
 statt eines technischen Rasters (vgl. Burmester). Drei Entwürfe:
@@ -23,6 +23,25 @@ statt eines technischen Rasters (vgl. Burmester). Drei Entwürfe:
 Fertigung (für alle drei): Lochfelder von hinten auf 2,0–2,5 mm Restwand taschenfräsen, Verlaufsgrößen
 in **nur 4 Bohrdurchmessern Ø 1,0 / 1,5 / 2,0 / 2,5 mm** für die ganze Blende (Werkzeugkosten), Langlöcher mit Schaftfräser Ø 1,5 mm. Hochglanz: Polieren bzw.
 Diamantfräsen, danach Klarlack oder Glanzeloxal.
+
+## Gewähltes Lochmuster: „Strahlenkranz optimiert“ (2C+) – größter offener Querschnitt
+
+Auswahlkriterium: maximaler offener Querschnitt für eine ungehinderte Schallabstrahlung. Berechnet aus
+der Geometrie (offene Fläche / Feldfläche):
+
+| Muster | Hochtöner | Tiefmitteltöner | Subwoofer | gesamt | kleinster Steg |
+|---|---|---|---|---|---|
+| 2A Sonnenblume | 23,8 % | 27,4 % | 28,3 % | 27,8 % | 0,56 mm ✗ |
+| 2B Welle | 13,7 % | 19,4 % | 19,6 % | 19,2 % | 0,90 mm |
+| 2C Strahlenkranz | 10,4 % | 31,1 % | 32,9 % | 31,1 % | 0,56 mm ✗ |
+| **2C+ Strahlenkranz optimiert** | **38,2 %** | **41,7 %** | **42,4 %** | **41,9 %** | **0,80 mm ✓** |
+
+2C+ (`render/opt2c.py`, CAD: `04_cad/blende/lochmuster_2c.py`):
+- Innen Sonnenblumen-Spirale, außen Kranz radialer Langlöcher (lang, dazwischen kurze ab dem Radius, wo der
+  Steg reicht). Beim Hochtöner ebenfalls Spirale + Kranz (volles Lochfeld ergab nur ≈ 29 %).
+- Spiralabstand automatisch auf **Mindeststeg 0,8 mm** optimiert (vorher stellenweise 0,56 mm).
+- Nur **Bohr-Ø 1,5 / 2,0 / 2,5 mm** + **Langloch-Fräser Ø 2,0 mm**.
+- Richtwert für akustisch transparente Gitter: ≥ 30–40 % offen. 2C+ erfüllt das bei allen drei Treibern.
 
 ---
 

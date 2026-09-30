@@ -70,7 +70,14 @@ def stack(ims,path,q=88):
     Wm=max(i.width for i in ims); out=Image.new('RGB',(Wm,sum(i.height for i in ims)+8*(len(ims)-1)),'white'); y=0
     for i in ims: out.paste(i,(0,y)); y+=i.height+8
     out.save(path,quality=q)
-MUSTER={'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
+import opt2c
+def feld_strahlen_plus(pen,cx,cy,D):
+    """C+: Strahlenkranz optimiert – max. offener Querschnitt bei Steg ≥ 0,8 mm, nur Ø1,5/2,0/2,5 + Fräser Ø2,0."""
+    h,s=opt2c.field(cx,cy,D)
+    for x,y,d in h: hole(pen,(x,y),d)
+    for x0,y0,a,r0,r1 in s:
+        u=np.array([math.cos(a),math.sin(a)]); pen.slot(np.array([x0,y0])+u*(r0+r1)/2,u,r1-r0,opt2c.SLOTW,(16,17,21))
+MUSTER={'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
 
 def alu_poliert(img,muster='A'):
     shadow(img,BL); polished(img,BL); pen=Pen(img)
@@ -93,7 +100,8 @@ def sheet_montage(items,path):
 
 if __name__=='__main__':
     V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 12 mm", leder)
-    items=[V1]+[(f"Variante 2{k} – Alu hochglanzpoliert · Lochmuster „{n}“", (lambda kk: (lambda im: alu_poliert(im,kk)))(k)) for k,(n,_) in MUSTER.items()]
+    V2=("Variante 2 – Alu hochglanzpoliert · „Strahlenkranz optimiert“ · 41 % offen", lambda im: alu_poliert(im,'C+'))
+    items=[V1,V2]
     sheet(items,'Vorschau_flach.jpg',crop)
     sheet_montage(items,'Vorschau_Montage.jpg')
     print('ok')

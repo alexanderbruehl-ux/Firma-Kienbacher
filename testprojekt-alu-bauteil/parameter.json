@@ -175,7 +175,23 @@
           1.5,
           2.0,
           2.5
-        ]
+        ],
+        "lochmuster_gewaehlt": {
+          "name": "Strahlenkranz optimiert (2C+)",
+          "offen_prozent": {
+            "hochtoener": 38.2,
+            "tiefmitteltoener": 41.7,
+            "subwoofer": 42.4,
+            "gesamt": 41.9
+          },
+          "steg_min": 0.8,
+          "bohrdurchmesser": [
+            1.5,
+            2.0,
+            2.5
+          ],
+          "langloch_breite": 2.0
+        }
       }
     },
     "rumpfwand": 10.0,
