@@ -161,7 +161,7 @@ def _pip(p,poly):
     return c
 def ht_M_kontur(pen,cx,cy,D,mw=28.0):
     """Hochtöner: Sonnenblume + echte Signet-Kontur (aus dem vektorisierten Logo) als Durchbruch, 3,7° gedreht."""
-    M=_htm.signet_poly(mw,cx,cy)
+    M=_htm.signet_poly(mw,cx,cy+0.5,ang=0.0)   # waagerecht, 0,5 mm nach oben
     opt2c.WMIN=0.8
     for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,_law(D)):
         if _pip((x,y),M): continue

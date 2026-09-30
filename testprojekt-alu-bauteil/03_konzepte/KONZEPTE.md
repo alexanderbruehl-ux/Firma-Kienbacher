@@ -43,7 +43,7 @@ Sonnenblume (Spiralabstand jeweils automatisch auf den Mindeststeg optimiert):
 ## Festlegung Hochtöner: Sonnenblume + ausgefrästes Signet-M (echte Kontur)
 
 Nur im Hochtöner. Statt Schlitzen konstanter Breite wird die **echte Signet-Kontur** (aus dem
-vektorisierten Logo) als Durchbruch gefräst: Breite 28 mm, 3,7° gedreht wie das Logo, schmalste Stelle
+vektorisierten Logo) als Durchbruch gefräst: Breite 28 mm, **waagerecht, 0,5 mm über der Feldmitte**, schmalste Stelle
 1,62 mm (Fräser Ø 1,0 mm, Spitzen 49° → Verrundung r 0,5 mm). Löcher bleiben, außer sie kämen dem M
 näher als 0,8 mm. Hochtöner 27,0 % offen, **die Feldmitte (r < 4 mm) ist zu 45–99 % offen** statt 0–26 %.
 3D-Modell: `04_cad/blende/blende_2a35.py` (→ `Blende_2A35M.step/.stl`, 1.412 Bohrungen, 1.062 g).

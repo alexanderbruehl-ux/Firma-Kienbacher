@@ -14,6 +14,8 @@ sys.path.insert(0,HERE); import lochmuster_opt as LM
 LM.WMIN=0.8
 import signet_m
 M_WIDTH=28.0             # ausgefrästes Signet-M im Hochtöner (echte Kontur), Breite in mm
+M_ANG=0.0                # waagerecht
+M_DY=0.5                 # 0,5 mm nach oben versetzt
 
 # ---------------- Parameter ----------------
 T=8.5                    # Blendendicke
@@ -112,7 +114,7 @@ def build_blende():
         outer=cq.Wire.makeCircle(Rf,cq.Vector(x,y,0),cq.Vector(0,0,1))
         inners=[]
         if D<60:   # Signet-M (echte Kontur) + Löcher nur mit Steg >= 0,8 mm zum M
-            M=signet_m.signet_poly(M_WIDTH,x,y)
+            M=signet_m.signet_poly(M_WIDTH,x,y+M_DY,ang=math.radians(M_ANG))
             def segd(p,a,b):
                 p,a,b=map(np.array,(p,a,b)); t=np.clip(np.dot(p-a,b-a)/np.dot(b-a,b-a),0,1); return np.linalg.norm(p-(a+t*(b-a)))
             def pip(p):
