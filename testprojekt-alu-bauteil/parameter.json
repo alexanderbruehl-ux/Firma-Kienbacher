@@ -151,12 +151,24 @@
           "schwarz",
           "sattelbraun"
         ],
-        "abschlussleiste": "Edelstahl-Optik wie Einfassung Schwalbennest"
+        "abschlussleiste": "Edelstahl-Optik wie Einfassung Schwalbennest",
+        "vorschau_farbe": "sattelbraun",
+        "abschlussleiste_breite": 9.0
       },
       "2_alu_gefraest": {
-        "logo": "eingefräst, optional LED-hinterleuchtet",
+        "logo": "eingefräst (keine LED)",
         "schalldurchlass": "gebohrte oder geschlitzte Perforation",
-        "prioritaet": "wahrscheinlicher"
+        "prioritaet": "wahrscheinlicher",
+        "oberflaeche": "hochglanzpoliert",
+        "kantennut": {
+          "breite": 1.2,
+          "abstand_kante": 4.0
+        },
+        "lochmuster_entwuerfe": [
+          "A Sonnenblume",
+          "B Welle",
+          "C Strahlenkranz"
+        ]
       }
     },
     "rumpfwand": 10.0,

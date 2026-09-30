@@ -1,4 +1,31 @@
-# Designkonzepte Blende Schwalbennest (Stand 30.09.2026)
+# Designkonzepte Blende Schwalbennest
+
+## Aktuelle Vorschau (Stand 30.09.2026) – immer zwei Varianten
+
+![Vorschau](bilder/Vorschau_flach.jpg)
+
+**Variante 1 – Leder sattelbraun:** Lautsprechergitter schwarz, Logo blind geprägt, Ziernaht, an der
+überstehenden rechten Kante eine **polierte Edelstahl-Abschlussleiste, 9 mm breit** (so breit wie die
+Einfassung des Schwalbennests im Rumpf, aus dem Foto gemessen: oben ≈ 9 mm, links ≈ 8 mm).
+
+**Variante 2 – Aluminium hochglanzpoliert mit Lochmuster:** Logo eingefräst (ohne Farbe, keine LED),
+schlanke gefräste **Kantennut** (1,2 mm breit, 4 mm innen) parallel zur rechten Kante als optische Nähe zur
+Edelstahleinfassung, Diamantschnitt-Ring um jedes Lochfeld. Das Lochmuster soll ein **Blickfang** sein
+statt eines technischen Rasters (vgl. Burmester). Drei Entwürfe:
+
+| Muster | Idee | Wirkung |
+|---|---|---|
+| **2A „Sonnenblume“** | Phyllotaxis-Spirale (goldener Winkel 137,5°), Loch-Ø wächst von innen nach außen | organisch, spiralige Linien schimmern je nach Blickwinkel |
+| **2B „Welle“** | konzentrische Lochkreise, Loch-Ø wellenförmig moduliert | Ringe scheinen zu „schwingen“, Sinnbild Schallwelle |
+| **2C „Strahlenkranz“** | Zentrum als Sonnenblumenfeld, außen Kranz aus Langlöchern im Wechsel lang/kurz | dynamisch, Blick zieht zur Treibermitte |
+
+Fertigung (für alle drei): Lochfelder von hinten auf 2,0–2,5 mm Restwand taschenfräsen, Verlaufsgrößen
+in 4–6 Stufen (Standardbohrer), Langlöcher mit Schaftfräser Ø 1,5 mm. Hochglanz: Polieren bzw.
+Diamantfräsen, danach Klarlack oder Glanzeloxal.
+
+---
+
+## Frühere Konzeptrunde
 
 Grundlage: Maße und Einbau laut `ANFORDERUNGEN.md` (maßlich eingefroren). Alle Entwürfe verwenden
 die CAD-Kontur (links 65,6°), die Treiberausschnitte aus `parameter.json` und das Meisterwerke-Logo
@@ -33,7 +60,7 @@ Gemeinsam für K2a–c:
   die Fräszeit gering. Außerhalb der Zonen behält die Blende die volle Dicke (Steifigkeit).
 - Rückseite: 4 flache Taschen für Stahlscheiben oder Gegenmagnete gegenüber den Magnettaschen
   Ø 12 im Deckel bei (23/16), (103/193), (365/38), (423/195) mm.
-- **LED-Option:** Nur das Signet wird durchgefräst (Signethöhe ≈ 13 mm, Strichstärke ≈ 1,0–1,2 mm, Fräser
+- ~~LED-Option~~ (entfällt, Logo wird eingefräst bzw. geprägt): Nur das Signet wird durchgefräst (Signethöhe ≈ 13 mm, Strichstärke ≈ 1,0–1,2 mm, Fräser
   Ø 0,8 mm) und mit einem PMMA-Einsatz (opal) hinterlegt. Der LED-Streifen sitzt in einer Tasche auf
   der Rückseite. Die Wortmarke wird nach dem Eloxieren lasergraviert, weil ihre Haarstriche zu fein
   für einen Durchbruch sind. Stromzufuhr offen (z. B. Federkontakte neben den Magneten).
