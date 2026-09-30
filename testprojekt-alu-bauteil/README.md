@@ -14,7 +14,7 @@ und Oberflächeneffekten gerendert.
 |---|-------|----------|--------|--------|
 | 1 | Referenzen sammeln | Produktbilder + was daran gefällt | `01_referenzen/` | 🔶 läuft (R01–R03, U01–U12 Web-Bilder Boot) |
 | 2 | Designanalyse | Formensprache, Muster, Oberflächen, Fertigungsbezug | `02_designanalyse/` | 🔶 begonnen |
-| 3 | Konzeptvarianten | 3–4 eigenständige Entwürfe mit Moodboard/Skizzen/Vorschau | `03_konzepte/` | ⬜ |
+| 3 | Konzeptvarianten | 2 Varianten (Leder / Alu gefräst), Anforderungen in `03_konzepte/ANFORDERUNGEN.md` | `03_konzepte/` | 🔶 begonnen |
 | 4 | **Designauswahl** (durch Kienbacher) | gewählte Variante + Änderungswünsche | `03_konzepte/AUSWAHL.md` | ⬜ |
 | 5 | Parametrisches 3D-CAD | `parameter.json` → STEP/STL + Vorschau | `04_cad/` | ✅ Werkzeugkette getestet (Platzhalter) |
 | 6 | Fusion: Konstruktion + Rendering | parametrisches Fusion-Design, Material, Render-PNG | `05_fusion/` | ✅ Skript vorbereitet, ⬜ am Desktop-PC testen |

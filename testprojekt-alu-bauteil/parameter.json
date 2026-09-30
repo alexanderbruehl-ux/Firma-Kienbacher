@@ -96,5 +96,36 @@
     ],
     "gehaeuse_tiefe_gesamt": 139.0,
     "hinweis": "Schriftzug-/Logo-Ausschnitte der Lederabdeckung liegen als Zeile ca. 150–290 mm von links, 26–36 mm über der Unterkante."
+  },
+  "blende_vorgaben": {
+    "_quelle": "Vorgaben Alexander Brühl 30.09.2026, siehe 03_konzepte/ANFORDERUNGEN.md",
+    "dicke_max": 8.5,
+    "befestigung": "Magnete am LS-Korpus (Deckel)",
+    "einbau": "Vorderseite bündig mit Bootsrumpf",
+    "fachtiefe": 140.0,
+    "ueberstand_seite_offenes_fach": [
+      15.0,
+      20.0
+    ],
+    "ueberstand_nominal": 17.5,
+    "tiefenkonflikt_mm": 7.5,
+    "varianten": {
+      "1_leder": {
+        "logo": "geprägt",
+        "schalldurchlass": "LS-Gitter",
+        "lederfarben": [
+          "dunkelblau",
+          "hellgrau",
+          "schwarz",
+          "sattelbraun"
+        ],
+        "abschlussleiste": "Edelstahl-Optik wie Einfassung Schwalbennest"
+      },
+      "2_alu_gefraest": {
+        "logo": "eingefräst, optional LED-hinterleuchtet",
+        "schalldurchlass": "gebohrte oder geschlitzte Perforation",
+        "prioritaet": "wahrscheinlicher"
+      }
+    }
   }
 }
