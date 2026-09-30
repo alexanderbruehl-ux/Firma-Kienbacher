@@ -11,8 +11,9 @@ die CAD-Kontur (links 65,6°), die Treiberausschnitte aus `parameter.json` und d
 `logo/Meisterwerke_Logo.svg` (Signet + Wortmarke) und `logo/Meisterwerke_Signet.svg` (nur „M“).
 Nachgezeichnet vom Referenzbild „Meisterwerke Marina“ (Signet aus Messung der Schenkel konstruiert,
 Wortmarke in Cinzel, SIL Open Font License). Erzeugt mit `logo/mwlogo.py`.
-Position auf der Blende: unten zwischen Sub- und Tiefmitteltöner-Ausschnitt, Mitte (265 | 34) mm,
-Breite 80 mm, Höhe ≈ 17,8 mm.
+Position auf der Blende: **mittig unter dem 100er (KT 100 V)**, **parallel zur Unterkante gedreht
+(3,7°)**, Breite 125 mm, Höhe ≈ 27.8 mm. Mitte (286.1 | 37.5) mm, Logounterkante 5 mm über der
+Blendenunterkante. Abstand Signet-Oberkante zum 100er-Feld ≈ 8 mm.
 
 ## K1 – Leder (Designvariante 1)
 
@@ -34,7 +35,7 @@ Gemeinsam für K2a–c:
   die Fräszeit gering. Außerhalb der Zonen behält die Blende die volle Dicke (Steifigkeit).
 - Rückseite: 4 flache Taschen für Stahlscheiben oder Gegenmagnete gegenüber den Magnettaschen
   Ø 12 im Deckel bei (23/16), (103/193), (365/38), (423/195) mm.
-- **LED-Option:** Nur das Signet wird durchgefräst (Strichstärke bei 12 mm Höhe ≈ 0,9–1,1 mm, Fräser
+- **LED-Option:** Nur das Signet wird durchgefräst (Signethöhe ≈ 13 mm, Strichstärke ≈ 1,0–1,2 mm, Fräser
   Ø 0,8 mm) und mit einem PMMA-Einsatz (opal) hinterlegt. Der LED-Streifen sitzt in einer Tasche auf
   der Rückseite. Die Wortmarke wird nach dem Eloxieren lasergraviert, weil ihre Haarstriche zu fein
   für einen Durchbruch sind. Stromzufuhr offen (z. B. Federkontakte neben den Magneten).

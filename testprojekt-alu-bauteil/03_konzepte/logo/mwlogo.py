@@ -50,15 +50,19 @@ def svg(path, color='#1b2a4a', with_signet=True, with_wordmark=True):
     x1=WM_X0+WM_W if with_wordmark else SIG_X0+SIG_W; y1=WM_Y0+WM_CAP if with_wordmark else SIG_Y0+SIG_H
     pad=10
     open(path,'w').write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{x0-pad} {y0-pad} {x1-x0+2*pad} {y1-y0+2*pad}"><g fill="{color}">'+''.join(parts)+'</g></svg>')
-def draw(draw_polygon, draw_text_glyph_polys, to_px, x_mm, y_mm, width_mm, fill, with_wordmark=True):
-    """Zeichnet das Logo mit Zentrum (x_mm,y_mm) und Gesamtbreite width_mm über Callback-Funktionen."""
+def draw(draw_polygon, draw_text_glyph_polys, to_px, x_mm, y_mm, width_mm, fill, with_wordmark=True, angle_deg=0.0, signet_only=False):
+    """Zeichnet das Logo mit Zentrum (x_mm,y_mm), Gesamtbreite width_mm und Drehung angle_deg (gegen UZS).
+    signet_only: nur das Signet an seiner Position innerhalb der Gesamtmarke zeichnen."""
     f,gs,names,adv,s,track=_glyphs()
     bx0,bx1=(WM_X0,WM_X0+WM_W) if with_wordmark else (SIG_X0,SIG_X0+SIG_W)
     by0,by1=SIG_Y0,(WM_Y0+WM_CAP) if with_wordmark else SIG_Y0+SIG_H
     k=width_mm/(bx1-bx0); cx,cy=(bx0+bx1)/2,(by0+by1)/2
-    M=lambda u,v:to_px((x_mm+(u-cx)*k, y_mm-(v-cy)*k))
+    ca,sa=np.cos(np.radians(angle_deg)),np.sin(np.radians(angle_deg))
+    def M(u,v):
+        dx,dy=(u-cx)*k,-(v-cy)*k
+        return to_px((x_mm+dx*ca-dy*sa, y_mm+dx*sa+dy*ca))
     for poly in SIGNET: draw_polygon([M(u,v) for u,v in poly])
-    if with_wordmark:
+    if with_wordmark and not signet_only:
         from fontTools.pens.basePen import BasePen
         class Flat(BasePen):
             def __init__(s2,gs): super().__init__(gs); s2.polys=[];s2.cur=[]
