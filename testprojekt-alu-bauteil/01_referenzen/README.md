@@ -34,3 +34,17 @@ Sitzbereich/Heck mit Lautsprecherpositionen, Rumpffarbe Blau):
   https://www.skipper-bootshandel.de/frauscher-650-alassio/
 - Inserat mit Audio-Ausstattung: https://uk.boats.com/power-boats/2024-frauscher-alassio-650-electric-2023-8307426/
 
+
+### Einbauort: „Schwalbennester“
+
+- Seitliche Ablagefächer links und rechts im Cockpit (Ablage für Handy und Kleinteile),
+  laut Händlerbeschreibungen mit **Ambientebeleuchtung**. Optional gibt es seitliche
+  Staukästen in Teak.
+- Die Musikanlage (Lautsprecher) wird dort eingebaut, die neue Alu-Blende sitzt also in der
+  Seitenwand bzw. Front des Schwalbennests.
+- Quellen: https://www.boote-magazin.de/en/boats/sport-boats/frauscher-650-alassio-europe-s-best-selling-electric-boat-put-to-the-test/ ,
+  https://www.nautechnews.it/2021/07/02/restyling-frauscher-650-alassio/ ,
+  Konfigurator: https://www.configurator.frauscherboats.com/650-alassio
+- **Benötigt für die Konstruktion:** Fotos der Schwalbennester (frontal + schräg), Innenmaße bzw.
+  verfügbare Einbaufläche, Wandmaterial/-stärke, Lautsprechertyp (JL Audio M3 oder M6?)
+  inkl. Einbaudurchmesser, Einbautiefe und Lochbild.
