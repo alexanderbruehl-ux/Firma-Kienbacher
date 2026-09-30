@@ -4,27 +4,41 @@
 
 ![Schnitt](Einbau_Schnitt_schematisch.png)
 
-- Der LS-Korpus (Deckel 20 mm + Gehäuse 119 mm, siehe `parameter.json` → `einbauschnittstelle`)
-  steckt im Schwalbennest. Das Fach ist **140 mm tief**. Der Korpus sitzt an einem Ende der
-  Öffnung, der Rest des Fachs bleibt offen.
-- Die **Vorderseite der Blende schließt außen bündig mit dem Bootsrumpf ab** (Ebene des
-  Edelstahlrahmens).
-- **Blendendicke max. 8,5 mm** (die heutige Lederabdeckung mit 10 mm ist zu dick).
-- **Befestigung mit Magneten** am LS-Korpus (Deckel). Keine sichtbaren Schrauben.
-- **Überstand 15–20 mm** über den Korpus, nur an der Seite zum offenen Fach. Von der Seite
-  gesehen entsteht eine schlanke, „fliegende“ Kante mit Schattenfuge dahinter.
-- Treiberausschnitte (BF 32, KT 100 V, W 130 X) laut `einbauschnittstelle`. Die Blende gibt es
-  links und rechts, spiegelbildlich.
+- **Rumpfwand 10 mm**, Öffnung mit polierter Edelstahleinfassung. Dahinter liegt das Fach mit
+  **140 mm Tiefe**.
+- Der **LS-Korpus** (Deckel 20 mm + Gehäuse 119 mm = 139 mm) schlüpft in das Fach und ist genau
+  auf die Innenmaße eingepasst. **Links rutscht er in einen Hinterschnitt** hinter die Rumpfwand
+  (im CAD: linke Korpuskante senkrecht, 90°).
+- Die **Blende (max. 8,5 mm)** wird mit **Magneten** am Deckel gehalten. Die Magnete halten
+  **1,5 mm Abstand**, so dass die Blende genau in der 10-mm-Wand sitzt und **bündig mit dem Rumpf**
+  abschließt.
+- **Links ist die Blende gegenüber dem Korpus abgeschrägt** (CAD 65,6°), damit sie in die
+  eingefasste Öffnung passt.
+- **Rechts steht sie ca. 15–20 mm über den Korpus** (CAD: Rückseite ≈17 mm, als Fase ausgeführt).
+  Das ergibt die schlanke, „fliegende“ Kante.
+- **Spalt zwischen Blende und Einfassung:** links, oben und unten umlaufend gleich (Vorschlag 2 mm),
+  rechts größer.
+- Treiberausschnitte laut `parameter.json` → `einbauschnittstelle`. Die Blende gibt es links und
+  rechts, spiegelbildlich.
+- Tiefe: 8,5 + 1,5 + 20 + 119 = 149 mm ≤ 10 mm Wand + 140 mm Fach. Der zuvor vermutete
+  Tiefenkonflikt entfällt.
 
-## ⚠️ Offener Konflikt in der Aufbautiefe
+## CAD-Referenz (Stand Fusion/STEP, bleibt Referenz)
 
-Blende 8,5 + Deckel 20 + Gehäuse 119 = **147,5 mm > 140 mm Fachtiefe**, also **7,5 mm zu viel**.
-Mögliche Auflösungen (Entscheidung offen):
-1. Die 140 mm werden ab Rahmenaußenkante gemessen, und Wand oder Rahmen bringen zusätzliche Tiefe.
-   Dann bitte nachmessen.
-2. Den Deckel des Korpus um ≥ 7,5 mm dünner machen oder die Blende in den Deckel einlassen
-   (Tasche im Deckel).
-3. Die Korpus-Rückseite anpassen oder schräg zuschneiden, falls die Fachrückwand der Rumpfform folgt.
+Die Maße der heutigen Lederabdeckung und des Deckels bleiben **unverändert** in
+`parameter.json` → `einbauschnittstelle`. Zusätzlich aus dem STEP ausgelesen (Ursprung = linke
+untere Ecke der Blendenvorderseite, mm):
+
+| Kontur | Ecken (unten links → unten rechts → oben rechts → oben links) |
+|---|---|
+| Blende Vorderseite | (0/0) · (369,1/23,9) · (438,7/209,4) · (93,8/207,0) |
+| Blende Rückseite (mit Überstand/Fase rechts) | (−0,6/−0,1) · (388,4/25,0) · (457,8/210,1) · (93,5/207,5) |
+| Deckel/Korpus-Front | (−17,8/2,4) · (373,8/27,7) · (440,6/205,9) · (−17,4/202,7) |
+
+Die Fotomontage (Referenzfoto aus dem privaten Repo, nicht hier abgelegt) wurde **am Foto**
+perspektivisch angepasst, nicht an der Blende. Die Blende ist dafür so eingepasst, dass links,
+oben und unten ein gleicher Spalt von 2 mm entsteht. Rechts wurden 20 mm Luft hinter der Fase
+angenommen. Die Öffnungsmaße sind damit noch nicht nachgemessen.
 
 ## Designvarianten
 
@@ -38,8 +52,8 @@ Mögliche Auflösungen (Entscheidung offen):
 
 ## Offen
 
-- Auflösung des Tiefenkonflikts (siehe oben)
-- Maße der Öffnung (Länge oben/unten, Höhe) und Lage des Korpus im Fach (Ende Richtung Bug oder Heck)
+- Nachmessen: Öffnung innen an der Einfassung (Länge oben/unten, Höhe) und Spalt rechts
+- Spaltmaß festlegen (Vorschlag 2 mm)
 - Logo/Signet (Meisterwerke Marina, Kienbacher, neutral)
 - Variante 2: Perforation gebohrt oder geschlitzt, LED ja/nein (Bauraum für LED-Streifen und
   Diffusor in 8,5 mm)

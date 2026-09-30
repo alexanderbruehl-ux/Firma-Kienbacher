@@ -95,20 +95,52 @@
       }
     ],
     "gehaeuse_tiefe_gesamt": 139.0,
-    "hinweis": "Schriftzug-/Logo-Ausschnitte der Lederabdeckung liegen als Zeile ca. 150–290 mm von links, 26–36 mm über der Unterkante."
+    "hinweis": "Schriftzug-/Logo-Ausschnitte der Lederabdeckung liegen als Zeile ca. 150–290 mm von links, 26–36 mm über der Unterkante.",
+    "kontur_rueckseite": [
+      [
+        -0.6,
+        -0.1
+      ],
+      [
+        388.4,
+        25.0
+      ],
+      [
+        457.8,
+        210.1
+      ],
+      [
+        93.5,
+        207.5
+      ]
+    ],
+    "deckel_front": [
+      [
+        -17.8,
+        2.4
+      ],
+      [
+        373.8,
+        27.7
+      ],
+      [
+        440.6,
+        205.9
+      ],
+      [
+        -17.4,
+        202.7
+      ]
+    ],
+    "kontur_ecken_hinweis": "kontur_ecken = Vorderseite (sichtbar); Rückseite rechts mit ≈17 mm Überstand/Fase"
   },
   "blende_vorgaben": {
     "_quelle": "Vorgaben Alexander Brühl 30.09.2026, siehe 03_konzepte/ANFORDERUNGEN.md",
     "dicke_max": 8.5,
     "befestigung": "Magnete am LS-Korpus (Deckel)",
-    "einbau": "Vorderseite bündig mit Bootsrumpf",
+    "einbau": "Vorderseite bündig mit Bootsrumpf; Rumpfwand 10 mm = Blende 8,5 + Magnetabstand 1,5",
     "fachtiefe": 140.0,
-    "ueberstand_seite_offenes_fach": [
-      15.0,
-      20.0
-    ],
     "ueberstand_nominal": 17.5,
-    "tiefenkonflikt_mm": 7.5,
     "varianten": {
       "1_leder": {
         "logo": "geprägt",
@@ -126,6 +158,15 @@
         "schalldurchlass": "gebohrte oder geschlitzte Perforation",
         "prioritaet": "wahrscheinlicher"
       }
-    }
+    },
+    "rumpfwand": 10.0,
+    "magnetabstand": 1.5,
+    "spalt_umlaufend_vorschlag": 2.0,
+    "spalt_hinweis": "links/oben/unten gleich, rechts größer (Überstandseite)",
+    "ueberstand_seite": "rechts (Korpus links im Hinterschnitt)",
+    "ueberstand": [
+      15.0,
+      20.0
+    ]
   }
 }
