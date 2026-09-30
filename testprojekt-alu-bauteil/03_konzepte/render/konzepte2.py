@@ -139,7 +139,26 @@ def kombi(ht,tmt):
         elif D<130: tmt(pen,cx,cy,D)
         else: feld_sonnenblume35(pen,cx,cy,D)
     return f
-MUSTER={'MA':('HT mit M-Medaillon',kombi(ht_m_medaillon,feld_sonnenblume35)),'MB':('100er mit M-Emblem',kombi(ht_offen_mitte,tmt_emblem)),'A35S':('Sonnenblume + HT Spiralschlitze',sonnenblume_mit_ht(ht_spirale)),'A35R':('Sonnenblume + HT Ringschlitze',sonnenblume_mit_ht(ht_ringe)),'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
+import m_schlitz as _ms
+def _segdist(p,a,b):
+    p,a,b=map(np.array,(p,a,b)); t=np.clip(np.dot(p-a,b-a)/np.dot(b-a,b-a),0,1); return np.linalg.norm(p-(a+t*(b-a)))
+def sonnenblume_mit_M(mfac,law_fn,edge=1.2):
+    def f(pen,cx,cy,D):
+        mw=mfac*D; legs=[((a[0]+cx,a[1]+cy),(b[0]+cx,b[1]+cy),sw) for a,b,sw in _ms.m_legs(mw,0,0,2.5,1.6)]
+        opt2c.WMIN=0.8
+        for x,y,d in opt2c.best_phyllo(cx,cy,D/2-edge,law_fn(D)):
+            if all(_segdist((x,y),a,b)-sw/2-d/2>=0.8 for a,b,sw in legs): hole(pen,(x,y),d)
+        for a,b,sw in legs: _stamp(pen,[a,b],sw)
+    return f
+def _law(D):
+    q=lambda v,ds:min(ds,key=lambda x:abs(x-v))
+    return (lambda t:q(2.5+1.0*t,[2.5,3.0,3.5])) if D>60 else (lambda t:2.0 if t<0.75 else 2.5)
+def nur_ht_M(pen,cx,cy,D):
+    if D<60: sonnenblume_mit_M(28/46.2,_law)(pen,cx,cy,D)
+    else: feld_sonnenblume35(pen,cx,cy,D)
+def alle_M(pen,cx,cy,D):
+    sonnenblume_mit_M(0.6,_law)(pen,cx,cy,D)
+MUSTER={'MH':('M-Schlitze im Hochtöner',nur_ht_M),'MALL':('M-Schlitze in allen Feldern',alle_M),'MA':('HT mit M-Medaillon',kombi(ht_m_medaillon,feld_sonnenblume35)),'MB':('100er mit M-Emblem',kombi(ht_offen_mitte,tmt_emblem)),'A35S':('Sonnenblume + HT Spiralschlitze',sonnenblume_mit_ht(ht_spirale)),'A35R':('Sonnenblume + HT Ringschlitze',sonnenblume_mit_ht(ht_ringe)),'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
 
 def alu_poliert(img,muster='A'):
     shadow(img,BL); polished(img,BL); pen=Pen(img)
@@ -163,6 +182,10 @@ def sheet_montage(items,path):
 if __name__=='__main__':
     V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 12 mm", leder)
     import sys
+    if 'mschlitz' in sys.argv:
+        items=[("Sonnenblume + ausgefrästes M im Hochtöner (HT 27,3 % statt 25,1 % offen)", lambda im: alu_poliert(im,'MH')),
+               ("Sonnenblume + ausgefrästes M in allen drei Feldern", lambda im: alu_poliert(im,'MALL'))]
+        sheet(items,'M_Schlitz_Blende.jpg',crop); print('ok'); raise SystemExit
     if 'mlogo' in sys.argv:
         items=[("A · Hochtöner: M als Durchbruch im Medaillon, Löcher außen", lambda im: alu_poliert(im,'MA')),
                ("B · Burmester-Prinzip: M-Emblem massiv in der 100er-Mitte, HT mit offener Mitte", lambda im: alu_poliert(im,'MB'))]

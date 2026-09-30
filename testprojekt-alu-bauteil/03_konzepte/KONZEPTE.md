@@ -40,7 +40,26 @@ Sonnenblume (Spiralabstand jeweils automatisch auf den Mindeststeg optimiert):
 | **2A-35: Sub/TMT Ø2,5→3,5, HT Ø2,0→2,5** | **28,8 %** | **35,1 %** | **35,7 %** | **35,1 %** | **0,80 mm** |
 | 2A-35 mit Steg ≥ 0,7 | 30,6 % | 36,6 % | 37,4 % | 36,8 % | 0,70 mm |
 
-## Signet-M in der Mitte (Burmester-Prinzip)
+## Sonnenblume + zusätzlich ausgefrästes M (Stand 30.09.2026)
+
+Kein Emblem: Die Sonnenblume bleibt vollständig, **zusätzlich** werden die vier Schenkel des Signet-M als
+Schlitze ausgefräst (linke Schenkel Ø 1,6, rechte Ø 2,5 mm – wie der Dünn/Dick-Kontrast im Signet,
+3,7° gedreht wie das Logo). Löcher entfallen nur dort, wo sie dem M näher als 0,8 mm Steg kämen.
+Das M öffnet genau die Feldmitte (Bündelung des Hochtöners). Skript `akustik/m_schlitz.py`.
+
+![HT mit M](bilder/HT_M_Schlitz.jpg)
+
+| Hochtöner-Feld | offen | Steg |
+|---|---|---|
+| Sonnenblume ohne M | 25,1 % | 0,80 mm |
+| + M 22 mm (Schlitze 2,0) | 27,5 % | 0,80 mm |
+| **+ M 28 mm (Schlitze 1,6 / 2,5)** | **27,3 %** | **0,80 mm** |
+| + M 28 mm (Schlitze 2,5 / 2,5) | 29,3 % | 0,80 mm |
+| + M 34 mm (Schlitze 2,0) | 29,3 % | 0,80 mm |
+
+![M in der Blende](bilder/M_Schlitz_Blende.jpg)
+
+## Signet-M in der Mitte als Emblem (Burmester-Prinzip) – verworfen
 
 Burmester (R02) setzt ein **kleines massives Signet-Element in die Feldmitte**, der Schall tritt darum
 herum aus. Das funktioniert bei Tief-/Mitteltönern (Emblem ≪ Wellenlänge), beim Hochtöner deckt es aber
