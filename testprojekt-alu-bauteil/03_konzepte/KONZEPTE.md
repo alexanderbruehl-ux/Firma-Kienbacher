@@ -40,7 +40,32 @@ Sonnenblume (Spiralabstand jeweils automatisch auf den Mindeststeg optimiert):
 | **2A-35: Sub/TMT Ø2,5→3,5, HT Ø2,0→2,5** | **28,8 %** | **35,1 %** | **35,7 %** | **35,1 %** | **0,80 mm** |
 | 2A-35 mit Steg ≥ 0,7 | 30,6 % | 36,6 % | 37,4 % | 36,8 % | 0,70 mm |
 
-## Sonnenblume + zusätzlich ausgefrästes M (Stand 30.09.2026)
+## Festlegung Hochtöner: Sonnenblume + ausgefrästes Signet-M (echte Kontur)
+
+Nur im Hochtöner. Statt Schlitzen konstanter Breite wird die **echte Signet-Kontur** (aus dem
+vektorisierten Logo) als Durchbruch gefräst: Breite 28 mm, 3,7° gedreht wie das Logo, schmalste Stelle
+1,62 mm (Fräser Ø 1,0 mm, Spitzen 49° → Verrundung r 0,5 mm). Löcher bleiben, außer sie kämen dem M
+näher als 0,8 mm. Hochtöner 27,0 % offen, **die Feldmitte (r < 4 mm) ist zu 45–99 % offen** statt 0–26 %.
+3D-Modell: `04_cad/blende/blende_2a35.py` (→ `Blende_2A35M.step/.stl`, 1.412 Bohrungen, 1.062 g).
+
+![HT-Detail](bilder/HT_M_Kontur_Detail.jpg)
+
+Schematischer Frequenzgang aller Optimierungsstufen (Hochtöner mit radialem Offen-Profil und
+Bündelungsgewichtung – die Mitte zählt bei hohen Frequenzen mehr; `akustik/frequenzplot.py`):
+
+![Frequenzgang](akustik/Frequenzplot_Sonnenblume.png)
+
+| Stufe | 5 kHz | 10 kHz | 15 kHz | 20 kHz |
+|---|---|---|---|---|
+| Sonnenblume bisher | −1,5 dB | −5,0 dB | −8,4 dB | −11,2 dB |
+| 2A-35 (Haut 2,2 mm) | −1,3 dB | −3,8 dB | −6,4 dB | −8,5 dB |
+| 2A-35, HT-Haut 1,5 mm | −0,9 dB | −2,8 dB | −4,9 dB | −6,9 dB |
+| **2A-35, HT-Haut 1,5 mm + Signet-M** | **−0,6 dB** | **−1,6 dB** | **−2,7 dB** | **−3,8 dB** |
+
+Die absoluten Werte hängen von der (vereinfachten) Bündelungsgewichtung ab; die Reihenfolge und der
+Trend sind robust. Verifikation per REW-Messung mit/ohne Blende.
+
+## Sonnenblume + zusätzlich ausgefrästes M – Schlitzvariante (Vorstufe)
 
 Kein Emblem: Die Sonnenblume bleibt vollständig, **zusätzlich** werden die vier Schenkel des Signet-M als
 Schlitze ausgefräst (linke Schenkel Ø 1,6, rechte Ø 2,5 mm – wie der Dünn/Dick-Kontrast im Signet,

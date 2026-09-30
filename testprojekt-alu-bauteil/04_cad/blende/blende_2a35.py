@@ -12,6 +12,8 @@ P=json.load(open(os.path.join(ROOT,'parameter.json')))
 sys.path.insert(0,os.path.join(ROOT,'03_konzepte','logo')); import mwlogo
 sys.path.insert(0,HERE); import lochmuster_opt as LM
 LM.WMIN=0.8
+import signet_m
+M_WIDTH=28.0             # ausgefrästes Signet-M im Hochtöner (echte Kontur), Breite in mm
 
 # ---------------- Parameter ----------------
 T=8.5                    # Blendendicke
@@ -105,15 +107,29 @@ def build_blende():
         cyl=cq.Workplane('XY',origin=(x,y,-T-1)).circle(Rf).extrude(T+2)
         cone=cq.Solid.makeCone(Rf,Rf+RING,RECESS,pnt=cq.Vector(x,y,-RECESS),dir=cq.Vector(0,0,1))
         body=body.cut(cyl).cut(cq.Workplane().add(cone))
-        pts=field_2a35(x,y,D); allpts+=pts
+        pts=field_2a35(x,y,D)
         sk=SKIN_HT if D<60 else SKIN
         outer=cq.Wire.makeCircle(Rf,cq.Vector(x,y,0),cq.Vector(0,0,1))
-        inners=[cq.Wire.makeCircle(d/2,cq.Vector(px,py,0),cq.Vector(0,0,1)) for px,py,d in pts]
+        inners=[]
+        if D<60:   # Signet-M (echte Kontur) + Löcher nur mit Steg >= 0,8 mm zum M
+            M=signet_m.signet_poly(M_WIDTH,x,y)
+            def segd(p,a,b):
+                p,a,b=map(np.array,(p,a,b)); t=np.clip(np.dot(p-a,b-a)/np.dot(b-a,b-a),0,1); return np.linalg.norm(p-(a+t*(b-a)))
+            def pip(p):
+                c=False
+                for i in range(len(M)):
+                    (x1,y1),(x2,y2)=M[i],M[i-1]
+                    if (y1>p[1])!=(y2>p[1]) and p[0]<(x2-x1)*(p[1]-y1)/(y2-y1)+x1: c=not c
+                return c
+            pts=[(px,py,d) for px,py,d in pts if not pip((px,py)) and min(segd((px,py),M[i-1],M[i]) for i in range(len(M)))-d/2>=0.8]
+            inners.append(cq.Wire.makePolygon([cq.Vector(px,py,0) for px,py in M],close=True))
+        allpts+=pts
+        inners+=[cq.Wire.makeCircle(d/2,cq.Vector(px,py,0),cq.Vector(0,0,1)) for px,py,d in pts]
         skin=cq.Solid.extrudeLinear(cq.Face.makeFromWires(outer,inners),cq.Vector(0,0,sk)).translate((0,0,-RECESS-sk))
         if D<60 and CSINK_HT>0:   # rückseitige 90°-Senkungen (optional)
             cones=[cq.Solid.makeCone(d/2+CSINK_HT,d/2,CSINK_HT,pnt=cq.Vector(px,py,-RECESS-sk),dir=cq.Vector(0,0,1)) for px,py,d in pts]
             skin=skin.cut(cq.Compound.makeCompound(cones))
-        print(f'  Feld Ø{D}: {len(pts)} Bohrungen {sorted(set(p[2] for p in pts))}, Restwand {sk} mm'+(' + Senkung' if (D<60 and CSINK_HT>0) else ''))
+        print(f'  Feld Ø{D}: {len(pts)} Bohrungen {sorted(set(p[2] for p in pts))}, Restwand {sk} mm'+(f', Signet-M {M_WIDTH} mm' if D<60 else '')+(' + Senkung' if (D<60 and CSINK_HT>0) else ''))
         body=body.union(cq.Workplane().add(skin.Solids()))
     # Logo einfräsen
     faces,C=logo_faces()
@@ -148,8 +164,8 @@ def build_scene():
 
 if __name__=='__main__':
     b,pts,C=build_blende()
-    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35.step'))
-    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35.stl'),tolerance=0.02,angularTolerance=0.15)
+    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.step'))
+    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.stl'),tolerance=0.02,angularTolerance=0.15)
     for name,s in zip(['Rumpf','Einfassung','Fach','Korpus'],build_scene()):
         cq.exporters.export(s,os.path.join(OUT,f'Szene_{name}.stl'),tolerance=0.05,angularTolerance=0.2)
     v=b.val().Volume(); print(f'Blende 2A-35: Volumen {v/1000:.1f} cm³, Masse {v*2.70/1000:.0f} g (EN AW-6082)')

@@ -153,8 +153,23 @@ def sonnenblume_mit_M(mfac,law_fn,edge=1.2):
 def _law(D):
     q=lambda v,ds:min(ds,key=lambda x:abs(x-v))
     return (lambda t:q(2.5+1.0*t,[2.5,3.0,3.5])) if D>60 else (lambda t:2.0 if t<0.75 else 2.5)
+def _pip(p,poly):
+    x,y=p; c=False
+    for i in range(len(poly)):
+        x1,y1=poly[i]; x2,y2=poly[i-1]
+        if (y1>y)!=(y2>y) and x<(x2-x1)*(y-y1)/(y2-y1)+x1: c=not c
+    return c
+def ht_M_kontur(pen,cx,cy,D,mw=28.0):
+    """Hochtöner: Sonnenblume + echte Signet-Kontur (aus dem vektorisierten Logo) als Durchbruch, 3,7° gedreht."""
+    M=_htm.signet_poly(mw,cx,cy)
+    opt2c.WMIN=0.8
+    for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,_law(D)):
+        if _pip((x,y),M): continue
+        dmin=min(_segdist((x,y),M[i-1],M[i]) for i in range(len(M)))
+        if dmin-d/2>=0.8: hole(pen,(x,y),d)
+    pen.poly(M,fill=(16,17,21))
 def nur_ht_M(pen,cx,cy,D):
-    if D<60: sonnenblume_mit_M(28/46.2,_law)(pen,cx,cy,D)
+    if D<60: ht_M_kontur(pen,cx,cy,D)
     else: feld_sonnenblume35(pen,cx,cy,D)
 def alle_M(pen,cx,cy,D):
     sonnenblume_mit_M(0.6,_law)(pen,cx,cy,D)
@@ -198,7 +213,7 @@ if __name__=='__main__':
         items=[("2A Sonnenblume bisher · 27,8 % offen · Steg 0,56 mm (zu dünn)", lambda im: alu_poliert(im,'A')),
                ("2A-35 Sonnenblume querschnittsoptimiert · 35,1 % offen · Steg ≥ 0,8 mm", lambda im: alu_poliert(im,'A35'))]
         sheet(items,'Sonnenblume_Vergleich.jpg',crop); print('ok'); raise SystemExit
-    V2=("Variante 2 – Alu hochglanzpoliert · Sonnenblume querschnittsoptimiert · 35 % offen", lambda im: alu_poliert(im,'A35'))
+    V2=("Variante 2 – Alu hochglanzpoliert · Sonnenblume · Hochtöner mit ausgefrästem M", lambda im: alu_poliert(im,'MH'))
     items=[V1,V2]
     sheet(items,'Vorschau_flach.jpg',crop)
     sheet_montage(items,'Vorschau_Montage.jpg')
