@@ -6,14 +6,12 @@ die CAD-Kontur (links 65,6°), die Treiberausschnitte aus `parameter.json` und d
 
 ![Konzepte](bilder/Konzepte_flach.jpg)
 
-## Logo
+## Logo (vorläufig)
 
-`logo/Meisterwerke_Logo.svg` (Signet + Wortmarke) und `logo/Meisterwerke_Signet.svg` (nur „M“).
-Nachgezeichnet vom Referenzbild „Meisterwerke Marina“ (Signet aus Messung der Schenkel konstruiert,
-Wortmarke in Cinzel, SIL Open Font License). Erzeugt mit `logo/mwlogo.py`.
-Position auf der Blende: **mittig unter dem 100er (KT 100 V)**, **parallel zur Unterkante gedreht
-(3,7°)**, Breite 125 mm, Höhe ≈ 27.8 mm. Mitte (286.1 | 37.5) mm, Logounterkante 5 mm über der
-Blendenunterkante. Abstand Signet-Oberkante zum 100er-Feld ≈ 8 mm.
+`logo/` – vorläufige Nachzeichnung aus der Bilddatei (siehe `logo/README.md`), bis die Original-
+Vektordatei vorliegt. Position: **parallel zur Unterkante (3,7°)**, Mitte 15 mm rechts der
+100er-Mitte, Logounterkante 8 mm über der Blendenunterkante, Breite 115 mm, Höhe ≈ 27,9 mm.
+Abstand Signet-Oberkante zum 100er-Feld ≈ 6 mm.
 
 ## K1 – Leder (Designvariante 1)
 
@@ -45,7 +43,7 @@ Gemeinsam für K2a–c:
 | Konzept | Muster | Charakter | Fertigung |
 |---|---|---|---|
 | **K2a „Ringe“** | konzentrische Lochkreise je Treiber, Loch-Ø wächst nach außen (Sub/TMT 1,0 → 2,4 mm), polierter Diamantschnitt-Ring um jedes Feld | klassisch, uhrwerkhaft, am nächsten an den Referenzen R02 | Bohren, viele Löcher (≈ 3.000–4.000); Ringe auf der Drehmaschine nicht möglich (Kontur), daher Glanzfräsen |
-| **K2b „Diagonale“** | Langlöcher parallel zur 65,6°-Kante, als Sehnen in den Treiberkreisen; dazu eine Glanzschnitt-Leitlinie | nimmt die Diagonale des Boots auf, sportlich, eigenständig | Nutenfräsen Ø 2,2 / 1,6 mm, deutlich weniger Einzelelemente als Bohren |
+| **K2b „Diagonale“** | Langlöcher parallel zur 65,6°-Kante, als Sehnen in den Treiberkreisen | nimmt die Diagonale des Boots auf, sportlich, eigenständig | Nutenfräsen Ø 2,2 / 1,6 mm, deutlich weniger Einzelelemente als Bohren |
 | **K2c „Verlauf“** | flächiges Lochfeld im 65,6°-Raster; über den Treibern große Löcher, dazwischen fein, nach rechts zur „fliegenden“ Kante auslaufend | ruhig, flächig, modern; die Treiber sind nur zu ahnen | nur über den Treibern durchgehend, sonst Sacklöcher 1–2 mm tief als Dekor, damit das Gehäuse dicht bleibt |
 
 ## Offen
