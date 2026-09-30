@@ -132,7 +132,7 @@
         202.7
       ]
     ],
-    "kontur_ecken_hinweis": "kontur_ecken = Vorderseite (sichtbar); Rückseite rechts mit ≈17 mm Überstand/Fase"
+    "kontur_ecken_hinweis": "kontur_ecken = Vorderseite Bestand-Lederabdeckung (CAD-Referenz, unverändert)"
   },
   "blende_vorgaben": {
     "_quelle": "Vorgaben Alexander Brühl 30.09.2026, siehe 03_konzepte/ANFORDERUNGEN.md",
@@ -162,8 +162,8 @@
     "rumpfwand": 10.0,
     "magnetabstand": 1.5,
     "spalt_umlaufend_vorschlag": 2.0,
-    "spalt_hinweis": "links/oben/unten gleich, rechts größer (Überstandseite)",
-    "ueberstand_seite": "rechts (Korpus links im Hinterschnitt)",
+    "spalt_hinweis": "oben/unten/links gleich; rechts offenes Staufach",
+    "ueberstand_seite": "rechts, gerade Kante ohne Fase; rechts daneben offenes Staufach (Korpus links im Hinterschnitt)",
     "ueberstand": [
       15.0,
       20.0

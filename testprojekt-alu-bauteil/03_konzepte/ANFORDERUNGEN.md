@@ -14,10 +14,11 @@
   abschließt.
 - **Links ist die Blende gegenüber dem Korpus abgeschrägt** (CAD 65,6°), damit sie in die
   eingefasste Öffnung passt.
-- **Rechts steht sie ca. 15–20 mm über den Korpus** (CAD: Rückseite ≈17 mm, als Fase ausgeführt).
-  Das ergibt die schlanke, „fliegende“ Kante.
-- **Spalt zwischen Blende und Einfassung:** links, oben und unten umlaufend gleich (Vorschlag 2 mm),
-  rechts größer.
+- **Rechts steht sie ca. 15–20 mm über den Korpus**, gerade Kante über die volle Dicke (keine Fase).
+  Rechts daneben bleibt das **Staufach offen**. Von der Seite gesehen entsteht so eine schlanke,
+  „fliegende“ Kante.
+- **Spalt zwischen Blende und Einfassung:** oben, unten und links gleich (Vorschlag 2 mm). Rechts
+  schließt das offene Staufach an.
 - Treiberausschnitte laut `parameter.json` → `einbauschnittstelle`. Die Blende gibt es links und
   rechts, spiegelbildlich.
 - Tiefe: 8,5 + 1,5 + 20 + 119 = 149 mm ≤ 10 mm Wand + 140 mm Fach. Der zuvor vermutete
@@ -32,13 +33,17 @@ untere Ecke der Blendenvorderseite, mm):
 | Kontur | Ecken (unten links → unten rechts → oben rechts → oben links) |
 |---|---|
 | Blende Vorderseite | (0/0) · (369,1/23,9) · (438,7/209,4) · (93,8/207,0) |
-| Blende Rückseite (mit Überstand/Fase rechts) | (−0,6/−0,1) · (388,4/25,0) · (457,8/210,1) · (93,5/207,5) |
+| Blende Rückseite (Bestand, rechts breiter als Vorderseite) | (−0,6/−0,1) · (388,4/25,0) · (457,8/210,1) · (93,5/207,5) |
 | Deckel/Korpus-Front | (−17,8/2,4) · (373,8/27,7) · (440,6/205,9) · (−17,4/202,7) |
 
-Die Fotomontage (Referenzfoto aus dem privaten Repo, nicht hier abgelegt) wurde **am Foto**
-perspektivisch angepasst, nicht an der Blende. Die Blende ist dafür so eingepasst, dass links,
-oben und unten ein gleicher Spalt von 2 mm entsteht. Rechts wurden 20 mm Luft hinter der Fase
-angenommen. Die Öffnungsmaße sind damit noch nicht nachgemessen.
+**Fotomontage** (Referenzfoto aus dem privaten Repo, hier nicht abgelegt): Der Maßstab stammt aus
+dem CAD (Blendenhöhe ≈ Öffnungshöhe). Nur die Blendenkontur oben, unten und links wurde optisch an
+die Einfassung angepasst (2 mm Spalt). Die rechte Kante ist die Deckelkante + 17,5 mm. Die daraus
+zurückgerechnete Kontur (≈, nur aus dem Foto) lautet: (30,9/−0,9) · (386,0/10,4) · (461,5/211,9) ·
+(92,3/210,0).
+**Befund:** Mit der steileren linken Kante aus dem Foto schneidet der Sub-Ausschnitt Ø 156 unten
+links die Blendenkante. Vor der Konstruktion muss die Öffnung real vermessen werden (linke Kante
+der Einfassung: Winkel und Lage).
 
 ## Designvarianten
 
