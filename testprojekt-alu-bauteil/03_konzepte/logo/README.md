@@ -16,5 +16,6 @@ Wird ersetzt, sobald die **Original-Vektordatei** vorliegt (dann nur `mw_trace.j
 Entstehung: aus der Bilddatei „LOGO MW.jpg“ (privates Repo Privat-Meisterwerke) vektorisiert, keine
 Fremdschrift. Signet als Polygon aus der Kontur, Wortmarke mit Potrace als Bézierkurven.
 
-Position auf der Blende (Stand 30.09.2026): parallel zur Unterkante (3,7°), Mitte 15 mm rechts der
-100er-Mitte, Logounterkante 8 mm über der Blendenunterkante, Breite 115 mm (Höhe ≈ 27,9 mm).
+Position auf der Blende (Stand 30.09.2026): parallel zur Unterkante (3,7°), Logounterkante 8 mm über
+der Blendenunterkante, Mittelachse (um 3,7° gekippt) verlängert durch den 100er-Mittelpunkt,
+Mitte (291,3 | 40,9) mm, Breite 115 mm (Höhe ≈ 27,9 mm).

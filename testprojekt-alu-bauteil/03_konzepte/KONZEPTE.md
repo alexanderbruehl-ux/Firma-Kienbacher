@@ -9,9 +9,9 @@ die CAD-Kontur (links 65,6°), die Treiberausschnitte aus `parameter.json` und d
 ## Logo (vorläufig)
 
 `logo/` – vorläufige Nachzeichnung aus der Bilddatei (siehe `logo/README.md`), bis die Original-
-Vektordatei vorliegt. Position: **parallel zur Unterkante (3,7°)**, Mitte 15 mm rechts der
-100er-Mitte, Logounterkante 8 mm über der Blendenunterkante, Breite 115 mm, Höhe ≈ 27,9 mm.
-Abstand Signet-Oberkante zum 100er-Feld ≈ 6 mm.
+Vektordatei vorliegt. Position: **parallel zur Unterkante (3,7°)**, Logounterkante 8 mm über der Blendenunterkante.
+**Die Mittelachse des Logos (senkrecht zur Grundlinie, also um 3,7° gekippt) läuft verlängert durch den
+100er-Mittelpunkt.** Mitte (291,3 | 40,9) mm, Breite 115 mm, Höhe ≈ 27,9 mm.
 
 ## K1 – Leder (Designvariante 1)
 
