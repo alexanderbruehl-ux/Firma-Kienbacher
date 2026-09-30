@@ -83,7 +83,32 @@ def feld_sonnenblume35(pen,cx,cy,D):
     q=lambda v,ds:min(ds,key=lambda x:abs(x-v))
     law=(lambda t:q(2.5+1.0*t,[2.5,3.0,3.5])) if D>60 else (lambda t:q(2.0+0.5*t,[2.0,2.5]))
     for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,law): hole(pen,(x,y),d)
-MUSTER={'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
+def _stamp(pen,pts,w):
+    pts=np.array(pts); seg=np.linalg.norm(np.diff(pts,axis=0),axis=1); L=np.concatenate([[0],np.cumsum(seg)])
+    for s_ in np.arange(0,L[-1]+1e-9,0.08):
+        pen.circ((np.interp(s_,L,pts[:,0]),np.interp(s_,L,pts[:,1])),w/2,fill=(16,17,21))
+def ht_spirale(pen,cx,cy,D):
+    """HT-V2: Spiralschlitze (13 Haupt- + 13 Zwischenarme, aus den Sonnenblumen-Spiralen) + Zentralloch Ø8."""
+    R=D/2-1.2; rc=4.0; n=13; w=1.6; W=0.8; PITCH=0.9; COSA=math.cos(math.atan(PITCH))
+    hole(pen,(cx,cy),2*rc)
+    r0=max(rc+W+w/2,(n*(w+W))/(2*math.pi*COSA)*1.12); r1=(2*n*(w+W))/(2*math.pi*COSA)*1.12
+    arm=lambda th0,rs:[(cx+r*math.cos(th0+PITCH*math.log(r/r0)),cy+r*math.sin(th0+PITCH*math.log(r/r0))) for r in np.linspace(rs,R-w/2,60)]
+    for i in range(n):
+        th=2*math.pi*i/n; _stamp(pen,arm(th,r0),w); _stamp(pen,arm(th+math.pi/n,r1),w)
+def ht_ringe(pen,cx,cy,D):
+    """HT-V3: konzentrische Ringschlitze (3 versetzte Stege je Ring) + Zentralloch Ø6."""
+    R=D/2-1.2; w=1.6; W=0.8; hole(pen,(cx,cy),6.0); r=3.0+W+w/2; ring=0
+    while r+w/2<=R:
+        for s in range(3):
+            a0=2*math.pi*s/3+ring*0.6; a1=a0+2*math.pi/3-(W+w)/r
+            _stamp(pen,[(cx+r*math.cos(a),cy+r*math.sin(a)) for a in np.linspace(a0,a1,80)],w)
+        r+=w+W; ring+=1
+def sonnenblume_mit_ht(ht):
+    def f(pen,cx,cy,D):
+        if D<60: ht(pen,cx,cy,D)
+        else: feld_sonnenblume35(pen,cx,cy,D)
+    return f
+MUSTER={'A35S':('Sonnenblume + HT Spiralschlitze',sonnenblume_mit_ht(ht_spirale)),'A35R':('Sonnenblume + HT Ringschlitze',sonnenblume_mit_ht(ht_ringe)),'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
 
 def alu_poliert(img,muster='A'):
     shadow(img,BL); polished(img,BL); pen=Pen(img)
@@ -107,6 +132,10 @@ def sheet_montage(items,path):
 if __name__=='__main__':
     V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 12 mm", leder)
     import sys
+    if 'ht' in sys.argv:
+        items=[("Hochtöner V2 Spiralschlitze · HT 39,7 % offen · Mitte offen Ø8", lambda im: alu_poliert(im,'A35S')),
+               ("Hochtöner V3 Ringschlitze · HT 49,8 % offen · Mitte offen Ø6", lambda im: alu_poliert(im,'A35R'))]
+        sheet(items,'HT_Varianten_Blende.jpg',crop); print('ok'); raise SystemExit
     if 'vergleich' in sys.argv:
         items=[("2A Sonnenblume bisher · 27,8 % offen · Steg 0,56 mm (zu dünn)", lambda im: alu_poliert(im,'A')),
                ("2A-35 Sonnenblume querschnittsoptimiert · 35,1 % offen · Steg ≥ 0,8 mm", lambda im: alu_poliert(im,'A35'))]

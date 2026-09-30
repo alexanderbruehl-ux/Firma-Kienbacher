@@ -40,6 +40,26 @@ Sonnenblume (Spiralabstand jeweils automatisch auf den Mindeststeg optimiert):
 | **2A-35: Sub/TMT Ø2,5→3,5, HT Ø2,0→2,5** | **28,8 %** | **35,1 %** | **35,7 %** | **35,1 %** | **0,80 mm** |
 | 2A-35 mit Steg ≥ 0,7 | 30,6 % | 36,6 % | 37,4 % | 36,8 % | 0,70 mm |
 
+## Hochtöner-Feld: Alternativen mit offener Mitte
+
+Bei der Sonnenblume sitzen die **kleinsten Löcher in der Mitte** – dort, wo der Hochtöner bei hohen
+Frequenzen am stärksten gebündelt abstrahlt. Deshalb Alternativen mit offenem Zentrum
+(offene Fläche per Rasterung, Stege per Abstandskarte geprüft; Skript `akustik/ht_varianten.py`):
+
+![HT-Varianten](bilder/HT_Varianten.jpg)
+
+| HT-Feld | offen | kleinster Steg | Bemerkung |
+|---|---|---|---|
+| V0 Sonnenblume 2A-35 | 25,1 % | 0,80 mm | kleine Löcher innen (ungünstig) |
+| V1 Sonnenblume umgekehrt + Zentralloch Ø 7 | 24,0 % | 0,96 mm | Mitte offen, Fläche gering |
+| **V2 Spiralschlitze 13 + 13 Arme + Zentralloch Ø 8** | **39,7 %** | **0,89 mm** | greift die Sonnenblumen-Spiralen auf |
+| **V3 Ringschlitze + Zentralloch Ø 6** | **49,8 %** | 0,76 mm | akustisch am besten, Steg noch minimal anpassen |
+
+Schlitze: Fräser Ø 1,6 mm (Bahn = Schlitz), Restwand HT 1,5 mm. Rückseitige Senkungen geprüft und
+verworfen (nur 0,1–0,2 dB Gewinn). In der Blende:
+
+![HT in der Blende](bilder/HT_Varianten_Blende.jpg)
+
 ## Früher untersucht: „Strahlenkranz optimiert“ (2C+) – größter offener Querschnitt (verworfen)
 
 Auswahlkriterium: maximaler offener Querschnitt für eine ungehinderte Schallabstrahlung. Berechnet aus
