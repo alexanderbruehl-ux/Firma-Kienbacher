@@ -41,3 +41,10 @@ notes/      Diskussionsprotokoll, offene Punkte, Entscheidungen (siehe unten)
 - Version im Dokument ist als "l (Entwurf)" markiert, mit rotem Entwurfs-Hinweis am Anfang.
 - Der ursprüngliche Flow Chart (S. 5 im Original-PDF) wurde noch nicht ins Word-Dokument übernommen
   (nur als Platzhaltertext referenziert) — bei Bedarf nachbauen oder als Grafik einfügen.
+
+---
+
+## Weiteres Teilprojekt
+
+`testprojekt-alu-bauteil/` – Testprojekt für die KI-Fähigkeiten in Technik und Design
+(Referenzen → Designauswahl → 3D-CAD → Rendering in Autodesk Fusion). Siehe dortige README.

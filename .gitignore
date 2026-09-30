@@ -6,3 +6,5 @@ node_modules/
 # Rendering-Zwischendateien (falls beim Prüfen erzeugt)
 page-*.jpg
 *_preview.pdf
+
+__pycache__/

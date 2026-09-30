@@ -1,0 +1,37 @@
+{
+  "_hinweis": "PLATZHALTER-Bauteil zum Test der Werkzeugkette. Wird nach der Designauswahl durch das echte Bauteil ersetzt. Alle Maße in mm.",
+  "bauteil": {
+    "name": "Platzhalter_Halteplatte",
+    "sachnummer": "TP-ALU-0000",
+    "revision": "0"
+  },
+  "werkstoff": {
+    "bezeichnung": "EN AW-6082 T6 (AlSi1MgMn)",
+    "dichte_g_cm3": 2.70,
+    "fusion_material": "Aluminum 6061",
+    "fertigung": "CNC-Fräsen 3-Achs, 2 Aufspannungen",
+    "oberflaeche": "Glasperlgestrahlt + Eloxal E6/EV1, 15 µm"
+  },
+  "geometrie": {
+    "laenge": 120.0,
+    "breite": 60.0,
+    "dicke": 12.0,
+    "eckradius": 8.0,
+    "tasche_laenge": 80.0,
+    "tasche_breite": 30.0,
+    "tasche_tiefe": 4.0,
+    "tasche_radius": 4.0,
+    "bohrung_d": 6.6,
+    "bohrung_abstand_x": 100.0,
+    "bohrung_abstand_y": 40.0,
+    "kantenfase": 0.5
+  },
+  "rendering": {
+    "fusion_appearance": "Aluminum - Anodized Rough (Grey)",
+    "fusion_appearance_fallback": "Aluminum - Satin",
+    "umgebung": "Photo Booth",
+    "hintergrund": "Umgebung",
+    "aufloesung_px": [1920, 1080],
+    "kamera": "Isometrisch oben-rechts"
+  }
+}

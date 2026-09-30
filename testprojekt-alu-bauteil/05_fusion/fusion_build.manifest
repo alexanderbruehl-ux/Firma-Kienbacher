@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "Kienbacher Testprojekt",
+  "description": {"": "Konstruiert das Bauteil aus parameter.json, setzt Material/Aussehen und rendert."},
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}
