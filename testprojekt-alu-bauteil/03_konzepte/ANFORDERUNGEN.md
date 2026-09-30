@@ -36,16 +36,15 @@ untere Ecke der Blendenvorderseite, mm):
 | Blende Rückseite (Bestand, rechts breiter als Vorderseite) | (−0,6/−0,1) · (388,4/25,0) · (457,8/210,1) · (93,5/207,5) |
 | Deckel/Korpus-Front | (−17,8/2,4) · (373,8/27,7) · (440,6/205,9) · (−17,4/202,7) |
 
-**Fotomontage** (Referenzfoto aus dem privaten Repo, hier nicht abgelegt): Der Maßstab stammt aus
-dem CAD (Blendenhöhe ≈ Öffnungshöhe). Nur die Blendenkontur oben, unten und links wurde optisch an
-die Einfassung angepasst (2 mm Spalt). Die rechte Kante ist die Deckelkante + 17,5 mm. Korpus und
-Ausschnitte sind gegenüber der ersten Montage um **≈ 11,4 mm nach rechts** versetzt (bestätigt).
-Die **linke Kante folgt der im Foto automatisch erkannten Innenkante der Edelstahleinfassung**:
-Kantenpunkte aus 139 Bildzeilen (Übergang blauer Lack → Rahmen → Teak), Geradenfit mit
-1,6–3 px Streuung, keine messbare Krümmung. Die Kante ist dadurch etwas flacher als die frühere
-Handmessung. Der Steg zwischen Sub-Ausschnitt Ø 156 und linker Blendenkante beträgt jetzt ≈ 15 mm
-(CAD: 8,1 mm). Zurückgerechnete Kontur im CAD-System (≈, nur aus dem Foto):
-(10,2/−0,9) · (386,2/10,9) · (461,6/211,9) · (74,9/210,0).
+**Fotomontage** (Referenzfoto aus dem privaten Repo, hier nicht abgelegt): Die **CAD-Kontur der
+Blende gilt als maßgeblich**, auch für den Winkel der linken Kante (65,6°). Das **Foto wurde
+perspektivisch entzerrt**, so dass die Innenkante der Edelstahleinfassung links, oben und unten mit
+2 mm Spalt an der CAD-Kontur liegt. Maßstab und rechte Seite (offenes Staufach) entsprechen der
+bestätigten Montage, der Korpus sitzt dort um ≈ 11,4 mm nach rechts versetzt. Die rechte
+Blendenkante ist die Deckelkante + 17,5 mm. Blende damit im CAD-System:
+(0/0) · (391,6/25,4) · (460,7/209,6) · (93,8/207,0).
+Aus der Entzerrung abgeschätzt (nur grob): Die Öffnung ist innen etwa 750 mm (unten) bis 775 mm
+(oben) lang.
 Vor der Konstruktion die Öffnung real nachmessen.
 
 ## Designvarianten

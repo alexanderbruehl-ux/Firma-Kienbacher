@@ -169,28 +169,30 @@
       20.0
     ],
     "kontur_foto_angepasst": {
-      "_hinweis": "Näherung aus Fotomontage, CAD-System (Korpus unverändert), nur oben/unten/links an Einfassung angepasst, Spalt 2 mm; Lage relativ zu Korpus/Ausschnitten um DX verschoben – vor Konstruktion nachmessen",
+      "_hinweis": "CAD-Kontur maßgeblich (links 65,6°); Foto entzerrt, Spalt 2 mm oben/unten/links; rechte Kante = Deckelkante + 17,5 mm. CAD-System der Einbauschnittstelle.",
       "ecken": [
         [
-          10.2,
-          -0.9
+          0.0,
+          0.0
         ],
         [
-          386.2,
-          10.9
+          391.6,
+          25.4
         ],
         [
-          461.6,
-          211.9
+          460.7,
+          209.6
         ],
         [
-          74.9,
-          210.0
+          93.8,
+          207.0
         ]
       ],
-      "inhalt_versatz_dx": 11.4,
-      "steg_sub_links_min": 15.3,
-      "linke_kante": "automatisch erkannte Innenkante Edelstahleinfassung (Foto), Geradenfit 139 Zeilen"
+      "korpus_versatz_in_montage": 11.4,
+      "oeffnung_laenge_schaetzung": [
+        750,
+        775
+      ]
     }
   }
 }
