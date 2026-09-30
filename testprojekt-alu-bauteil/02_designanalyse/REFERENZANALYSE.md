@@ -57,6 +57,52 @@
 - Verlaufsmuster lassen sich parametrisch erzeugen. Das ist ideal für CadQuery und
   Fusion (Muster aus einer Formel statt Einzelgeometrie).
 
+## Einbauumgebung: Schwalbennester der Frauscher 650 Alassio (Web-Bilder U01–U12)
+
+Bildquellen: `01_referenzen/README.md` (Herstellerbilder, nur verlinkt).
+
+**Lage:** Je ein Fach in der linken und rechten Cockpit-Innenwand, etwa auf Höhe der beiden
+Einzelsitze bzw. knapp dahinter (U02, U07). Darüber läuft eine Edelstahl-Haltestange (U01, U02).
+
+**Form:** Liegende Öffnung, annähernd **Parallelogramm/Trapez** mit großen Eckradien. Die
+vordere Kante ist schräg (ca. 40–50°) und nimmt die Diagonale der äußeren
+Edelstahl-Zierleiste bzw. des Bordwand-Designausschnitts auf (U06, U11). Das Fach ist nach
+unten tiefer, innen mit einer kleinen Stufe/Ablage (U01).
+
+**Material/Oberflächen:**
+- Rahmen: umlaufende **polierte Edelstahl-Einfassung** (schmales Profil, Hochglanz).
+- Auskleidung: **Teak** mit sichtbarer Maserung (blaues Boot) bzw. farbig lackiert/gepolstert
+  (türkis, weißes Boot) – also je nach Ausstattung variabel.
+- Umgebung: hochglänzender **Gelcoat in Metallic-Blau** (fast spiegelnd), Teakdeck mit schwarzen
+  Fugen, blaues Leder mit Rautensteppung, polierter Edelstahl, Frauscher-Schriftzug.
+
+**Geschätzte Maße (nur aus Fotos, ±30 %, am Boot nachmessen!):**
+Öffnung ca. 550–700 mm lang × 220–300 mm hoch, Tiefe ca. 120–180 mm; Rahmenbreite ca. 8–12 mm.
+Maßstab: Bootsbreite ca. 2,1 m (Draufsicht U07), Becher im Fach (U01).
+
+**Vorhandene Lautsprecher:** Runde JL-Audio-Marine-Lautsprecher mit Speichengitter sitzen
+(je nach Baujahr/Ausstattung) unter dem Armaturenbrett (U04, U05), in der Seitenwand auf
+Fußhöhe vor dem Schwalbennest (U02, U03) und im Heck-Fußraum (U10). Laut Auftrag gehört der
+Lautsprecher selbst zu einem anderen Projekt; die Blende muss sich nur an dessen Einbau anpassen.
+
+**Mögliche Positionen der Alu-Blende:**
+1. **In der Rückwand bzw. Stirnseite des Schwalbennests** – Blende als Einsatz, der Lautsprecher
+   sitzt hinter dem Fach. Die Kontur folgt der Parallelogramm-Form des Fachs.
+2. **Seitenwand vor dem Fach** (heutige Lautsprecherposition, U02): runde oder trapezförmige
+   Blende, deren Schrägkante parallel zur Vorderkante des Fachs läuft.
+3. **Als Zierblende über dem ganzen Fach** mit perforiertem Feld und integriertem Rahmen, der die
+   Edelstahl-Einfassung ersetzt oder ergänzt (größter Eingriff, braucht Klärung mit Frauscher/Eigner).
+
+**Designfolgerungen für die Blende:**
+- Die **Diagonale** ist das prägende Motiv des Boots (Zierleiste, Fach, Designausschnitt):
+  Schlitze oder Verlauf der Perforation im gleichen Winkel führen.
+- Die umgebenden Metallteile sind **hochglanzpoliert**: Glanzfacette bzw. -rand der Blende
+  (vgl. R01/R02) passt. Eine mattgestrahlte, natur oder dunkel eloxierte Fläche setzt sich gegen
+  das spiegelnde Blau ab.
+- Farbe: Aluminium natur/Titan oder **dunkelblau eloxiert** passend zum Rumpf; Kontrast zum Teak.
+- Marine-Umgebung: seewasserbeständige Legierung (z. B. EN AW-5083/6082), Eloxal ≥ 20 µm
+  oder Pulver, Edelstahl-A4-Schrauben; keine Kontaktkorrosion zum Edelstahlrahmen (Isolierung).
+
 ## Abgrenzung / Schutzrechte
 
 Die Referenzen stammen von Burmester (Marke, Design, Signet). Das neue Bauteil
@@ -66,9 +112,9 @@ oder neutrales Signet vorgesehen.
 
 ## Offene Fragen an Kienbacher (vor Phase 3)
 
-1. **Funktion/Einsatz** des neuen Bauteils: Lautsprecherblende, Zier-/Designblende,
-   Bedienelement, Typenschild …? Einbauort bzw. Umgebung?
-2. **Größe** (ungefähre Hüllmaße) und **Stückzahl** (Prototyp, Kleinserie, Serie).
+1. ~~Funktion/Einsatz~~ → geklärt: Lautsprecherblende im Schwalbennest der Frauscher 650 Alassio.
+   Offen: welche der drei Positionen (Rückwand Fach, Seitenwand, ganzes Fach)?
+2. **Reale Maße/Fotos** der Schwalbennester am Boot und **Stückzahl** (Prototyp, Kleinserie, Serie).
    Davon hängt die Fertigung ab (Fräsen, Laser, Stanzen).
 3. **Blech** (Perforation, leicht) oder **Massivteil gefräst** (Facetten, Tiefe)?
 4. Signet auf dem Schild: Kienbacher-Logo, neutral oder frei?

@@ -12,7 +12,7 @@ und Oberflächeneffekten gerendert.
 
 | # | Phase | Ergebnis | Ordner | Status |
 |---|-------|----------|--------|--------|
-| 1 | Referenzen sammeln | Produktbilder + was daran gefällt | `01_referenzen/` | 🔶 läuft (3 Bilder erhalten) |
+| 1 | Referenzen sammeln | Produktbilder + was daran gefällt | `01_referenzen/` | 🔶 läuft (R01–R03, U01–U12 Web-Bilder Boot) |
 | 2 | Designanalyse | Formensprache, Muster, Oberflächen, Fertigungsbezug | `02_designanalyse/` | 🔶 begonnen |
 | 3 | Konzeptvarianten | 3–4 eigenständige Entwürfe mit Moodboard/Skizzen/Vorschau | `03_konzepte/` | ⬜ |
 | 4 | **Designauswahl** (durch Kienbacher) | gewählte Variante + Änderungswünsche | `03_konzepte/AUSWAHL.md` | ⬜ |
