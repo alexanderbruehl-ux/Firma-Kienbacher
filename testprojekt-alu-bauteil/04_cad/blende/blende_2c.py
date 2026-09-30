@@ -103,7 +103,6 @@ def build_blende():
         skin=cq.Solid.extrudeLinear(cq.Face.makeFromWires(outer,inners),cq.Vector(0,0,SKIN)).translate((0,0,-RECESS-SKIN))
         print(f'  Feld Ø{D}: {len(pts)} Bohrungen {sorted(set(p[2] for p in pts))}, {len(slots)} Langlöcher Breite {LM.SLOTW}')
         body=body.union(cq.Workplane().add(skin))
-        print(f'  Feld Ø{D}: {len(pts)} Bohrungen, Stufen {list(lv)}')
     # Logo einfräsen
     faces,C=logo_faces()
     for f in faces:

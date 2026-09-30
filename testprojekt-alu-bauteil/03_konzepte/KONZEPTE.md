@@ -24,7 +24,23 @@ Fertigung (für alle drei): Lochfelder von hinten auf 2,0–2,5 mm Restwand tasc
 in **nur 4 Bohrdurchmessern Ø 1,0 / 1,5 / 2,0 / 2,5 mm** für die ganze Blende (Werkzeugkosten), Langlöcher mit Schaftfräser Ø 1,5 mm. Hochglanz: Polieren bzw.
 Diamantfräsen, danach Klarlack oder Glanzeloxal.
 
-## Gewähltes Lochmuster: „Strahlenkranz optimiert“ (2C+) – größter offener Querschnitt
+## Lochmuster: Sonnenblume wird weiterverfolgt – Querschnitt
+
+2C+ gefällt optisch nicht, **die Sonnenblume (2A) wird weiterverfolgt.** Querschnittsvarianten der
+Sonnenblume (Spiralabstand jeweils automatisch auf den Mindeststeg optimiert):
+
+![Vergleich](bilder/Sonnenblume_Vergleich.jpg)
+
+| Sonnenblume | Hochtöner | Tiefmitteltöner | Subwoofer | gesamt | Steg |
+|---|---|---|---|---|---|
+| 2A bisher (Ø1,0–2,5) | 23,8 % | 27,4 % | 28,3 % | 27,8 % | 0,56 mm ✗ |
+| 2A-Verlauf, Steg ≥ 0,8 | 22,3 % | 24,2 % | 24,7 % | 24,4 % | 0,80 mm |
+| Ø1,5→2,5 | 24,1 % | 28,5 % | 29,2 % | 28,7 % | 0,80 mm |
+| Ø2,0→3,0 | 26,9 % | 32,0 % | 33,9 % | 32,9 % | 0,80 mm |
+| **2A-35: Sub/TMT Ø2,5→3,5, HT Ø2,0→2,5** | **28,8 %** | **35,1 %** | **35,7 %** | **35,1 %** | **0,80 mm** |
+| 2A-35 mit Steg ≥ 0,7 | 30,6 % | 36,6 % | 37,4 % | 36,8 % | 0,70 mm |
+
+## Früher untersucht: „Strahlenkranz optimiert“ (2C+) – größter offener Querschnitt (verworfen)
 
 Auswahlkriterium: maximaler offener Querschnitt für eine ungehinderte Schallabstrahlung. Berechnet aus
 der Geometrie (offene Fläche / Feldfläche):

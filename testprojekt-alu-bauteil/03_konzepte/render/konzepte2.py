@@ -77,7 +77,13 @@ def feld_strahlen_plus(pen,cx,cy,D):
     for x,y,d in h: hole(pen,(x,y),d)
     for x0,y0,a,r0,r1 in s:
         u=np.array([math.cos(a),math.sin(a)]); pen.slot(np.array([x0,y0])+u*(r0+r1)/2,u,r1-r0,opt2c.SLOTW,(16,17,21))
-MUSTER={'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
+def feld_sonnenblume35(pen,cx,cy,D):
+    """A35: Sonnenblume querschnittsoptimiert – Sub/TMT Ø2,5→3,5, HT Ø2,0→2,5, Steg ≥ 0,8 mm (≈ 35 % offen)."""
+    opt2c.WMIN=0.8
+    q=lambda v,ds:min(ds,key=lambda x:abs(x-v))
+    law=(lambda t:q(2.5+1.0*t,[2.5,3.0,3.5])) if D>60 else (lambda t:q(2.0+0.5*t,[2.0,2.5]))
+    for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,law): hole(pen,(x,y),d)
+MUSTER={'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
 
 def alu_poliert(img,muster='A'):
     shadow(img,BL); polished(img,BL); pen=Pen(img)
@@ -100,7 +106,12 @@ def sheet_montage(items,path):
 
 if __name__=='__main__':
     V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 12 mm", leder)
-    V2=("Variante 2 – Alu hochglanzpoliert · „Strahlenkranz optimiert“ · 41 % offen", lambda im: alu_poliert(im,'C+'))
+    import sys
+    if 'vergleich' in sys.argv:
+        items=[("2A Sonnenblume bisher · 27,8 % offen · Steg 0,56 mm (zu dünn)", lambda im: alu_poliert(im,'A')),
+               ("2A-35 Sonnenblume querschnittsoptimiert · 35,1 % offen · Steg ≥ 0,8 mm", lambda im: alu_poliert(im,'A35'))]
+        sheet(items,'Sonnenblume_Vergleich.jpg',crop); print('ok'); raise SystemExit
+    V2=("Variante 2 – Alu hochglanzpoliert · Sonnenblume querschnittsoptimiert · 35 % offen", lambda im: alu_poliert(im,'A35'))
     items=[V1,V2]
     sheet(items,'Vorschau_flach.jpg',crop)
     sheet_montage(items,'Vorschau_Montage.jpg')
