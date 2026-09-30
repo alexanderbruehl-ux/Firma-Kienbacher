@@ -38,12 +38,12 @@ untere Ecke der Blendenvorderseite, mm):
 
 **Fotomontage** (Referenzfoto aus dem privaten Repo, hier nicht abgelegt): Der Maßstab stammt aus
 dem CAD (Blendenhöhe ≈ Öffnungshöhe). Nur die Blendenkontur oben, unten und links wurde optisch an
-die Einfassung angepasst (2 mm Spalt). Die rechte Kante ist die Deckelkante + 17,5 mm. Die daraus
-zurückgerechnete Kontur (≈, nur aus dem Foto) lautet: (30,9/−0,9) · (386,0/10,4) · (461,5/211,9) ·
-(92,3/210,0).
-**Befund:** Mit der steileren linken Kante aus dem Foto schneidet der Sub-Ausschnitt Ø 156 unten
-links die Blendenkante. Vor der Konstruktion muss die Öffnung real vermessen werden (linke Kante
-der Einfassung: Winkel und Lage).
+die Einfassung angepasst (2 mm Spalt). Die rechte Kante ist die Deckelkante + 17,5 mm. Der Winkel der
+linken Kante passt so (bestätigt). Korpus und Ausschnitte sind gegenüber der ersten Montage um
+**≈ 11,4 mm nach rechts** versetzt. Dadurch bleibt zwischen Sub-Ausschnitt Ø 156 und linker
+Blendenkante wieder der CAD-Steg von 8,1 mm. Zurückgerechnete Kontur im CAD-System
+(≈, nur aus dem Foto): (19,6/−0,9) · (386,1/10,7) · (461,5/211,9) · (80,9/210,0).
+Vor der Konstruktion die Öffnung real nachmessen.
 
 ## Designvarianten
 
