@@ -103,6 +103,33 @@ Lautsprecher selbst zu einem anderen Projekt; die Blende muss sich nur an dessen
 - Marine-Umgebung: seewasserbeständige Legierung (z. B. EN AW-5083/6082), Eloxal ≥ 20 µm
   oder Pulver, Edelstahl-A4-Schrauben; keine Kontaktkorrosion zum Edelstahlrahmen (Isolierung).
 
+## Einbauschnittstelle aus dem LS-Projekt (verbindlich)
+
+Das Lautsprecherprojekt liegt im privaten Repo **Privat-Meisterwerke**,
+`Projekte/Schwalbennester Alassio/`. STEP-Dateien und Messdaten bleiben dort, hier stehen nur
+die Schnittstellenmaße. Maschinenlesbar: `parameter.json` → `einbauschnittstelle`.
+
+- Pro Seite ein 3D-gedrucktes Lautsprechergehäuse (Korpus 119 mm + Deckel 20 mm = **139 mm tief**),
+  das in der Öffnung des Schwalbennests sitzt. Bestückung: Visaton BF 32 (Hochtöner),
+  KT 100 V (Tiefmitteltöner), W 130 X (Subwoofer, nur rechts aktiv; links Blinddeckel).
+- Heutige Front: schwarze Gitter in einer **Lederabdeckung, 10 mm dick**. In der STEP-Datei ist das
+  der Körper „Abdeckung links“. **Die Alu-Blende ersetzt diese Abdeckung.**
+- Außenkontur 458,9 × 210,6 mm, schiefes Viereck mit geraden Kanten (links 65,6°, rechts 69,4°,
+  Unterkante 3,7° steigend). Die Ecken sind im Modell scharf. Die rechte Seite ist spiegelbildlich.
+
+| Treiber | Ausschnitt | Mittelpunkt ab linker unterer Ecke (mm) |
+|---|---|---|
+| BF 32 (Hochtöner) | Ø 46,2 | 376,4 / 151,0 |
+| KT 100 V (Tiefmitteltöner) | Ø 118,2 | 286,1 / 120,7 |
+| W 130 X (Subwoofer, links blind) | Ø 156,2 | 136,5 / 92,5 |
+
+![Einbauschnittstelle](Einbauschnittstelle_Blende_links.png)
+
+- Das eigene Foto des Boots (Privat-Meisterwerke, `Referenzbilder/03-Schwalbennest.jpeg`) bestätigt:
+  Parallelogramm-Öffnung mit poliertem Edelstahlrahmen, Teakauskleidung, Rumpf dunkles Marineblau.
+- Damit ist Position 1 (Blende in der Öffnung des Schwalbennests, vor dem Lautsprechergehäuse)
+  festgelegt. Die geschätzten Maße im Abschnitt oben sind durch diese Werte ersetzt.
+
 ## Abgrenzung / Schutzrechte
 
 Die Referenzen stammen von Burmester (Marke, Design, Signet). Das neue Bauteil
@@ -113,8 +140,8 @@ oder neutrales Signet vorgesehen.
 ## Offene Fragen an Kienbacher (vor Phase 3)
 
 1. ~~Funktion/Einsatz~~ → geklärt: Lautsprecherblende im Schwalbennest der Frauscher 650 Alassio.
-   Offen: welche der drei Positionen (Rückwand Fach, Seitenwand, ganzes Fach)?
-2. **Reale Maße/Fotos** der Schwalbennester am Boot und **Stückzahl** (Prototyp, Kleinserie, Serie).
+   Position: in der Öffnung des Schwalbennests, ersetzt die Lederabdeckung (siehe Einbauschnittstelle).
+2. ~~Reale Maße~~ → aus dem LS-Projekt übernommen. Offen: **Stückzahl** (Prototyp, Kleinserie, Serie).
    Davon hängt die Fertigung ab (Fräsen, Laser, Stanzen).
 3. **Blech** (Perforation, leicht) oder **Massivteil gefräst** (Facetten, Tiefe)?
 4. Signet auf dem Schild: Kienbacher-Logo, neutral oder frei?

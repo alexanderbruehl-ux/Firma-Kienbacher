@@ -43,9 +43,10 @@ Weitere Quellen:
 - Quellen: https://www.boote-magazin.de/en/boats/sport-boats/frauscher-650-alassio-europe-s-best-selling-electric-boat-put-to-the-test/ ,
   https://www.nautechnews.it/2021/07/02/restyling-frauscher-650-alassio/ ,
   Konfigurator: https://www.configurator.frauscherboats.com/650-alassio
-- **Benötigt für die Konstruktion:** Fotos der Schwalbennester am realen Boot (frontal + schräg,
-  mit Maßstab), Innenmaße bzw. verfügbare Einbaufläche, Wandmaterial/-stärke.
-  Lautsprecher und Einbaumaße kommen aus einem separaten Projekt (hier nicht recherchiert).
+- **Einbaumaße und Lautsprecher:** aus dem LS-Projekt (privates Repo Privat-Meisterwerke,
+  `Projekte/Schwalbennester Alassio/`), übernommen in `parameter.json` → `einbauschnittstelle`
+  und `02_designanalyse/REFERENZANALYSE.md`. Eigenes Foto des Schwalbennests dort unter
+  `Referenzbilder/03-Schwalbennest.jpeg`.
 
 ### Web-Referenzbilder Frauscher 650 Alassio (Recherche 30.09.2026)
 
