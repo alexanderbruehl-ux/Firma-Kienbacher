@@ -40,6 +40,19 @@ Sonnenblume (Spiralabstand jeweils automatisch auf den Mindeststeg optimiert):
 | **2A-35: Sub/TMT Ø2,5→3,5, HT Ø2,0→2,5** | **28,8 %** | **35,1 %** | **35,7 %** | **35,1 %** | **0,80 mm** |
 | 2A-35 mit Steg ≥ 0,7 | 30,6 % | 36,6 % | 37,4 % | 36,8 % | 0,70 mm |
 
+## Signet-M in der Mitte (Burmester-Prinzip)
+
+Burmester (R02) setzt ein **kleines massives Signet-Element in die Feldmitte**, der Schall tritt darum
+herum aus. Das funktioniert bei Tief-/Mitteltönern (Emblem ≪ Wellenlänge), beim Hochtöner deckt es aber
+genau die gebündelte Mitte ab.
+
+![M-Varianten](bilder/M_Varianten_Blende.jpg)
+
+| Variante | Hochtöner offen | Bewertung |
+|---|---|---|
+| A: M als Durchbruch im Medaillon im Hochtöner, Löcher außen | 15,1 % | optisch ruhig, akustisch zu wenig Fläche |
+| **B: M-Emblem massiv in der 100er-Mitte, HT mit offener Mitte (Zentralloch Ø7 + große Löcher innen)** | **24,0 %** | Emblem Ø20 deckt nur 2,9 % des 100er-Felds, λ(2,5 kHz) = 137 mm → akustisch vernachlässigbar |
+
 ## Hochtöner-Feld: Alternativen mit offener Mitte
 
 Bei der Sonnenblume sitzen die **kleinsten Löcher in der Mitte** – dort, wo der Hochtöner bei hohen

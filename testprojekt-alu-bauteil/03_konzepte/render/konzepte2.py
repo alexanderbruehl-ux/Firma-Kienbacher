@@ -108,7 +108,38 @@ def sonnenblume_mit_ht(ht):
         if D<60: ht(pen,cx,cy,D)
         else: feld_sonnenblume35(pen,cx,cy,D)
     return f
-MUSTER={'A35S':('Sonnenblume + HT Spiralschlitze',sonnenblume_mit_ht(ht_spirale)),'A35R':('Sonnenblume + HT Ringschlitze',sonnenblume_mit_ht(ht_ringe)),'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
+import ht_m as _htm
+def _signet(pen,cx,cy,width,fill):
+    pts=_htm.signet_poly(width,cx,cy); pen.poly(pts,fill=fill)
+def _radius(pts,cx,cy): return max(math.hypot(x-cx,y-cy) for x,y in pts)
+def ht_m_medaillon(pen,cx,cy,D):
+    """A: Signet-M als Durchbruch in einem Medaillon (Glanzring), Sonnenblumen-Löcher nur außen."""
+    mw=20.0; rm=_radius(_htm.signet_poly(mw,cx,cy),cx,cy)+1.2
+    diamond_ring(pen,(cx,cy),rm,w=1.2)
+    _signet(pen,cx,cy,mw,(16,17,21))
+    opt2c.WMIN=0.8
+    for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,lambda t:2.0 if t<0.75 else 2.5):
+        if math.hypot(x-cx,y-cy)-d/2>=rm+1.2+0.8: hole(pen,(x,y),d)
+def tmt_emblem(pen,cx,cy,D):
+    """B: massives, poliertes Medaillon mit eingefrästem M in der 100er-Mitte (Burmester-Prinzip), Löcher außen."""
+    rm=10.0
+    q=lambda v,ds:min(ds,key=lambda x:abs(x-v)); opt2c.WMIN=0.8
+    for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,lambda t:q(2.5+1.0*t,[2.5,3.0,3.5])):
+        if math.hypot(x-cx,y-cy)-d/2>=rm+2.0: hole(pen,(x,y),d)
+    pen.circ((cx,cy),rm,fill=(246,247,250)); diamond_ring(pen,(cx,cy),rm,w=1.4)
+    _signet(pen,cx+0.12,cy-0.12,13.0,(250,251,253)); _signet(pen,cx-0.12,cy+0.12,13.0,(120,126,136)); _signet(pen,cx,cy,13.0,(196,200,207))
+def ht_offen_mitte(pen,cx,cy,D):
+    """HT mit offener Mitte: Zentralloch Ø7, Sonnenblume umgekehrt (große Löcher innen)."""
+    hole(pen,(cx,cy),7.0); opt2c.WMIN=0.8
+    for x,y,d in opt2c.best_phyllo(cx,cy,D/2-1.2,lambda t:2.5 if t<0.6 else 2.0):
+        if math.hypot(x-cx,y-cy)-d/2>=3.5+0.8: hole(pen,(x,y),d)
+def kombi(ht,tmt):
+    def f(pen,cx,cy,D):
+        if D<60: ht(pen,cx,cy,D)
+        elif D<130: tmt(pen,cx,cy,D)
+        else: feld_sonnenblume35(pen,cx,cy,D)
+    return f
+MUSTER={'MA':('HT mit M-Medaillon',kombi(ht_m_medaillon,feld_sonnenblume35)),'MB':('100er mit M-Emblem',kombi(ht_offen_mitte,tmt_emblem)),'A35S':('Sonnenblume + HT Spiralschlitze',sonnenblume_mit_ht(ht_spirale)),'A35R':('Sonnenblume + HT Ringschlitze',sonnenblume_mit_ht(ht_ringe)),'A35':('Sonnenblume querschnittsoptimiert',feld_sonnenblume35),'C+':('Strahlenkranz optimiert',feld_strahlen_plus),'A':('Sonnenblume',feld_sonnenblume),'B':('Welle',feld_welle),'C':('Strahlenkranz',feld_strahlen)}
 
 def alu_poliert(img,muster='A'):
     shadow(img,BL); polished(img,BL); pen=Pen(img)
@@ -132,6 +163,10 @@ def sheet_montage(items,path):
 if __name__=='__main__':
     V1=("Variante 1 – Leder sattelbraun · Logo geprägt · Edelstahlleiste 12 mm", leder)
     import sys
+    if 'mlogo' in sys.argv:
+        items=[("A · Hochtöner: M als Durchbruch im Medaillon, Löcher außen", lambda im: alu_poliert(im,'MA')),
+               ("B · Burmester-Prinzip: M-Emblem massiv in der 100er-Mitte, HT mit offener Mitte", lambda im: alu_poliert(im,'MB'))]
+        sheet(items,'M_Varianten_Blende.jpg',crop); print('ok'); raise SystemExit
     if 'ht' in sys.argv:
         items=[("Hochtöner V2 Spiralschlitze · HT 39,7 % offen · Mitte offen Ø8", lambda im: alu_poliert(im,'A35S')),
                ("Hochtöner V3 Ringschlitze · HT 49,8 % offen · Mitte offen Ø6", lambda im: alu_poliert(im,'A35R'))]
