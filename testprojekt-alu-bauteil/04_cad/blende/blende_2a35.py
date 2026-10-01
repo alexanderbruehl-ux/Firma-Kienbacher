@@ -26,7 +26,7 @@ RECESS=0.6               # Absenkung Lochfeld vorne
 RING=2.0                 # Breite Diamantschnitt-Konus
 CHAMFER=0.5              # Glanzfase Außenkante
 GROOVE=(12.0,1.2,0.6)    # Kantennut: Abstand zur rechten Kante (= 12-mm-Kantenband), Breite, Tiefe
-LOGO_DEPTH=0.35
+LOGO_DEPTH=0.5             # Logo-Frästiefe (0,35 war im Rendering kaum sichtbar)
 LOGO_W=115.0; LOGO_ANG=math.degrees(math.atan2(25.4,391.6)); LOGO_EDGE=8.0
 BL=np.array(P['blende_vorgaben']['kontur_foto_angepasst']['ecken'])      # (0/0)(391.6/25.4)(460.7/209.6)(93.8/207)
 HOLES=[(a['mitte'][0],a['mitte'][1],a['d']) for a in P['einbauschnittstelle']['ausschnitte']]
@@ -167,7 +167,7 @@ def build_scene():
 if __name__=='__main__':
     b,pts,C=build_blende()
     cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.step'))
-    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.stl'),tolerance=0.02,angularTolerance=0.15)
+    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.stl'),tolerance=0.01,angularTolerance=0.04)   # fein: keine Facetten am Glanzkonus
     for name,s in zip(['Rumpf','Einfassung','Fach','Korpus'],build_scene()):
         cq.exporters.export(s,os.path.join(OUT,f'Szene_{name}.stl'),tolerance=0.05,angularTolerance=0.2)
     v=b.val().Volume(); print(f'Blende 2A-35: Volumen {v/1000:.1f} cm³, Masse {v*2.70/1000:.0f} g (EN AW-6082)')

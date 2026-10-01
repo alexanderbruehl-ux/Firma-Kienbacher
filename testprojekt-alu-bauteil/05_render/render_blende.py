@@ -7,6 +7,16 @@ HERE=os.path.dirname(os.path.abspath(__file__)); EXP=os.path.normpath(os.path.jo
 ap=argparse.ArgumentParser(); ap.add_argument('--hdri',default=''); ap.add_argument('--samples',type=int,default=160)
 ap.add_argument('--res',type=int,nargs=2,default=[1600,900]); ap.add_argument('--shot',default='gesamt'); ap.add_argument('--out',default=''); ap.add_argument('--blende',default='Blende_2C.stl'); ap.add_argument('--exposure',type=float,default=None)
 a=ap.parse_args([x for x in sys.argv[1:]])
+CACHE=os.path.join(HERE,'assets'); os.makedirs(CACHE,exist_ok=True)
+def asset(name,url):
+    p=os.path.join(CACHE,name)
+    if not os.path.exists(p):
+        import urllib.request; print('lade',url); urllib.request.urlretrieve(url,p)
+    return p
+PH='https://dl.polyhaven.org/file/ph-assets'
+TEAK_COL=asset('teak_veneer_col.jpg',PH+'/Textures/jpg/2k/teak_veneer/teak_veneer_diff_2k.jpg')
+TEAK_RGH=asset('teak_veneer_rough.jpg',PH+'/Textures/jpg/2k/teak_veneer/teak_veneer_rough_2k.jpg')
+STUDIO=asset('studio_small_09_2k.hdr',PH+'/HDRIs/hdr/2k/studio_small_09_2k.hdr')
 bpy.ops.wm.read_factory_settings(use_empty=True)
 sc=bpy.context.scene; sc.unit_settings.system='METRIC'
 def imp(name):
@@ -27,25 +37,37 @@ def smooth(o,angle=30):
 # ---- Objekte ----
 bl=imp(a.blende); hull=imp('Szene_Rumpf.stl'); frame=imp('Szene_Einfassung.stl'); pocket=imp('Szene_Fach.stl'); corpus=imp('Szene_Korpus.stl')
 alu=mat('Alu_hochglanz',(0.93,0.935,0.94),1.0,0.035)
-alu_sat=mat('Alu_satiniert',(0.86,0.87,0.88),1.0,0.32)
+alu_sat=mat('Alu_satiniert',(0.62,0.63,0.65),1.0,0.48)   # Fräsgrund matt -> Logo lesbar
 steel=mat('Edelstahl_poliert',(0.78,0.78,0.80),1.0,0.05)
 gel=mat('Gelcoat_marineblau',(0.004,0.008,0.032),0.0,0.3,coat=1.0,coat_rough=0.015)
 black=mat('Korpus_schwarz',(0.012,0.012,0.014),0.0,0.65)
-# Teak prozedural (Maserung + dunkle Fugen, Maßstab in Metern)
-teak=bpy.data.materials.new('Teak'); teak.use_nodes=True; nt=teak.node_tree; bs=nt.nodes['Principled BSDF']
-tc=nt.nodes.new('ShaderNodeTexCoord'); mp=nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value=(4,60,4)
-ns=nt.nodes.new('ShaderNodeTexNoise'); ns.inputs['Scale'].default_value=2.0; ns.inputs['Detail'].default_value=8
-wv=nt.nodes.new('ShaderNodeTexWave'); wv.wave_type='BANDS'; wv.bands_direction='Y'; wv.inputs['Scale'].default_value=0.6; wv.inputs['Distortion'].default_value=8.0; wv.inputs['Detail'].default_value=6
-cr=nt.nodes.new('ShaderNodeValToRGB'); cr.color_ramp.elements[0].color=(0.13,0.055,0.02,1); cr.color_ramp.elements[1].color=(0.33,0.15,0.06,1)
-nt.links.new(tc.outputs['Object'],mp.inputs['Vector']); nt.links.new(mp.outputs['Vector'],wv.inputs['Vector']); nt.links.new(wv.outputs['Fac'],cr.inputs['Fac']); nt.links.new(cr.outputs['Color'],bs.inputs['Base Color'])
-bs.inputs['Roughness'].default_value=0.5
+# Teak: CC0-Furniertextur (Poly Haven „Teak Veneer“), Box-Projektion in Objektkoordinaten
+def teak_mat(name,fugen=False):
+    m=bpy.data.materials.new(name); m.use_nodes=True; nt=m.node_tree; bs=nt.nodes['Principled BSDF']
+    tc=nt.nodes.new('ShaderNodeTexCoord'); mp=nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value=(2.2,2.2,2.2)
+    ic=nt.nodes.new('ShaderNodeTexImage'); ic.image=bpy.data.images.load(TEAK_COL); ic.projection='BOX'; ic.projection_blend=0.2
+    ir=nt.nodes.new('ShaderNodeTexImage'); ir.image=bpy.data.images.load(TEAK_RGH); ir.image.colorspace_settings.name='Non-Color'; ir.projection='BOX'
+    nt.links.new(tc.outputs['Object'],mp.inputs['Vector'])
+    for i in (ic,ir): nt.links.new(mp.outputs['Vector'],i.inputs['Vector'])
+    col=ic.outputs['Color']
+    if fugen:   # schwarze Fugen alle 45 mm (Teakdeck wie Frauscher)
+        wv=nt.nodes.new('ShaderNodeTexWave'); wv.wave_type='BANDS'; wv.bands_direction='Y'; wv.wave_profile='SAW'; wv.inputs['Scale'].default_value=1.0/0.045/ (2*math.pi) * 2*math.pi
+        mpw=nt.nodes.new('ShaderNodeMapping'); mpw.inputs['Scale'].default_value=(1,1.0/0.045,1); nt.links.new(tc.outputs['Object'],mpw.inputs['Vector'])
+        sep=nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(mpw.outputs['Vector'],sep.inputs['Vector'])
+        fr=nt.nodes.new('ShaderNodeMath'); fr.operation='FRACT'; nt.links.new(sep.outputs['Y'],fr.inputs[0])
+        st=nt.nodes.new('ShaderNodeMath'); st.operation='LESS_THAN'; st.inputs[1].default_value=0.11; nt.links.new(fr.outputs[0],st.inputs[0])
+        mx=nt.nodes.new('ShaderNodeMix'); mx.data_type='RGBA'; mx.inputs['B'].default_value=(0.012,0.010,0.009,1)
+        nt.links.new(st.outputs[0],mx.inputs['Factor']); nt.links.new(col,mx.inputs['A']); col=mx.outputs['Result']
+    nt.links.new(col,bs.inputs['Base Color']); nt.links.new(ir.outputs['Color'],bs.inputs['Roughness'])
+    return m
+teak=teak_mat('Teak'); teak_deck=teak_mat('Teakdeck',fugen=True)
 for o,m in ((hull,gel),(frame,steel),(pocket,teak),(corpus,black)): o.data.materials.append(m)
-# Blende: Logogrund (z = -0,35 mm, Normale +z) satiniert
+# Blende: Logogrund (z = -0,5 mm, Normale +z) satiniert
 bl.data.materials.append(alu); bl.data.materials.append(alu_sat)
 bm=bmesh.new(); bm.from_mesh(bl.data); n=0
 for f in bm.faces:
     c=f.calc_center_median()
-    if f.normal.z>0.99 and (abs(c.z+0.00035)<0.00004 or abs(c.z+0.35)<0.04): f.material_index=1; n+=1
+    if f.normal.z>0.99 and (abs(c.z+0.0005)<0.00003 or abs(c.z+0.5)<0.03): f.material_index=1; n+=1   # Logogrund z = -0,5 mm
 bm.to_mesh(bl.data); bm.free(); print('Logo-Flächen satiniert:',n)
 smooth(frame,50)   # Blende bleibt flach schattiert (ebene Flächen, keine Wellen)
 bpy.ops.object.empty_add(location=(0,0,0)); root=bpy.context.object; root.name='Szene'
@@ -53,7 +75,7 @@ for o in (bl,hull,frame,pocket,corpus): o.parent=root
 root.rotation_euler=(math.radians(90),0,0)
 # Teakdeck unterhalb des Fachs
 bpy.ops.mesh.primitive_plane_add(size=1,location=(0.35,-0.45,-0.20)); deck=bpy.context.object; deck.scale=(1.6,1.0,1)
-deck.data.materials.append(teak)
+deck.data.materials.append(teak_deck)
 # ---- Welt / Licht ----
 w=bpy.data.worlds.new('W'); sc.world=w; w.use_nodes=True; wn=w.node_tree
 bg=wn.nodes['Background']
@@ -72,6 +94,14 @@ else:
     try: sky.altitude=5
     except Exception: pass
     wn.links.new(sky.outputs['Color'],bg.inputs['Color']); bg.inputs['Strength'].default_value=0.35
+    # Spiegelstrahlen sehen ein neutrales Studio (kein rosé/bronze Farbstich auf Hochglanz-Alu und Edelstahl)
+    out=wn.nodes['World Output']; lp=wn.nodes.new('ShaderNodeLightPath')
+    st=wn.nodes.new('ShaderNodeTexEnvironment'); st.image=bpy.data.images.load(STUDIO)
+    bg2=wn.nodes.new('ShaderNodeBackground'); bg2.inputs['Strength'].default_value=0.30
+    wn.links.new(st.outputs['Color'],bg2.inputs['Color'])
+    mixs=wn.nodes.new('ShaderNodeMixShader')
+    wn.links.new(lp.outputs['Is Glossy Ray'],mixs.inputs['Fac']); wn.links.new(bg.outputs['Background'],mixs.inputs[1]); wn.links.new(bg2.outputs['Background'],mixs.inputs[2])
+    wn.links.new(mixs.outputs['Shader'],out.inputs['Surface'])
     try: sky.sun_intensity=0.25
     except Exception: pass
 # weiche Flächenleuchte für den Glanzreflex auf dem Alu
