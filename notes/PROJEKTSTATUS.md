@@ -50,7 +50,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 4 Fertigung Montage → **Teamleitung Montage** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `MONTAGE.md` |
 | 5 Boxenbauer | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `BOXENBAUER.md` |
 | 6 Produktionslogistiker | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–3), siehe `PRODUKTIONSLOGISTIKER.md` |
-| 7 Produktionsplanung | ⬜ Noch nicht begonnen |
+| 7 Produktionsplanung → **Produktionsplanung und -steuerung** (Umbenennung) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `PRODUKTIONSPLANUNG.md` |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
 | 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
@@ -130,7 +130,11 @@ Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
 **Produktionslogistiker** ist inhaltlich fertig abgestimmt (siehe
 `PRODUKTIONSLOGISTIKER.md`).
 
-Als Nächstes: **Produktionsplanung** (7.5.3.7).
+**Produktionsplanung und -steuerung** ist inhaltlich fertig abgestimmt
+(siehe `PRODUKTIONSPLANUNG.md`).
+
+Als Nächstes: **Digitale Prozessentwicklung & Lean Management**
+(7.5.3.8).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
