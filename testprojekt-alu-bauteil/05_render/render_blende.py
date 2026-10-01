@@ -11,7 +11,10 @@ CACHE=os.path.join(HERE,'assets'); os.makedirs(CACHE,exist_ok=True)
 def asset(name,url):
     p=os.path.join(CACHE,name)
     if not os.path.exists(p):
-        import urllib.request; print('lade',url); urllib.request.urlretrieve(url,p)
+        try:
+            import urllib.request; print('lade',url); urllib.request.urlretrieve(url,p)
+        except Exception as e:
+            print('Download fehlgeschlagen (%s) -> prozedurale Ersatzmaserung'%e); return None
     return p
 PH='https://dl.polyhaven.org/file/ph-assets'
 TEAK_COL=asset('teak_veneer_col.jpg',PH+'/Textures/jpg/2k/teak_veneer/teak_veneer_diff_2k.jpg')
@@ -41,10 +44,43 @@ alu_sat=mat('Alu_satiniert',(0.62,0.63,0.65),1.0,0.48)   # Fräsgrund matt -> Lo
 steel=mat('Edelstahl_poliert',(0.78,0.78,0.80),1.0,0.05)
 gel=mat('Gelcoat_marineblau',(0.004,0.008,0.032),0.0,0.3,coat=1.0,coat_rough=0.015)
 black=mat('Korpus_schwarz',(0.012,0.012,0.014),0.0,0.65)
+# Teak prozedural (Fachauskleidung wie im Foto: dunkles, rötlich-braunes Teak, feine Maserung längs = CAD-x)
+def teak_proc(name,fugen=False):
+    m=bpy.data.materials.new(name); m.use_nodes=True; nt=m.node_tree; bs=nt.nodes['Principled BSDF']
+    tc=nt.nodes.new('ShaderNodeTexCoord')
+    def tex(kind,scale,detail,rough=0.5):
+        mp=nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value=scale
+        t=nt.nodes.new(kind); t.inputs['Scale'].default_value=1.0
+        if 'Detail' in t.inputs: t.inputs['Detail'].default_value=detail
+        if 'Roughness' in t.inputs: t.inputs['Roughness'].default_value=rough
+        nt.links.new(tc.outputs['Object'],mp.inputs['Vector']); nt.links.new(mp.outputs['Vector'],t.inputs['Vector']); return t
+    fine=tex('ShaderNodeTexNoise',(1.2,260,260),12,0.65)      # feine Fasern, in x gestreckt
+    ring=tex('ShaderNodeTexNoise',(2.5,28,28),5,0.55)            # breitere Jahrring-Streifen
+    mix=nt.nodes.new('ShaderNodeMix'); mix.data_type='FLOAT'; mix.inputs['Factor'].default_value=0.55
+    nt.links.new(fine.outputs['Fac'],mix.inputs['A']); nt.links.new(ring.outputs['Fac'],mix.inputs['B'])
+    cr=nt.nodes.new('ShaderNodeValToRGB'); cr.color_ramp.interpolation='EASE'
+    cr.color_ramp.elements[0].position=0.34; cr.color_ramp.elements[0].color=(0.040,0.013,0.005,1)
+    cr.color_ramp.elements[1].position=0.66; cr.color_ramp.elements[1].color=(0.16,0.058,0.020,1)
+    if fugen:   # Deck: ruhigere, feinere Maserung (wenig Kontrast)
+        cr.color_ramp.elements[0].position=0.10; cr.color_ramp.elements[0].color=(0.11,0.045,0.017,1)
+        cr.color_ramp.elements[1].position=0.90; cr.color_ramp.elements[1].color=(0.22,0.095,0.036,1)
+    nt.links.new(mix.outputs['Result'],cr.inputs['Fac']); col=cr.outputs['Color']
+    if fugen:
+        mpw=nt.nodes.new('ShaderNodeMapping'); mpw.inputs['Scale'].default_value=(1,1.0/0.045,1); nt.links.new(tc.outputs['Object'],mpw.inputs['Vector'])
+        sep=nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(mpw.outputs['Vector'],sep.inputs['Vector'])
+        fr=nt.nodes.new('ShaderNodeMath'); fr.operation='FRACT'; nt.links.new(sep.outputs['Y'],fr.inputs[0])
+        st=nt.nodes.new('ShaderNodeMath'); st.operation='LESS_THAN'; st.inputs[1].default_value=0.11; nt.links.new(fr.outputs[0],st.inputs[0])
+        mx=nt.nodes.new('ShaderNodeMix'); mx.data_type='RGBA'; mx.inputs['B'].default_value=(0.012,0.010,0.009,1)
+        nt.links.new(st.outputs[0],mx.inputs['Factor']); nt.links.new(col,mx.inputs['A']); col=mx.outputs['Result']
+    nt.links.new(col,bs.inputs['Base Color']); bs.inputs['Roughness'].default_value=0.38
+    try: bs.inputs['Coat Weight'].default_value=0.35; bs.inputs['Coat Roughness'].default_value=0.08   # Klarlack
+    except Exception: pass
+    return m
 # Teak: CC0-Furniertextur (Poly Haven „Teak Veneer“), Box-Projektion in Objektkoordinaten
 def teak_mat(name,fugen=False):
     m=bpy.data.materials.new(name); m.use_nodes=True; nt=m.node_tree; bs=nt.nodes['Principled BSDF']
     tc=nt.nodes.new('ShaderNodeTexCoord'); mp=nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value=(2.2,2.2,2.2)
+    if not (TEAK_COL and TEAK_RGH): return teak_proc(name,fugen)
     ic=nt.nodes.new('ShaderNodeTexImage'); ic.image=bpy.data.images.load(TEAK_COL); ic.projection='BOX'; ic.projection_blend=0.2
     ir=nt.nodes.new('ShaderNodeTexImage'); ir.image=bpy.data.images.load(TEAK_RGH); ir.image.colorspace_settings.name='Non-Color'; ir.projection='BOX'
     nt.links.new(tc.outputs['Object'],mp.inputs['Vector'])
@@ -60,7 +96,7 @@ def teak_mat(name,fugen=False):
         nt.links.new(st.outputs[0],mx.inputs['Factor']); nt.links.new(col,mx.inputs['A']); col=mx.outputs['Result']
     nt.links.new(col,bs.inputs['Base Color']); nt.links.new(ir.outputs['Color'],bs.inputs['Roughness'])
     return m
-teak=teak_mat('Teak'); teak_deck=teak_mat('Teakdeck',fugen=True)
+teak=teak_proc('Teak_Fach'); teak_deck=teak_mat('Teakdeck',fugen=True)
 for o,m in ((hull,gel),(frame,steel),(pocket,teak),(corpus,black)): o.data.materials.append(m)
 # Blende: Logogrund (z = -0,5 mm, Normale +z) satiniert
 bl.data.materials.append(alu); bl.data.materials.append(alu_sat)
@@ -101,9 +137,11 @@ else:
     wn.links.new(sky.outputs['Color'],bg.inputs['Color']); bg.inputs['Strength'].default_value=0.35
     # Spiegelstrahlen sehen ein neutrales Studio (kein rosé/bronze Farbstich auf Hochglanz-Alu und Edelstahl)
     out=wn.nodes['World Output']; lp=wn.nodes.new('ShaderNodeLightPath')
-    st=wn.nodes.new('ShaderNodeTexEnvironment'); st.image=bpy.data.images.load(STUDIO)
     bg2=wn.nodes.new('ShaderNodeBackground'); bg2.inputs['Strength'].default_value=0.30
-    wn.links.new(st.outputs['Color'],bg2.inputs['Color'])
+    if STUDIO:
+        st=wn.nodes.new('ShaderNodeTexEnvironment'); st.image=bpy.data.images.load(STUDIO)
+        wn.links.new(st.outputs['Color'],bg2.inputs['Color'])
+    else: bg2.inputs['Color'].default_value=(0.85,0.87,0.9,1)   # offline: neutrales Hellgrau
     mixs=wn.nodes.new('ShaderNodeMixShader')
     wn.links.new(lp.outputs['Is Glossy Ray'],mixs.inputs['Fac']); wn.links.new(bg.outputs['Background'],mixs.inputs[1]); wn.links.new(bg2.outputs['Background'],mixs.inputs[2])
     wn.links.new(mixs.outputs['Shader'],out.inputs['Surface'])
