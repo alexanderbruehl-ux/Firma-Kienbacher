@@ -29,6 +29,16 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   raten, unternehmensspezifische Begriffe klären bevor sie ins Dokument kommen.
 - Alexander ergänzt nach dem gemeinsamen Grobentwurf noch weitere
   unternehmensspezifische Details selbst.
+- **Grundsatz: Jede Rolle muss für sich allein lesbar und vollständig
+  sein.** Verweise der Art „siehe Rolle X" sind nur zwischen Rollen
+  zulässig, die strukturell eine gemeinsame Basis teilen (z. B. die
+  Teamleitungen untereinander über `FUEHRUNG_HAUPTPROZESS.md`/
+  `FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md`). Für alle anderen Rollen
+  (z. B. PQB ist keine Teamleitungsfunktion) muss der eigene AKV-Anteil
+  eines gemeinsamen Prozesses (z. B. Sperrentscheidung) **vollständig
+  in der eigenen Rollenbeschreibung ausformuliert** werden, auch wenn
+  eine andere Rolle denselben Prozess aus ihrer Sicht ebenfalls
+  beschreibt.
 - **Arbeitsregel SharePoint-Sync (Token-/Zeit-Effizienz):** Inhaltliche
   Arbeit läuft laufend in den `notes/*.md`-Dateien (günstig, reiner Text);
   `scripts/build.js` und das Word-Dokument in `working/*.docx` werden
@@ -52,7 +62,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 6 Produktionslogistiker | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–3), siehe `PRODUKTIONSLOGISTIKER.md` |
 | 7 Produktionsplanung → **Produktionsplanung und -steuerung** (Umbenennung) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `PRODUKTIONSPLANUNG.md` |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–6), siehe `DIGITALE_PROZESSENTWICKLUNG.md` |
-| 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
+| 9 Qualitätsprüfer/in (PQB) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `PQB.md` (Verhältnis zu neuer Rolle „QS" bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
 | **NEU: Produktionskoordination (Organisation/Personal)** | 🔶 Wesentlicher Kern abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
@@ -136,7 +146,11 @@ Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
 **Digitale Prozessentwicklung & Lean Management** ist inhaltlich fertig
 abgestimmt (siehe `DIGITALE_PROZESSENTWICKLUNG.md`).
 
-Als Nächstes: **Qualitätsprüfer/in (PQB)** (7.5.3.9).
+**Qualitätsprüfer/in (PQB)** ist inhaltlich fertig abgestimmt (siehe
+`PQB.md`).
+
+Als Nächstes: **Alle Mitarbeiter** (7.5.3.11, generische Rolle für alle
+Beschäftigten).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
