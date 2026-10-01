@@ -1,0 +1,6 @@
+{
+  "_hinweis": "Spaltmaße in mm zwischen 1:1-Prüfschablone (links) und Innenkante Edelstahleinfassung an den Messstellen M1–M6 (Soll 2,0). Werte eintragen und blende_aufmass.py links ausführen. null = nicht gemessen (Sollwert).",
+  "M1_oben_1": null, "M2_oben_2": null,
+  "M3_unten_1": null, "M4_unten_2": null,
+  "M5_schraeg_1": null, "M6_schraeg_2": null
+}

@@ -1,0 +1,14 @@
+{
+  "_quelle": "STEP-Analyse Privat-Meisterwerke/Projekte/Schwalbennester Alassio/CAD (Deckel-Oberseite z = 135 mm), Koordinaten = Koordinatensystem der Fusion-Lautsprechermodelle (mm)",
+  "deckel_oberseite_z": 135.0,
+  "blende_vorderseite_z": 145.0,
+  "links": {
+    "ansicht_offset": [-1481.2, 3.7],
+    "treiber": {"sub": [-1344.7, 96.2], "tmt": [-1195.1, 124.4], "ht": [-1104.8, 154.7]},
+    "magnete": [[-1378.0, 196.3], [-1458.0, 19.8], [-1057.9, 198.5], [-1116.7, 41.8]]
+  },
+  "rechts": {
+    "treiber": {"sub": [-1854.9, 97.1], "tmt": [-2004.5, 125.9], "ht": [-2094.7, 156.4]},
+    "magnete": [[-1821.3, 197.1], [-1741.9, 20.3], [-2141.4, 200.4], [-2083.2, 43.5]]
+  }
+}
