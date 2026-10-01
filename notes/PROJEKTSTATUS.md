@@ -64,7 +64,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–6), siehe `DIGITALE_PROZESSENTWICKLUNG.md` |
 | 9 Qualitätsprüfer/in (PQB) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `PQB.md` (Verhältnis zu neuer Rolle „QS" bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
-| 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
+| 11 Alle Mitarbeiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `ALLE_MITARBEITER.md` |
 | **NEU: Produktionskoordination (Organisation/Personal)** | 🔶 Wesentlicher Kern abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
@@ -146,11 +146,16 @@ Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
 **Digitale Prozessentwicklung & Lean Management** ist inhaltlich fertig
 abgestimmt (siehe `DIGITALE_PROZESSENTWICKLUNG.md`).
 
-**Qualitätsprüfer/in (PQB)** ist inhaltlich fertig abgestimmt (siehe
-`PQB.md`).
+**Qualitätsprüfer/in (PQB)** und **Alle Mitarbeiter** sind inhaltlich
+fertig abgestimmt (siehe `PQB.md`, `ALLE_MITARBEITER.md`).
 
-Als Nächstes: **Alle Mitarbeiter** (7.5.3.11, generische Rolle für alle
-Beschäftigten).
+Damit sind von den "einfacheren Rollen ohne Vertretungsbezug" nur noch
+offen: **Automatisierung** (gehört zur Gruppe Unterstützungsprozesse,
+siehe Abschnitt „Organisationsteam" oben).
+
+Danach folgen die beiden noch offenen Vertretungsfunktionen:
+**Prozesstechnik und Bemusterung** sowie **QS (Qualitätssicherung
+Produktion)**.
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
