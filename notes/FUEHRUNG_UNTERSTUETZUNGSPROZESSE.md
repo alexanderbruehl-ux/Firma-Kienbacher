@@ -64,7 +64,9 @@ Konfliktmanagement) — Themenfeld Führung.
 
 ## Themenblock B: Aufgabenliste als zentraler Eingangskanal
 
-**Aufgabe:** Abarbeitung/Priorisierung der Aufgabenliste, in die
-verschiedene Stakeholder (andere Teamleitungen, Produktionsleitung)
-Störungen/Anliegen eintragen (siehe `FUEHRUNG_HAUPTPROZESS.md`
-Themenblock A).
+**Aufgabe:** Abarbeitung/Priorisierung der Aufgabenliste (geführt im
+digitalen Arbeitsplatz-Portal „Kienformation-Center", dort als
+Aufgabenliste „Spritzgusswerkzeuge (Wartung/Reparatur)" bzw.
+„Maschinen/Anlagen/Gebäude (Wartung/Reparatur)"), in die verschiedene
+Stakeholder (andere Teamleitungen, Produktionsleitung) Störungen/
+Anliegen eintragen (siehe `FUEHRUNG_HAUPTPROZESS.md` Themenblock A).

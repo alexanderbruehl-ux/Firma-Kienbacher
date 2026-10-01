@@ -19,10 +19,13 @@ Gesamtstruktur der drei Vertretungsbereiche.
 **Aufgabe** *(jeweils als Vorschlag/Konzept und Vorbereitung zur Umsetzung
 sowie Umsetzungsunterstützung; die Entscheidung liegt beim
 Produktionsleiter)*:
-- Urlaubsplanung
+- Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal
+  „Kienformation-Center", dort als „Ich und meine Mitarbeiter
+  (An-/Abwesenheiten)")
 - Personalauswahl und -entwicklung
 - Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im
-  Lernmanagementsystem (LMS)
+  Lernmanagementsystem (LMS; im Kienformation-Center als „Meine Kurse
+  (LMS)" zugänglich)
 - Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur
   Flexibilisierung und Effizienzsteigerung)
 
