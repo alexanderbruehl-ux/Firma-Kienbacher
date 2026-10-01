@@ -65,6 +65,11 @@ for o,m in ((hull,gel),(frame,steel),(pocket,teak),(corpus,black)): o.data.mater
 # Blende: Logogrund (z = -0,5 mm, Normale +z) satiniert
 bl.data.materials.append(alu); bl.data.materials.append(alu_sat)
 bm=bmesh.new(); bm.from_mesh(bl.data); n=0
+bmesh.ops.remove_doubles(bm,verts=bm.verts,dist=1e-7)   # STL-Dreiecke verbinden, damit glatte Schattierung wirkt
+ns=0
+for f in bm.faces:   # nur schräge Flächen (Diamantschnitt-Konus, Fasen) glatt schattieren -> keine Facetten
+    if 0.3<f.normal.z<0.995: f.smooth=True; ns+=1
+print('glatt schattierte Konus-/Fasenflächen:',ns)
 for f in bm.faces:
     c=f.calc_center_median()
     if f.normal.z>0.99 and (abs(c.z+0.0005)<0.00003 or abs(c.z+0.5)<0.03): f.material_index=1; n+=1   # Logogrund z = -0,5 mm

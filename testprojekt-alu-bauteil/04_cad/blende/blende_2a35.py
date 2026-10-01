@@ -175,7 +175,7 @@ if __name__=='__main__':
         print('Szene exportiert'); sys.exit()
     b,pts,C=build_blende()
     cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.step'))
-    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.stl'),tolerance=0.01,angularTolerance=0.04)   # fein: keine Facetten am Glanzkonus
+    cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.stl'),tolerance=0.02,angularTolerance=0.1)   # feiner führt zu Speicherüberlauf; Konus wird im Rendering glatt schattiert
     for name,s in zip(['Rumpf','Einfassung','Fach','Korpus'],build_scene()):
         cq.exporters.export(s,os.path.join(OUT,f'Szene_{name}.stl'),tolerance=0.05,angularTolerance=0.2)
     v=b.val().Volume(); print(f'Blende 2A-35: Volumen {v/1000:.1f} cm³, Masse {v*2.70/1000:.0f} g (EN AW-6082)')
