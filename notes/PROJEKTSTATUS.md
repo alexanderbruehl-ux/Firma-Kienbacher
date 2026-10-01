@@ -69,7 +69,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
-| **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–3), siehe `AUTOMATISIERUNG.md` |
+| **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
 | **NEU: Teamleitung Instandhaltung** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
 | **NEU: Teamleitung Werkzeugbau** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.6), siehe `WERKZEUGBAU.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
 

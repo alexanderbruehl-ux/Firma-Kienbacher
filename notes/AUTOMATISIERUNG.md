@@ -54,3 +54,21 @@ für Kunststofftechniker, siehe `PRODUKTIONSLEITER.md` Themenblock 9).
   Rückkopplung zu den erforderlichen Prozessfreigaben (Verifizierung/
   Validierung, dass die Änderung die Produktkonformität nicht
   beeinträchtigt, vor Wiederaufnahme der Serienproduktion)
+
+---
+
+## Themenblock 4: CE-Konformität bei Gesamtanlagen
+
+**Verantwortung:** Sicherstellung der CE-Konformität bei durch die
+Automatisierung erstellten/integrierten Gesamtanlagen (die
+Zusammenführung mehrerer Einzelmaschinen/-komponenten zu einer
+funktionalen Einheit macht die Automatisierung gemäß Maschinenrichtlinie
+(2006/42/EG, in Österreich umgesetzt über die
+Maschinen-Sicherheitsverordnung MSV 2010) zum „Hersteller" der
+Gesamtanlage).
+
+**Aufgabe:**
+- Durchführung der Risikobeurteilung für die Gesamtanlage
+- Erstellung der technischen Dokumentation
+- Ausstellung der Konformitätserklärung und Anbringung der
+  CE-Kennzeichnung
