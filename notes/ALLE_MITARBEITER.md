@@ -15,7 +15,9 @@ für die bereichsspezifische Fassung am eigenen Arbeitsplatz).
 
 **Aufgabe:**
 - Informationen auf der Anschlagtafel sowie auf digitalen
-  Informationsmedien (Bildschirminformationen) beachten
+  Informationsmedien beachten (Bildschirminformationen sowie das
+  digitale Arbeitsplatz-Portal „Kienformation-Center", u. a. für
+  aushangpflichtige Gesetze/Mitteilungen)
 - Qualitative und quantitative Arbeitserbringung
 - Bewusstsein für die Auswirkungen der eigenen Tätigkeit auf
   Kundenanforderungen und Produktqualität
