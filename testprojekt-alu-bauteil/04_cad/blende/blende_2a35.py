@@ -153,18 +153,26 @@ def build_scene():
     op=np.array([(-3.2,-2.2),(733.2,45.5),(854.1,214.3),(92.5,209.0)])     # Öffnung Innenkante Einfassung (aus Entzerrung)
     op[0]=offset_poly(BL,2.0)[0]; op[3]=offset_poly(BL,2.0)[3]
     op[1]=offset_poly(BL,2.0)[0]+(op[1]-op[0]); op[2]=offset_poly(BL,2.0)[3]+(op[2]-op[3])
-    hull=cq.Workplane('XY',origin=(-220,-160,-10)).rect(1300,560,centered=False).extrude(10)
+    WELL=420.0   # Vertiefung des Fachs nach unten (ohne Boden, Ende aus der Perspektive nicht sichtbar)
+    hull=cq.Workplane('XY',origin=(-220,-160-WELL,-10)).rect(1300,560+WELL,centered=False).extrude(10)
     hull=hull.cut(poly_wp(op,-11).extrude(12))
     frame=poly_wp(offset_poly(op,9.0),0).extrude(1.6).cut(poly_wp(op,-1).extrude(4))
     frame=frame.edges('>Z').fillet(0.7)
     cav=np.vstack([offset_poly(op,4.0),DK+[[-4,-4],[4,-4],[4,4],[-4,4]]])
     from scipy.spatial import ConvexHull
-    hullpts=cav[ConvexHull(cav).vertices]
+    hp=cav[ConvexHull(cav).vertices]
+    ext=np.vstack([hp,hp+[0,-WELL]]); hullpts=ext[ConvexHull(ext).vertices]   # nach unten verlängerter Fachquerschnitt
     pocket=poly_wp(offset_poly(hullpts,6.0),-156).extrude(146).cut(poly_wp(hullpts,-150).extrude(141))
+    ymin=float(hullpts[:,1].min())
+    pocket=pocket.cut(cq.Workplane('XY',origin=(-400,ymin-50,-200)).rect(1600,60,centered=False).extrude(250))   # Boden offen
     corpus=poly_wp(DK,-149).extrude(139)
     return hull,frame,pocket,corpus
 
 if __name__=='__main__':
+    if '--szene' in sys.argv:   # nur Einbauszene neu erzeugen
+        for name,sh in zip(['Rumpf','Einfassung','Fach','Korpus'],build_scene()):
+            cq.exporters.export(sh,os.path.join(OUT,f'Szene_{name}.stl'),tolerance=0.05,angularTolerance=0.2)
+        print('Szene exportiert'); sys.exit()
     b,pts,C=build_blende()
     cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.step'))
     cq.exporters.export(b,os.path.join(OUT,'Blende_2A35M.stl'),tolerance=0.01,angularTolerance=0.04)   # fein: keine Facetten am Glanzkonus
