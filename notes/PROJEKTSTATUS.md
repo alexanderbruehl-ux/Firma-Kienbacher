@@ -66,7 +66,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `ALLE_MITARBEITER.md` |
 | **NEU: Produktionskoordination (Organisation/Personal)** | 🔶 Wesentlicher Kern abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
-| **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: Prozesstechnik und Bemusterung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `PROZESSTECHNIK_BEMUSTERUNG.md` |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
 | **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
@@ -153,9 +153,18 @@ fertig abgestimmt (siehe `PQB.md`, `ALLE_MITARBEITER.md`).
 `AUTOMATISIERUNG.md`). Damit sind alle "einfacheren Rollen ohne
 Vertretungsbezug" abgearbeitet.
 
-Als Nächstes folgen die beiden noch offenen Vertretungsfunktionen
-(Ebene A des Organisationsteams): **Prozesstechnik und Bemusterung**
-sowie **QS (Qualitätssicherung Produktion)**.
+**Prozesstechnik und Bemusterung** ist inhaltlich fertig abgestimmt
+(siehe `PROZESSTECHNIK_BEMUSTERUNG.md`).
+
+Als Nächstes: letzte offene Vertretungsfunktion **QS (Qualitätssicherung
+Produktion)**.
+
+**Offener Punkt für später (von Alexander angemerkt):** Umgang mit
+Verweisen auf "eigene Anweisungen"/mitgeltende Dokumente (z. B. die
+Anweisung zum Vorserienprozess) – konkretisieren (genaue
+Dokumentennummer/-titel nennen) oder neutralisieren (allgemein halten)?
+Dazu auch IATF-Anforderungen zu Vorgänger-/Nachfolgeprozessen und
+mitgeltenden Dokumenten prüfen.
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
