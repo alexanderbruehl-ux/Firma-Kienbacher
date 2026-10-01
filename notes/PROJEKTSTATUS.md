@@ -67,7 +67,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 11 Alle Mitarbeiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `ALLE_MITARBEITER.md` |
 | **NEU: Produktionskoordination (Organisation/Personal)** | 🔶 Wesentlicher Kern abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
 | **NEU: Prozesstechnik und Bemusterung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `PROZESSTECHNIK_BEMUSTERUNG.md` |
-| **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: QS (Qualitätssicherung Produktion)** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `QS.md` |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
 | **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
 | **NEU: Teamleitung Instandhaltung** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
@@ -153,18 +153,35 @@ fertig abgestimmt (siehe `PQB.md`, `ALLE_MITARBEITER.md`).
 `AUTOMATISIERUNG.md`). Damit sind alle "einfacheren Rollen ohne
 Vertretungsbezug" abgearbeitet.
 
-**Prozesstechnik und Bemusterung** ist inhaltlich fertig abgestimmt
-(siehe `PROZESSTECHNIK_BEMUSTERUNG.md`).
+**Prozesstechnik und Bemusterung** und **QS (Qualitätssicherung
+Produktion)** sind inhaltlich fertig abgestimmt (siehe
+`PROZESSTECHNIK_BEMUSTERUNG.md`, `QS.md`). Damit ist jede identifizierte
+Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
+**alle Rollen des Dokuments haben jetzt einen inhaltlichen Stand.**
 
-Als Nächstes: letzte offene Vertretungsfunktion **QS (Qualitätssicherung
-Produktion)**.
-
-**Offener Punkt für später (von Alexander angemerkt):** Umgang mit
-Verweisen auf "eigene Anweisungen"/mitgeltende Dokumente (z. B. die
-Anweisung zum Vorserienprozess) – konkretisieren (genaue
-Dokumentennummer/-titel nennen) oder neutralisieren (allgemein halten)?
-Dazu auch IATF-Anforderungen zu Vorgänger-/Nachfolgeprozessen und
-mitgeltenden Dokumenten prüfen.
+**Verbleibende offene Punkte:**
+- `INSTANDHALTUNG.md`/`WERKZEUGBAU.md`: betriebsspezifische Details, die
+  Alexander noch ergänzt (Teamgröße, Kennzahlen-Zielwerte,
+  Ersatzteilhaltung, Fremdfirmen, Dokumentationssystem;
+  Verschleißteil-Programm-Fristen, Kundenwerkzeuge-Besonderheiten)
+- `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
+  Alexander noch etwas auffällt
+- Werkzeugbau: deferierte Diskussion Organigramm/Stellenbeschreibungen
+  (Aufteilung in zwei Rollen?)
+- **Offener Punkt (von Alexander angemerkt):** Umgang mit Verweisen auf
+  "eigene Anweisungen"/mitgeltende Dokumente (z. B. die Anweisung zum
+  Vorserienprozess) – konkretisieren (genaue Dokumentennummer/-titel
+  nennen) oder neutralisieren (allgemein halten)? Dazu auch
+  IATF-Anforderungen zu Vorgänger-/Nachfolgeprozessen und mitgeltenden
+  Dokumenten prüfen.
+- `scripts/build.js`/`working/*.docx`: noch nicht auf dem Stand aller in
+  diesem Durchgang fertiggestellten Rollen (Produktionskoordination,
+  Werker, Boxenbauer, Produktionslogistiker, Produktionsplanung,
+  Digitale Prozessentwicklung, PQB, Alle Mitarbeiter, Automatisierung,
+  Prozesstechnik und Bemusterung, QS) — Neu-Generierung und SharePoint-
+  Sync nur auf explizite Anfrage (siehe Arbeitsregel oben)
+- Ein zweiter Durchgang über alle Rollen (Review/Konsistenzprüfung,
+  Formulierungen) steht noch aus
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
@@ -196,9 +213,12 @@ in zwei Ebenen:
   - QS – Qualitätssicherung Produktion (Qualität); **Besonderheit:** Der
     Produktionsleiter hat **keine Weisungsbefugnis gegenüber QS**
     (bewusst organisatorisch außerhalb der Produktionsabteilung
-    angesiedelt, 4-Augen-Prinzip). Umgekehrt hat QS **fachliche
+    angesiedelt, 4-Augen-Prinzip; QS ist organisatorisch der
+    Qualitätsabteilung zugeordnet). Umgekehrt hat QS **fachliche
     Weisungsbefugnis gegenüber dem Produktionsleiter in Q-Themen**
-    (spätestens über den QMB durchsetzbar).
+    (spätestens über den QMB durchsetzbar). **QMB ist eine
+    Abteilungsleiter-Funktion, gleichrangig mit dem Produktionsleiter**
+    (nicht nur eine Stabsstelle).
 - **Ebene B – unterstützende Fachfunktionen** (keine formale
   Vertretungsbefugnis):
   - **Produktionsplanung und -steuerung** — Sonderstellung: funktional
