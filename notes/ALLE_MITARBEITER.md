@@ -49,7 +49,9 @@ für die bereichsspezifische Fassung am eigenen Arbeitsplatz).
 - Sicherheitseinrichtungen nicht eigenmächtig entfernen oder außer
   Betrieb setzen
 - Unverzügliche Meldung festgestellter Mängel oder Gefahren an die
-  vorgesetzte Stelle bzw. Sicherheitsvertrauensperson
+  vorgesetzte Stelle bzw. Sicherheitsvertrauensperson (Kontaktdaten über
+  die Liste „Beauftragte Personen" im Kienformation-Center auffindbar,
+  dort auch Sicherheitsfachkraft und Ersthelfer gelistet)
 - Teilnahme an Sicherheits- und Gesundheitsunterweisungen
 - Rücksichtnahme auf die Sicherheit und Gesundheit anderer Personen,
   die von der eigenen Tätigkeit betroffen sein können
