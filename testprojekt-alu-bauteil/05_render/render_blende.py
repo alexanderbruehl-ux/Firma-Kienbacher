@@ -130,5 +130,5 @@ sc.view_settings.view_transform='AgX'; sc.view_settings.look='AgX - Medium High 
 sc.render.image_settings.file_format='PNG'
 # ohne HDRI: physikalischer Himmel + Sonne, dafür Belichtung -2 (dunkelblaues Gelcoat, Teak, Hochglanz-Alu)
 sc.view_settings.exposure=a.exposure if a.exposure is not None else (0.0 if a.hdri and os.path.exists(a.hdri) else -2.0)
-sc.render.filepath=a.out or os.path.join(HERE,f"{a.blende.replace('.stl','')}_{a.shot}.png")
+sc.render.filepath=os.path.abspath(a.out) if a.out else os.path.join(HERE,f"{a.blende.replace('.stl','')}_{a.shot}.png")   # absolut, sonst kann Blender nicht speichern
 import time; t=time.time(); bpy.ops.render.render(write_still=True); print('Render %.0fs -> %s'%(time.time()-t,sc.render.filepath))
