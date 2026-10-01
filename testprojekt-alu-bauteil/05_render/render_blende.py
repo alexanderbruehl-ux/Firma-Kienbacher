@@ -1,11 +1,11 @@
 """Fotorealistisches Rendering der Alu-Blende im Schwalbennest (Blender/Cycles, headless via bpy).
-    python3 render_blende.py [--hdri PFAD.hdr] [--samples 160] [--res 1600 900] [--shot gesamt|detail]
+    python3 render_blende.py [--hdri PFAD.hdr] [--samples 160] [--res 1600 900] [--shot gesamt|detail|hochtoener] [--exposure EV]
 Eingaben: 04_cad/blende/export/*.stl  (vorher 04_cad/blende/blende_2a.py ausführen)"""
 import bpy, bmesh, math, os, sys, argparse
 from mathutils import Vector
 HERE=os.path.dirname(os.path.abspath(__file__)); EXP=os.path.normpath(os.path.join(HERE,'..','04_cad','blende','export'))
 ap=argparse.ArgumentParser(); ap.add_argument('--hdri',default=''); ap.add_argument('--samples',type=int,default=160)
-ap.add_argument('--res',type=int,nargs=2,default=[1600,900]); ap.add_argument('--shot',default='gesamt'); ap.add_argument('--out',default=''); ap.add_argument('--blende',default='Blende_2C.stl')
+ap.add_argument('--res',type=int,nargs=2,default=[1600,900]); ap.add_argument('--shot',default='gesamt'); ap.add_argument('--out',default=''); ap.add_argument('--blende',default='Blende_2C.stl'); ap.add_argument('--exposure',type=float,default=None)
 a=ap.parse_args([x for x in sys.argv[1:]])
 bpy.ops.wm.read_factory_settings(use_empty=True)
 sc=bpy.context.scene; sc.unit_settings.system='METRIC'
@@ -45,7 +45,7 @@ bl.data.materials.append(alu); bl.data.materials.append(alu_sat)
 bm=bmesh.new(); bm.from_mesh(bl.data); n=0
 for f in bm.faces:
     c=f.calc_center_median()
-    if f.normal.z>0.99 and abs(c.z+0.00035)<0.00004: f.material_index=1; n+=1
+    if f.normal.z>0.99 and (abs(c.z+0.00035)<0.00004 or abs(c.z+0.35)<0.04): f.material_index=1; n+=1
 bm.to_mesh(bl.data); bm.free(); print('Logo-Flächen satiniert:',n)
 smooth(frame,50)   # Blende bleibt flach schattiert (ebene Flächen, keine Wellen)
 bpy.ops.object.empty_add(location=(0,0,0)); root=bpy.context.object; root.name='Szene'
@@ -63,23 +63,37 @@ if a.hdri and os.path.exists(a.hdri):
     wn.links.new(tcw.outputs['Generated'],mapn.inputs['Vector']); wn.links.new(mapn.outputs['Vector'],env.inputs['Vector']); wn.links.new(env.outputs['Color'],bg.inputs['Color'])
     bg.inputs['Strength'].default_value=1.0
 else:
-    bg.inputs['Color'].default_value=(0.6,0.65,0.7,1); bg.inputs['Strength'].default_value=0.8
+    sky=wn.nodes.new('ShaderNodeTexSky')
+    for t in ('MULTIPLE_SCATTERING','NISHITA','SINGLE_SCATTERING'):
+        try: sky.sky_type=t; break
+        except Exception: pass
+    print('Sky:',sky.sky_type)
+    sky.sun_elevation=math.radians(28); sky.sun_rotation=math.radians(215)
+    try: sky.altitude=5
+    except Exception: pass
+    wn.links.new(sky.outputs['Color'],bg.inputs['Color']); bg.inputs['Strength'].default_value=0.35
+    try: sky.sun_intensity=0.25
+    except Exception: pass
 # weiche Flächenleuchte für den Glanzreflex auf dem Alu
 bpy.ops.object.light_add(type='AREA',location=(0.30,-0.60,0.35)); L=bpy.context.object; L.data.energy=60; L.data.size=0.6; L.data.shape='RECTANGLE'; L.data.size_y=0.15
 L.rotation_euler=(math.radians(65),0,0)
 # ---- Kamera ----
 bpy.ops.object.camera_add(); cam=bpy.context.object; sc.camera=cam
-if a.shot=='detail':
+if a.shot=='hochtoener':   # Hochtöner-Feld (CAD 376,4/151,0) mit ausgefrästem Signet-M
+    target=Vector((0.3764,0.0,0.151)); cam.location=Vector((0.44,-0.22,0.20)); cam.data.lens=100
+elif a.shot=='detail':
     target=Vector((0.29,0.0,0.07)); cam.location=Vector((0.42,-0.26,0.14)); cam.data.lens=85
 else:
     target=Vector((0.33,0.0,0.10)); cam.location=Vector((0.86,-0.72,0.46)); cam.data.lens=42
 d=target-cam.location; cam.rotation_euler=d.to_track_quat('-Z','Y').to_euler()
-cam.data.dof.use_dof=True; cam.data.dof.focus_distance=d.length; cam.data.dof.aperture_fstop=8 if a.shot=='gesamt' else 5.6
+cam.data.dof.use_dof=True; cam.data.dof.focus_distance=d.length; cam.data.dof.aperture_fstop={'gesamt':8,'hochtoener':11}.get(a.shot,5.6)
 # ---- Render ----
 sc.render.engine='CYCLES'; sc.cycles.device='CPU'; sc.cycles.samples=a.samples; sc.cycles.use_denoising=True
 sc.cycles.max_bounces=8; sc.cycles.glossy_bounces=6
 sc.render.resolution_x,sc.render.resolution_y=a.res; sc.render.resolution_percentage=100
 sc.view_settings.view_transform='AgX'; sc.view_settings.look='AgX - Medium High Contrast'
 sc.render.image_settings.file_format='PNG'
+# ohne HDRI: physikalischer Himmel + Sonne, dafür Belichtung -2 (dunkelblaues Gelcoat, Teak, Hochglanz-Alu)
+sc.view_settings.exposure=a.exposure if a.exposure is not None else (0.0 if a.hdri and os.path.exists(a.hdri) else -2.0)
 sc.render.filepath=a.out or os.path.join(HERE,f"{a.blende.replace('.stl','')}_{a.shot}.png")
 import time; t=time.time(); bpy.ops.render.render(write_still=True); print('Render %.0fs -> %s'%(time.time()-t,sc.render.filepath))
