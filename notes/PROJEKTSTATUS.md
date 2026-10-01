@@ -69,7 +69,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
-| **NEU: Automatisierung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–3), siehe `AUTOMATISIERUNG.md` |
 | **NEU: Teamleitung Instandhaltung** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
 | **NEU: Teamleitung Werkzeugbau** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.6), siehe `WERKZEUGBAU.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
 
@@ -149,13 +149,13 @@ abgestimmt (siehe `DIGITALE_PROZESSENTWICKLUNG.md`).
 **Qualitätsprüfer/in (PQB)** und **Alle Mitarbeiter** sind inhaltlich
 fertig abgestimmt (siehe `PQB.md`, `ALLE_MITARBEITER.md`).
 
-Damit sind von den "einfacheren Rollen ohne Vertretungsbezug" nur noch
-offen: **Automatisierung** (gehört zur Gruppe Unterstützungsprozesse,
-siehe Abschnitt „Organisationsteam" oben).
+**Automatisierung** ist inhaltlich fertig abgestimmt (siehe
+`AUTOMATISIERUNG.md`). Damit sind alle "einfacheren Rollen ohne
+Vertretungsbezug" abgearbeitet.
 
-Danach folgen die beiden noch offenen Vertretungsfunktionen:
-**Prozesstechnik und Bemusterung** sowie **QS (Qualitätssicherung
-Produktion)**.
+Als Nächstes folgen die beiden noch offenen Vertretungsfunktionen
+(Ebene A des Organisationsteams): **Prozesstechnik und Bemusterung**
+sowie **QS (Qualitätssicherung Produktion)**.
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
