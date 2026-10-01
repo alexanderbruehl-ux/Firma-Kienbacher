@@ -51,7 +51,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 5 Boxenbauer | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `BOXENBAUER.md` |
 | 6 Produktionslogistiker | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–3), siehe `PRODUKTIONSLOGISTIKER.md` |
 | 7 Produktionsplanung → **Produktionsplanung und -steuerung** (Umbenennung) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `PRODUKTIONSPLANUNG.md` |
-| 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
+| 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–6), siehe `DIGITALE_PROZESSENTWICKLUNG.md` |
 | 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
@@ -133,8 +133,10 @@ Vertretungsstruktur des Produktionsleiters, siehe `OFFENE_ROLLEN.md`).
 **Produktionsplanung und -steuerung** ist inhaltlich fertig abgestimmt
 (siehe `PRODUKTIONSPLANUNG.md`).
 
-Als Nächstes: **Digitale Prozessentwicklung & Lean Management**
-(7.5.3.8).
+**Digitale Prozessentwicklung & Lean Management** ist inhaltlich fertig
+abgestimmt (siehe `DIGITALE_PROZESSENTWICKLUNG.md`).
+
+Als Nächstes: **Qualitätsprüfer/in (PQB)** (7.5.3.9).
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
