@@ -13,7 +13,7 @@
 | **Teamleitung Spritzguss-Produktion (Schichtführer)** | Umbenennung von „Schichtführer" zur eindeutigen Klarstellung, analog zu den anderen Teamleitungsfunktionen | „Schichtführer" bleibt als geläufige Kurzbezeichnung in Klammer erhalten; siehe FUEHRUNG_HAUPTPROZESS.md |
 | **AKV-Prinzip** | Aufgaben – Kompetenzen – Verantwortung | Organisierendes Prinzip der gesamten Dokumentrevision; siehe PROJEKTSTATUS.md |
 | **ASchG** | ArbeitnehmerInnenschutzgesetz (Österreich) | Wird im Produktionsleiter-Block unter Verantwortung/Sicherheit referenziert (gesamthaft, kein spezifischer Paragraph) |
-| **PT** | Prozesstechnik und Bemusterung | Abkürzung wie in Version k verwendet („Werkzeugoptimierungen in Absprache mit PT"); siehe PRODUKTIONSLEITER.md Themenblock 12 |
+| **PT** | Produkt-/Projekttechnik | Nicht zu verwechseln mit der Rolle „Prozesstechnik und Bemusterung" (eigene, davon getrennte Funktion); Abkürzung wie in Version k verwendet („Werkzeugoptimierungen in Absprache mit PT"); siehe PRODUKTIONSLEITER.md Themenblock 12 |
 | **SVP** | Sicherheitsvertrauensperson (ASchG) | Fachabteilung/-funktion im Kontext Aus-/Weiterbildung und Unterweisung; siehe PRODUKTIONSLEITER.md Themenblock 14 |
 | **SFK** | Sicherheitsfachkraft (ASchG) | Fachabteilung/-funktion im Kontext Aus-/Weiterbildung und Unterweisung; siehe PRODUKTIONSLEITER.md Themenblock 14 |
 | **Schichtlogbuch** | Einziges Dokumentationsmittel für die Schichtübergabe (Status je Maschine, Vorkommnisse, laufende Maßnahmen) | Kein separates „Schichtbericht"-Dokument daneben — bewusste Klarstellung, da Version k uneinheitlich „Schichtlogbuch" und „Schichtberichte (Todo-Liste, OneNote Prüfbegleitkarte)" nennt; siehe SCHICHTFUEHRER.md Themenblock 9 |
