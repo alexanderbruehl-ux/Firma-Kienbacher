@@ -409,15 +409,15 @@ def letter_S():
     return [_fit_polygon(_strich(S_CTRL,S_BREITE,S_CLIPS))],0.0
 
 # G (Variante B): Bogen als Strich, rechter Stamm als Rechteck mit scharfer unterer rechter Ecke, Delle (6-fach) an der Stamm-Oberkante
-G_CTRL=[[969.9,133.4],[735.4,41.0],[575.5,21.7],[306.4,75.6],[155.7,220.4],[82.2,417.6],[87.0,630.1],[179.2,821.8],[344.3,948.9],[520.0,990.0],[690.0,965.0]]
-G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,75.0]
+G_CTRL=[[969.9,133.4],[735.4,41.0],[575.5,21.7],[306.4,75.6],[155.7,220.4],[82.2,417.6],[87.0,630.1],[179.2,821.8],[344.3,948.9],[520.0,990.0],[690.0,975.0],[830.0,950.0]]
+G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,70.0,72.0]
 G_CLIPS=[('xmax',937.4,(0.0,250.0))]                  # Serife oben rechts senkrecht
 G_STAMM=(815.0,925.0,546.0,992.0)                      # rechter Stamm: x links, x rechts, y oben, y unten (scharfe Ecke unten rechts)
 G_DELLE=6.0                                            # Faktor auf die Delle des I an der Stamm-Oberkante
 def letter_G():
     from shapely.geometry import Polygon, box
     xl,xr,yo,yu=G_STAMM
-    P=Polygon(_strich(G_CTRL,G_BREITE,G_CLIPS,ext=(150.0,150.0))).buffer(0)
+    P=Polygon(_strich(G_CTRL,G_BREITE,G_CLIPS,ext=(150.0,0.0))).buffer(0)
     from shapely.geometry import LineString as _LS
     yu=float(P.intersection(_LS([(xl+2,0),(xl+2,1100)])).bounds[3])            # Fußkante = Unterkante des Bogens an der Stammkante (keine Stufe)
     ys=np.linspace(yo,yu,80); tf=np.clip(1-(yu-ys)/AUSLAUF,0,1)**3
