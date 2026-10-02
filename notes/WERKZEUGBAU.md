@@ -72,7 +72,6 @@ Themenblock 11/12).
 
 ## Noch zu ergänzen (Alexander)
 
-- Teamgröße
 - Verschleißteil-Programm: konkrete Fristen/Kriterien
 - Umgang mit Kundenwerkzeugen: vertragliche/kundenspezifische
   Besonderheiten

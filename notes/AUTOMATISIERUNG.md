@@ -5,10 +5,12 @@ Rolle, siehe `OFFENE_ROLLEN.md`, Rolle 5). Gehört konzeptionell zur
 Gruppe **Unterstützungsprozesse** (analog Werkzeugbau/Instandhaltung),
 berichtet im Regelbetrieb direkt an den Produktionsleiter.
 
-Besetzung: 1 fixer Mitarbeiter zu 100 % für Automatisierung zuständig
-(teilweise Zusammenarbeit mit externen Partnern) + eine 50 %-Ressource
-aus der Instandhaltung (diese Person ist zugleich Lehrlingsausbildner
-für Kunststofftechniker, siehe `PRODUKTIONSLEITER.md` Themenblock 9).
+Die Rolle arbeitet teilweise mit externen Partnern zusammen; eine
+anteilige Ressource kann aus der Instandhaltung stammen (siehe
+`PRODUKTIONSLEITER.md` Themenblock 9 zur Lehrlingsausbildner-Funktion
+für Kunststofftechniker). Konkrete Besetzungs-/Kapazitätsangaben sind
+bewusst nicht Teil dieses Dokuments (siehe `PROJEKTSTATUS.md`,
+Methodik).
 
 ---
 
