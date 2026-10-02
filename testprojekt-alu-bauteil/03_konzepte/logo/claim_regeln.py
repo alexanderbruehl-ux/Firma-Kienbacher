@@ -324,3 +324,33 @@ def letter_A():
     T=(Il(yc),yc)
     hole=[L(T,(Ir(yt),yt)),L((Ir(yt),yt),(Il(yt),yt)),L((Il(yt),yt),T)]
     return [out,hole],-1.8
+
+
+# --- U: links der Stamm des I (dick, mit Kopf-Auslauf), rechts ein Haarlinien-Stamm (73) mit Kopf-Auslauf, unten ein Bogen aus je zwei Bézierkurven außen/innen
+#     (per Flächenabgleich an die beiden U im GIF angepasst); der Bogen läuft 1 px unter die Grundlinie (runder Überhang) ---
+U_STAMM_L=(11.7,125.5)                 # linker Stamm: x-Bereich in der Mitte (wie I: Stamm 113,8, Spitze bei x=0)
+U_STAMM_R=(756.0,829.4)                # rechter Stamm: x-Bereich in der Mitte (Haarlinie 73)
+U_AUSSEN=(701.7,232.1,149.5,401.0,1022.8,153.4,200.8,700.4)    # (y Bogenanfang links, Ausrundung links, Anlauf links, x Mitte unten, y unten, Anlauf rechts, Ausrundung rechts, y Bogenanfang rechts)
+U_INNEN=(638.6,150.5,149.6,402.6,951.5,160.5,145.6,694.6)
+def letter_U():
+    A=AUSSTELLUNG; AU=AUSLAUF; xl0,xl1=U_STAMM_L; xr0,xr1=U_STAMM_R
+    L=lambda p,q:np.array([p,np.add(p,np.subtract(q,p)/3.0),np.add(p,2*np.subtract(q,p)/3.0),q],float)
+    def bogen(xl,xr,p):
+        ya,b1,a1,xc,yo,a2,b2,yr=p
+        return (np.array([[xl,ya],[xl,ya+b1],[xc-a1,yo],[xc,yo]],float),np.array([[xc,yo],[xc+a2,yo],[xr,yr+b2],[xr,yr]],float))
+    ao,io=bogen(xl0,xr1,U_AUSSEN),bogen(xl1,xr0,U_INNEN)
+    ka=LINKS_ANTEIL*A; ki=(1-LINKS_ANTEIL)*A                        # Kopf: 57 % nach links/außen, 43 % nach innen (wie beim I)
+    seg=[]
+    seg.append((_dent_kante(xl0-ka,xl1+ki,True),'dent'))                                           # Kopf links, Delle des I
+    seg.append((rev:=_kante_y(xl1,0.0,ki,AU,0.0)[::-1],'kurve'))                                   # linker Stamm, Innenkante: Auslauf …
+    seg.append((L((xl1,AU),(xl1,U_INNEN[0])),'linie'))                                             # … gerade bis zum Bogen
+    seg.append((io[0],'kurve')); seg.append((io[1],'kurve'))                                       # Bogen innen
+    seg.append((L((xr0,U_INNEN[7]),(xr0,AU)),'linie'))                                             # rechter Stamm, Innenkante gerade hoch …
+    seg.append((_kante_y(xr0,0.0,-ki,AU,0.0),'kurve'))                                             # … Auslauf (Haarlinie: nach innen 43 %)
+    seg.append((_dent_kante(xr0-ki,xr1+ka,True),'dent'))                                           # Kopf rechts, Delle des I
+    seg.append((_kante_y(xr1,0.0,ka,AU,0.0)[::-1],'kurve'))                                        # rechte Außenkante: Auslauf …
+    seg.append((L((xr1,AU),(xr1,U_AUSSEN[7])),'linie'))                                            # … gerade bis zum Bogen
+    seg.append((ao[1][::-1],'kurve')); seg.append((ao[0][::-1],'kurve'))                           # Bogen außen (von rechts unten nach links)
+    seg.append((L((xl0,U_AUSSEN[0]),(xl0,AU)),'linie'))                                            # linke Außenkante gerade hoch …
+    seg.append((_kante_y(xl0,0.0,-ka,AU,0.0),'kurve'))                                             # … Auslauf bis zur Spitze
+    return [_schliessen(seg)],-1.8
