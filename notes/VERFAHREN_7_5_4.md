@@ -150,7 +150,63 @@ gemeint ist. In diesem Fall: **Produktionsplanung und -steuerung**.
 
 ## 7.5.4.4 Abwicklung der Produktionsaufträge
 
-*Noch zu bearbeiten.*
+**Alter Text (Version k, unverändert):**
+> "Für die allgemeine Vorbereitung der Formen ist der Schichtführer
+> zuständig. Der Einbau der Formen erfolgt durch den Schichtführer oder
+> mit Aushilfe geschulter Mitarbeiter bei Bedarf. Produktionslogistik /
+> Wareneingang ist für die rechtzeitige Vorbereitung der entsprechenden
+> Einlegeteile zuständig, Boxenbauer für die Gebindebereitstellung und
+> interne Transporte von der Produktion ins Lager. Der Lagerarbeiter
+> ist für die rechtzeitige Vorbereitung der Materialien zuständig. Der
+> Schichtführer hat nun die Aufgabe, die Produktion abzuwickeln
+> (7A-51-3), entsprechende Qualitätskontrollen mittels Prüfbegleitkarte
+> durchzuführen und Vorkommnisse zu beheben."
+
+**Neuer Text:**
+> **7.5.4.4 Abwicklung der Produktionsaufträge (exemplarisch für
+> Spritzguss)**
+>
+> Für die allgemeine Vorbereitung der Spritzgusswerkzeuge ist die
+> Teamleitung Spritzguss-Produktion verantwortlich. Der Einbau der
+> Werkzeuge erfolgt primär durch Einsteller/Rüster. Die
+> Produktionslogistik ist für die rechtzeitige Vorbereitung der
+> Einlegeteile zuständig, der Boxenbauer für die Gebindebereitstellung
+> und interne Transporte von der Produktion ins Lager. Die Teamleitung
+> Lager ist für die rechtzeitige Vorbereitung der Materialien
+> zuständig. Die Teamleitung Spritzguss-Produktion wickelt die
+> Produktion ab, führt die entsprechenden Qualitätskontrollen mittels
+> Prüfbegleitkarte durch und behebt Vorkommnisse.
+
+**Korrekturen/Klärungen:**
+- "Formen" → "Spritzgusswerkzeuge" (Begriffskonsistenz)
+- Klammerzusatz in der Überschrift ("exemplarisch für Spritzguss")
+  statt zusätzlichem Satz im Fließtext — macht transparent, dass
+  analoge Abläufe in anderen Bereichen gelten (z. B. Kleben in der
+  Endfertigung), ohne das explizit auszuformulieren
+- "(7A-51-3)" entfernt (alter interner Dokumentcode, siehe
+  `MITGELTENDE_UNTERLAGEN.md`-Prinzip: keine konkreten
+  Dokumentnummern im Fließtext)
+- "Lagerarbeiter" → "Teamleitung Lager" (konsistent mit `LAGER.md`)
+
+**Wichtiger Methodik-Fund (neue Rolle entdeckt durch Rollen-Gegenprüfung):**
+Der Satz "Einbau erfolgt primär durch Einsteller/Rüster" wurde zunächst
+vorschnell übernommen (von Alexander als Korrektur eingebracht), stand
+aber im Widerspruch zu `SCHICHTFUEHRER.md` Themenblock 1 ("Umbau und
+Einstellung der Produktionsmaschinen" als Teamleitungs-Aufgabe). Nach
+systematischer Gegenprüfung **aller** Rollen (nicht nur der
+naheliegendsten) stellte sich heraus: "Einsteller/Rüster" ist
+tatsächlich eine **neue, eigenständige Fachrolle** (bereits in
+`PRODUKTIONSLEITER.md` Themenblock 14 als unterstelltes Personal der
+Teamleitung erwähnt, aber nie eigens ausgearbeitet) — siehe
+`EINSTELLER_RUESTER.md`. Kein Widerspruch: Teamleitung bleibt
+verantwortlich/entscheidungsbefugt (Parametrierung, finale Freigabe mit
+PQB), Einsteller/Rüster führen den Einbau als unterstelltes Fachpersonal
+durch.
+
+**Methodik-Grundsatz (von Alexander verschärft):** Bei jeder
+Rollenzuordnung in 7.5.4 müssen **alle** bereits bestehenden Rollen
+gegengeprüft werden (nicht nur die naheliegendste), um Widersprüche zu
+bestehenden AKV-Inhalten zu vermeiden.
 
 ## 7.5.4.5 Begleitende Produktionsarbeiten
 

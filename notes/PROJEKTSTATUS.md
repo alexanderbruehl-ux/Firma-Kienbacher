@@ -46,6 +46,14 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   Fischgrät). Die **Kompetenz**, bestimmte Kennzahlen/Zielwerte
   festzulegen, bleibt im Dokument (AKV-Aussage); die **konkreten
   Zahlenwerte selbst** nicht.
+- **Grundsatz: Bei jeder Rollenzuordnung in Verfahrensbeschreibungen
+  (7.5.4) müssen alle bereits bestehenden Rollen gegengeprüft werden**
+  (nicht nur die naheliegendste), um Widersprüche zu bereits
+  bestehenden AKV-Inhalten zu vermeiden. Konkreter Fund: "Einsteller/
+  Rüster" wurde zunächst fälschlich als Widerspruch zu
+  `SCHICHTFUEHRER.md` eingeschätzt, bis die Gegenprüfung aller Rollen
+  zeigte, dass es sich um eine neue, unterstellte Fachrolle handelt
+  (siehe `EINSTELLER_RUESTER.md`).
 - **Grundsatz: Alte Rollen-Abkürzungen/-namen aus Version k nie
   automatisch durch eine umbenannte Nachfolgerolle ersetzen.** Da oft
   mehrere Nachfolgerollen infrage kommen (z. B. "AV" könnte Digitale
@@ -100,6 +108,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: QS (Qualitätssicherung Produktion)** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `QS.md` |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
 | **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
+| **NEU: Einsteller/Rüster** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `EINSTELLER_RUESTER.md` |
 | **NEU: Teamleitung Instandhaltung** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
 | **NEU: Teamleitung Werkzeugbau** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.6), siehe `WERKZEUGBAU.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
 
@@ -230,8 +239,11 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   7.5.2 Geltungsbereich, 7.5.4 Verfahren) — 7.5.1 und 7.5.2 ✅ fertig
   (siehe `ZIEL_GELTUNGSBEREICH.md`, inkl. Vorgänger-/
   Nachfolgeprozess-Herleitung). 7.5.4 🔶 in Bearbeitung, siehe
-  `VERFAHREN_7_5_4.md` — 7.5.4.1.1, 7.5.4.2 und 7.5.4.3 ✅ fertig;
-  7.5.4.4–7.5.4.6 noch offen. Enthält u. a. veraltete
+  `VERFAHREN_7_5_4.md` — 7.5.4.1.1 bis 7.5.4.4 ✅ fertig; 7.5.4.5 und
+  7.5.4.6 noch offen. Im Zuge von 7.5.4.4 neue Rolle **Einsteller/
+  Rüster** entdeckt und ausgearbeitet (siehe `EINSTELLER_RUESTER.md`) —
+  Fachpersonal unterstellt der Teamleitung Spritzguss-Produktion,
+  zuständig für Werkzeugeinbau/-transport und Grundeinstellung. Enthält u. a. veraltete
   Begriffe, eine nie besprochene Rolle ("interner
   Reklamationskoordinator") und alte interne Dokumentcodes
   ("7A-51-3", "6A-32-1")
