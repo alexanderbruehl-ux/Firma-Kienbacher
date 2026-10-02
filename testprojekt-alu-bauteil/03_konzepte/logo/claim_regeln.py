@@ -188,6 +188,7 @@ def letter_P(innen_hoch=18.0):
 
 
 # --- D: linke Hälfte (Stamm, oberer und unterer Arm samt Einzug) aus dem Schriftzug-E, rechts ein Bogen aus je zwei Bézierkurven (außen/innen), angepasst an die GIF-Pixel ---
+D_STAMM_INNEN=125.0   # senkrechte Innenkante des Stamms
 D_XC=300.0          # ab hier beginnt der Bogen (Arme laufen bis dahin wie beim E)
 # Bogenparameter: je (Anlauf oben, Ausrundung oben, Anlauf unten, Ausrundung unten, Außenrand x, Beginn/Ende des senkrechten Rands oben/unten);
 # per Flächenabgleich (symmetrische Differenz) mit den GIF-Pixeln angepasst
@@ -210,8 +211,8 @@ def letter_D():
         Q0=np.array([xm,yv]); Q3=np.array([D_XC,ybot]); d=bz(Q0,Q0+np.array([0.0,bd]),Q3+np.array([ad,0.0]),Q3)
         return np.vstack([u,d])
     out=kurve(D_BOGEN_AUSSEN,yt,yb); inn=kurve(D_BOGEN_INNEN,yi_t,yi_b)
-    xs=np.linspace(125.0,D_XC,12); topk=[(x,span(x)[0][1]) for x in xs]; botk=[(x,span(x)[1][0]) for x in xs]
-    Cc=Pg([(125.0,topk[0][1])]+topk[1:]+list(map(tuple,inn[1:-1]))+botk[::-1]).buffer(0)
+    xs=np.linspace(150.0,D_XC,12); topk=[(x,span(x)[0][1]) for x in xs]; botk=[(x,span(x)[1][0]) for x in xs]       # Armkanten ab x=150 (näher am Stamm liegt die Kante im Stammbereich)
+    Cc=Pg([(D_STAMM_INNEN,topk[0][1])]+topk+list(map(tuple,inn[1:-1]))+botk[::-1]+[(D_STAMM_INNEN,botk[0][1])]).buffer(0)       # linke Wand des Innenraums senkrecht (GIF: Stamm 5 px)
     xs2=np.linspace(100.0,D_XC,30); fill=Pg([(x,span(x)[0][0]) for x in xs2]+[(x,span(x)[1][1]) for x in xs2[::-1]]).buffer(0)       # Arme samt Stamm exakt nach der E-Kontur
     Fo=Ep.intersection(box(-10,-10,D_XC,1030)).union(fill).union(Pg(np.vstack([[(D_XC,yt)],out[1:-1],[(D_XC,yb)]])).buffer(0))
     G=Fo.difference(Cc).buffer(0).buffer(-0.8,join_style=2).buffer(0.8,join_style=2).simplify(0.05)
