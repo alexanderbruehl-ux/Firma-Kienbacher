@@ -33,7 +33,8 @@ Werkzeuge (inkl. Kundenwerkzeuge).
   Kundenwerkzeuge dauerhaft/sichtbar gekennzeichnet
 - Lagerung und Schutz der Werkzeuge vor Beschädigung/Verschleiß
 - Rüst-/Werkzeugwechselprozesse
-- Verschleißteil-Programm
+- Verschleißteile-Management: systematischer Umgang mit Verschleißteilen
+  am Werkzeug (Erkennung, Austausch, Dokumentation)
 - Dokumentation von Werkzeugänderungen/-modifikationen inkl.
   Änderungsstand
 - Abarbeitung der Aufgabenliste (siehe
@@ -72,7 +73,7 @@ Themenblock 11/12).
 
 ## Noch zu ergänzen (Alexander)
 
-- Verschleißteil-Programm: konkrete Fristen/Kriterien
+- Verschleißteile-Management: konkrete Austauschfristen/-kriterien
 - Umgang mit Kundenwerkzeugen: vertragliche/kundenspezifische
   Besonderheiten
 - Dokumentation: welches System/Tool für Werkzeughistorie und
