@@ -65,7 +65,9 @@ dieser Rolle und außerhalb des Geltungsbereichs dieses Dokuments.
 
 Ebenso liegt die **Pflege des Lenkungsplans** (Control Plan) bei einer
 Rolle der Produkt-/Projekttechnik, in multidisziplinärer Abstimmung mit
-Q, angestoßen durch Kundenforderungen (CSRs) und abgeglichen mit den
+**RPP (Robust Production Processes)** — einem eigenen Team innerhalb
+der Qualitätsmanagement-Abteilung —, angestoßen durch
+Kundenforderungen (CSRs) und abgeglichen mit den
 Ergebnissen/Implikationen der Bemusterung — die Bemusterungsergebnisse
 dieser Rolle fließen also ein, die Pflege des Dokuments selbst erfolgt
 aber dort.
