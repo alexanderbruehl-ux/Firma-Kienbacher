@@ -102,9 +102,18 @@ def letter_T(breite=None):
 # --- R: Stamm, Steg und Bogen aus dem Schriftzug-R (an das Claim-R angepasst), das Bein als saubere Form mit geraden Kanten (aus den GIF-Pixeln beider R) ---
 R_BOGEN=1.086       # x-Faktor für den Bogen (ab Stammkante 125)
 R_STEG_Y=483.0      # Höhe der Mittelsteg-Mitte (Schriftzug-R: 546)
-R_BEIN_LINKS=(-199.9,0.762)    # linke Beinkante  x = a + b*y   (37,3° von der Senkrechten)
-R_BEIN_RECHTS=(-76.2,0.803)    # rechte Beinkante x = a + b*y   (38,8°)
+R_BEIN_STEIGUNG=0.7819         # gemeinsame Steigung der Beinkanten (38,0° von der Senkrechten; GIF: 37,3° links / 38,8° rechts = Auslauf-Aufweitung)
+R_BEIN_LINKS_700=334.1         # linke Beinkante bei y=700
+R_BEIN_BREITE=150.5            # waagrechte Beinbreite in der Mitte (y=700)
 R_BEIN_OBEN=480.0              # Oberkante des Bein-Polygons (liegt im Steg, wird mit ihm vereinigt)
+def _fuss_delle_unten(x0,x1,n=30):
+    """untere Endkante (von x0 nach x1, x0<x1) mit der Delle des I (um 180° gedreht), x auf die I-Breite (134) normiert; liefert (x,y)"""
+    xs=np.linspace(x0,x1,n); u=(xs-x0)/(x1-x0)*134.0; return np.c_[xs,CAP-np.poly1d(DELLE_OBEN)(134.0-u)]
+def _bein_aufgeweitet(al,bl,ar,br,yt,n=60):
+    ys=np.linspace(yt,CAP,n); tf=np.clip(1-(CAP-ys)/AUSLAUF,0,1)**3
+    xl=al+bl*ys-(1-LINKS_ANTEIL)*AUSSTELLUNG*tf; xr=ar+br*ys+LINKS_ANTEIL*AUSSTELLUNG*tf          # unten mehr nach rechts (Punktsymmetrie zum Kopf)
+    fuss=_fuss_delle_unten(xl[-1],xr[-1])
+    return list(zip(xl,ys))[:-1]+list(map(tuple,fuss))+list(zip(xr,ys))[::-1][1:]
 def letter_R(unten_runter=18.0,innen_hoch=18.0,glatt=True):   # Variante D (Engstelle am Bogen: Wand 75 statt 37)
     from shapely.geometry import Polygon as Pg
     polys,idx=_wordmark_glyphs(); I=polys[idx['I'][0]]; F=1000/(I[:,1].max()-I[:,1].min()); Rp=polys[idx['R'][0]]
@@ -117,7 +126,7 @@ def letter_R(unten_runter=18.0,innen_hoch=18.0,glatt=True):   # Variante D (Engs
         return np.c_[xn,yn]
     base=Pg(warp(Rn)).buffer(0)
     # Bogenunterseite im Claim (aus den GIF-Pixeln, Zeilen 652-660): glatte Kurve x(y) vom Bogen bis zur rechten Beinkante (Kerbe)
-    al,bl=R_BEIN_LINKS; ar,br=R_BEIN_RECHTS; yt=R_BEIN_OBEN
+    bl=br=R_BEIN_STEIGUNG; al=R_BEIN_LINKS_700-bl*700.0; ar=al+R_BEIN_BREITE; yt=R_BEIN_OBEN
     if glatt:      # Unterseite = eine kubische Bézierkurve, tangentenstetig aus der Bogenaußenkante bis zur Kerbe an der rechten Beinkante
         yk=512.0+unten_runter; P0=np.array([613.0,300.0]); P3=np.array([ar+br*yk,yk])
         t0=np.array([-0.3,1.0]); t0/=np.linalg.norm(t0); t3=np.array([1.0,-0.443]); t3/=np.linalg.norm(t3)
@@ -130,7 +139,7 @@ def letter_R(unten_runter=18.0,innen_hoch=18.0,glatt=True):   # Variante D (Engs
     yt=min(yt,path[-1,1]-20.0); xk=path[-1,0]
     region=Pg([(-100,-100),(1200,-100),(1200,pts[0,1])]+list(map(tuple,path))+[(xk,1100),(-100,1100)])   # alles oberhalb der Kurve und links von der Beinkante bleibt
     base=base.intersection(region)
-    leg=Pg([(al+bl*yt,yt),(ar+br*yt,yt),(ar+br*1000.0,1000.0),(al+bl*1000.0,1000.0)])
+    leg=Pg(_bein_aufgeweitet(al,bl,ar,br,yt))      # Beinkanten laufen am Fuß wie beim I kubisch aus, Fußkante mit der Delle des I
     poly=base.union(leg).buffer(0).buffer(-1.0,join_style=2).buffer(1.0,join_style=2).simplify(0.05)
     outer=np.array(poly.exterior.coords)[:-1]
     Cw=warp(Cn)
@@ -210,6 +219,15 @@ def letter_D():
     return [_fit_polygon(np.array(G.exterior.coords)[:-1]),_fit_polygon(np.array(G.interiors[0].coords)[:-1])],dy
 
 
+def _dent_kante(xl,xr,oben=True):
+    """gerade Endkante zwischen x=xl und xr (xl<xr) mit der Delle des I (Regel für ALLE flachen Stammenden); Rückgabe: 4 Béziers-Punkte von xl nach xr.
+    oben: Delle des I-Kopfs, unten: um 180° gedreht (Punktsymmetrie); die Dellenform wird auf die Kantenbreite normiert (I-Stamm = 134)"""
+    w=xr-xl; sc=np.poly1d([134.0/w,0.0]); p=np.poly1d(DELLE_OBEN)
+    q=p(sc) if oben else -p(np.poly1d([-134.0/w,134.0]))
+    B=_poly_bezier(q.coeffs,0.0,w); B=B.copy(); B[:,0]+=xl
+    if not oben: B[:,1]+=CAP
+    return B
+
 # --- N: Stämme mit den geschwungenen Auslauf-Kanten des I (kubisch t³ über AUSLAUF, exakt als Bézier), Diagonale gerade unter ~42,8° (Regel aus allen drei N im GIF),
 #     die Diagonale läuft an beiden Enden spitz in die Stämme; Punktsymmetrie bei Diagonale und Auslaufrichtung ---
 N_BREITE=854.0                       # Gesamtbreite (inkl. Ausstellung rechts oben)
@@ -227,17 +245,29 @@ def letter_N():
         return np.array([[x_mid+sgn*o,y] for o,y in zip(off,ys)],float)
     AU=AUSLAUF
     out=[]
-    out.append(L((xl0,0.0),(a,0.0)))                                               # Kopf links (Spitze)
+    out.append(_dent_kante(xl0,a,True))                                            # Kopf links (Spitze), Delle wie beim I
     out.append(L((a,0.0),(xr0,ya)))                                                # obere Diagonalkante
     out.append(L((xr0,ya),(xr0,AU)))                                               # rechter Stamm, linke Kante (gerade)
     out.append(flare(xr0,N_AUSSTELLUNG_R_OBEN[0],0.0,AU,-1)[::-1])                 # … Auslauf nach oben (nach links ausgestellt)
-    out.append(L((xr0-N_AUSSTELLUNG_R_OBEN[0],0.0),(xr1+N_AUSSTELLUNG_R_OBEN[1],0.0)))   # Kopf rechts (flach)
+    out.append(_dent_kante(xr0-N_AUSSTELLUNG_R_OBEN[0],xr1+N_AUSSTELLUNG_R_OBEN[1],True))   # Kopf rechts, Delle wie beim I
     out.append(flare(xr1,N_AUSSTELLUNG_R_OBEN[1],0.0,AU,+1))                       # rechte Kante: Auslauf oben …
     out.append(L((xr1,AU),(xr1,1000.0)))                                           # … gerade bis unten
-    out.append(L((xr1,1000.0),(al+b*1000.0,1000.0)))                               # Fuß rechts (Spitze)
+    out.append(_dent_kante(al+b*1000.0,xr1,False)[::-1])                           # Fuß rechts (Spitze), Delle gedreht
     out.append(L((al+b*1000.0,1000.0),(xl1,yb)))                                   # untere Diagonalkante
     out.append(L((xl1,yb),(xl1,1000.0)))                                           # linker Stamm, rechte Kante
-    out.append(L((xl1,1000.0),(xl0-N_AUSSTELLUNG_L_UNTEN,1000.0)))                 # Fuß links (flach)
+    out.append(_dent_kante(xl0-N_AUSSTELLUNG_L_UNTEN,xl1,False)[::-1])             # Fuß links, Delle gedreht
     out.append(flare(xl0,N_AUSSTELLUNG_L_UNTEN,1000.0,1000.0-AU,-1))               # linke Kante: Auslauf unten …
     out.append(L((xl0,1000.0-AU),(xl0,0.0)))                                       # … gerade bis oben
+    # Delle-Kanten behalten ihre Endpunkte (Ecke links tiefer als rechts, wie beim I); die angrenzenden Kanten rücken dorthin
+    dent=[bool(len(o)==4 and o[0][1] not in (0.0,1000.0) or False) for o in out]
+    dent=[k in (0,4,7,10) for k in range(len(out))]
+    gerade=[k not in (3,5,11) and k not in (0,4,7,10) for k in range(len(out))]       # Linienstücke (Auslaufkurven sind 3,5,11 → nur Endpunkt verschieben)
+    n=len(out)
+    for k in range(n):
+        a,b=out[k],out[(k+1)%n]; d=a[3]-b[0]
+        if np.linalg.norm(d)<1e-9: continue
+        if dent[k]: b[0]=a[3]; b[1]=b[1]+(-d)
+        else:       a[3]=b[0]; a[2]=a[2]+d
+    for k in range(n):
+        if gerade[k]: p,q=out[k][0],out[k][3]; out[k]=np.array([p,p+(q-p)/3,p+2*(q-p)/3,q])
     return [out],-1.8
