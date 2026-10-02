@@ -1,5 +1,5 @@
-"""Meisterwerke-Logo – aus der Original-Bilddatei vektorisiert (trace_logo.py, Potrace), keine Fremdschrift.
-Pfade in mw_trace.json (Einheit: Pixel der Vorlage 1024x266, y nach unten)."""
+"""Meisterwerke-Logo – aus der Original-Reinzeichnung (DWG, Vektor) übernommen (logo_aus_dwg.py).
+Pfade in mw_trace.json (Einheit: DWG-Zeichnungseinheiten, y nach unten). Alle Maße werden über die Bounding-Boxen skaliert."""
 import json, os, re, numpy as np
 HERE=os.path.dirname(os.path.abspath(__file__))
 _T=json.load(open(os.path.join(HERE,'mw_trace.json')))

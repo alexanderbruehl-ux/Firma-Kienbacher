@@ -1,3 +1,4 @@
+# ÜBERHOLT (02.10.2026): Logo kommt jetzt aus der Original-DWG -> logo_aus_dwg.py. Dieses Skript nur zur Nachvollziehbarkeit.
 """Vektorisiert das Meisterwerke-Logo aus der Bilddatei (keine Fremdschrift).
 Ablauf: 8x hochskalieren (bikubisch) -> leicht glätten -> Schwelle auf halber Kantenhöhe ->
 Sterne/Kleinstflecken entfernen -> Potrace (Bezierkurven) -> SVG (Signet und Wortmarke getrennt)."""
