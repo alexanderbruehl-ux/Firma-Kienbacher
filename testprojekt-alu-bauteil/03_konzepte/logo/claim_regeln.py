@@ -377,4 +377,32 @@ def _superellipse_bezier(xc,rx,yT,yB,e):
         P=base*np.array([sx,sy]); P=P[::-1] if rev else P; segs.append(f(P))
     return segs
 def letter_O():
-    return [_superellipse_bezier(*O_AUSSEN),[sg[::-1] for sg in _superellipse_bezier(*O_INNEN)][::-1]],-1.8
+    return [_superellipse_bezier(*O_AUSSEN),[sg[::-1] for sg in _superellipse_bezier(*O_INNEN)][::-1]],0.0
+
+
+# ---------------------------------------------------------------------------------------------------------------------------
+# Striche mit variabler Breite (S, G, &): Mittellinie = kubischer Spline durch wenige Stützpunkte, Breite = PCHIP durch Breitenwerte (dick im Bogen,
+# Haarlinie an den Enden); die Enden werden verlängert und mit senkrechten/waagrechten Schnitten abgeschlossen (Serifen des Claims).
+# Stützpunkte/Breiten stammen aus dem Skelett des gemittelten GIF-Buchstabens (geglättet) und wurden per Flächenabgleich (XOR) nachgeschliffen.
+# ---------------------------------------------------------------------------------------------------------------------------
+def _strich(ctrl,w,clips=(),ext=150.0,n=200):
+    from scipy.interpolate import CubicSpline, PchipInterpolator
+    from shapely.geometry import Polygon, box
+    ctrl=np.asarray(ctrl,float); w=np.asarray(w,float)
+    t0=ctrl[0]-ctrl[1]; t0/=np.linalg.norm(t0); t1=ctrl[-1]-ctrl[-2]; t1/=np.linalg.norm(t1)
+    c2=np.vstack([ctrl[0]+t0*ext,ctrl,ctrl[-1]+t1*ext]); w2=np.r_[w[0],w,w[-1]]
+    d=np.r_[0,np.cumsum(np.linalg.norm(np.diff(c2,axis=0),axis=1))]; t=np.linspace(0,d[-1],n)
+    cs=CubicSpline(d,c2,bc_type='natural'); C=cs(t); T=cs(t,1); T/=np.linalg.norm(T,axis=1)[:,None]; Nn=np.c_[-T[:,1],T[:,0]]
+    W=PchipInterpolator(d,w2)(t)[:,None]
+    P=Polygon(np.vstack([C+Nn*W/2,(C-Nn*W/2)[::-1]])).buffer(0)
+    for cl in clips:
+        k,v=cl[0],cl[1]; lo,hi=(cl[2] if len(cl)>2 else (-1e4,1e4))
+        P=P.difference({'xmax':box(v,lo,1e4,hi),'xmin':box(-1e4,lo,v,hi),'ymax':box(lo,v,hi,1e4),'ymin':box(lo,-1e4,hi,v)}[k])
+    if P.geom_type!='Polygon': P=max(P.geoms,key=lambda g:g.area)
+    return np.array(P.exterior.coords)[:-1]
+
+S_CTRL=[[-100.2,833.7],[165.3,964.0],[361.4,961.6],[503.4,823.5],[507.6,627.1],[355.2,501.7],[167.7,412.1],[73.9,246.4],[159.9,68.2],[357.9,24.5],[583.0,132.8]]
+S_BREITE=[185.5,77.6,61.8,97.5,137.2,127.8,131.0,112.2,77.4,52.4,139.3]
+S_CLIPS=[('xmax',534.0,(0.0,250.0)),('xmin',4.6,(780.0,1100.0))]       # Serifen: oben rechts senkrecht abgeschnitten, unten links senkrecht
+def letter_S():
+    return [_fit_polygon(_strich(S_CTRL,S_BREITE,S_CLIPS))],0.0
