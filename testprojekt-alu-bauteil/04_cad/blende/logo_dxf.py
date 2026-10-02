@@ -11,7 +11,7 @@ HERE=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.normpath(os.path.j
 sys.path.insert(0,os.path.join(ROOT,'03_konzepte','logo')); import mwlogo
 P=json.load(open(os.path.join(ROOT,'parameter.json')))
 ausschn=P['einbauschnittstelle']['ausschnitte']; c100=[a for a in ausschn if abs(a['d']-118.2)<0.5][0]; T0=np.array(c100['mitte'],float); D100=c100['d']
-LOGO_W=115.0; LOGO_ANG=math.degrees(math.atan2(25.4,391.6)); LOGO_EDGE=8.0                       # wie blende_2a35.py
+LOGO_W=105.0; LOGO_ANG=math.degrees(math.atan2(25.4,391.6)); LOGO_EDGE=8.0                       # wie blende_2a35.py
 a=math.radians(LOGO_ANG); H=LOGO_W/mwlogo.ASPECT; n=np.array([math.sin(a),-math.cos(a)]); dT=np.dot(T0,-n); C=T0+(dT-(LOGO_EDGE+H/2))*n
 polys=[]; mwlogo.draw(lambda p:polys.append(p), lambda ps:polys.extend(ps), lambda p:(float(p[0]),float(p[1])), C[0],C[1],LOGO_W,None,angle_deg=LOGO_ANG)
 polys=[np.array(p,float) for p in polys if len(p)>=3]
