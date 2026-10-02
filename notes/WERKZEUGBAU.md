@@ -34,7 +34,8 @@ Werkzeuge (inkl. Kundenwerkzeuge).
 - Lagerung und Schutz der Werkzeuge vor Beschädigung/Verschleiß
 - Rüst-/Werkzeugwechselprozesse
 - Verschleißteile-Management: systematischer Umgang mit Verschleißteilen
-  am Werkzeug (Erkennung, Austausch, Dokumentation)
+  am Werkzeug (Erkennung, Austausch, Dokumentation) gemäß definierter
+  und im ERP-System hinterlegter Austauschfristen bzw. Wartungszyklen
 - Dokumentation von Werkzeugänderungen/-modifikationen inkl.
   Änderungsstand
 - Abarbeitung der Aufgabenliste (siehe
@@ -73,7 +74,6 @@ Themenblock 11/12).
 
 ## Noch zu ergänzen (Alexander)
 
-- Verschleißteile-Management: konkrete Austauschfristen/-kriterien
 - Umgang mit Kundenwerkzeugen: vertragliche/kundenspezifische
   Besonderheiten
 - Dokumentation: welches System/Tool für Werkzeughistorie und
