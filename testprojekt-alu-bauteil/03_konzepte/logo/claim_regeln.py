@@ -272,3 +272,55 @@ def letter_N():
     for k in range(n):
         if gerade[k]: p,q=out[k][0],out[k][3]; out[k]=np.array([p,p+(q-p)/3,p+2*(q-p)/3,q])
     return [out],-1.8
+
+
+# --- A: zwei parallele Streifen (links Haarlinie, rechts dick – wie beim M des Schriftzugs), Außenkanten spiegelsymmetrisch zur Mittelachse (~23,2°),
+#     Querbalken zwischen den Innenkanten, Füße mit dem Auslauf (t³) und der Delle des I; Spitze oben flach (Delle auf die Kantenbreite normiert) ---
+A_LINKS=(439.5,-0.4355,71.8)     # Außenkante links x = a + b*y, Streifenbreite (horizontal, Haarlinie)
+A_RECHTS_INNEN=(351.4,0.4218)    # Innenkante des rechten Streifens x = a + b*y
+A_RECHTS_BREITE=129.9            # Breite des rechten (dicken) Streifens
+A_BALKEN=(561.0,610.0)           # Oberkante / Unterkante des Querbalkens (GIF-Zeilen 23–24); Unterkante = Beginn des Fuß-Auslaufs (1000-390)
+def _kante_y(c0,c1,k,y0,y1):
+    """Kante x(y)=c0+c1*y+k*((y-y0)/(y1-y0))³ als exakter kubischer Bézier (y linear), von y0 nach y1"""
+    h=y1-y0; p=lambda y:c0+c1*y+k*((y-y0)/h)**3; d=lambda y:c1+3*k*((y-y0)/h)**2/h
+    P=lambda y:np.array([p(y),y])
+    return np.array([P(y0),P(y0)+np.array([d(y0)*h/3,h/3]),P(y1)-np.array([d(y1)*h/3,h/3]),P(y1)])
+def _schliessen(seg):
+    """Kantenfolge [(Béziers, Art)] schließen: Delle-Kanten behalten ihre Endpunkte (Ecken links tiefer als rechts wie beim I), angrenzende Kanten rücken dorthin;
+    Linienstücke werden danach neu linearisiert"""
+    out=[(np.array(b,float),k) for b,k in seg]; n=len(out)
+    for i in range(n):
+        a,ka=out[i]; b,kb=out[(i+1)%n]; d=a[3]-b[0]
+        if np.linalg.norm(d)<1e-9: continue
+        if ka=='dent': b[0]=a[3]; b[1]=b[1]-d
+        else: a[3]=b[0]; a[2]=a[2]+d
+    res=[]
+    for b,k in out:
+        if k=='linie': p,q=b[0],b[3]; b=np.array([p,p+(q-p)/3,p+2*(q-p)/3,q])
+        res.append(b)
+    return res
+def letter_A():
+    al,bl,wl=A_LINKS; ar,br=A_RECHTS_INNEN; wr=A_RECHTS_BREITE; yt,yb=A_BALKEN; yf=CAP-AUSLAUF
+    A=AUSSTELLUNG; k_l=-(1-LINKS_ANTEIL)*A; k_r=LINKS_ANTEIL*A          # Fuß: links 43 % nach links, rechts 57 % nach rechts
+    Ol=lambda y:al+bl*y; Il=lambda y:al+bl*y+wl; Ir=lambda y:ar+br*y; Or=lambda y:ar+br*y+wr
+    L=lambda p,q:np.array([p,np.add(p,np.subtract(q,p)/3.0),np.add(p,2*np.subtract(q,p)/3.0),q],float)
+    rev=lambda B:B[::-1]
+    seg=[]                                                      # (Béziers, Art): 'dent' | 'linie' | 'kurve'
+    seg.append((_dent_kante(Ol(0.0),Or(0.0),True),'dent'))                                           # Spitze oben
+    seg.append((L((Or(0.0),0.0),(Or(yf),yf)),'linie'))                                               # rechte Außenkante, gerade …
+    seg.append((_kante_y(ar+wr,br,k_r,yf,CAP),'kurve'))                                              # … dann Auslauf
+    xr_o=ar+wr+br*CAP+k_r; xr_i=ar+br*CAP-(1-LINKS_ANTEIL)*A
+    seg.append((rev(_dent_kante(xr_i,xr_o,False)),'dent'))                                          # Fuß rechts (von außen nach innen)
+    seg.append((rev(_kante_y(ar,br,-(1-LINKS_ANTEIL)*A,yf,CAP)),'kurve'))                           # rechte Innenkante: Auslauf rückwärts (beginnt am Balken)
+    seg.append((L((Ir(yb),yb),(Il(yb),yb)),'linie'))                                                 # Balkenunterkante
+    seg.append((_kante_y(al+wl,bl,k_r,yf,CAP),'kurve'))                                              # linke Innenkante: Auslauf (Streifenkante rechts → mehr nach rechts)
+    xl_i=al+wl+bl*CAP+k_r; xl_o=al+bl*CAP+k_l
+    seg.append((rev(_dent_kante(xl_o,xl_i,False)),'dent'))                                          # Fuß links (von innen nach außen)
+    seg.append((rev(_kante_y(al,bl,k_l,yf,CAP)),'kurve'))                                            # linke Außenkante: Auslauf rückwärts …
+    seg.append((L((Ol(yf),yf),(Ol(0.0),0.0)),'linie'))                                               # … gerade hoch bis zur Spitze
+    out=_schliessen(seg)
+    yc=(al+wl-ar)/(br-bl-0.0)                                                                       # Spitze des Innenraums: Il(yc)=Ir(yc)
+    yc=(al+wl-ar)/(br-bl)
+    T=(Il(yc),yc)
+    hole=[L(T,(Ir(yt),yt)),L((Ir(yt),yt),(Il(yt),yt)),L((Il(yt),yt),T)]
+    return [out,hole],-1.8
