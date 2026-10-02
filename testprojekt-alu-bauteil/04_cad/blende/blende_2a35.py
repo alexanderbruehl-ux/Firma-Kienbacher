@@ -14,13 +14,17 @@ sys.path.insert(0,HERE); import lochmuster_opt as LM
 LM.WMIN=0.8
 import signet_m
 M_WIDTH=28.0             # ausgefrästes Signet-M im Hochtöner (echte Kontur), Breite in mm
-M_ANG=0.0                # waagerecht
-M_DY=0.5                 # 0,5 mm nach oben versetzt
+M_ANG=0.211              # M-Achse senkrecht (Signet-Eigenneigung 3,711° minus 3,5° Achsneigung)
+M_DX,M_DY=-0.04,1.52     # Umschlagrechteck des M im Feldzentrum (−0,04/+0,02) und 1,5 mm nach oben gesetzt
+HT_LOECHER=os.path.join(ROOT,'03_konzepte','akustik','ht_neu_loecher.json')   # Hochtöner-Feld 2025: 101 Bohrungen (Raster Ø2,5 + Ø2,0/1,5), außen entspannt, Stege ≥ 0,8 mm
 
 # ---------------- Parameter ----------------
 T=8.5                    # Blendendicke
 SKIN=2.2                 # Restwand Lochfelder Sub/TMT
 SKIN_HT=1.5              # Restwand Hochtöner-Feld
+# Sub/TMT: Haut Mitte 2,2 mm, nach außen stufenweise dicker bis 3,5 mm (Variante B), Fräsung von hinten mit 45°-Fräser (Flanke Δr = Δt), Radius zur Zylinderwand
+HAUT_STUFEN=[(0.42,2.85),(0.72,3.5)]   # (Radius-Anteil am Feldradius, Wand außerhalb); Mitte = SKIN
+HAUT_RADIUS=2.5          # Hohlkehle Haut-Rückseite zur Zylinderfläche (2–3 mm)
 CSINK_HT=0.0             # rückseitige Senkung: verworfen (nur 0,1–0,2 dB Gewinn, Mehrkosten)
 RECESS=0.6               # Absenkung Lochfeld vorne
 RING=2.0                 # Breite Diamantschnitt-Konus
@@ -114,7 +118,7 @@ def build_blende():
         outer=cq.Wire.makeCircle(Rf,cq.Vector(x,y,0),cq.Vector(0,0,1))
         inners=[]
         if D<60:   # Signet-M (echte Kontur) + Löcher nur mit Steg >= 0,8 mm zum M
-            M=signet_m.signet_poly(M_WIDTH,x,y+M_DY,ang=math.radians(M_ANG))
+            M=signet_m.signet_poly(M_WIDTH,x+M_DX,y+M_DY,ang=math.radians(M_ANG))
             def segd(p,a,b):
                 p,a,b=map(np.array,(p,a,b)); t=np.clip(np.dot(p-a,b-a)/np.dot(b-a,b-a),0,1); return np.linalg.norm(p-(a+t*(b-a)))
             def pip(p):
@@ -123,16 +127,41 @@ def build_blende():
                     (x1,y1),(x2,y2)=M[i],M[i-1]
                     if (y1>p[1])!=(y2>p[1]) and p[0]<(x2-x1)*(p[1]-y1)/(y2-y1)+x1: c=not c
                 return c
-            pts=[(px,py,d) for px,py,d in pts if not pip((px,py)) and min(segd((px,py),M[i-1],M[i]) for i in range(len(M)))-d/2>=0.8]
+            pts=[(x+hx,y+hy,hd) for hx,hy,hd in json.load(open(HT_LOECHER))['holes']]      # feste Lochliste (Koordinaten relativ zur Feldmitte)
+            assert all(not pip((px,py)) and min(segd((px,py),M[i-1],M[i]) for i in range(len(M)))-d/2>=0.79 for px,py,d in pts), 'Bohrung zu nah am M'
             inners.append(cq.Wire.makePolygon([cq.Vector(px,py,0) for px,py in M],close=True))
         allpts+=pts
         inners+=[cq.Wire.makeCircle(d/2,cq.Vector(px,py,0),cq.Vector(0,0,1)) for px,py,d in pts]
         skin=cq.Solid.extrudeLinear(cq.Face.makeFromWires(outer,inners),cq.Vector(0,0,sk)).translate((0,0,-RECESS-sk))
+        ring_pending=None
+        if D>60:   # stufenweise dickere Haut nach außen: Rotationskörper unter der 2,2-mm-Platte, 45°-Flanken, Hohlkehle zur Zylinderwand
+            z0=-RECESS-sk; zt=lambda t:-RECESS-t; Rf=D/2; steps=[(0.0,sk)]+[(a*Rf,t) for a,t in HAUT_STUFEN]
+            pr=[(steps[1][0],zt(sk))]
+            for (r1,t1),(r2,t2) in zip(steps[:-1],steps[1:]):
+                dt=t2-t1; pr+=[(r2+dt,zt(t2))] if False else []
+            # Profilpunkte von innen nach außen: Flanke ab Radius r_k (45°) auf die nächste Wand
+            pts_p=[(steps[1][0],zt(sk))]; tprev=sk
+            for k in range(1,len(steps)):
+                rk,tk=steps[k]; dt=tk-tprev; pts_p+=[(rk+dt,zt(tk))]
+                if k+1<len(steps): pts_p+=[(steps[k+1][0],zt(tk))]
+                tprev=tk
+            tmax=steps[-1][1]; fr=HAUT_RADIUS
+            wp=cq.Workplane('XZ',origin=(x,y,0)).moveTo(steps[1][0],z0+0.05).lineTo(*pts_p[0])
+            for pp in pts_p[1:]: wp=wp.lineTo(*pp)
+            wp=wp.lineTo(Rf-fr,zt(tmax)).threePointArc((Rf-fr+fr*0.70711,zt(tmax)-fr+fr*0.70711),(Rf,zt(tmax)-fr)).lineTo(Rf,z0+0.05).close()
+            ring=wp.revolve(360,(0,0,0),(0,1,0)).val()
+            cyls=cq.Compound.makeCompound([cq.Solid.makeCylinder(d/2,30,pnt=cq.Vector(px,py,-25),dir=cq.Vector(0,0,1)) for px,py,d in pts])
+            ring=ring.cut(cyls)
+            ring_pending=ring
+            print(f'    Haut gestuft: Mitte {sk} mm, Stufen {HAUT_STUFEN}, Radius {fr} mm, Vol {ring.Volume():.0f} mm³')
         if D<60 and CSINK_HT>0:   # rückseitige 90°-Senkungen (optional)
             cones=[cq.Solid.makeCone(d/2+CSINK_HT,d/2,CSINK_HT,pnt=cq.Vector(px,py,-RECESS-sk),dir=cq.Vector(0,0,1)) for px,py,d in pts]
             skin=skin.cut(cq.Compound.makeCompound(cones))
         print(f'  Feld Ø{D}: {len(pts)} Bohrungen {sorted(set(p[2] for p in pts))}, Restwand {sk} mm'+(f', Signet-M {M_WIDTH} mm' if D<60 else '')+(' + Senkung' if (D<60 and CSINK_HT>0) else ''))
-        body=body.union(cq.Workplane().add(skin.Solids()))
+        v_before=body.val().Volume(); body=body.union(cq.Workplane().add(skin.Solids()))
+        if ring_pending is not None:
+            body=body.union(cq.Workplane().add(ring_pending.Solids()))
+            print(f'    Körpervolumen {v_before/1000:.1f} -> {body.val().Volume()/1000:.1f} cm³ (mit Haut und gestuftem Ring)')
     # Logo einfräsen
     faces,C=logo_faces()
     for f in faces:
