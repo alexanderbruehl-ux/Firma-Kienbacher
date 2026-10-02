@@ -192,8 +192,8 @@ D_STAMM_INNEN=125.0   # senkrechte Innenkante des Stamms
 D_XC=300.0          # ab hier beginnt der Bogen (Arme laufen bis dahin wie beim E)
 # Bogenparameter: je (Anlauf oben, Ausrundung oben, Anlauf unten, Ausrundung unten, Außenrand x, Beginn/Ende des senkrechten Rands oben/unten);
 # per Flächenabgleich (symmetrische Differenz) mit den GIF-Pixeln angepasst
-D_BOGEN_AUSSEN=(233.5,308.4,210.2,299.8,900.4,342.6,568.9)
-D_BOGEN_INNEN=(302.4,155.0,313.8,147.2,753.0,340.1,636.9)
+D_BOGEN_AUSSEN=(233.5,416.3,210.2,404.7,900.4,402.6,508.9)      # Variante B: senkrechter Rand je Seite 60 kürzer, Ausrundung ×1,35 (runder Bogen)
+D_BOGEN_INNEN=(302.4,209.3,313.8,198.7,753.0,400.1,576.9)
 def letter_D():
     from shapely.geometry import Polygon as Pg, LineString, box
     polys,idx=_wordmark_glyphs(); I=polys[idx['I'][0]]; F=1000/(I[:,1].max()-I[:,1].min()); E=polys[idx['E'][0]]
