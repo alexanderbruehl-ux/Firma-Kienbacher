@@ -216,10 +216,11 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
 - **Review des bisher unveränderten Original-Rohtexts** (7.5.1 Ziel,
   7.5.2 Geltungsbereich, 7.5.4 Verfahren) — 7.5.1 und 7.5.2 ✅ fertig
   (siehe `ZIEL_GELTUNGSBEREICH.md`, inkl. Vorgänger-/
-  Nachfolgeprozess-Herleitung), 7.5.4 noch offen. 7.5.4 enthält u. a.
-  veraltete Begriffe, eine nie besprochene Rolle ("interner
-  Reklamationskoordinator") und alte interne Dokumentcodes
-  ("7A-51-3", "6A-32-1")
+  Nachfolgeprozess-Herleitung). 7.5.4 🔶 in Bearbeitung, siehe
+  `VERFAHREN_7_5_4.md` — 7.5.4.1.1 Grobplanung ✅ fertig; 7.5.4.2–7.5.4.6
+  noch offen. Enthält u. a. veraltete Begriffe, eine nie besprochene
+  Rolle ("interner Reklamationskoordinator") und alte interne
+  Dokumentcodes ("7A-51-3", "6A-32-1")
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
