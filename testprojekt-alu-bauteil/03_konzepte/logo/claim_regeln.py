@@ -418,9 +418,11 @@ def letter_G():
     from shapely.geometry import Polygon, box
     xl,xr,yo,yu=G_STAMM
     P=Polygon(_strich(G_CTRL,G_BREITE,G_CLIPS,ext=(150.0,150.0))).buffer(0)
+    from shapely.geometry import LineString as _LS
+    yu=float(P.intersection(_LS([(xl+2,0),(xl+2,1100)])).bounds[3])            # Fußkante = Unterkante des Bogens an der Stammkante (keine Stufe)
     ys=np.linspace(yo,yu,80); tf=np.clip(1-(yu-ys)/AUSLAUF,0,1)**3
     xl_f=xl+0*tf; xr_f=xr+LINKS_ANTEIL*AUSSTELLUNG*tf          # Fuß wie beim D links unten (I-Auslauf, gespiegelt): Aufweitung unten
-    foot=_fuss_delle_unten(xl_f[-1],xr_f[-1])
+    foot=_fuss_delle_unten(xl_f[-1],xr_f[-1])+np.array([0.0,yu-CAP])
     stem=Polygon(list(zip(xl_f,ys))+list(map(tuple,foot))[:]+list(zip(xr_f,ys))[::-1]).buffer(0)
     P=P.union(stem).buffer(0)
     B=_dent_kante(xl,xr,True); t=np.linspace(0,1,30)[:,None]
