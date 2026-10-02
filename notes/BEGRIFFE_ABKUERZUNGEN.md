@@ -19,6 +19,7 @@ AKV) sind bewusst **nicht** enthalten.
 ## Begriffe/Abkürzungen
 
 - **AAW** — Arbeitsanweisung
+- **ARPL** — FOSS-Modul zur Pflege von Arbeitsplänen
 - **Aufgabenliste** — Liste, die von Instandhaltung und Werkzeugbau
   geführt wird; verschiedene Stakeholder tragen dort Anliegen/
   Störungen ein
@@ -32,11 +33,16 @@ AKV) sind bewusst **nicht** enthalten.
 - **MES (authentig)** — Manufacturing Execution System
 - **Poka-Yoke-Verifizierung („Dummy-Prüfung")** — regelmäßige
   Funktionsprüfung integrierter Prüfanlagen mittels Referenzteilen
+- **PA** — Produktionsauftrag (eine von mehreren
+  Betriebsauftragskategorien)
 - **PQB** — Qualitätsprüfer/in
 - **Prüfbegleitkarte** — Dokument für Qualitätskontrollen/Freigaben
 - **PT** — Produkt-/Projekttechnik
-- **QMB** — Qualitätsmanagementbeauftragte/r
+- **QMB** — Qualitätsmanagementbeauftragte/r; bei Kienbacher
+  wahrgenommen vom Abteilungsleiter der Qualitätsmanagement-Abteilung
 - **QS** — Qualitätssicherung Produktion
+- **RPP** — Robust Production Processes, Team innerhalb der
+  Qualitätsmanagement-Abteilung
 - **Schichtlogbuch** — Dokumentationsmittel für die Schichtübergabe
 - **SFK** — Sicherheitsfachkraft
 - **SVP** — Sicherheitsvertrauensperson

@@ -46,6 +46,13 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   Fischgrät). Die **Kompetenz**, bestimmte Kennzahlen/Zielwerte
   festzulegen, bleibt im Dokument (AKV-Aussage); die **konkreten
   Zahlenwerte selbst** nicht.
+- **Grundsatz: Alte Rollen-Abkürzungen/-namen aus Version k nie
+  automatisch durch eine umbenannte Nachfolgerolle ersetzen.** Da oft
+  mehrere Nachfolgerollen infrage kommen (z. B. "AV" könnte Digitale
+  Prozessentwicklung & Lean Management, Produktionsplanung und
+  -steuerung, oder Prozesstechnik und Bemusterung sein), muss vor jeder
+  Ersetzung nachgefragt werden, welche Rolle inhaltlich tatsächlich
+  gemeint ist.
 - **Grundsatz: Pro eigenständigem Verfahren exakt eine Anweisung, nie
   eine unbestimmte Mehrzahl.** Gehören mehrere Tätigkeiten zum selben
   Verfahren, bekommen sie eine gemeinsame Anweisung; nur inhaltlich
@@ -223,8 +230,8 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   7.5.2 Geltungsbereich, 7.5.4 Verfahren) — 7.5.1 und 7.5.2 ✅ fertig
   (siehe `ZIEL_GELTUNGSBEREICH.md`, inkl. Vorgänger-/
   Nachfolgeprozess-Herleitung). 7.5.4 🔶 in Bearbeitung, siehe
-  `VERFAHREN_7_5_4.md` — 7.5.4.1.1 Grobplanung und 7.5.4.2 Feinplanung
-  ✅ fertig; 7.5.4.3–7.5.4.6 noch offen. Enthält u. a. veraltete
+  `VERFAHREN_7_5_4.md` — 7.5.4.1.1, 7.5.4.2 und 7.5.4.3 ✅ fertig;
+  7.5.4.4–7.5.4.6 noch offen. Enthält u. a. veraltete
   Begriffe, eine nie besprochene Rolle ("interner
   Reklamationskoordinator") und alte interne Dokumentcodes
   ("7A-51-3", "6A-32-1")
