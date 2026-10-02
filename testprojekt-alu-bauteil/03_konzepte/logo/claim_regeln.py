@@ -354,3 +354,27 @@ def letter_U():
     seg.append((L((xl0,U_AUSSEN[0]),(xl0,AU)),'linie'))                                            # linke Außenkante gerade hoch …
     seg.append((_kante_y(xl0,0.0,-ka,AU,0.0),'kurve'))                                             # … Auslauf bis zur Spitze
     return [_schliessen(seg)],-1.8
+
+
+# --- O: Ring aus zwei Superellipsen (außen/innen), per Flächenabgleich an das gemittelte O aus den 4 O im GIF angepasst. Seitenwände dick (145), oben/unten Haarlinie (~46);
+#     oben/unten leichter Überhang über Kappenhöhe ---
+O_AUSSEN=(539.0,539.2,-3.0,1010.6,2.3)       # (x Mitte, Halbachse x, y oben, y unten, Exponent)
+O_INNEN=(539.0,394.6,43.0,962.8,2.3)
+def _superellipse(xc,rx,yT,yB,e,k=240):
+    t=np.linspace(0,2*np.pi,k,endpoint=False); c=np.cos(t); s=np.sin(t)
+    return np.c_[xc+rx*np.sign(c)*np.abs(c)**(2/e),0.5*(yT+yB)+0.5*(yB-yT)*np.sign(s)*np.abs(s)**(2/e)]
+def _superellipse_bezier(xc,rx,yT,yB,e):
+    """Superellipse als 4 Béziers (je ein Viertel, achsenparallele Tangenten), Handlängen per Kleinste-Quadrate"""
+    from scipy.optimize import least_squares
+    yc=0.5*(yT+yB); ry=0.5*(yB-yT); t=np.linspace(0,np.pi/2,60)
+    Q=np.c_[np.cos(t)**(2/e),np.sin(t)**(2/e)]                               # Viertel im Einheitsmaß: von (1,0) nach (0,1)
+    u=np.linspace(0,1,60)[:,None]
+    def bz(p): a,b=p; P0=np.array([1,0.]);P1=np.array([1,a]);P2=np.array([b,1.]);P3=np.array([0,1.]); return (1-u)**3*P0+3*(1-u)**2*u*P1+3*(1-u)*u**2*P2+u**3*P3
+    r=least_squares(lambda p:[np.min(np.linalg.norm(bz(p)-q,axis=1)) for q in Q],[0.55,0.55]); a,b=r.x
+    f=lambda P:np.array([[xc+rx*x,yc+ry*y] for x,y in P])                      # unten rechts (y nach unten) beginnt bei (1,0)
+    base=np.array([[1,0],[1,a],[b,1],[0,1]],float); segs=[]
+    for sx,sy,rev in ((1,1,False),(-1,1,True),(-1,-1,False),(1,-1,True)):     # rechts → unten → links → oben, im Uhrzeigersinn (y nach unten)
+        P=base*np.array([sx,sy]); P=P[::-1] if rev else P; segs.append(f(P))
+    return segs
+def letter_O():
+    return [_superellipse_bezier(*O_AUSSEN),[sg[::-1] for sg in _superellipse_bezier(*O_INNEN)][::-1]],-1.8
