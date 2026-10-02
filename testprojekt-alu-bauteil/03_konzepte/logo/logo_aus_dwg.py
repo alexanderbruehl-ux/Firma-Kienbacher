@@ -30,6 +30,14 @@ bb=lambda P:[min(p[:,0].min() for p in P),min(p[:,1].min() for p in P),max(p[:,0
 ymid=(bb(paths)[1]+bb(paths)[3])/2                                            # Signet liegt oberhalb der Bildmitte, Wortmarke darunter
 sig=[p for p in paths if p[:,1].max()<ymid]; wm=[p for p in paths if p[:,1].max()>=ymid]
 assert len(sig)==1 and len(wm)==len(paths)-1, (len(sig),len(wm))
+# Signet-Vergrößerung (Wunsch 02.10.2026): oberes M so groß wie in der früheren Darstellung. Gleichmäßige Skalierung (Form bleibt wie im Original)
+# um Mitte/Unterkante des Signets -> Schriftzug, Abstand Signet-Schrift und Mittelachse bleiben exakt erhalten.
+# Faktor = Mittelwert aus Breiten- (1,3320) und Höhenverhältnis (1,2756) zwischen alter Nachzeichnung und Original-DWG.
+SIGNET_FAKTOR=1.3035        # 1.0 = Signet exakt wie in der Original-DWG
+if SIGNET_FAKTOR!=1.0:
+    q=sig[0]; cx=(q[:,0].min()+q[:,0].max())/2; yb=q[:,1].max()        # y nach unten: Unterkante = max y
+    sig=[np.c_[cx+(q[:,0]-cx)*SIGNET_FAKTOR, yb+(q[:,1]-yb)*SIGNET_FAKTOR]]
+    paths=sig+wm
 d=lambda P:' '.join('M'+' L'.join(f'{x:.3f},{y:.3f}' for x,y in p)+' Z' for p in P)
 dsig,dwm=d(sig),d(wm); bs,bw,ba=bb(sig),bb(wm),bb(paths)
 json.dump({'signet':dsig,'wordmark':dwm,'bbox_all':ba,'bbox_signet':bs,'bbox_wordmark':bw},open(os.path.join(HERE,'mw_trace.json'),'w'))
@@ -44,5 +52,7 @@ for p in sig+wm: v+=list(map(tuple,p))+[tuple(p[0])]; c+=[Path.MOVETO]+[Path.LIN
 for name,bg,fg in (('Logo_hell.png','#ffffff','#1b2a4a'),('Logo_dunkel.png','#0e1422','#f2f2f2')):
     fig=plt.figure(figsize=(20,20*(ba[3]-ba[1]+60)/(ba[2]-ba[0]+60))); ax=fig.add_axes([0,0,1,1]); fig.patch.set_facecolor(bg)
     ax.add_patch(PathPatch(Path(v,c),facecolor=fg,edgecolor='none')); ax.set_xlim(ba[0]-30,ba[2]+30); ax.set_ylim(ba[3]+30,ba[1]-30); ax.set_aspect('equal'); ax.axis('off')
-    fig.savefig(os.path.join(HERE,name),dpi=100,facecolor=bg); plt.close(fig)
+    fig.savefig(os.path.join(HERE,name),dpi=300,facecolor=bg)      # 6000 px Breite
+    if name=='Logo_hell.png': fig.savefig(os.path.join(HERE,'Meisterwerke_Logo.pdf'),facecolor=bg)   # Vektor-PDF
+    plt.close(fig)
 print('Signet-BBox',[round(x,2) for x in bs],'Wortmarke-BBox',[round(x,2) for x in bw],'Gesamt',[round(x,2) for x in ba])
