@@ -285,7 +285,7 @@ Themenblocks.
 
 ---
 
-## Themenblock 12: Werkzeugoptimierungen in Absprache mit PT (PT = Prozesstechnik und Bemusterung)
+## Themenblock 12: Werkzeugoptimierungen in Absprache mit PT (PT = Produkt-/Projekttechnik)
 
 **Fall 1 – vor Serienstart:** Läuft im Rahmen des Vorserienprozesses (siehe
 Themenblock 11 – Bemusterungs-Eskalation).
