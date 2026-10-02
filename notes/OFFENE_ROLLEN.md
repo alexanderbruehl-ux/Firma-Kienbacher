@@ -17,7 +17,7 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
   - Beispiel Effizienz: Nichteinhaltung von Zykluszeiten
   - Beispiel Qualität: Abweichungen aufgrund von Können/Wollen/Disziplin
 - Operative Führung des Bereichs **Endfertigung** (Schleifen/Entgraten +
-  Kleben), ca. 3–4 Mitarbeitende
+  Kleben)
 
 ## 2. Prozesstechnik und Bemusterung
 
@@ -73,10 +73,10 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 ## 5. Automatisierung
 
 - Neue, eigenständige Funktion — bisher nicht im Dokument abgebildet
-- Besetzung: 1 fixer Mitarbeiter zu 100 % für Automatisierung zuständig
-  (teilweise Zusammenarbeit mit externen Partnern) + eine 50 %-Ressource aus
-  der Instandhaltung (diese Person ist zugleich Lehrlingsausbildner für
-  Kunststofftechniker, siehe PRODUKTIONSLEITER.md Themenblock 9)
+- Arbeitet teilweise mit externen Partnern zusammen; eine anteilige
+  Ressource kann aus der Instandhaltung stammen (diese Person ist
+  zugleich Lehrlingsausbildner für Kunststofftechniker, siehe
+  PRODUKTIONSLEITER.md Themenblock 9)
 - Agiert bei der Optimierung der technischen Produktprozessentwicklung als
   eigenständige, parallele Disziplin neben Prozesstechnik und Bemusterung
   sowie Digitale Prozessentwicklung & Lean Management (siehe
@@ -101,7 +101,6 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 
 **Endfertigung** (Schleifen/Entgraten + Kleben)
 - Fehlte im Ursprungsdokument vollständig
-- Ca. 3–4 Mitarbeitende
 - Geführt durch **Teamleitung Endfertigung** = Produktionskoordination
   (Organisation/Personal), siehe oben (Personalunion)
 

@@ -29,6 +29,18 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   raten, unternehmensspezifische Begriffe klären bevor sie ins Dokument kommen.
 - Alexander ergänzt nach dem gemeinsamen Grobentwurf noch weitere
   unternehmensspezifische Details selbst.
+- **Grundsatz: Keine variablen, organisatorischen Detailangaben im
+  Dokument** (z. B. Anzahl Mitarbeiter/Teamgröße, prozentuale
+  Aufteilung von Ressourcen auf Rollen, konkrete Kennzahlen-Zielwerte
+  wie OEE/MTBF/MTTR-Sollwerte). Solche Angaben ändern sich erfahrungs-
+  gemäß häufig und würden bei jeder Änderung eine Dokumentrevision
+  erfordern. Das Dokument ist als Prozess-/Verfahrensanweisung zu
+  schreiben (Abläufe, Rollen, AKV, Prozesse, Input-/Output-Faktoren),
+  orientiert an IATF 16949/ISO 9001 und
+  Prozessmanagement-Grundmodellen (Turtle-Diagramm, Ishikawa/
+  Fischgrät). Die **Kompetenz**, bestimmte Kennzahlen/Zielwerte
+  festzulegen, bleibt im Dokument (AKV-Aussage); die **konkreten
+  Zahlenwerte selbst** nicht.
 - **Grundsatz: Jede Rolle muss für sich allein lesbar und vollständig
   sein.** Verweise der Art „siehe Rolle X" sind nur zwischen Rollen
   zulässig, die strukturell eine gemeinsame Basis teilen (z. B. die
@@ -161,9 +173,11 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
 
 **Verbleibende offene Punkte:**
 - `INSTANDHALTUNG.md`/`WERKZEUGBAU.md`: betriebsspezifische Details, die
-  Alexander noch ergänzt (Teamgröße, Kennzahlen-Zielwerte,
-  Ersatzteilhaltung, Fremdfirmen, Dokumentationssystem;
-  Verschleißteil-Programm-Fristen, Kundenwerkzeuge-Besonderheiten)
+  Alexander noch ergänzt (Ersatzteilhaltung, Fremdfirmen,
+  Dokumentationssystem; Verschleißteil-Programm-Fristen,
+  Kundenwerkzeuge-Besonderheiten) — Teamgröße und konkrete
+  Kennzahlen-Zielwerte bewusst NICHT mehr Teil dieser Liste, siehe
+  neuer Methodik-Grundsatz unten
 - `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
   Alexander noch etwas auffällt
 - Werkzeugbau: deferierte Diskussion Organigramm/Stellenbeschreibungen

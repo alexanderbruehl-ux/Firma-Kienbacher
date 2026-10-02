@@ -1,8 +1,11 @@
 # Rolle: Teamleitung Instandhaltung — AKV-Ausarbeitung (Zwischenstand)
 
 Status: **in Bearbeitung** — Normrahmen recherchiert und abgestimmt,
-betriebsspezifische Details (Teamgrößen, Kennzahlen, Ersatzteilhaltung
-etc.) werden von Alexander noch ergänzt.
+betriebsspezifische Details (Ersatzteilhaltung, Fremdfirmen,
+Dokumentationssystem) werden von Alexander noch ergänzt. Variable
+Detailangaben wie Teamgröße oder konkrete Kennzahlen-Zielwerte sind
+bewusst nicht Teil dieses Dokuments (siehe `PROJEKTSTATUS.md`,
+Methodik).
 
 Kein Punkt aus Version k (neue Rolle, siehe OFFENE_ROLLEN.md). Gehört zur
 Gruppe **Unterstützungsprozesse** (siehe
@@ -69,7 +72,6 @@ automatisierungstechnische Themen liegen bei der Rolle Automatisierung
 
 ## Noch zu ergänzen (Alexander)
 
-- Teamgröße, konkrete Kennzahlen/Ziele (OEE/MTBF/MTTR-Zielwerte)
 - Ersatzteilhaltung: eigenes Lager, Umfang, Verantwortlichkeit
 - Umgang mit Fremdfirmen über Hersteller hinaus (z. B. externe
   Instandhaltungsdienstleister)
