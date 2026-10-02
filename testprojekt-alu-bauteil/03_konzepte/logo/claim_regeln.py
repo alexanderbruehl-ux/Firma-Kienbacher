@@ -412,17 +412,21 @@ def letter_S():
 G_CTRL=[[969.9,133.4],[735.4,41.0],[575.5,21.7],[306.4,75.6],[155.7,220.4],[82.2,417.6],[87.0,630.1],[179.2,821.8],[344.3,948.9],[520.0,990.0],[690.0,965.0]]
 G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,75.0]
 G_CLIPS=[('xmax',937.4,(0.0,250.0))]                  # Serife oben rechts senkrecht
-G_STAMM=(808.0,928.0,546.0,982.0)                      # rechter Stamm: x links, x rechts, y oben, y unten (scharfe Ecke unten rechts)
+G_STAMM=(815.0,925.0,546.0,992.0)                      # rechter Stamm: x links, x rechts, y oben, y unten (scharfe Ecke unten rechts)
 G_DELLE=6.0                                            # Faktor auf die Delle des I an der Stamm-Oberkante
 def letter_G():
     from shapely.geometry import Polygon, box
     xl,xr,yo,yu=G_STAMM
     P=Polygon(_strich(G_CTRL,G_BREITE,G_CLIPS,ext=(150.0,150.0))).buffer(0)
-    P=P.union(box(xl,yo,xr,yu)).buffer(0)
+    ys=np.linspace(yo,yu,80); tf=np.clip(1-(yu-ys)/AUSLAUF,0,1)**3
+    xl_f=xl+0*tf; xr_f=xr+LINKS_ANTEIL*AUSSTELLUNG*tf          # Fuß wie beim D links unten (I-Auslauf, gespiegelt): Aufweitung unten
+    foot=_fuss_delle_unten(xl_f[-1],xr_f[-1])
+    stem=Polygon(list(zip(xl_f,ys))+list(map(tuple,foot))[:]+list(zip(xr_f,ys))[::-1]).buffer(0)
+    P=P.union(stem).buffer(0)
     B=_dent_kante(xl,xr,True); t=np.linspace(0,1,30)[:,None]
     curve=((1-t)**3*B[0]+3*(1-t)**2*t*B[1]+3*(1-t)*t**2*B[2]+t**3*B[3])*np.array([1.0,G_DELLE])
     P=P.difference(Polygon([(xl-1,yo-1),(xr+1,yo-1),(xr+1,yo+curve[-1,1])]+[(x,yo+y) for x,y in curve[::-1]]+[(xl-1,yo+curve[0,1])]).buffer(0))
-    P=P.intersection(box(-50,-50,xr,yu+30))
+    P=P.intersection(box(-50,-50,xr_f[-1]+0.01,yu+30))
     if P.geom_type!='Polygon': P=max(P.geoms,key=lambda g:g.area)
     return [_fit_polygon(np.array(P.exterior.coords)[:-1])],0.0
 
