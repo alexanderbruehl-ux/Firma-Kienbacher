@@ -433,16 +433,20 @@ def letter_G():
     return [_fit_polygon(np.array(P.exterior.coords)[:-1])],0.0
 
 # --- &: drei Striche (Schlaufe + unterer Bogen, Diagonale, rechter Arm), vereinigt ---
-AMP_STRICHE=[
- dict(ctrl=[[394.3,407.0],[507.0,289.7],[546.4,162.9],[405.0,48.3],[258.7,107.3],[221.7,270.5],[223.3,468.7],[103.1,633.1],[64.7,808.9],[230.5,972.3],[393.4,970.0],[555.0,910.0]],
-      w=[48.9,67.5,71.7,46.1,74.3,102.3,90.9,78.8,129.9,82.1,46.8,58.0],clips=[],ext=(60.0,60.0)),
- dict(ctrl=[[312.0,418.0],[440.8,610.0],[604.8,798.7],[760.1,967.2]],w=[104.0,111.4,117.4,100.4],
+AMP_STRICHE=[    # V2 (freigegebener Ausgangspunkt, 02.10.): Schlaufe oval, dick/dünn, Haarlinien an den Enden
+ dict(ctrl=[[394.3,407.0],[507.0,289.7],[546.4,162.9],[405.0,48.3],[250.0,92.0],[232.0,262.0],[236.0,440.0],[118.0,612.0],[64.7,808.9],[230.5,972.3],[393.4,970.0],[555.0,910.0]],
+      w=[50.0,60.0,66.0,46.0,66.0,92.0,84.0,70.0,125.0,78.0,46.0,52.0],clips=[],ext=(60.0,0.0)),
+ dict(ctrl=[[312.0,418.0],[440.8,610.0],[604.8,798.7],[760.1,967.2]],w=[80.0,128.0,128.0,105.0],
       clips=[('xmax',841.5,(731.7,1097.6)),('ymax',995.1,(487.8,975.6))],ext=(0.0,150.0)),
- dict(ctrl=[[825.6,497.1],[738.5,660.0],[651.8,776.7],[578.8,879.6]],w=[60.7,64.4,48.7,72.4],clips=[('ymin',487.8,(609.8,975.6))],ext=(120.0,70.0))]
+ dict(ctrl=[[825.6,497.1],[738.5,660.0],[651.8,776.7],[578.8,879.6]],w=[66.0,60.0,52.0,66.0],clips=[('ymin',487.8,(609.8,975.6))],ext=(120.0,70.0))]
+AMP_PFLASTER=[]                 # zusätzliche Polygone (Stege), die Schlaufe und Diagonale sicher schließen
+AMP_KERBEN=[]                   # Polygone, die nach dem Vereinigen abgezogen werden (Einknick links mittig)
+AMP_GLAETTUNG=40.0               # Radius des Schließens (füllt Kerben an den Nähten der drei Striche)
 def letter_AMP():
-    from shapely.geometry import Polygon
-    from shapely.ops import unary_union
-    U_=unary_union([Polygon(_strich(d['ctrl'],d['w'],d['clips'],ext=d['ext'])).buffer(0) for d in AMP_STRICHE]).buffer(0)
-    G=U_ if U_.geom_type=='Polygon' else max(U_.geoms,key=lambda g:g.area)
-    cont=[_fit_polygon(np.array(G.exterior.coords)[:-1])]+[_fit_polygon(np.array(h.coords)[:-1]) for h in G.interiors]
+    """& aus der von Hand im Kontur-Werkzeug eingestellten Kontur (amp_kontur.json: Knoten mit Ankerpunkt p, Griffen i/o, Einheiten wie die anderen Buchstaben)"""
+    import json
+    K=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'amp_kontur.json')))['konturen']
+    cont=[]
+    for nodes in K:
+        n=len(nodes); cont.append([np.array([nodes[i]['p'],nodes[i]['o'],nodes[(i+1)%n]['i'],nodes[(i+1)%n]['p']],float) for i in range(n)])
     return cont,0.0
