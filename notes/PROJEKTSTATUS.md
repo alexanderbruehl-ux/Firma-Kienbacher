@@ -198,8 +198,13 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
     konkreten Dokumentnummern)
   - ✅ **Aufzeichnungen (Records)** — fertig, siehe
     `AUFZEICHNUNGEN.md`
-  - ⬜ **Begriffe/Abkürzungen** — noch zu erarbeiten (nur tatsächlich im
-    Dokument verwendete Begriffe/Abkürzungen, Auswahl aus `BEGRIFFE.md`)
+  - ✅ **Begriffe/Abkürzungen** — fertig, siehe
+    `BEGRIFFE_ABKUERZUNGEN.md`. Auswahlkriterium: firmenspezifisch
+    oder dokumentspezifische Verwechslungsgefahr/Zuspitzung (z. B. PT
+    vs. Prozesstechnik und Bemusterung; QMB/QS/PQB-Abgrenzung) —
+    allgemeingültige, fachüblich bekannte Abkürzungen ohne
+    dokumentspezifische Zuspitzung (z. B. ASchG, AKV) bewusst
+    ausgeschlossen
 - `scripts/build.js`/`working/*.docx`: noch nicht auf dem Stand aller in
   diesem Durchgang fertiggestellten Rollen (Produktionskoordination,
   Werker, Boxenbauer, Produktionslogistiker, Produktionsplanung,
