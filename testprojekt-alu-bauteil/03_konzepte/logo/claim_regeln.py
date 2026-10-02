@@ -390,7 +390,8 @@ def _strich(ctrl,w,clips=(),ext=150.0,n=200):
     from shapely.geometry import Polygon, box
     ctrl=np.asarray(ctrl,float); w=np.asarray(w,float)
     t0=ctrl[0]-ctrl[1]; t0/=np.linalg.norm(t0); t1=ctrl[-1]-ctrl[-2]; t1/=np.linalg.norm(t1)
-    c2=np.vstack([ctrl[0]+t0*ext,ctrl,ctrl[-1]+t1*ext]); w2=np.r_[w[0],w,w[-1]]
+    e0,e1=(ext,ext) if np.isscalar(ext) else ext
+    c2=np.vstack([ctrl[0]+t0*max(e0,1e-6),ctrl,ctrl[-1]+t1*max(e1,1e-6)]); w2=np.r_[w[0],w,w[-1]]
     d=np.r_[0,np.cumsum(np.linalg.norm(np.diff(c2,axis=0),axis=1))]; t=np.linspace(0,d[-1],n)
     cs=CubicSpline(d,c2,bc_type='natural'); C=cs(t); T=cs(t,1); T/=np.linalg.norm(T,axis=1)[:,None]; Nn=np.c_[-T[:,1],T[:,0]]
     W=PchipInterpolator(d,w2)(t)[:,None]
@@ -412,3 +413,18 @@ G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,74.6,110.9,97.0
 G_CLIPS=[('xmax',937.4,(0.0,250.0)),('ymin',546.0,(700.0,1100.0),250.0)]       # Serife oben rechts senkrecht, Oberkante des rechten Stamms waagrecht (y=546, GIF-Zeile 22,4)
 def letter_G():
     return [_fit_polygon(_strich(G_CTRL,G_BREITE,G_CLIPS))],0.0
+
+# --- &: drei Striche (Schlaufe + unterer Bogen, Diagonale, rechter Arm), vereinigt ---
+AMP_STRICHE=[
+ dict(ctrl=[[394.3,407.0],[507.0,289.7],[546.4,162.9],[405.0,48.3],[258.7,107.3],[221.7,270.5],[223.3,468.7],[103.1,633.1],[64.7,808.9],[230.5,972.3],[393.4,970.0],[555.0,910.0]],
+      w=[48.9,67.5,71.7,46.1,74.3,102.3,90.9,78.8,129.9,82.1,46.8,58.0],clips=[],ext=(60.0,60.0)),
+ dict(ctrl=[[312.0,418.0],[440.8,610.0],[604.8,798.7],[760.1,967.2]],w=[104.0,111.4,117.4,100.4],
+      clips=[('xmax',841.5,(731.7,1097.6)),('ymax',995.1,(487.8,975.6))],ext=(0.0,150.0)),
+ dict(ctrl=[[825.6,497.1],[738.5,660.0],[651.8,776.7],[578.8,879.6]],w=[60.7,64.4,48.7,72.4],clips=[('ymin',487.8,(609.8,975.6))],ext=(120.0,70.0))]
+def letter_AMP():
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+    U_=unary_union([Polygon(_strich(d['ctrl'],d['w'],d['clips'],ext=d['ext'])).buffer(0) for d in AMP_STRICHE]).buffer(0)
+    G=U_ if U_.geom_type=='Polygon' else max(U_.geoms,key=lambda g:g.area)
+    cont=[_fit_polygon(np.array(G.exterior.coords)[:-1])]+[_fit_polygon(np.array(h.coords)[:-1]) for h in G.interiors]
+    return cont,0.0

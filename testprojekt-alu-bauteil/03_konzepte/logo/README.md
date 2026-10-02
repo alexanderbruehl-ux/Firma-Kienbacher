@@ -34,19 +34,30 @@ der Blendenunterkante, Mittelachse (um 3,7° gekippt) verlängert durch den 100e
 Breite 115 mm (Höhe ≈ 30,3 mm, Signet 15,9 × 12,9 mm), Schriftzug-Unterkante wie bisher; Logo-Mitte (291,2 | 42,1) mm.
 Kleinster Abstand Logo → Rand des 100er-Ausschnitts: 4,6 mm (der Diamantschnitt-Konus von 2 mm Breite liegt davon noch abzuziehen).
 
-## Claim „MAGNA OPERA OF INTERIOR & SOUND“ (Entwurf, 02.10.2026)
+## Claim „MAGNA OPERA OF INTERIOR & SOUND“ (regelbasierter Entwurf, 02.10.2026)
 
 Der Claim liegt nur als Raster vor (GIF, Claim-Höhe 42 px, nur Tinte/transparent) und dort mit dem **alten, grammatisch falschen Text
 „OPUS MAGNA …“** (*opus* ist Einzahl, *magna* Mehrzahl). Richtig ist die Mehrzahl **„MAGNA OPERA“** (ebenso richtig: „OPERA MAGNA“).
-Alle Buchstaben des neuen Claims kommen im alten vor. `logo_claim_aus_bild.py`:
-- Buchstaben einzeln rekonstruiert: mehrfach vorkommende Exemplare (O 4×, N 3×, A/U/S/I/R je 2×) auf Teilpixel genau übereinandergelegt und gemittelt,
-  Kontur geglättet, Ecken aus den Schnittpunkten der Kanten, nahezu gerade Kanten als Geraden, Rundungen mit wenigen kubischen Béziers (`curvefit.py`).
-- **Das M stammt direkt aus dem Vektor-Schriftzug** (auf Claim-Höhe skaliert, 43,8 px breit; das M im GIF ist 47 px breit und kräftiger).
+Alle Buchstaben des neuen Claims kommen im alten vor. Die Buchstaben sind **nicht mehr aus dem Pixelrauschen nachgezeichnet**, sondern nach
+**Regeln des Meisterwerke-Schriftzugs konstruiert** (`claim_regeln.py`, Einheiten: Kappenhöhe = 1000), jeder Buchstabe wurde einzeln gegen das
+(gemittelte) Pixelbild geprüft. `logo_claim_aus_bild.py` setzt sie mit dem Buchstabenabstand des GIF zusammen.
+
+**Gemeinsame Regeln** (vom I abgeleitet, gelten für alle Buchstaben):
+- **Stamm/Strich-Enden laufen kubisch aus** (t³ über 390 Einheiten, +20,5 am Ende; oben mehr nach links, unten mehr nach rechts: Punktsymmetrie).
+- **Flache Enden haben die Delle des I** (3 Einheiten tief; unten um 180° gedreht), auf die Endbreite normiert.
+- Stamm 113,8; Haarlinie ca. 70 (im GIF: Querbalken A 49, rechter N-Stamm 61); Querstriche und Bögen aus Haarlinie und dicker Wand.
+- Möglichst nur **gerade Kanten** und **wenige exakte Béziers** statt Kurvenanpassung (N, A: Kanten exakt; Auslauf-Kurven sind exakt kubisch).
+
+**Buchstaben:** I, E, F, T (aus dem Schriftzug-E/I/T abgeleitet, E-Arme +10 %, T −12 %); R, P (Schriftzug-R: Steg höher, Bogen weiter, Bein aus zwei geraden
+Kanten mit Fuß-Auslauf, Bogenwand ≥ 65); D (E-Stamm + Bogen); N (punktsymmetrisch, Diagonale 42,8°); A (zwei parallele Streifen 72/130, 23,2°, Balken);
+U (I-Stamm + Haarlinien-Stamm + Bogen); O (zwei Superellipsen); S, G, & (Striche mit variabler Breite entlang einer geglätteten Mittellinie,
+Skelett des gemittelten GIF-Buchstabens, per Flächenabgleich nachgeschliffen). **Das M stammt direkt aus dem Vektor-Schriftzug** (43,8 px breit; das M im GIF ist 47 px).
+
 - Neusatz mit dem Buchstabenabstand des GIF (Kontrolle am alten Text: mittlere Abweichung 1,6 px bei 42 px Buchstabenhöhe), mittig zum Schriftzug;
-  Abstand zur Schrift und Höhe wie im GIF. Claim-Breite 87,4 % des Schriftzugs (GIF: 84,8 %, ein Zeichen mehr).
+  Abstand zur Schrift und Höhe wie im GIF. Claim-Breite ca. 88 % des Schriftzugs (GIF: 84,8 %, ein Zeichen mehr).
 - Signet und Schriftzug sind unverändert; in `mw_trace.json` kommen nur `claim`, `bbox_claim`, `claim_text` hinzu.
+- Rekonstruktion: `python logo_claim_aus_bild.py` (benötigt `pillow numpy scipy scikit-image matplotlib shapely`).
 
-**Grenzen:** Das ist eine Rekonstruktion aus einem 42-px-Raster, keine Originalzeichnung. Bei normaler Größe (auf der Blende ca. 3 mm Schrifthöhe) nicht
-sichtbar, in starker Vergrößerung bleiben leichte Unregelmäßigkeiten (z. B. in U, N, D, &). Für Fertigungsdaten und Großformate die Original-Vektordatei
-mit dem richtigen Claim beschaffen.
-
+**Grenzen:** Das ist eine Rekonstruktion aus einem 42-px-Raster, keine Originalzeichnung. Die Pixelbilder lassen etwa ±0,5 px (± 12 Einheiten) Spielraum;
+Details wie Spitzen, Serifen und Balkenstärke sind Interpretation (offen: Balken-A 49 vs. Haarlinie 70, Überhang runder Buchstaben, Spitzenform). Bei normaler
+Größe (auf der Blende ca. 3 mm Schrifthöhe) nicht sichtbar. Für Fertigungsdaten und Großformate die Original-Vektordatei mit dem richtigen Claim beschaffen.

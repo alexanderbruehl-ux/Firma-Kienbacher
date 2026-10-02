@@ -69,6 +69,9 @@ def rule_glyph(fn):
     res=fn(); cont,dy=res if isinstance(res,tuple) else (res,0.0)
     P=np.vstack([RG.sample(c,12) for c in cont]); xmin,xmax=P[:,0].min(),P[:,0].max()
     f=lambda p:((p[0]-xmin)/URU,y0+(p[1]+dy)/URU)                                 # x ab linker Tintenkante (px), y absolut (px)
+    area=lambda c:0.5*np.sum((lambda Q:Q[:,0]*np.roll(Q[:,1],-1)-np.roll(Q[:,0],-1)*Q[:,1])(RG.sample(c,12)))
+    ar=[area(c) for c in cont]; big=int(np.argmax(np.abs(ar)))
+    cont=[ (c if (i==big or np.sign(ar[i])!=np.sign(ar[big])) else [b[::-1] for b in c][::-1]) for i,c in enumerate(cont)]   # Löcher gegenläufig zur Außenkontur (auch für Renderer mit Nonzero-Regel)
     paths=[]
     for c in cont:
         d=[('M',f(c[0][0]))]+[('C',f(b[1]),f(b[2]),f(b[3])) for b in c]; paths.append(d)
