@@ -189,12 +189,16 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   (keine eigene Führungsfunktion); siehe `WERKZEUGBAU.md`
 - `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
   Alexander noch etwas auffällt
-- **Offener Punkt (von Alexander angemerkt):** Umgang mit Verweisen auf
-  "eigene Anweisungen"/mitgeltende Dokumente (z. B. die Anweisung zum
-  Vorserienprozess) – konkretisieren (genaue Dokumentennummer/-titel
-  nennen) oder neutralisieren (allgemein halten)? Dazu auch
-  IATF-Anforderungen zu Vorgänger-/Nachfolgeprozessen und mitgeltenden
-  Dokumenten prüfen.
+- **Gliederung ergänzt um drei neue Abschnitte** (ISO 9001/IATF-konforme
+  Standardgliederung einer Verfahrensanweisung; Änderungshistorie
+  bewusst weggelassen):
+  - ✅ **Mitgeltende Unterlagen** — fertig, siehe
+    `MITGELTENDE_UNTERLAGEN.md` (generische Formulierung nach
+    Prozesskategorie: Kern-/Führungs-/Unterstützungsprozesse, keine
+    konkreten Dokumentnummern)
+  - ⬜ **Aufzeichnungen (Records)** — noch zu erarbeiten
+  - ⬜ **Begriffe/Abkürzungen** — noch zu erarbeiten (nur tatsächlich im
+    Dokument verwendete Begriffe/Abkürzungen, Auswahl aus `BEGRIFFE.md`)
 - `scripts/build.js`/`working/*.docx`: noch nicht auf dem Stand aller in
   diesem Durchgang fertiggestellten Rollen (Produktionskoordination,
   Werker, Boxenbauer, Produktionslogistiker, Produktionsplanung,
