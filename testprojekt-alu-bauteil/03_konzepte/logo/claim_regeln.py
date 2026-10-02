@@ -210,24 +210,34 @@ def letter_D():
     return [_fit_polygon(np.array(G.exterior.coords)[:-1]),_fit_polygon(np.array(G.interiors[0].coords)[:-1])],dy
 
 
-# --- N: punktsymmetrisch (180°-Drehung um die Mitte): zwei Haarlinien-Stämme, Diagonale unter ~42,8° (Regel aus allen drei N im GIF),
-#     Fuß-Ausstellung des linken Stamms unten (= Kopf-Ausstellung des rechten oben), Diagonale läuft an beiden Enden spitz in die Stämme ---
-N_BREITE=854.0; N_RAND=24.4; N_STAMM=73.2      # Gesamtbreite, Abstand der Stammaußenkante vom linken Rand (Stamm steht 1 px eingerückt), Stammbreite (Haarlinie)
-N_STAMM_R=61.0                                 # rechter Stamm im GIF schmaler (2–3 px statt 3 px)
-N_AUSSTELLUNG=(730.0,24.4)                     # Beginn (y) und Betrag (x) der Stamm-Ausstellung am Fuß
-N_DIAG_A,N_DIAG_B=62.0,0.927                   # rechte (obere) Diagonalkante x = a + b*y ; die linke ergibt sich punktsymmetrisch
+# --- N: Stämme mit den geschwungenen Auslauf-Kanten des I (kubisch t³ über AUSLAUF, exakt als Bézier), Diagonale gerade unter ~42,8° (Regel aus allen drei N im GIF),
+#     die Diagonale läuft an beiden Enden spitz in die Stämme; Punktsymmetrie bei Diagonale und Auslaufrichtung ---
+N_BREITE=854.0                       # Gesamtbreite (inkl. Ausstellung rechts oben)
+N_L=(24.4,97.6)                      # linker Stamm (Haarlinie 73) in der Mitte: x-Bereich
+N_R=(768.0,829.4)                    # rechter Stamm (im GIF schmaler: 61) in der Mitte
+N_AUSSTELLUNG_L_UNTEN=24.4           # linker Stamm: Fuß weitet sich nach links (GIF: 4 statt 3 px)
+N_AUSSTELLUNG_R_OBEN=(12.2,24.4)     # rechter Stamm: Kopf weitet sich links/rechts (GIF: 4 statt 2 px)
+N_DIAG_A,N_DIAG_B=62.0,0.927         # obere Diagonalkante x = a + b*y ; untere punktsymmetrisch: a_u = W - a - 1000*b
 def letter_N():
-    from shapely.geometry import Polygon as Pg, box
-    from shapely import affinity
-    W=N_BREITE; a=N_DIAG_A; b=N_DIAG_B; al=W-a-1000*b; x0=N_RAND; x1=x0+N_STAMM; ya,fx=N_AUSSTELLUNG
-    y=np.array([0.0,1000.0])
-    band=Pg([(al+b*y[0],0),(a+b*y[0],0),(a+b*y[1],1000.0),(al+b*y[1],1000.0)])
-    stamm=Pg([(x0,0),(x1,0),(x1,1000),(x0-fx,1000),(x0-fx,1000),(x0,ya)])             # linker Stamm mit Fußausstellung
-    oben=Pg([(-10,-10),(W+10,-10),(W+10,0.0),(a,0.0),(a+b*1000,1000),(W+10,1000),(W+10,1010),(-10,1010)]).buffer(0)
-    stamm=stamm.intersection(Pg([(x0-fx-1,0),(a+0.0,0),(a+b*1000,1000),(x0-fx-1,1000)]))   # Stamm nicht über die obere Diagonalkante hinaus
-    L=stamm; R=affinity.rotate(stamm,180,origin=(W/2,500.0)).intersection(box(W-x0-N_STAMM_R,-10,W+50,1010)).union(affinity.rotate(stamm,180,origin=(W/2,500.0)).intersection(box(W-x0,-10,W+50,1010)))
-    Bd=band.intersection(box(x0,0,W-x0,1000))
-    G=L.union(R).union(Bd).buffer(0).simplify(0.05)
-    assert G.geom_type=='Polygon' and not len(G.interiors),(G.geom_type,)
-    P=np.array(G.exterior.coords)[:-1]; Q=np.roll(P,-1,axis=0)                      # nur gerade Kanten: exakte Linien-Béziers statt Kurvenanpassung (keine Spitzen an den Ecken)
-    return [[np.array([p,p+(q-p)/3,p+2*(q-p)/3,q]) for p,q in zip(P,Q)]],-1.8
+    W=N_BREITE; a=N_DIAG_A; b=N_DIAG_B; al=W-a-1000*b; xl0,xl1=N_L; xr0,xr1=N_R
+    ya=(xr0-a)/b; yb=(xl1-al)/b                                    # Schnittpunkte Diagonale/Stamm (rechts bzw. links)
+    L=lambda p,q:np.array([p,np.add(p,np.subtract(q,p)/3.0),np.add(p,2*np.subtract(q,p)/3.0),q],float)
+    def flare(x_mid,A,y_end,y_mid,sgn):             # Auslaufkante x = x_mid + sgn*A*(1-u)³, u=0 am Ende (y_end) … 1 an der Stelle y_mid; exakt kubisch
+        ys=[y_end+(y_mid-y_end)*k/3.0 for k in range(4)]; off=[A,0.0,0.0,0.0]
+        return np.array([[x_mid+sgn*o,y] for o,y in zip(off,ys)],float)
+    AU=AUSLAUF
+    out=[]
+    out.append(L((xl0,0.0),(a,0.0)))                                               # Kopf links (Spitze)
+    out.append(L((a,0.0),(xr0,ya)))                                                # obere Diagonalkante
+    out.append(L((xr0,ya),(xr0,AU)))                                               # rechter Stamm, linke Kante (gerade)
+    out.append(flare(xr0,N_AUSSTELLUNG_R_OBEN[0],0.0,AU,-1)[::-1])                 # … Auslauf nach oben (nach links ausgestellt)
+    out.append(L((xr0-N_AUSSTELLUNG_R_OBEN[0],0.0),(xr1+N_AUSSTELLUNG_R_OBEN[1],0.0)))   # Kopf rechts (flach)
+    out.append(flare(xr1,N_AUSSTELLUNG_R_OBEN[1],0.0,AU,+1))                       # rechte Kante: Auslauf oben …
+    out.append(L((xr1,AU),(xr1,1000.0)))                                           # … gerade bis unten
+    out.append(L((xr1,1000.0),(al+b*1000.0,1000.0)))                               # Fuß rechts (Spitze)
+    out.append(L((al+b*1000.0,1000.0),(xl1,yb)))                                   # untere Diagonalkante
+    out.append(L((xl1,yb),(xl1,1000.0)))                                           # linker Stamm, rechte Kante
+    out.append(L((xl1,1000.0),(xl0-N_AUSSTELLUNG_L_UNTEN,1000.0)))                 # Fuß links (flach)
+    out.append(flare(xl0,N_AUSSTELLUNG_L_UNTEN,1000.0,1000.0-AU,-1))               # linke Kante: Auslauf unten …
+    out.append(L((xl0,1000.0-AU),(xl0,0.0)))                                       # … gerade bis oben
+    return [out],-1.8
