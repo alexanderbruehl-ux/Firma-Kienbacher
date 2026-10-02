@@ -329,9 +329,9 @@ def letter_A():
 # --- U: links der Stamm des I (dick, mit Kopf-Auslauf), rechts ein Haarlinien-Stamm (73) mit Kopf-Auslauf, unten ein Bogen aus je zwei Bézierkurven außen/innen
 #     (per Flächenabgleich an die beiden U im GIF angepasst); der Bogen läuft 1 px unter die Grundlinie (runder Überhang) ---
 U_STAMM_L=(11.7,125.5)                 # linker Stamm: x-Bereich in der Mitte (wie I: Stamm 113,8, Spitze bei x=0)
-U_STAMM_R=(756.0,829.4)                # rechter Stamm: x-Bereich in der Mitte (Haarlinie 73)
-U_AUSSEN=(701.7,232.1,149.5,401.0,1022.8,153.4,200.8,700.4)    # (y Bogenanfang links, Ausrundung links, Anlauf links, x Mitte unten, y unten, Anlauf rechts, Ausrundung rechts, y Bogenanfang rechts)
-U_INNEN=(638.6,150.5,149.6,402.6,951.5,160.5,145.6,694.6)
+U_STAMM_R=(744.0,829.4)                # rechter Stamm: x-Bereich in der Mitte (Haarlinie 73)
+U_AUSSEN=(701.7,232.1,149.5,401.0,1012.0,153.4,200.8,700.4)    # (y Bogenanfang links, Ausrundung links, Anlauf links, x Mitte unten, y unten, Anlauf rechts, Ausrundung rechts, y Bogenanfang rechts)
+U_INNEN=(638.6,150.5,149.6,402.6,940.5,160.5,145.6,694.6)
 def letter_U():
     A=AUSSTELLUNG; AU=AUSLAUF; xl0,xl1=U_STAMM_L; xr0,xr1=U_STAMM_R
     L=lambda p,q:np.array([p,np.add(p,np.subtract(q,p)/3.0),np.add(p,2*np.subtract(q,p)/3.0),q],float)
