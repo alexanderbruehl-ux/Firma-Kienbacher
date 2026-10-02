@@ -29,6 +29,11 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   raten, unternehmensspezifische Begriffe klären bevor sie ins Dokument kommen.
 - Alexander ergänzt nach dem gemeinsamen Grobentwurf noch weitere
   unternehmensspezifische Details selbst.
+- **Grundsatz: Keine namentliche Nennung von Stelleninhabern.** Ein
+  QM-Dokument beschreibt Rollen/Funktionen, nicht Personen – auch wenn
+  eine Position aktuell eindeutig einer bestimmten Person zugeordnet
+  ist (z. B. zur Klärung im Organigramm), wird das im Dokument nicht
+  namentlich festgehalten.
 - **Grundsatz: Keine variablen, organisatorischen Detailangaben im
   Dokument** (z. B. Anzahl Mitarbeiter/Teamgröße, prozentuale
   Aufteilung von Ressourcen auf Rollen, konkrete Kennzahlen-Zielwerte
@@ -174,14 +179,16 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
 **Verbleibende offene Punkte:**
 - `INSTANDHALTUNG.md`/`WERKZEUGBAU.md`: betriebsspezifische Details, die
   Alexander noch ergänzt (Ersatzteilhaltung, Fremdfirmen,
-  Dokumentationssystem; Verschleißteil-Programm-Fristen,
-  Kundenwerkzeuge-Besonderheiten) — Teamgröße und konkrete
-  Kennzahlen-Zielwerte bewusst NICHT mehr Teil dieser Liste, siehe
-  neuer Methodik-Grundsatz unten
+  Dokumentationssystem, Kundenwerkzeuge-Besonderheiten) — Teamgröße und
+  konkrete Kennzahlen-/Fristen-Zahlenwerte bewusst NICHT mehr Teil
+  dieser Liste, siehe neuer Methodik-Grundsatz unten
+  (Verschleißteile-Management bereits entsprechend gelöst: Verweis auf
+  ERP-System statt konkreter Werte)
+- Werkzeugbau-Rollenstruktur final geklärt: eine Teamleitungsfunktion,
+  ergänzt durch fachlich-technische Mitwirkung erfahrener Mitarbeiter
+  (keine eigene Führungsfunktion); siehe `WERKZEUGBAU.md`
 - `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
   Alexander noch etwas auffällt
-- Werkzeugbau: deferierte Diskussion Organigramm/Stellenbeschreibungen
-  (Aufteilung in zwei Rollen?)
 - **Offener Punkt (von Alexander angemerkt):** Umgang mit Verweisen auf
   "eigene Anweisungen"/mitgeltende Dokumente (z. B. die Anweisung zum
   Vorserienprozess) – konkretisieren (genaue Dokumentennummer/-titel
