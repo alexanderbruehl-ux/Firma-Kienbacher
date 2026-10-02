@@ -408,11 +408,23 @@ S_CLIPS=[('xmax',534.0,(0.0,250.0)),('xmin',4.6,(780.0,1100.0))]       # Serifen
 def letter_S():
     return [_fit_polygon(_strich(S_CTRL,S_BREITE,S_CLIPS))],0.0
 
-G_CTRL=[[969.9,133.4],[735.4,41.0],[575.5,21.7],[306.4,75.6],[155.7,220.4],[82.2,417.6],[87.0,630.1],[179.2,821.8],[344.3,948.9],[562.3,981.6],[775.3,960.2],[877.0,811.7],[871.3,604.1]]
-G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,74.6,110.9,97.0]
-G_CLIPS=[('xmax',937.4,(0.0,250.0)),('ymin',546.0,(700.0,1100.0),250.0)]       # Serife oben rechts senkrecht, Oberkante des rechten Stamms waagrecht (y=546, GIF-Zeile 22,4)
+# G (Variante B): Bogen als Strich, rechter Stamm als Rechteck mit scharfer unterer rechter Ecke, Delle (6-fach) an der Stamm-Oberkante
+G_CTRL=[[969.9,133.4],[735.4,41.0],[575.5,21.7],[306.4,75.6],[155.7,220.4],[82.2,417.6],[87.0,630.1],[179.2,821.8],[344.3,948.9],[520.0,990.0],[690.0,965.0]]
+G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,75.0]
+G_CLIPS=[('xmax',937.4,(0.0,250.0))]                  # Serife oben rechts senkrecht
+G_STAMM=(808.0,928.0,546.0,982.0)                      # rechter Stamm: x links, x rechts, y oben, y unten (scharfe Ecke unten rechts)
+G_DELLE=6.0                                            # Faktor auf die Delle des I an der Stamm-Oberkante
 def letter_G():
-    return [_fit_polygon(_strich(G_CTRL,G_BREITE,G_CLIPS))],0.0
+    from shapely.geometry import Polygon, box
+    xl,xr,yo,yu=G_STAMM
+    P=Polygon(_strich(G_CTRL,G_BREITE,G_CLIPS,ext=(150.0,150.0))).buffer(0)
+    P=P.union(box(xl,yo,xr,yu)).buffer(0)
+    B=_dent_kante(xl,xr,True); t=np.linspace(0,1,30)[:,None]
+    curve=((1-t)**3*B[0]+3*(1-t)**2*t*B[1]+3*(1-t)*t**2*B[2]+t**3*B[3])*np.array([1.0,G_DELLE])
+    P=P.difference(Polygon([(xl-1,yo-1),(xr+1,yo-1),(xr+1,yo+curve[-1,1])]+[(x,yo+y) for x,y in curve[::-1]]+[(xl-1,yo+curve[0,1])]).buffer(0))
+    P=P.intersection(box(-50,-50,xr,yu+30))
+    if P.geom_type!='Polygon': P=max(P.geoms,key=lambda g:g.area)
+    return [_fit_polygon(np.array(P.exterior.coords)[:-1])],0.0
 
 # --- &: drei Striche (Schlaufe + unterer Bogen, Diagonale, rechter Arm), vereinigt ---
 AMP_STRICHE=[
