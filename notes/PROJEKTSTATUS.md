@@ -196,7 +196,8 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
     `MITGELTENDE_UNTERLAGEN.md` (generische Formulierung nach
     Prozesskategorie: Kern-/Führungs-/Unterstützungsprozesse, keine
     konkreten Dokumentnummern)
-  - ⬜ **Aufzeichnungen (Records)** — noch zu erarbeiten
+  - ✅ **Aufzeichnungen (Records)** — fertig, siehe
+    `AUFZEICHNUNGEN.md`
   - ⬜ **Begriffe/Abkürzungen** — noch zu erarbeiten (nur tatsächlich im
     Dokument verwendete Begriffe/Abkürzungen, Auswahl aus `BEGRIFFE.md`)
 - `scripts/build.js`/`working/*.docx`: noch nicht auf dem Stand aller in
