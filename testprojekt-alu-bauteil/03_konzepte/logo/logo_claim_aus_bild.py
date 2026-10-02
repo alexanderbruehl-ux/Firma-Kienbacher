@@ -59,6 +59,23 @@ for ch in dict.fromkeys(letters):
 print()
 rw={ch:g[0] for ch,g in glyph.items()}                                            # Rasterbreiten (für Abstandsmodell)
 glyph['M']=wordmark_M(); print('M aus dem Schriftzug: Breite %.1f px (Claim-M im GIF: %d px)'%(glyph['M'][0],rw['M']))
+# Buchstaben nach Regeln (claim_regeln.py) ersetzen die Pixel-Nachzeichnung; nicht fertige Buchstaben bleiben Pixel-Nachzeichnung
+import claim_regeln as RG
+RULE={'I':RG.letter_I,'E':RG.letter_E,'F':RG.letter_F,'T':RG.letter_T,'R':RG.letter_R,'P':RG.letter_P,'D':RG.letter_D,'N':RG.letter_N,'A':RG.letter_A,'U':RG.letter_U,'O':RG.letter_O,'S':RG.letter_S}
+for _n in ('G','AMP'):
+    if hasattr(RG,'letter_'+_n): RULE['&' if _n=='AMP' else _n]=getattr(RG,'letter_'+_n)
+URU=1000/41                                                                       # Einheiten je GIF-Pixel (Kappenhöhe 41 px = 1000)
+def rule_glyph(fn):
+    res=fn(); cont,dy=res if isinstance(res,tuple) else (res,0.0)
+    P=np.vstack([RG.sample(c,12) for c in cont]); xmin,xmax=P[:,0].min(),P[:,0].max()
+    f=lambda p:((p[0]-xmin)/URU,y0+(p[1]+dy)/URU)                                 # x ab linker Tintenkante (px), y absolut (px)
+    paths=[]
+    for c in cont:
+        d=[('M',f(c[0][0]))]+[('C',f(b[1]),f(b[2]),f(b[3])) for b in c]; paths.append(d)
+    return (xmax-xmin)/URU,paths
+for _ch,_fn in RULE.items():
+    if _ch in glyph: glyph[_ch]=rule_glyph(_fn)
+print('Nach Regeln: '+' '.join(RULE.keys()))
 # Abstandsmodell: Lücke(i,j)=a_i+b_j, Wortlücke = Mittel
 pairs=[];wg=[];prev=None;li=0
 for c in ALT:

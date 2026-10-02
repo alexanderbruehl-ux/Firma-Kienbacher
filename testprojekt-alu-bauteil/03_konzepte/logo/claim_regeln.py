@@ -396,8 +396,8 @@ def _strich(ctrl,w,clips=(),ext=150.0,n=200):
     W=PchipInterpolator(d,w2)(t)[:,None]
     P=Polygon(np.vstack([C+Nn*W/2,(C-Nn*W/2)[::-1]])).buffer(0)
     for cl in clips:
-        k,v=cl[0],cl[1]; lo,hi=(cl[2] if len(cl)>2 else (-1e4,1e4))
-        P=P.difference({'xmax':box(v,lo,1e4,hi),'xmin':box(-1e4,lo,v,hi),'ymax':box(lo,v,hi,1e4),'ymin':box(lo,-1e4,hi,v)}[k])
+        k,v=cl[0],cl[1]; lo,hi=(cl[2] if len(cl)>2 else (-1e4,1e4)); lim=cl[3] if len(cl)>3 else 1e4       # lim: Reichweite des Schnitts in Schnittrichtung
+        P=P.difference({'xmax':box(v,lo,v+lim,hi),'xmin':box(v-lim,lo,v,hi),'ymax':box(lo,v,hi,v+lim),'ymin':box(lo,v-lim,hi,v)}[k])
     if P.geom_type!='Polygon': P=max(P.geoms,key=lambda g:g.area)
     return np.array(P.exterior.coords)[:-1]
 
@@ -406,3 +406,9 @@ S_BREITE=[185.5,77.6,61.8,97.5,137.2,127.8,131.0,112.2,77.4,52.4,139.3]
 S_CLIPS=[('xmax',534.0,(0.0,250.0)),('xmin',4.6,(780.0,1100.0))]       # Serifen: oben rechts senkrecht abgeschnitten, unten links senkrecht
 def letter_S():
     return [_fit_polygon(_strich(S_CTRL,S_BREITE,S_CLIPS))],0.0
+
+G_CTRL=[[969.9,133.4],[735.4,41.0],[575.5,21.7],[306.4,75.6],[155.7,220.4],[82.2,417.6],[87.0,630.1],[179.2,821.8],[344.3,948.9],[562.3,981.6],[775.3,960.2],[877.0,811.7],[871.3,604.1]]
+G_BREITE=[123.8,73.0,45.7,81.9,123.1,139.7,151.0,112.0,83.2,65.2,74.6,110.9,97.0]
+G_CLIPS=[('xmax',937.4,(0.0,250.0)),('ymin',546.0,(700.0,1100.0),250.0)]       # Serife oben rechts senkrecht, Oberkante des rechten Stamms waagrecht (y=546, GIF-Zeile 22,4)
+def letter_G():
+    return [_fit_polygon(_strich(G_CTRL,G_BREITE,G_CLIPS))],0.0
