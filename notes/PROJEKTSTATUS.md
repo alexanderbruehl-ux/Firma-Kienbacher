@@ -46,6 +46,12 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   Fischgrät). Die **Kompetenz**, bestimmte Kennzahlen/Zielwerte
   festzulegen, bleibt im Dokument (AKV-Aussage); die **konkreten
   Zahlenwerte selbst** nicht.
+- **Grundsatz: Pro eigenständigem Verfahren exakt eine Anweisung, nie
+  eine unbestimmte Mehrzahl.** Gehören mehrere Tätigkeiten zum selben
+  Verfahren, bekommen sie eine gemeinsame Anweisung; nur inhaltlich
+  wirklich getrennte Verfahren bekommen jeweils eine eigene. Dieses
+  Prinzip gilt für alle Verweise auf (noch zu schaffende oder
+  bestehende) weitere Anweisungen im gesamten Dokument.
 - **Grundsatz: Jede Rolle muss für sich allein lesbar und vollständig
   sein.** Verweise der Art „siehe Rolle X" sind nur zwischen Rollen
   zulässig, die strukturell eine gemeinsame Basis teilen (z. B. die
@@ -217,10 +223,16 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   7.5.2 Geltungsbereich, 7.5.4 Verfahren) — 7.5.1 und 7.5.2 ✅ fertig
   (siehe `ZIEL_GELTUNGSBEREICH.md`, inkl. Vorgänger-/
   Nachfolgeprozess-Herleitung). 7.5.4 🔶 in Bearbeitung, siehe
-  `VERFAHREN_7_5_4.md` — 7.5.4.1.1 Grobplanung ✅ fertig; 7.5.4.2–7.5.4.6
-  noch offen. Enthält u. a. veraltete Begriffe, eine nie besprochene
-  Rolle ("interner Reklamationskoordinator") und alte interne
-  Dokumentcodes ("7A-51-3", "6A-32-1")
+  `VERFAHREN_7_5_4.md` — 7.5.4.1.1 Grobplanung und 7.5.4.2 Feinplanung
+  ✅ fertig; 7.5.4.3–7.5.4.6 noch offen. Enthält u. a. veraltete
+  Begriffe, eine nie besprochene Rolle ("interner
+  Reklamationskoordinator") und alte interne Dokumentcodes
+  ("7A-51-3", "6A-32-1")
+- **Künftig zu schaffende Anweisungen (außerhalb dieses Dokuments,
+  jeweils genau eine pro Verfahren):**
+  - Anweisung zur Feinplanung (inkl. Personaleinsatzplanung/
+    Mitarbeiterqualifikationsmatrix-Abgleich) — siehe
+    `VERFAHREN_7_5_4.md`, 7.5.4.2
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 

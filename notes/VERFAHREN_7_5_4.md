@@ -33,7 +33,47 @@ Durchsicht: veraltete Rollennamen, eine nie besprochene Rolle
 
 ## 7.5.4.2 Feinplanung
 
-*Noch zu bearbeiten.*
+**Alter Text (Version k, unverändert):**
+> "Diese erfolgt aufgrund der freigegebenen FOSS-Aufträge übersichtlich
+> in TIG und auf der Planungstafel mit Produktionsinfo der Aufträge
+> durch die Produktionsplanung. Die Planungstafel steht der
+> Arbeitsvorbereitung der einzelnen Fachabteilungen zur Verfügung,
+> wobei in den bereits aufliegenden Aufträgen alle vorzubereitenden
+> Details angeführt sind. Gleichzeitig erfolgt täglich bzw. nach Bedarf
+> ein kurzes Informationsgespräch an der Planungstafel mit den dazu
+> benötigten Personen (AV, QM, Lager, Logistik). Die Planung wird
+> täglich aktualisiert, um eine gewisse Flexibilität beizubehalten. Der
+> Schichtplan am Bildschirm zeigt die aktuelle Werkerzuteilung an den
+> Arbeitsplätzen; die Mitarbeiterqualifikationsmatrix wird dazu
+> einbezogen, die entsprechende Produktschulung wird vor der Zuteilung
+> des Werkers durch die Stelle Produktionsleitung überprüft."
+
+**Neuer Text:**
+> Die Feinplanung erfolgt auf Basis der freigegebenen FOSS-Aufträge
+> durch die Produktionsplanung und -steuerung, einschließlich der
+> Personaleinsatzplanung unter Berücksichtigung der
+> Mitarbeiterqualifikationen. Die konkrete Vorgehensweise ist in einer
+> eigenen Anweisung zur Feinplanung geregelt.
+
+**Methodik-Prinzip (für den Rest von 7.5.4 und das gesamte Dokument):**
+**Pro eigenständigem Verfahren exakt eine Anweisung, nie eine
+unbestimmte Mehrzahl.** Gehören mehrere im Originaltext genannte
+Tätigkeiten (hier: Planungswerkzeug-Nutzung UND
+Mitarbeiterqualifikationsabgleich) zu demselben Verfahren (hier:
+Feinplanung inkl. Personaleinsatzplanung), bekommen sie **eine**
+gemeinsame Anweisung. Nur wirklich eigenständige, inhaltlich getrennte
+Verfahren bekommen jeweils eine eigene.
+
+**Offener Punkt (für später, außerhalb dieses Dokuments):** Die
+Anweisung zur Feinplanung existiert noch nicht und müsste geschaffen
+werden (Details: TIG, Planungstafel, Mitarbeiterqualifikationsmatrix,
+Schichtplan).
+
+**Weggelassen (vage/unklar, nicht übernommen):** "AV, QM, Lager,
+Logistik" als Teilnehmer des täglichen Informationsgesprächs — AV
+(Arbeitsvorbereitung, jetzt Digitale Prozessentwicklung & Lean
+Management) und QM (unklar: QMB oder QS) waren nicht eindeutig genug
+zuordenbar und wurden nicht in den neuen Text übernommen.
 
 ## 7.5.4.3 Zeitlich begrenzte Änderungen in der Produktionsprozesslenkung
 
