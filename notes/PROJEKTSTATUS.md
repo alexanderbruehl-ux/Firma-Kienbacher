@@ -213,6 +213,12 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   Sync nur auf explizite Anfrage (siehe Arbeitsregel oben)
 - Ein zweiter Durchgang über alle Rollen (Review/Konsistenzprüfung,
   Formulierungen) steht noch aus
+- **Review des bisher unveränderten Original-Rohtexts** (7.5.1 Ziel,
+  7.5.2 Geltungsbereich, 7.5.4 Verfahren) — 7.5.1 Ziel ✅ fertig (siehe
+  `ZIEL_GELTUNGSBEREICH.md`), 7.5.2 und 7.5.4 noch offen. 7.5.4 enthält
+  u. a. veraltete Begriffe, eine nie besprochene Rolle ("interner
+  Reklamationskoordinator") und alte interne Dokumentcodes
+  ("7A-51-3", "6A-32-1")
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
