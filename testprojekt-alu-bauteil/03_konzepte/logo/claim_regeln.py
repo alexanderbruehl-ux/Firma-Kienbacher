@@ -176,3 +176,58 @@ def letter_P(innen_hoch=18.0):
     t=np.clip((Cw[:,1]-250.0)/205.0,0,None); Cw[:,1]-=innen_hoch*t**2
     Cw[:,0]=np.where(Cw[:,0]>STEM,STEM+(Cw[:,0]-STEM)*P_INNEN_X,Cw[:,0])     # Innenraum rechts an die GIF-Pixel (Bogenwand 6 px)
     return [_fit_polygon(outer),_fit_polygon(Cw)],dy
+
+
+# --- D: linke Hälfte (Stamm, oberer und unterer Arm samt Einzug) aus dem Schriftzug-E, rechts ein Bogen aus je zwei Bézierkurven (außen/innen), angepasst an die GIF-Pixel ---
+D_XC=300.0          # ab hier beginnt der Bogen (Arme laufen bis dahin wie beim E)
+# Bogenparameter: je (Anlauf oben, Ausrundung oben, Anlauf unten, Ausrundung unten, Außenrand x, Beginn/Ende des senkrechten Rands oben/unten);
+# per Flächenabgleich (symmetrische Differenz) mit den GIF-Pixeln angepasst
+D_BOGEN_AUSSEN=(233.5,308.4,210.2,299.8,900.4,342.6,568.9)
+D_BOGEN_INNEN=(302.4,155.0,313.8,147.2,753.0,340.1,636.9)
+def letter_D():
+    from shapely.geometry import Polygon as Pg, LineString, box
+    polys,idx=_wordmark_glyphs(); I=polys[idx['I'][0]]; F=1000/(I[:,1].max()-I[:,1].min()); E=polys[idx['E'][0]]
+    En=(E-[E[:,0].min(),E[:,1].min()])*F; dy=-1.8
+    Ep=Pg(En).buffer(0)
+    def span(x):                      # (Oberkante, Unterkante der Arme, Innenkanten) bei x
+        L=LineString([(x,-10),(x,1030)]).intersection(Ep); g=sorted([b.bounds[1::2] for b in (L.geoms if hasattr(L,'geoms') else [L])])
+        return g[0],g[-1]
+    top0,bot0=span(D_XC); yt,yi_t=top0[0],top0[1]; yi_b,yb=bot0[0],bot0[1]
+    tt=np.linspace(0,1,150)[:,None]
+    def bz(P0,P1,P2,P3): return (1-tt)**3*P0+3*(1-tt)**2*tt*P1+3*(1-tt)*tt**2*P2+tt**3*P3
+    def kurve(par,ytop,ybot):
+        au,bu,ad,bd,xm,ya,yv=par
+        P0=np.array([D_XC,ytop]); P3=np.array([xm,ya]); u=bz(P0,P0+np.array([au,0.0]),P3-np.array([0.0,bu]),P3)
+        Q0=np.array([xm,yv]); Q3=np.array([D_XC,ybot]); d=bz(Q0,Q0+np.array([0.0,bd]),Q3+np.array([ad,0.0]),Q3)
+        return np.vstack([u,d])
+    out=kurve(D_BOGEN_AUSSEN,yt,yb); inn=kurve(D_BOGEN_INNEN,yi_t,yi_b)
+    xs=np.linspace(125.0,D_XC,12); topk=[(x,span(x)[0][1]) for x in xs]; botk=[(x,span(x)[1][0]) for x in xs]
+    Cc=Pg([(125.0,topk[0][1])]+topk[1:]+list(map(tuple,inn[1:-1]))+botk[::-1]).buffer(0)
+    xs2=np.linspace(100.0,D_XC,30); fill=Pg([(x,span(x)[0][0]) for x in xs2]+[(x,span(x)[1][1]) for x in xs2[::-1]]).buffer(0)       # Arme samt Stamm exakt nach der E-Kontur
+    Fo=Ep.intersection(box(-10,-10,D_XC,1030)).union(fill).union(Pg(np.vstack([[(D_XC,yt)],out[1:-1],[(D_XC,yb)]])).buffer(0))
+    G=Fo.difference(Cc).buffer(0).buffer(-0.8,join_style=2).buffer(0.8,join_style=2).simplify(0.05)
+    assert G.geom_type=='Polygon' and len(G.interiors)==1, (G.geom_type,len(getattr(G,'interiors',[])))
+    return [_fit_polygon(np.array(G.exterior.coords)[:-1]),_fit_polygon(np.array(G.interiors[0].coords)[:-1])],dy
+
+
+# --- N: punktsymmetrisch (180°-Drehung um die Mitte): zwei Haarlinien-Stämme, Diagonale unter ~42,8° (Regel aus allen drei N im GIF),
+#     Fuß-Ausstellung des linken Stamms unten (= Kopf-Ausstellung des rechten oben), Diagonale läuft an beiden Enden spitz in die Stämme ---
+N_BREITE=854.0; N_RAND=24.4; N_STAMM=73.2      # Gesamtbreite, Abstand der Stammaußenkante vom linken Rand (Stamm steht 1 px eingerückt), Stammbreite (Haarlinie)
+N_STAMM_R=61.0                                 # rechter Stamm im GIF schmaler (2–3 px statt 3 px)
+N_AUSSTELLUNG=(730.0,24.4)                     # Beginn (y) und Betrag (x) der Stamm-Ausstellung am Fuß
+N_DIAG_A,N_DIAG_B=62.0,0.927                   # rechte (obere) Diagonalkante x = a + b*y ; die linke ergibt sich punktsymmetrisch
+def letter_N():
+    from shapely.geometry import Polygon as Pg, box
+    from shapely import affinity
+    W=N_BREITE; a=N_DIAG_A; b=N_DIAG_B; al=W-a-1000*b; x0=N_RAND; x1=x0+N_STAMM; ya,fx=N_AUSSTELLUNG
+    y=np.array([0.0,1000.0])
+    band=Pg([(al+b*y[0],0),(a+b*y[0],0),(a+b*y[1],1000.0),(al+b*y[1],1000.0)])
+    stamm=Pg([(x0,0),(x1,0),(x1,1000),(x0-fx,1000),(x0-fx,1000),(x0,ya)])             # linker Stamm mit Fußausstellung
+    oben=Pg([(-10,-10),(W+10,-10),(W+10,0.0),(a,0.0),(a+b*1000,1000),(W+10,1000),(W+10,1010),(-10,1010)]).buffer(0)
+    stamm=stamm.intersection(Pg([(x0-fx-1,0),(a+0.0,0),(a+b*1000,1000),(x0-fx-1,1000)]))   # Stamm nicht über die obere Diagonalkante hinaus
+    L=stamm; R=affinity.rotate(stamm,180,origin=(W/2,500.0)).intersection(box(W-x0-N_STAMM_R,-10,W+50,1010)).union(affinity.rotate(stamm,180,origin=(W/2,500.0)).intersection(box(W-x0,-10,W+50,1010)))
+    Bd=band.intersection(box(x0,0,W-x0,1000))
+    G=L.union(R).union(Bd).buffer(0).simplify(0.05)
+    assert G.geom_type=='Polygon' and not len(G.interiors),(G.geom_type,)
+    P=np.array(G.exterior.coords)[:-1]; Q=np.roll(P,-1,axis=0)                      # nur gerade Kanten: exakte Linien-Béziers statt Kurvenanpassung (keine Spitzen an den Ecken)
+    return [[np.array([p,p+(q-p)/3,p+2*(q-p)/3,q]) for p,q in zip(P,Q)]],-1.8
