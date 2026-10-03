@@ -31,8 +31,8 @@ Gesamtmarke: Seitenverhältnis 3,794 : 1 (Original-DWG 4,213 : 1).
 
 Position auf der Blende (Stand 30.09.2026): parallel zur Unterkante (3,7°), Logounterkante 8 mm über
 der Blendenunterkante, Mittelachse (um 3,7° gekippt) verlängert durch den 100er-Mittelpunkt,
-Breite 115 mm (Höhe ≈ 30,3 mm, Signet 15,9 × 12,9 mm), Schriftzug-Unterkante wie bisher; Logo-Mitte (291,2 | 42,1) mm.
-Kleinster Abstand Logo → Rand des 100er-Ausschnitts: 4,6 mm (der Diamantschnitt-Konus von 2 mm Breite liegt davon noch abzuziehen).
+Breite **105 mm** (Stand 02.10.2026, vorher 115; Schrift 8 mm über der Unterkante).
+Kleinster Abstand Logo → Rand des 100er-Ausschnitts: **7,2 mm** (der Diamantschnitt-Konus von 2 mm Breite liegt davon noch abzuziehen).
 
 ## Claim „MAGNA OPERA OF INTERIOR & SOUND“ (regelbasierter Entwurf, 02.10.2026)
 
