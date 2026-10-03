@@ -17,8 +17,8 @@ und Oberflächeneffekten gerendert.
 | 3 | Konzeptvarianten | K1 Leder, K2a–c Alu gefräst (`03_konzepte/KONZEPTE.md`), Logo nachgezeichnet | `03_konzepte/` | 🔶 Entwürfe liegen vor |
 | 4 | **Designauswahl** (durch Kienbacher) | gewählte Variante + Änderungswünsche | `03_konzepte/AUSWAHL.md` | ⬜ |
 | 5 | Parametrisches 3D-CAD | `parameter.json` → STEP/STL + Vorschau | `04_cad/` | ✅ Werkzeugkette getestet (Platzhalter) |
-| 6 | Fusion: Konstruktion + Rendering | parametrisches Fusion-Design, Material, Render-PNG | `05_fusion/` | ✅ Skript vorbereitet, ⬜ am Desktop-PC testen |
-| 7 | Fertigungsunterlagen | Technische Zeichnung, Toleranzen, Oberflächenangaben | `06_zeichnung/` | ⬜ |
+| 6 | Fusion: Konstruktion + Rendering | `fusion_blende.py` importiert das Blenden-STEP (identisch mit CadQuery), Material, Ansicht; `fusion_build.py` ist nur der Platzhalter-Test | `05_fusion/` | 🔶 Skript geschrieben, ⬜ am Desktop-PC testen |
+| 7 | Fertigungsunterlagen | Zeichnung A3 aus den Modelldaten (`zeichnung_blende.py`): Ansicht, Detail Hochtöner, Schnitt Haut, Bohrtabelle | `06_zeichnung/` | 🔶 Entwurf, Bemaßung fehlt |
 
 ## Werkzeugkette
 
