@@ -269,7 +269,7 @@ const doc = new Document({
         akvLabel("Aufgabe:"),
         bullet("Umsetzung von Sofortmaßnahmen bei Kundenreklamationen: 100%-Kontrolle der betroffenen Teile/Bestände, Sensibilisierung und Unterweisung der Mitarbeiter, Mithilfe bei der Eingrenzung des Fehlerzeitraums bzw. des ersten Auftretens"),
         bullet("Sicherstellung der Einhaltung geänderter Arbeitsanweisungen, die im Zuge der Reklamation angepasst wurden (Unterweisung durch Teamleitung oder QS)"),
-        akv("Kompetenz:", "Gemeinsame Definition (mit QS/QMB) von Vermeidungs- und Abstellmaßnahmen sowie Sicherstellung von deren Einhaltung."),
+        akv("Kompetenz:", "Gemeinsame Definition (mit QS) von Vermeidungs- und Abstellmaßnahmen sowie Sicherstellung von deren Einhaltung."),
 
         // ============ 7.5.3.2 SCHICHTFÜHRER ============
         roleHeading("7.5.3.2 Teamleitung Spritzguss-Produktion (Schichtführer)"),

@@ -152,8 +152,11 @@ zuverlässig erkannt werden. Prüffrequenz gemäß Lenkungsplan (Control Plan).
   Zuge der Reklamation angepasst wurden (Unterweisung erfolgt durch
   Teamleitung oder QS)
 
-**Kompetenz:** Gemeinsame Definition (mit QS/QMB) von Vermeidungs- und
-Abstellmaßnahmen sowie Sicherstellung von deren Einhaltung.
+**Kompetenz:** Gemeinsame Definition (mit QS) von Vermeidungs- und
+Abstellmaßnahmen sowie Sicherstellung von deren Einhaltung. QMB hat in
+diesem Ablauf keine Rolle — QMB vertritt ausschließlich extern und tritt
+nur über den Produktionsleiter in Erscheinung (siehe PRODUKTIONSLEITER.md
+Themenblock 5/8).
 
 (Anknüpfung an Themenblock C sowie an PRODUKTIONSLEITER.md
-Themenblock 5/8 auf Gesamtebene.)
+Themenblock 5 auf Gesamtebene.)
