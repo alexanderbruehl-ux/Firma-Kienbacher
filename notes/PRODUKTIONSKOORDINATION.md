@@ -1,7 +1,6 @@
 # Rolle: Produktionskoordination — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung** — wesentlicher Kern (Themenblock 1) sowie
-Abgrenzung zu HR (Themenblock 2) abgestimmt.
+Status: **inhaltlich abgeschlossen.**
 
 Kein Punkt aus Version k (neue Rolle, siehe `OFFENE_ROLLEN.md`, Rolle 1).
 = Teamleitung Endfertigung in Personalunion (eine Person, zwei Funktionen);
@@ -45,9 +44,3 @@ Bedürfnisse des Produktionsbereichs). Grundsätzliche HR-Zuständigkeiten
 (z. B. arbeitsrechtliche Themen, Vertragsgestaltung, zentrale
 Personalprozesse) bleiben unberührt.
 
----
-
-## Noch zu ergänzen (Alexander)
-
-- Weitere wiederkehrende Themen über den wesentlichen Kern hinaus (falls
-  im weiteren Verlauf noch etwas auffällt)
