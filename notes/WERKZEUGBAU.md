@@ -42,8 +42,6 @@ Werkzeuge (inkl. Kundenwerkzeuge).
   - Werkzeuge werden während Wartung/Reparatur über den LCST (LifeCycle
     Status) bzw. den Betriebsmittelstatus für die Produktion gesperrt und
     nach Abschluss wieder für die Planung und Steuerung freigegeben
-- Dokumentation von Werkzeugänderungen/-modifikationen inkl.
-  Änderungsstand
 - Abarbeitung der Aufgabenliste (siehe
   `FUEHRUNG_UNTERSTUETZUNGSPROZESSE.md` Themenblock B)
 
