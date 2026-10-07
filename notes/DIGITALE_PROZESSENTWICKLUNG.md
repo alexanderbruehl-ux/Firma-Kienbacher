@@ -44,7 +44,7 @@ Werkzeugbau-/Bemusterungsaufträge bei Werkzeugänderungen. Projektmitarbeit
 
 **Aufgabe:**
 - Mitarbeit bei logistischen und produktionswirtschaftlichen Projekten
-  (gemeinsam mit Produktionsplanung und -steuerung)
+  (analog Produktionsplanung und -steuerung)
 
 ---
 
