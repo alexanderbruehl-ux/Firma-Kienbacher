@@ -36,12 +36,21 @@ gesetzlicher Bestimmungen.
   Neubau/Wartung)
 - Mitwirkung an KVP/5S/Kaizen
 - Vorausschauende und ggf. vorbeugende Instandhaltung nach Wartungsplan
-- Verwaltung von Ersatzteilen für Schlüsselanlagen, inkl. ordnungsgemäßer
-  Lagerung (Verpackung, Konservierung)
+- Ersatzteilhaltung: Kleinmateriallager für elektrische, pneumatische,
+  elektronische und hydraulische Standardkomponenten (inkl. Kabel,
+  Stecker u. Ä.); größere Komponenten (z. B. Hydraulikpumpen,
+  Förderschnecken) an verschiedenen Lagerorten (u. a. Werkzeuglager).
+  Kritische, wertige Ersatzteile werden im ERP-System (FOSS)
+  bestandsgeführt, Verbrauchsmaterialien nicht separat. Da die meisten
+  Ersatzteile von den Maschinenherstellern kurzfristig (binnen weniger
+  Tage, bei Bedarf express) zur Verfügung gestellt werden, erfolgt die
+  Beschaffung überwiegend anlassbezogen statt über große eigene
+  Lagerbestände.
 - Verpackung/Konservierung von Anlagen/Betriebsmitteln bei Lagerung
 - Jährliche Überprüfung des Wartungsplans
 - Anlage und Pflege der Objektstammdaten (FOSS) für alle relevanten
-  Anlagen, Betriebsmittel, Vorrichtungen etc.
+  Anlagen, Betriebsmittel, Vorrichtungen etc., inkl. hinterlegter
+  zyklischer Wartungszeitpunkte
 - Beauftragung und Beaufsichtigung relevanter Prüfstellen für gesetzlich
   vorgeschriebene Prüfungen (z. B. Leitern, Hebezeuge, Anschlagmittel)
 - Abarbeitung der Aufgabenliste (Störungsmeldungen, siehe
