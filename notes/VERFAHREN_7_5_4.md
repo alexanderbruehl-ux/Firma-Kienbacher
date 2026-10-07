@@ -234,9 +234,10 @@ bestehenden AKV-Inhalten zu vermeiden.
 > QMB an den Produktionsleiter, die QS unterstützt bei der
 > Durchführung. Eine geregelte Wartung und Instandhaltung dient als
 > vorbeugende Maßnahme zur Produktionssicherheit. Die Teamleitung
-> Spritzguss-Produktion ist für die Auslieferqualität sowie die
-> Auswertung der Produktionsvorkommnisse verantwortlich und hat bei
-> Bedarf Maßnahmen einzuleiten.
+> Teamleitungen im Hauptprozess sind jeweils für die Qualität der in
+> ihrem Bereich produzierten Teile sowie die Auswertung der
+> Produktionsvorkommnisse verantwortlich und haben bei Bedarf
+> Maßnahmen einzuleiten.
 
 **Korrekturen/Klärungen (gegen alle bestehenden Rollen geprüft):**
 - **"QMB / PL" → "QS"** beim Korrekturmaßnahmen-Check: Per
@@ -251,8 +252,15 @@ bestehenden AKV-Inhalten zu vermeiden.
   Kundenbezug. `QS.md` bleibt unverändert (Formulierung dort passt
   bereits).
 - "(siehe Wartungslisten)" und alter Dokumentcode "(6A-32-1)" entfernt
-- "Teamleader" → "Teamleitung Spritzguss-Produktion" (konsistent mit
-  "exemplarisch für Spritzguss"-Rahmen aus 7.5.4.4)
+- **"Teamleader... Auslieferqualität" korrigiert:** Ursprünglich auf
+  "Teamleitung Spritzguss-Produktion" zugespitzt — falsch, da Spritzguss
+  oft nur der erste Fertigungsschritt ist (Teile durchlaufen ggf. noch
+  Montage/Endfertigung vor dem Versand) und "Auslieferqualität" daher
+  nicht in deren Kontrollbereich liegt. Zusätzlich redundant mit
+  `FUEHRUNG_HAUPTPROZESS.md` Themenblock B. Verallgemeinert auf **"Die
+  Teamleitungen im Hauptprozess"** (jeweils verantwortlich für die
+  Qualität ihres eigenen Bereichs), konsistent mit der dort bereits
+  etablierten Kategorie.
 - **Überschrift geändert:** "Begleitende Produktionsarbeiten" (vage) →
   "Abweichungsmanagement im laufenden Betrieb" (präziser,
   etablierter QM-Begriff, deckt Störungen/Qualitätsabweichungen/
