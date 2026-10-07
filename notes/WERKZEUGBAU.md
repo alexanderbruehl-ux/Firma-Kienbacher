@@ -90,8 +90,10 @@ stehenden Werkzeugen.
   Wartungs-/Reparaturhistorie
 - Schutz vor Fremdzugriff: trockene, gesicherte Verwahrung in
   definierten Hallenbereichen
-- Information des Kunden und gemeinsame Abstimmung weiterer Maßnahmen
-  bei Verlust, Beschädigung oder technischen Problemen (Nichteignung)
+- Meldung an die Produkt-/Projekttechnik bei Verlust, Beschädigung oder
+  technischen Problemen (Nichteignung) des Kundenwerkzeugs; die
+  Information des Kunden und Abstimmung weiterer Maßnahmen erfolgt durch
+  die Produkt-/Projekttechnik
 - Bei Erreichen/Überschreiten der vereinbarten Schusszahl: Anfrage an
   den Kunden zur Freigabe weiterer Wartungs-/Reparaturkosten und
   Kostenübernahme
