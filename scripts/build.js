@@ -484,7 +484,7 @@ const doc = new Document({
         bullet("Vergabe und Verwaltung von Lagerplätzen für Werkzeuge, Vorrichtungen, Mess-/Hilfsmittel (Systematik/Zuweisung im Lagerverwaltungssystem; operative Pflege/Zustand liegt bei Teamleitung Werkzeugbau)"),
 
         blockHeading("3. Mitwirkung bei Projekten"),
-        akv("Aufgabe:", "Mitarbeit bei logistischen und produktionswirtschaftlichen Projekten (gemeinsam mit Produktionsplanung und -steuerung)."),
+        akv("Aufgabe:", "Mitarbeit bei logistischen und produktionswirtschaftlichen Projekten (analog Produktionsplanung und -steuerung)."),
 
         blockHeading("4. Digitale Standards und Visualisierung"),
         akv("Aufgabe:", "Erstellung und Pflege digitaler Arbeitsanweisungen und visueller Standards (elektronische Plantafeln, Bildschirminformationen)."),
