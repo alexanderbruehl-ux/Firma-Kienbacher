@@ -109,7 +109,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
 | **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
 | **NEU: Einsteller/Rüster** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `EINSTELLER_RUESTER.md` |
-| **NEU: Teamleitung Instandhaltung** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
+| **NEU: Teamleitung Instandhaltung** | ✅ inhaltlich fertig abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` |
 | **NEU: Teamleitung Werkzeugbau** | ✅ inhaltlich fertig abgestimmt (IATF 16949 §8.5.1.6/§8.5.3.1), siehe `WERKZEUGBAU.md` |
 
 Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
@@ -161,8 +161,10 @@ inhaltlich fertig abgestimmt, inkl. Umgang mit Kundenwerkzeugen gemäß
 IATF 16949 §8.5.3.1 (Kennzeichnung, FOSS-Dokumentation,
 Fremdzugriffsschutz, Kundeninformation bei Verlust/Beschädigung/
 Nichteignung, Kostenfreigabe bei Schusszahl-Erreichung — siehe
-`WERKZEUGBAU.md`). **Teamleitung Instandhaltung** ist mit Normrahmen
-abgestimmt, betriebsspezifische Details von Alexander noch zu ergänzen.
+`WERKZEUGBAU.md`). **Teamleitung Instandhaltung** ist ebenfalls
+inhaltlich fertig abgestimmt, inkl. Ersatzteilhaltung und Abgrenzung zu
+Fremdfirmen gemäß IATF 16949 §8.5.1.5 (siehe `INSTANDHALTUNG.md`). Damit
+ist die Gruppe **Unterstützungsprozesse** vollständig abgearbeitet.
 
 **Produktionskoordination** (Personalunion mit Teamleitung Endfertigung,
 Vertretung des Produktionsleiters Bereich Organisation/Personal) ist im
@@ -207,10 +209,12 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   Werkzeug-/Betriebsmittelmanagement inkl. Wartungsstrategie via
   Soll-/Ist-Schusszahlen und LCST/Betriebsmittelstatus-Sperrmechanismus,
   Umgang mit Kundenwerkzeugen)
-- `INSTANDHALTUNG.md`: betriebsspezifische Details, die Alexander noch
-  ergänzt (Ersatzteilhaltung, Fremdfirmen, Dokumentationssystem) —
-  Teamgröße und konkrete Kennzahlen-/Fristen-Zahlenwerte bewusst NICHT
-  mehr Teil dieser Liste, siehe Methodik-Grundsatz unten
+- `INSTANDHALTUNG.md`: ✅ vollständig abgeschlossen (Ersatzteilhaltung
+  inkl. Kleinmateriallager/FOSS-Bestandsführung, Abgrenzung zu
+  Fremdfirmen bei Infrastrukturthemen, Dokumentation via FOSS-
+  Objektstammdaten mit zyklischen Wartungszeitpunkten) — Teamgröße und
+  konkrete Kennzahlen-/Fristen-Zahlenwerte bewusst NICHT Teil des
+  Dokuments, siehe Methodik-Grundsatz unten
 - `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
   Alexander noch etwas auffällt
 - **Gliederung ergänzt um drei neue Abschnitte** (ISO 9001/IATF-konforme
