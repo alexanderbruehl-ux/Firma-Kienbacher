@@ -246,7 +246,7 @@ const doc = new Document({
         akv("Aufgabe:", "Bewertung gemeldeter Fehler gemeinsam mit PQB auf Schicht-/Team-Ebene; Entscheidung über Sperrung fehlerhafter Produkte. Anweisung an Lager bzw. Produktionslogistiker zum Transport gesperrter Ware ins gesperrte Lager. Zusätzlich: Rückmeldung fehlerhafter Kaufteile an PQB/Wareneingangskontrolle – da die Wareneingangsprüfung überwiegend stichprobenartig erfolgt, werden Fehler bei Kaufteilen häufig erst bei der Weiterverarbeitung festgestellt (bei Teamleitung Montage aufgrund des hohen Kaufteilanteils verstärkt relevant)."),
 
         blockHeading("D. Personalverantwortung"),
-        akv("Verantwortung:", "Personalverantwortung für die unterstellten Mitarbeiter des Bereichs, inkl. Sicherheit, Ordnung und Sauberkeit am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen (Produktionsleiter als Eskalationsstufe)."),
+        akv("Verantwortung:", "Personalverantwortung für die unterstellten Mitarbeiter des Bereichs, inkl. Sicherheit, Ordnung und Sauberkeit am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen (Produktionsleiter als Eskalationsstufe). Ausnahme Teamleitung Lager: disziplinarische Eskalationsstufe ist dort der Abteilungsleiter SCM/Logistik, nicht der Produktionsleiter (siehe 7.5.3.7)."),
         akv("Aufgabe:", "Personalführung des Bereichs (Einteilung, Feedback, Konfliktmanagement)."),
 
         blockHeading("E. Produktions- und Qualitätsaufzeichnungen"),
@@ -359,7 +359,7 @@ const doc = new Document({
 
         // ============ 7.5.3.7 LAGER ============
         roleHeading("7.5.3.7 Teamleitung Lager"),
-        note("Führungsrolle im Hauptprozess (siehe oben). Hinweis zum Umfang: Der Produktionsleiter ist nicht für die Lagerprozesse allgemein zuständig – hier wird nur der Teil beschrieben, der im Auftragsabwicklungsprozess der Produktion relevant ist."),
+        note("Führungsrolle im Hauptprozess (siehe oben). Organisatorisch ist die Teamleitung Lager dem Abteilungsleiter SCM/Logistik unterstellt, nicht dem Produktionsleiter – abweichend von den übrigen Rollen dieser Gruppe (siehe Themenblock D). Der Produktionsleiter ist nur für die Schnittstelle Lager↔Produktion im Rahmen dieses Dokuments zuständig, nicht für die Lagerprozesse oder die Personalführung allgemein."),
 
         blockHeading("1. Warenannahme und -ausgang"),
         akv("Aufgabe:", "Be- und Entladen von LKWs (Wareneingang/-ausgang); Kommissionierung und Versand der Aufträge."),
@@ -435,6 +435,7 @@ const doc = new Document({
         bullet("Korrektur und Rückmeldung von falschen Gewichtsangaben"),
         bullet("Kommunikation mit Lagerverantwortlichen bei Abweichungen"),
         bullet("Abschließen von Produktionsaufträgen im System"),
+        bullet("Mitwirkung bei der Pflege/Überprüfung von Stammdaten im ERP-System (z. B. Teilegewicht, Stückliste)"),
 
         blockHeading("3. Ausschussentsorgung (bereichsübergreifend)"),
         akv("Aufgabe:", "Abwiegen und Entsorgen/Zuführen von Ausschüssen (Recyclingmaterial), Papier, Kartonagen – bereichsübergreifend in allen Produktionsbereichen (nicht auf Montage beschränkt)."),
@@ -779,7 +780,7 @@ const doc = new Document({
         bullet("Schichtlogbuch – Dokumentationsmittel für die Schichtübergabe"),
         bullet("SFK – Sicherheitsfachkraft"),
         bullet("SVP – Sicherheitsvertrauensperson"),
-        bullet("Teamleiter – Sammelbegriff für die dem Produktionsleiter unterstellten Führungskräfte"),
+        bullet("Teamleiter – Sammelbegriff für die den jeweiligen Abteilungsleitungen unterstellten Führungskräfte im Produktionsumfeld dieses Dokuments; mit Ausnahme der Teamleitung Lager (Abteilungsleiter SCM/Logistik) dem Produktionsleiter unterstellt"),
       ],
     },
   ],

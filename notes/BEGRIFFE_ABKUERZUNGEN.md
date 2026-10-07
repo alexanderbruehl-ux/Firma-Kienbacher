@@ -48,5 +48,7 @@ AKV) sind bewusst **nicht** enthalten.
 - **Schichtlogbuch** — Dokumentationsmittel für die Schichtübergabe
 - **SFK** — Sicherheitsfachkraft
 - **SVP** — Sicherheitsvertrauensperson
-- **Teamleiter** — Sammelbegriff für die dem Produktionsleiter
-  unterstellten Führungskräfte
+- **Teamleiter** — Sammelbegriff für die den jeweiligen
+  Abteilungsleitungen unterstellten Führungskräfte im Produktionsumfeld
+  dieses Dokuments; mit Ausnahme der Teamleitung Lager
+  (Abteilungsleiter SCM/Logistik) dem Produktionsleiter unterstellt

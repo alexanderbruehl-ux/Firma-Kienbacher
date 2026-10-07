@@ -89,6 +89,11 @@ am Arbeitsplatz. Erstverantwortung für disziplinarische Maßnahmen bei den
 unterstellten Mitarbeitern (Produktionsleiter als Eskalationsstufe, siehe
 PRODUKTIONSLEITER.md Themenblock 4).
 
+**Ausnahme Teamleitung Lager:** Organisatorisch dem Abteilungsleiter
+SCM/Logistik unterstellt, nicht dem Produktionsleiter — disziplinarische
+Eskalationsstufe ist dort entsprechend der Abteilungsleiter SCM/Logistik
+(siehe `LAGER.md`).
+
 **Aufgabe:** Personalführung des Bereichs (Einteilung, Feedback,
 Konfliktmanagement) — Themenfeld Führung.
 

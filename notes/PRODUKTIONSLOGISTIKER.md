@@ -26,6 +26,8 @@ Blecheinleger/Buchsen/Schrauben) und Zuständigkeitsbereiche präzisiert.
 - Korrektur und Rückmeldung von falschen Gewichtsangaben
 - Kommunikation mit Lagerverantwortlichen bei Abweichungen
 - Abschließen von Produktionsaufträgen im System
+- Mitwirkung bei der Pflege/Überprüfung von Stammdaten im ERP-System
+  (z. B. Teilegewicht, Stückliste)
 
 *Hinweis: alle Buchungen/Korrekturen erfolgen im FOSS.*
 

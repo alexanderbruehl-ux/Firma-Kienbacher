@@ -4,12 +4,13 @@ Status: **inhaltlich abgeschlossen.** Originalliste Version k vollständig
 abgearbeitet. Allgemeine AKV-Punkte sind über `FUEHRUNG_HAUPTPROZESS.md`
 abgedeckt; hier stehen die Lager-spezifischen Ausprägungen.
 
-Noch **nicht** im working/*.docx eingearbeitet.
-
-**Hinweis zum Umfang:** Alexander ist nicht für die Lagerprozesse
-allgemein zuständig — hier wird der Teil beschrieben, der im
-Auftragsabwicklungsprozess der Produktion relevant ist (Schnittstelle
-Lager ↔ Produktion), nicht das vollständige Lagerprozess-Bild.
+**Organisatorische Zuordnung (wichtig):** Die Teamleitung Lager ist dem
+Abteilungsleiter SCM/Logistik unterstellt, nicht dem Produktionsleiter —
+abweichend von den übrigen Rollen der Gruppe Führungsrollen im
+Hauptprozess (siehe `FUEHRUNG_HAUPTPROZESS.md` Themenblock D). Der
+Produktionsleiter ist nur für die Schnittstelle Lager ↔ Produktion im
+Rahmen dieses Dokuments zuständig, nicht für die Lagerprozesse oder die
+Personalführung allgemein.
 
 Diese Rolle gehört zur Gruppe **Führungsrollen im Hauptprozess** (siehe
 `FUEHRUNG_HAUPTPROZESS.md`) — Input-Bereitstellung/Output-Versand als
