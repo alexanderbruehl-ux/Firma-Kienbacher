@@ -59,8 +59,7 @@ die Wirksamkeit und gibt frei (z. B. Entsperren von Teilen/Prozessen)
 - Vertritt den Produktionsleiter in allen qualitätsrelevanten Fragen:
   fehlerhafte Teile im Haus, Reklamationen, Sperren, Nacharbeit,
   Maschinen abstellen/stoppen
-- Korrespondenzfunktion zur Produktionsleitung auf Gesamtebene (analog
-  QMB ↔ Schichtführer/Teamleitung auf Schicht-/Team-Ebene)
+- Korrespondenzfunktion zur Produktionsleitung auf Gesamtebene
 
 **Kompetenz:**
 - Befugnis, die Produktion/den Versand zu stoppen, um Qualitätsprobleme

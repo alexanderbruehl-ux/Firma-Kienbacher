@@ -41,8 +41,7 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 - Vertritt den Produktionsleiter in allen qualitätsrelevanten Fragen:
   fehlerhafte Teile im Haus, Reklamationen, Sperren, Nacharbeit, Maschinen
   abstellen/stoppen
-- Korrespondenzfunktion zur Produktionsleitung auf **Gesamtebene** (analog:
-  QMB ↔ Schichtführer/Teamleiter auf Schicht-/Team-Ebene)
+- Korrespondenzfunktion zur Produktionsleitung auf **Gesamtebene**
 - Ablauf Korrekturmaßnahmen: **QS stellt Bedarf fest** → Produktionsleitung
   entscheidet Maßnahme → **QS prüft und gibt frei** (z. B. Entsperren von
   Teilen/Prozessen) — siehe PRODUKTIONSLEITER.md, Themenblock 5
