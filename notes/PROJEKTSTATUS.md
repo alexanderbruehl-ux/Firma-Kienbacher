@@ -110,7 +110,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
 | **NEU: Einsteller/Rüster** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `EINSTELLER_RUESTER.md` |
 | **NEU: Teamleitung Instandhaltung** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
-| **NEU: Teamleitung Werkzeugbau** | 🔶 Normrahmen abgestimmt (IATF 16949 §8.5.1.6), siehe `WERKZEUGBAU.md` — betriebsspezifische Details von Alexander noch zu ergänzen |
+| **NEU: Teamleitung Werkzeugbau** | ✅ inhaltlich fertig abgestimmt (IATF 16949 §8.5.1.6/§8.5.3.1), siehe `WERKZEUGBAU.md` |
 
 Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
 
@@ -156,9 +156,13 @@ wurde um die Rückmeldung fehlerhafter Kaufteile ergänzt.
 1–7, siehe `LAGER.md`) — damit ist die Gruppe **Führungsrollen im
 Hauptprozess** vollständig abgearbeitet.
 
-Gruppe **Unterstützungsprozesse** (Teamleitung Instandhaltung, Teamleitung
-Werkzeugbau) ist mit Normrahmen abgestimmt (betriebsspezifische Details
-von Alexander noch zu ergänzen).
+Gruppe **Unterstützungsprozesse**: **Teamleitung Werkzeugbau** ist
+inhaltlich fertig abgestimmt, inkl. Umgang mit Kundenwerkzeugen gemäß
+IATF 16949 §8.5.3.1 (Kennzeichnung, FOSS-Dokumentation,
+Fremdzugriffsschutz, Kundeninformation bei Verlust/Beschädigung/
+Nichteignung, Kostenfreigabe bei Schusszahl-Erreichung — siehe
+`WERKZEUGBAU.md`). **Teamleitung Instandhaltung** ist mit Normrahmen
+abgestimmt, betriebsspezifische Details von Alexander noch zu ergänzen.
 
 **Produktionskoordination** (Personalunion mit Teamleitung Endfertigung,
 Vertretung des Produktionsleiters Bereich Organisation/Personal) ist im
@@ -199,16 +203,14 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
 **alle Rollen des Dokuments haben jetzt einen inhaltlichen Stand.**
 
 **Verbleibende offene Punkte:**
-- `INSTANDHALTUNG.md`/`WERKZEUGBAU.md`: betriebsspezifische Details, die
-  Alexander noch ergänzt (Ersatzteilhaltung, Fremdfirmen,
-  Dokumentationssystem, Kundenwerkzeuge-Besonderheiten) — Teamgröße und
-  konkrete Kennzahlen-/Fristen-Zahlenwerte bewusst NICHT mehr Teil
-  dieser Liste, siehe neuer Methodik-Grundsatz unten
-  (Verschleißteile-Management bereits entsprechend gelöst: Verweis auf
-  ERP-System statt konkreter Werte)
-- Werkzeugbau-Rollenstruktur final geklärt: eine Teamleitungsfunktion,
-  ergänzt durch fachlich-technische Mitwirkung erfahrener Mitarbeiter
-  (keine eigene Führungsfunktion); siehe `WERKZEUGBAU.md`
+- `WERKZEUGBAU.md`: ✅ vollständig abgeschlossen (Rollenstruktur,
+  Werkzeug-/Betriebsmittelmanagement inkl. Wartungsstrategie via
+  Soll-/Ist-Schusszahlen und LCST/Betriebsmittelstatus-Sperrmechanismus,
+  Umgang mit Kundenwerkzeugen)
+- `INSTANDHALTUNG.md`: betriebsspezifische Details, die Alexander noch
+  ergänzt (Ersatzteilhaltung, Fremdfirmen, Dokumentationssystem) —
+  Teamgröße und konkrete Kennzahlen-/Fristen-Zahlenwerte bewusst NICHT
+  mehr Teil dieser Liste, siehe Methodik-Grundsatz unten
 - `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
   Alexander noch etwas auffällt
 - **Gliederung ergänzt um drei neue Abschnitte** (ISO 9001/IATF-konforme

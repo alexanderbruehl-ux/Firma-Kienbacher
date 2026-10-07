@@ -1,7 +1,6 @@
 # Rolle: Teamleitung Werkzeugbau — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung** — Normrahmen recherchiert und abgestimmt,
-betriebsspezifische Details werden von Alexander noch ergänzt.
+Status: **inhaltlich abgeschlossen.**
 
 Kein Punkt aus Version k (neue Rolle, siehe OFFENE_ROLLEN.md). Gehört zur
 Gruppe **Unterstützungsprozesse** (siehe
@@ -38,8 +37,12 @@ Werkzeuge (inkl. Kundenwerkzeuge).
 - Lagerung und Schutz der Werkzeuge vor Beschädigung/Verschleiß
 - Rüst-/Werkzeugwechselprozesse
 - Verschleißteile-Management: systematischer Umgang mit Verschleißteilen
-  am Werkzeug (Erkennung, Austausch, Dokumentation) gemäß definierter
-  und im ERP-System hinterlegter Austauschfristen bzw. Wartungszyklen
+  am Werkzeug (Erkennung, Austausch, Dokumentation). Eine
+  Wartungsstrategie mit hinterlegten Soll-Schusszahlen, erfassten
+  Ist-Schusszahlen und Erreichungsgrad löst die Wartung aus. Werkzeuge
+  werden während Wartung/Reparatur über den LCST (LifeCycle Status) bzw.
+  den Betriebsmittelstatus für die Produktion gesperrt und nach Abschluss
+  wieder für die Planung und Steuerung freigegeben
 - Dokumentation von Werkzeugänderungen/-modifikationen inkl.
   Änderungsstand
 - Abarbeitung der Aufgabenliste (siehe
@@ -76,9 +79,26 @@ Themenblock 11/12).
 
 ---
 
-## Noch zu ergänzen (Alexander)
+## Themenblock 4: Umgang mit Kundenwerkzeugen
 
-- Umgang mit Kundenwerkzeugen: vertragliche/kundenspezifische
-  Besonderheiten
-- Dokumentation: welches System/Tool für Werkzeughistorie und
-  Änderungsstände
+**Verantwortung:** Ordnungsgemäßer Umgang mit im Eigentum des Kunden
+stehenden Werkzeugen.
+
+**Aufgabe:**
+- Nutzung ausschließlich für den vom Kunden vorgesehenen Zweck
+- Doppelte Kennzeichnung: Typenschild sowie zusätzliche, dauerhafte
+  Werkzeug-Beschriftung (eingeschweißter Zettel)
+- Verwaltung der Werkzeugstammdaten im ERP-System (FOSS): eindeutige
+  Werkzeugnummer, Kundenzuordnung, Änderungsstand,
+  Wartungs-/Reparaturhistorie
+- Schutz vor Fremdzugriff: trockene, gesicherte Verwahrung in
+  verschlossenen Hallenbereichen
+- Information des Kunden und gemeinsame Abstimmung weiterer Maßnahmen
+  bei Verlust, Beschädigung oder technischen Problemen (Nichteignung)
+- Bei Erreichen/Überschreiten der vereinbarten Schusszahl: Anfrage an
+  den Kunden zur Freigabe weiterer Wartungs-/Reparaturkosten und
+  Kostenübernahme
+
+**Kompetenz:** Keine eigenständige Entscheidung über Kostenübernahme
+oder Weiterverwendung des Werkzeugs jenseits der vereinbarten
+Schusszahl — diese Entscheidung liegt beim Kunden.
