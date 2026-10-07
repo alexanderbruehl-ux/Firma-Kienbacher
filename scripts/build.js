@@ -611,7 +611,6 @@ const doc = new Document({
         bullet("Verschleißteile-Management: systematischer Umgang mit Verschleißteilen am Werkzeug (Erkennung, Austausch, Dokumentation)"),
         bullet("Eine Wartungsstrategie mit hinterlegten Soll-Schusszahlen, erfassten Ist-Schusszahlen und Erreichungsgrad löst die Wartung aus", 1),
         bullet("Werkzeuge werden während Wartung/Reparatur über den LCST (LifeCycle Status) bzw. den Betriebsmittelstatus für die Produktion gesperrt und nach Abschluss wieder für die Planung und Steuerung freigegeben", 1),
-        bullet("Dokumentation von Werkzeugänderungen/-modifikationen inkl. Änderungsstand"),
         bullet("Abarbeitung der Aufgabenliste"),
         akv("Kompetenz:", "Entscheidung über Werkzeugstatus (Produktion/Reparatur/Aussonderung); Sperren von Werkzeugen/Vorrichtungen und Einleitung von Korrekturmaßnahmen; Produktionsstopp bei Gefahr oder Formbeschädigung (Not-Halt-Kompetenz)."),
 
