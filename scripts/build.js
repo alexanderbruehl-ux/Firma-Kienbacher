@@ -733,10 +733,10 @@ const doc = new Document({
 
         // ============ 7.5.4 VERFAHREN ============
         h("7.5.4 Verfahren", HeadingLevel.HEADING_2),
-        p("Zur Sicherheit der Produktionsabläufe wurden entsprechende Prüf- und Arbeitsanweisungen erstellt. In den Produktionsaufträgen und Produktdatenblättern sind alle Informationen zur Herstellung der Produkte enthalten. Der Ablauf ist im Flow Chart (siehe separate Grafik / Anhang) dargestellt."),
+        p("Zur Sicherstellung korrekter Produktionsabläufe liegen entsprechende Arbeitsanweisungen und Prüfpläne vor. In den Produktionsaufträgen sind alle relevanten Steuerungsinformationen zur Herstellung der Produkte enthalten."),
 
         h("7.5.4.1.1 Grobplanung", HeadingLevel.HEADING_3),
-        p("Kundenbestellungen werden vom Verkaufsinnendienst (VKI) geprüft und ins FOSS übergeben. Die Produktionsplanung und -steuerung ermittelt anhand des KPLI-Moduls die aktuellen Bedarfe und lastet die Produktionsaufträge entsprechend Lagerstand und Bedarf ein."),
+        p("Kundenbestellungen werden von der Logistikplanung in Abstimmung mit dem Verkaufsinnendienst (VKI) auf grundsätzliche terminliche Machbarkeit geprüft und anschließend an das FOSS-System übergeben. Die Produktionsplanung und -steuerung überprüft anhand des KPLI-Moduls die aktuellen Bedarfe gegen die Verfügbarkeit aller relevanten Ressourcen (Maschinenkapazität, Personalkapazität, Behälterverfügbarkeit, grundsätzliche Materialverfügbarkeit, …) und lastet die Produktionsaufträge entsprechend Lagerstand und Bedarf ein."),
 
         h("7.5.4.2 Feinplanung", HeadingLevel.HEADING_3),
         p("Die Feinplanung erfolgt auf Basis der freigegebenen FOSS-Aufträge durch die Produktionsplanung und -steuerung, einschließlich der Personaleinsatzplanung unter Berücksichtigung der Mitarbeiterqualifikationen. Die konkrete Vorgehensweise ist in einer eigenen Anweisung zur Feinplanung geregelt."),
@@ -776,6 +776,7 @@ const doc = new Document({
         bullet("IKK – Interdisziplinäre Koordinationsrunde Kernprozesse"),
         bullet("Kienformation-Center – digitales Arbeitsplatz-Portal für Fach-/Führungskräfte"),
         bullet("LMS – Lernmanagementsystem"),
+        bullet("Logistikplanung – Planungsfunktion innerhalb der Abteilung SCM/Logistik, getrennt von der Produktionsplanung und -steuerung"),
         bullet("MES (Authentig) – Manufacturing Execution System"),
         bullet("Poka-Yoke-Verifizierung („Dummy-Prüfung“) – regelmäßige Funktionsprüfung integrierter Prüfanlagen mittels Referenzteilen"),
         bullet("PA – Produktionsauftrag (eine von mehreren Betriebsauftragskategorien)"),

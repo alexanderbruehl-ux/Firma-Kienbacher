@@ -8,6 +8,31 @@ Durchsicht: veraltete Rollennamen, eine nie besprochene Rolle
 
 ---
 
+## Einleitung 7.5.4 (davor)
+
+**Alter Text (Version k, unverändert):**
+> "Zur Sicherheit der Produktionsabläufe wurden entsprechende Prüf- und
+> Arbeitsanweisungen erstellt. In den Produktionsaufträgen und
+> Produktdatenblättern sind alle Informationen zur Herstellung der
+> Produkte enthalten. Der Ablauf ist im Flow Chart (siehe separate
+> Grafik / Anhang) dargestellt."
+
+**Neuer Text:**
+> Zur Sicherstellung korrekter Produktionsabläufe liegen entsprechende
+> Arbeitsanweisungen und Prüfpläne vor. In den Produktionsaufträgen sind
+> alle relevanten Steuerungsinformationen zur Herstellung der Produkte
+> enthalten.
+
+**Klärungen:**
+- "Produktdatenblätter" war ein undefinierter, sonst nirgends im
+  Dokument verwendeter Begriff ohne heutige Entsprechung — gestrichen,
+  ersetzt durch "relevante Steuerungsinformationen" in den
+  Produktionsaufträgen
+- Flow-Chart-Verweis entfernt: es existiert kein entsprechendes
+  Prozessablaufdiagramm als Anlage; daher auch **kein** separater
+  "Anlagen"-Abschnitt angelegt (war in der Gliederungsdiskussion
+  mitgedacht, entfällt mangels Inhalt)
+
 ## 7.5.4.1.1 Grobplanung
 
 **Alter Text (Version k, unverändert):**
@@ -16,18 +41,29 @@ Durchsicht: veraltete Rollennamen, eine nie besprochene Rolle
 > eingelastet. Im Modul KPLI werden die aktuellen Bedarfe ermittelt."
 
 **Neuer Text:**
-> Kundenbestellungen werden vom Verkaufsinnendienst (VKI) geprüft und
-> ins FOSS übergeben. Die Produktionsplanung und -steuerung ermittelt
-> anhand des KPLI-Moduls die aktuellen Bedarfe und lastet die
-> Produktionsaufträge entsprechend Lagerstand und Bedarf ein.
+> Kundenbestellungen werden von der Logistikplanung in Abstimmung mit
+> dem Verkaufsinnendienst (VKI) auf grundsätzliche terminliche
+> Machbarkeit geprüft und anschließend an das FOSS-System übergeben.
+> Die Produktionsplanung und -steuerung überprüft anhand des
+> KPLI-Moduls die aktuellen Bedarfe gegen die Verfügbarkeit aller
+> relevanten Ressourcen (Maschinenkapazität, Personalkapazität,
+> Behälterverfügbarkeit, grundsätzliche Materialverfügbarkeit, ...) und
+> lastet die Produktionsaufträge entsprechend Lagerstand und Bedarf ein.
 
 **Klärungen:**
 - VKI = Verkaufsinnendienst (neu aufgetretener Begriff, bestätigt)
 - KPLI = Modul UND gleichnamiges Meeting sind dasselbe/verknüpft
   (bestätigt, siehe `BEGRIFFE.md`)
-- Tätigkeit jetzt explizit der Rolle **Produktionsplanung und
-  -steuerung** zugeordnet (vorher unpersönlich/passiv formuliert),
-  konsistent mit `PRODUKTIONSPLANUNG.md`
+- **Logistikplanung** = eigene Planungsfunktion innerhalb der Abteilung
+  SCM/Logistik, getrennt von der Produktionsplanung und -steuerung
+  (bestätigt) — prüft die grundsätzliche terminliche Machbarkeit von
+  Kundenbestellungen in Abstimmung mit dem VKI, bevor diese ins
+  FOSS-System übergeben werden
+- Die Prüfung der Produktionsplanung und -steuerung wurde präzisiert:
+  nicht nur „Bedarfsermittlung“, sondern Abgleich gegen die
+  Verfügbarkeit aller relevanten Ressourcen (Maschinen-/
+  Personalkapazität, Behälterverfügbarkeit, grundsätzliche
+  Materialverfügbarkeit)
 
 ---
 
