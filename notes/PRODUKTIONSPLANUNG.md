@@ -60,7 +60,7 @@ führt Tätigkeiten zeitlich unabhängig von dieser Instanz durch.
   unterschiedlicher Listen/Tabellen
 - Archivierung von Betriebsauftragsdokumenten
 - Erstellung der Produktionsaufträge im ERP-System (FOSS)
-- Einplanung der Produktionsaufträge im MES-System (authentig)
+- Einplanung der Produktionsaufträge im MES-System (Authentig)
 - Dokumentation im DocuWare anlegen
 - Erstellung und Pflege von Auswertungen, Berichten und Übersichten
   (Kapazitätsübersichten, Personalzuordnungen, Plantafel, …) im

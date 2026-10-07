@@ -30,7 +30,7 @@ AKV) sind bewusst **nicht** enthalten.
 - **Kienformation-Center** — digitales Arbeitsplatz-Portal für
   Fach-/Führungskräfte
 - **LMS** — Lernmanagementsystem
-- **MES (authentig)** — Manufacturing Execution System
+- **MES (Authentig)** — Manufacturing Execution System
 - **Poka-Yoke-Verifizierung („Dummy-Prüfung")** — regelmäßige
   Funktionsprüfung integrierter Prüfanlagen mittels Referenzteilen
 - **PA** — Produktionsauftrag (eine von mehreren

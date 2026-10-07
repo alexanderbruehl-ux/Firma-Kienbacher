@@ -462,7 +462,7 @@ const doc = new Document({
         bullet("Operative Vorbereitung der Produktionsaufträge, Erstellung unterschiedlicher Listen/Tabellen"),
         bullet("Archivierung von Betriebsauftragsdokumenten"),
         bullet("Erstellung der Produktionsaufträge im ERP-System (FOSS)"),
-        bullet("Einplanung der Produktionsaufträge im MES-System (authentig)"),
+        bullet("Einplanung der Produktionsaufträge im MES-System (Authentig)"),
         bullet("Dokumentation im DocuWare anlegen"),
         bullet("Erstellung und Pflege von Auswertungen, Berichten und Übersichten (Kapazitätsübersichten, Personalzuordnungen, Plantafel, …) im Zusammenhang mit der Produktionsplanung und -steuerung"),
 
@@ -767,7 +767,7 @@ const doc = new Document({
         bullet("IKK – Interdisziplinäre Koordinationsrunde Kernprozesse"),
         bullet("Kienformation-Center – digitales Arbeitsplatz-Portal für Fach-/Führungskräfte"),
         bullet("LMS – Lernmanagementsystem"),
-        bullet("MES (authentig) – Manufacturing Execution System"),
+        bullet("MES (Authentig) – Manufacturing Execution System"),
         bullet("Poka-Yoke-Verifizierung („Dummy-Prüfung“) – regelmäßige Funktionsprüfung integrierter Prüfanlagen mittels Referenzteilen"),
         bullet("PA – Produktionsauftrag (eine von mehreren Betriebsauftragskategorien)"),
         bullet("PQB – Qualitätsprüfer/in"),
