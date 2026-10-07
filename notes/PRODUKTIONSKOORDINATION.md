@@ -22,8 +22,7 @@ Produktionsleiter)*:
   „Kienformation-Center")
 - Personalauswahl und -entwicklung
 - Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im
-  Lernmanagementsystem (LMS; im Kienformation-Center als „Meine Kurse
-  (LMS)" zugänglich)
+  Lernmanagementsystem (LMS)
 - Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur
   Flexibilisierung und Effizienzsteigerung)
 

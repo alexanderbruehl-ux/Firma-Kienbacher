@@ -350,7 +350,7 @@ const doc = new Document({
         akvLabel("Aufgabe:"),
         bullet("Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal „Kienformation-Center“)"),
         bullet("Personalauswahl und -entwicklung"),
-        bullet("Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im Lernmanagementsystem (LMS; im Kienformation-Center als „Meine Kurse (LMS)“ zugänglich)"),
+        bullet("Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im Lernmanagementsystem (LMS)"),
         bullet("Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur Flexibilisierung und Effizienzsteigerung)"),
         note("Charakter: überwiegend wiederkehrend zu bestimmten Zeitpunkten (z. B. vor Betriebsurlauben, Weihnachtsschließtagen), selten anlassbezogen."),
 
