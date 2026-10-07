@@ -35,7 +35,6 @@ Werkzeuge (inkl. Kundenwerkzeuge).
 - Werkzeugkennzeichnung (Kennnummer, Status, Eigentümer, Standort) —
   Kundenwerkzeuge dauerhaft/sichtbar gekennzeichnet
 - Lagerung und Schutz der Werkzeuge vor Beschädigung/Verschleiß
-- Rüst-/Werkzeugwechselprozesse
 - Verschleißteile-Management: systematischer Umgang mit Verschleißteilen
   am Werkzeug (Erkennung, Austausch, Dokumentation). Eine
   Wartungsstrategie mit hinterlegten Soll-Schusszahlen, erfassten
