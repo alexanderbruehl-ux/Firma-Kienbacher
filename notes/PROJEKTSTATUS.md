@@ -103,10 +103,10 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 9 Qualitätsprüfer/in (PQB) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `PQB.md` (Verhältnis zu neuer Rolle „QS" bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) → **Teamleitung Lager** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–7), siehe `LAGER.md` |
 | 11 Alle Mitarbeiter | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `ALLE_MITARBEITER.md` |
-| **NEU: Produktionskoordination (Organisation/Personal)** | 🔶 Wesentlicher Kern abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
+| **NEU: Produktionskoordination (Organisation/Personal)** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `PRODUKTIONSKOORDINATION.md` |
 | **NEU: Prozesstechnik und Bemusterung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `PROZESSTECHNIK_BEMUSTERUNG.md` |
 | **NEU: QS (Qualitätssicherung Produktion)** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–5), siehe `QS.md` |
-| **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` — Produktionskoordination als eigene Rolle noch separat auszuarbeiten |
+| **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `ENDFERTIGUNG.md` |
 | **NEU: Automatisierung** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–4), siehe `AUTOMATISIERUNG.md` |
 | **NEU: Einsteller/Rüster** | ✅ Inhaltlich fertig abgestimmt (Themenblöcke 1–2), siehe `EINSTELLER_RUESTER.md` |
 | **NEU: Teamleitung Instandhaltung** | ✅ inhaltlich fertig abgestimmt (IATF 16949 §8.5.1.5), siehe `INSTANDHALTUNG.md` |
@@ -167,8 +167,8 @@ Fremdfirmen gemäß IATF 16949 §8.5.1.5 (siehe `INSTANDHALTUNG.md`). Damit
 ist die Gruppe **Unterstützungsprozesse** vollständig abgearbeitet.
 
 **Produktionskoordination** (Personalunion mit Teamleitung Endfertigung,
-Vertretung des Produktionsleiters Bereich Organisation/Personal) ist im
-wesentlichen Kern abgestimmt (siehe `PRODUKTIONSKOORDINATION.md`).
+Vertretung des Produktionsleiters Bereich Organisation/Personal) ist
+inhaltlich fertig abgestimmt (siehe `PRODUKTIONSKOORDINATION.md`).
 
 **Maschinenpersonal (Werker)** ist inhaltlich fertig abgestimmt (siehe
 `WERKER.md`).
@@ -215,8 +215,14 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
   Objektstammdaten mit zyklischen Wartungszeitpunkten) — Teamgröße und
   konkrete Kennzahlen-/Fristen-Zahlenwerte bewusst NICHT Teil des
   Dokuments, siehe Methodik-Grundsatz unten
-- `PRODUKTIONSKOORDINATION.md`: weitere wiederkehrende Themen, falls
-  Alexander noch etwas auffällt
+- `PRODUKTIONSKOORDINATION.md`: ✅ vollständig abgeschlossen (Alexander
+  hat bestätigt, dass es beim bisherigen Stand bleibt)
+
+**Damit sind alle betriebsspezifischen Ergänzungspunkte
+(Werkzeugbau, Instandhaltung, Produktionskoordination) abgeschlossen —
+jede Rolle des Dokuments hat jetzt einen vollständig abgestimmten
+inhaltlichen Stand.**
+
 - **Gliederung ergänzt um drei neue Abschnitte** (ISO 9001/IATF-konforme
   Standardgliederung einer Verfahrensanweisung; Änderungshistorie
   bewusst weggelassen):
