@@ -74,8 +74,11 @@ function note(text) {
   });
 }
 
-function controlCell(text, opts = {}) {
+const CONTROL_COL_WIDTHS = [1400, 2200, 1500, 1700, 1600]; // dxa, sums to ~8400
+
+function controlCell(text, width, opts = {}) {
   return new TableCell({
+    width: { size: width, type: WidthType.DXA },
     children: [new Paragraph({
       children: [new TextRun({ text, font: FONT, size: 18, ...opts })],
     })],
@@ -85,24 +88,26 @@ function controlCell(text, opts = {}) {
 
 function docControlTable() {
   return new Table({
-    width: { size: 100, type: WidthType.PERCENTAGE },
+    width: { size: 8400, type: WidthType.DXA },
+    layout: "fixed",
+    columnWidths: CONTROL_COL_WIDTHS,
     rows: [
       new TableRow({
         children: [
-          controlCell("Status", { bold: true }),
-          controlCell("Ersteller", { bold: true }),
-          controlCell("Geprüft durch", { bold: true }),
-          controlCell("Freigegeben durch", { bold: true }),
-          controlCell("Datum Freigabe", { bold: true }),
+          controlCell("Status", CONTROL_COL_WIDTHS[0], { bold: true }),
+          controlCell("Ersteller", CONTROL_COL_WIDTHS[1], { bold: true }),
+          controlCell("Geprüft durch", CONTROL_COL_WIDTHS[2], { bold: true }),
+          controlCell("Freigegeben durch", CONTROL_COL_WIDTHS[3], { bold: true }),
+          controlCell("Datum Freigabe", CONTROL_COL_WIDTHS[4], { bold: true }),
         ],
       }),
       new TableRow({
         children: [
-          controlCell("Entwurf"),
-          controlCell("Alexander Brühl"),
-          controlCell("QS"),
-          controlCell("QMB"),
-          controlCell("–"),
+          controlCell("Entwurf", CONTROL_COL_WIDTHS[0]),
+          controlCell("Alexander Brühl", CONTROL_COL_WIDTHS[1]),
+          controlCell("QS", CONTROL_COL_WIDTHS[2]),
+          controlCell("QMB", CONTROL_COL_WIDTHS[3]),
+          controlCell("–", CONTROL_COL_WIDTHS[4]),
         ],
       }),
     ],
