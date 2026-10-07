@@ -627,7 +627,7 @@ const doc = new Document({
         akv("Verantwortung:", "Ordnungsgemäßer Umgang mit im Eigentum des Kunden stehenden Werkzeugen."),
         akvLabel("Aufgabe:"),
         bullet("Nutzung ausschließlich für den vom Kunden vorgesehenen Zweck"),
-        bullet("Doppelte Kennzeichnung: Typenschild sowie zusätzliche, dauerhafte Werkzeug-Beschriftung (eingeschweißter Zettel)"),
+        bullet("Doppelte Kennzeichnung: Typenschild sowie zusätzliche, dauerhafte Werkzeug-Beschriftung (eingeschweißter Zettel bzw. RFID/NFC/QR-Codes)"),
         bullet("Verwaltung der Werkzeugstammdaten im ERP-System (FOSS): eindeutige Werkzeugnummer, Kundenzuordnung, Änderungsstand, Wartungs-/Reparaturhistorie"),
         bullet("Schutz vor Fremdzugriff: trockene, gesicherte Verwahrung in verschlossenen Hallenbereichen"),
         bullet("Information des Kunden und gemeinsame Abstimmung weiterer Maßnahmen bei Verlust, Beschädigung oder technischen Problemen (Nichteignung)"),

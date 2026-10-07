@@ -84,7 +84,7 @@ stehenden Werkzeugen.
 **Aufgabe:**
 - Nutzung ausschließlich für den vom Kunden vorgesehenen Zweck
 - Doppelte Kennzeichnung: Typenschild sowie zusätzliche, dauerhafte
-  Werkzeug-Beschriftung (eingeschweißter Zettel)
+  Werkzeug-Beschriftung (eingeschweißter Zettel bzw. RFID/NFC/QR-Codes)
 - Verwaltung der Werkzeugstammdaten im ERP-System (FOSS): eindeutige
   Werkzeugnummer, Kundenzuordnung, Änderungsstand,
   Wartungs-/Reparaturhistorie
