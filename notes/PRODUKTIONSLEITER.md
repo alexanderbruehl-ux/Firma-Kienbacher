@@ -126,9 +126,11 @@ Themenblock vollständig abgedeckt.
 
 **Wichtige Verschiebung gegenüber Version k:** Das direkte Gegenüber der
 Produktionsleitung bei Korrekturmaßnahmen auf **Gesamtebene** ist nicht mehr
-QMB, sondern die neue Rolle **QS (Qualitätssicherung Produktion)**. QMB bleibt
-als Korrespondenzfunktion nur noch auf **Schicht-/Team-Ebene** (siehe
-PROJEKTSTATUS.md, Abschnitt „Bereits geklärte Struktur-Entscheidungen").
+QMB, sondern die neue Rolle **QS (Qualitätssicherung Produktion)**. QMB hat in
+diesem internen Korrekturmaßnahmen-Ablauf keine Rolle — QMB vertritt
+ausschließlich extern (siehe Themenblock 8). Auf **Schicht-/Team-Ebene** liegt
+die entsprechende Bewertung bei Teamleitung und PQB (siehe
+`FUEHRUNG_HAUPTPROZESS.md`, Themenblock C).
 
 **Ablauf bei Korrekturmaßnahmen** (gemeinschaftlich, aber mit klar getrennten
 Rollen):

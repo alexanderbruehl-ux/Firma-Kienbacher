@@ -152,7 +152,7 @@ const doc = new Document({
         bullet("Disziplinarische Maßnahmen bei WerkerInnen/Sachbearbeitern (als Eskalationsinstanz)"),
 
         blockHeading("5. Korrekturmaßnahmen / QS-Zusammenarbeit"),
-        p("Das direkte Gegenüber der Produktionsleitung bei Korrekturmaßnahmen auf Gesamtebene ist die Rolle QS (Qualitätssicherung Produktion). QMB bleibt Korrespondenzfunktion auf Schicht-/Team-Ebene. Ablauf: QS stellt Bedarf fest → Produktionsleitung entscheidet Maßnahme → QS prüft und gibt frei."),
+        p("Das direkte Gegenüber der Produktionsleitung bei Korrekturmaßnahmen auf Gesamtebene ist die Rolle QS (Qualitätssicherung Produktion). Auf Schicht-/Team-Ebene liegt die entsprechende Bewertung bei Teamleitung und PQB. Ablauf: QS stellt Bedarf fest → Produktionsleitung entscheidet Maßnahme → QS prüft und gibt frei."),
         akv("Aufgabe:", "Entscheidung über Art und Umsetzung von Korrekturmaßnahmen bei durch QS festgestelltem Handlungsbedarf (gesamtheitliche Ebene)."),
         akv("Kompetenz:", "Entscheidungsbefugnis über die konkrete Maßnahmenwahl bei Korrekturmaßnahmen."),
 
