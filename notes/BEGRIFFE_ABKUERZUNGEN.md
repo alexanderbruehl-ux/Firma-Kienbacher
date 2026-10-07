@@ -30,6 +30,8 @@ AKV) sind bewusst **nicht** enthalten.
 - **Kienformation-Center** — digitales Arbeitsplatz-Portal für
   Fach-/Führungskräfte
 - **LMS** — Lernmanagementsystem
+- **Logistikplanung** — Planungsfunktion innerhalb der Abteilung
+  SCM/Logistik, getrennt von der Produktionsplanung und -steuerung
 - **MES (Authentig)** — Manufacturing Execution System
 - **Poka-Yoke-Verifizierung („Dummy-Prüfung")** — regelmäßige
   Funktionsprüfung integrierter Prüfanlagen mittels Referenzteilen
