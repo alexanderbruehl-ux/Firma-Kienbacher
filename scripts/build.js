@@ -1,6 +1,6 @@
 const {
   Document, Packer, Paragraph, TextRun, HeadingLevel, Table, TableRow, TableCell,
-  WidthType, BorderStyle, AlignmentType, ShadingType, LevelFormat, PageBreak
+  WidthType, AlignmentType, ShadingType, LevelFormat, PageBreak
 } = require("docx");
 
 const FONT = "Calibri";
@@ -69,19 +69,6 @@ function note(text) {
   });
 }
 
-function footerNote() {
-  return new Paragraph({
-    spacing: { before: 400 },
-    border: { top: { style: BorderStyle.SINGLE, size: 4, color: "CC0000" } },
-    children: [
-      new TextRun({
-        text: "ENTWURF – Zwischenstand in Bearbeitung, wird gemeinsam mit den Rollenverantwortlichen abgestimmt. Nummerierung der Rollen (7.5.3.x) ist vorläufig.",
-        italics: true, color: "CC0000", font: FONT, size: 18,
-      }),
-    ],
-  });
-}
-
 const doc = new Document({
   numbering: {
     config: [
@@ -107,7 +94,6 @@ const doc = new Document({
           spacing: { after: 200 },
           children: [new TextRun({ text: "Kap. 7.5 Produktrealisierung", font: FONT, size: 22 })],
         }),
-        footerNote(),
         new Paragraph({ spacing: { before: 300, after: 200 },
           alignment: AlignmentType.CENTER,
           children: [new TextRun({ text: "Auftragsabwicklung in der Produktion", bold: true, underline: {}, font: FONT, size: 26 })] }),
