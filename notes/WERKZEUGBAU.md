@@ -36,12 +36,12 @@ Werkzeuge (inkl. Kundenwerkzeuge).
   Kundenwerkzeuge dauerhaft/sichtbar gekennzeichnet
 - Lagerung und Schutz der Werkzeuge vor Beschädigung/Verschleiß
 - Verschleißteile-Management: systematischer Umgang mit Verschleißteilen
-  am Werkzeug (Erkennung, Austausch, Dokumentation). Eine
-  Wartungsstrategie mit hinterlegten Soll-Schusszahlen, erfassten
-  Ist-Schusszahlen und Erreichungsgrad löst die Wartung aus. Werkzeuge
-  werden während Wartung/Reparatur über den LCST (LifeCycle Status) bzw.
-  den Betriebsmittelstatus für die Produktion gesperrt und nach Abschluss
-  wieder für die Planung und Steuerung freigegeben
+  am Werkzeug (Erkennung, Austausch, Dokumentation)
+  - Eine Wartungsstrategie mit hinterlegten Soll-Schusszahlen, erfassten
+    Ist-Schusszahlen und Erreichungsgrad löst die Wartung aus
+  - Werkzeuge werden während Wartung/Reparatur über den LCST (LifeCycle
+    Status) bzw. den Betriebsmittelstatus für die Produktion gesperrt und
+    nach Abschluss wieder für die Planung und Steuerung freigegeben
 - Dokumentation von Werkzeugänderungen/-modifikationen inkl.
   Änderungsstand
 - Abarbeitung der Aufgabenliste (siehe
