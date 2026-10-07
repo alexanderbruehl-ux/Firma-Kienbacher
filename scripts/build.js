@@ -74,6 +74,41 @@ function note(text) {
   });
 }
 
+function controlCell(text, opts = {}) {
+  return new TableCell({
+    children: [new Paragraph({
+      children: [new TextRun({ text, font: FONT, size: 18, ...opts })],
+    })],
+    margins: { top: 60, bottom: 60, left: 100, right: 100 },
+  });
+}
+
+function docControlTable() {
+  return new Table({
+    width: { size: 100, type: WidthType.PERCENTAGE },
+    rows: [
+      new TableRow({
+        children: [
+          controlCell("Status", { bold: true }),
+          controlCell("Ersteller", { bold: true }),
+          controlCell("Geprüft durch", { bold: true }),
+          controlCell("Freigegeben durch", { bold: true }),
+          controlCell("Datum Freigabe", { bold: true }),
+        ],
+      }),
+      new TableRow({
+        children: [
+          controlCell("Entwurf"),
+          controlCell("Alexander Brühl"),
+          controlCell("QS"),
+          controlCell("QMB"),
+          controlCell("–"),
+        ],
+      }),
+    ],
+  });
+}
+
 const doc = new Document({
   numbering: {
     config: [
@@ -102,6 +137,9 @@ const doc = new Document({
         new Paragraph({ spacing: { before: 300, after: 200 },
           alignment: AlignmentType.CENTER,
           children: [new TextRun({ text: "Auftragsabwicklung in der Produktion", bold: true, underline: {}, font: FONT, size: 26 })] }),
+
+        docControlTable(),
+        new Paragraph({ spacing: { after: 200 }, children: [] }),
 
         h("7.5.1 Ziel", HeadingLevel.HEADING_2),
         p("Sicherstellen einer reibungslosen Produktion, um die Spritzgussteile in der gewünschten Qualität, zum vereinbarten Termin und innerhalb der geplanten Kosten herzustellen, unter Berücksichtigung einer klaren Rollenverteilung mit eindeutig zugeordneten Aufgaben, Kompetenzen und Verantwortlichkeiten sowie einer multidisziplinären Zusammenarbeit der beteiligten Funktionen."),
