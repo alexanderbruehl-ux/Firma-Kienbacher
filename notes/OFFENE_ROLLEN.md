@@ -106,13 +106,14 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 
 ## Begriffsklärung: „Teamleiter"
 
-**Sammelbegriff** für alle dem Produktionsleiter unterstellten Führungskräfte:
-- Teamleitung Spritzguss-Produktion (Schichtführer)
-- Teamleitung Montage
-- Teamleitung Lager
-- Teamleitung Endfertigung
-- Teamleitung Instandhaltung
-- Teamleitung Werkzeugbau
+**Sammelbegriff** für die den jeweiligen Abteilungsleitungen unterstellten
+Führungskräfte im Produktionsumfeld dieses Dokuments:
+- Teamleitung Spritzguss-Produktion (Schichtführer) — Produktionsleiter
+- Teamleitung Montage — Produktionsleiter
+- Teamleitung Lager — **Ausnahme:** Abteilungsleiter SCM/Logistik
+- Teamleitung Endfertigung — Produktionsleiter
+- Teamleitung Instandhaltung — Produktionsleiter
+- Teamleitung Werkzeugbau — Produktionsleiter
 
 → Sollte im Dokument an geeigneter Stelle (z. B. Anfang 7.5.3 oder als
 Fußnote/Begriffsdefinition) einmalig definiert werden, damit der Sammelbegriff
