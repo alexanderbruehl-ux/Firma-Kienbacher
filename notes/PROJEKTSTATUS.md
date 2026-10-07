@@ -236,13 +236,17 @@ Rolle aus `OFFENE_ROLLEN.md` mindestens im Erstentwurf ausgearbeitet —
 - Ein zweiter Durchgang über alle Rollen (Review/Konsistenzprüfung,
   Formulierungen) steht noch aus
 - **Review des bisher unveränderten Original-Rohtexts** (7.5.1 Ziel,
-  7.5.2 Geltungsbereich, 7.5.4 Verfahren) — 7.5.1 und 7.5.2 ✅ fertig
-  (siehe `ZIEL_GELTUNGSBEREICH.md`, inkl. Vorgänger-/
-  Nachfolgeprozess-Herleitung). 7.5.4 🔶 in Bearbeitung, siehe
-  `VERFAHREN_7_5_4.md` — 7.5.4.1.1 bis 7.5.4.5 ✅ fertig; 7.5.4.6 noch
-  offen. "Interner Reklamationskoordinator" aufgelöst (keine eigene
-  Rolle, Ablauf über QMB→Produktionsleiter mit QS-Unterstützung bei
-  extern relevanten Reklamationen geklärt). Im Zuge von 7.5.4.4 neue Rolle **Einsteller/
+  7.5.2 Geltungsbereich, 7.5.4 Verfahren) — **✅ vollständig
+  abgeschlossen.** 7.5.1/7.5.2 siehe `ZIEL_GELTUNGSBEREICH.md` (inkl.
+  Vorgänger-/Nachfolgeprozess-Herleitung); 7.5.4.1.1–7.5.4.6 siehe
+  `VERFAHREN_7_5_4.md`. Dabei u. a. "Interner Reklamationskoordinator"
+  aufgelöst (keine eigene Rolle, Ablauf über QMB→Produktionsleiter mit
+  QS-Unterstützung bei extern relevanten Reklamationen geklärt) und
+  neue Rolle **Einsteller/Rüster** entdeckt und ausgearbeitet (siehe
+  `EINSTELLER_RUESTER.md`). Damit hat jetzt **jeder Abschnitt des
+  gesamten Dokuments** (7.5.1–7.5.4, alle Rollen in 7.5.3, plus die
+  drei neuen Abschnitte Mitgeltende Unterlagen/Aufzeichnungen/Begriffe)
+  einen überarbeiteten, abgestimmten Stand. Im Zuge von 7.5.4.4 neue Rolle **Einsteller/
   Rüster** entdeckt und ausgearbeitet (siehe `EINSTELLER_RUESTER.md`) —
   Fachpersonal unterstellt der Teamleitung Spritzguss-Produktion,
   zuständig für Werkzeugeinbau/-transport und Grundeinstellung. Enthält u. a. veraltete
