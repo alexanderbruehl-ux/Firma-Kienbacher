@@ -45,7 +45,7 @@ gesetzlicher Bestimmungen.
     werden, erfolgt die Beschaffung überwiegend anlassbezogen statt über
     große eigene Lagerbestände
 - Verpackung/Konservierung von Anlagen/Betriebsmitteln bei Lagerung
-- Jährliche Überprüfung des Wartungsplans
+- Periodische Überprüfung des Wartungsplans
 - Anlage und Pflege der Objektstammdaten (FOSS) für alle relevanten
   Anlagen, Betriebsmittel, Vorrichtungen etc., inkl. hinterlegter
   zyklischer Wartungszeitpunkte

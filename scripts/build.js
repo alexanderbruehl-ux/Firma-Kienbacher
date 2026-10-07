@@ -587,7 +587,7 @@ const doc = new Document({
         bullet("Kritische, wertige Ersatzteile werden im ERP-System (FOSS) bestandsgeführt, Verbrauchsmaterialien nicht separat", 1),
         bullet("Da die meisten Ersatzteile von den Maschinenherstellern kurzfristig (binnen weniger Tage, bei Bedarf express) zur Verfügung gestellt werden, erfolgt die Beschaffung überwiegend anlassbezogen statt über große eigene Lagerbestände", 1),
         bullet("Verpackung/Konservierung von Anlagen/Betriebsmitteln bei Lagerung"),
-        bullet("Jährliche Überprüfung des Wartungsplans"),
+        bullet("Periodische Überprüfung des Wartungsplans"),
         bullet("Anlage und Pflege der Objektstammdaten (FOSS) für alle relevanten Anlagen, Betriebsmittel, Vorrichtungen etc., inkl. hinterlegter zyklischer Wartungszeitpunkte"),
         bullet("Beauftragung und Beaufsichtigung relevanter Prüfstellen für gesetzlich vorgeschriebene Prüfungen (z. B. Leitern, Hebezeuge, Anschlagmittel)"),
         bullet("Abarbeitung der Aufgabenliste (Störungsmeldungen)"),
