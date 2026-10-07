@@ -268,4 +268,41 @@ bestehenden AKV-Inhalten zu vermeiden.
 
 ## 7.5.4.6 Material
 
-*Noch zu bearbeiten.*
+**Alter Text (Version k, unverändert):**
+> "Alle Anlieferungen werden im WEP ident geprüft. Die
+> Produktionsplanung erfolgt rechtzeitig. Um eine geforderte
+> Vortrocknung von Originalmaterial rechtzeitig einzuleiten, werden die
+> Trocknungsdetails am Arbeitsplan angedruckt (ARPL). Der Aushang
+> erfolgt zuvor an der Plantafel. Restmaterial wird in sauberen,
+> verschlossenen, beschrifteten Behältern / Säcken an das Lager
+> retourniert, gebucht und aufbewahrt."
+
+**Neuer Text:**
+> Alle Anlieferungen werden von der Wareneingangsprüfung (WEP) auf
+> Identität geprüft. Die Produktionsplanung und -steuerung
+> berücksichtigt bei der Einplanung der Produktionsaufträge die
+> erforderliche Durchlaufzeit der Wareneingangsprüfung (WEP), damit
+> freigegebenes Material rechtzeitig für die Produktion sowie die ggf.
+> erforderliche Vortrocknung zur Verfügung steht. Um eine geforderte
+> Vortrocknung von Originalmaterial rechtzeitig einzuleiten, werden die
+> Trocknungsdetails am Arbeitsplan angedruckt (ARPL). Der Aushang
+> erfolgt zuvor an der Plantafel. Restmaterial wird in sauberen,
+> verschlossenen, beschrifteten Behältern/Säcken an das Lager
+> retourniert, gebucht und aufbewahrt.
+
+**Klärungen:**
+- WEP = Wareneingangsprüfung, eine eigene Organisationseinheit im
+  Q-Bereich (analog RPP — Teams innerhalb der Qualitätsmanagement-
+  Abteilung)
+- "Im WEP ident geprüft" (Ort) → "von der WEP... geprüft" (WEP als
+  handelnder Akteur) — gängigere Formulierung
+- "Die Produktionsplanung erfolgt rechtzeitig" (vage, inhaltsleer) →
+  konkretisiert und ursächlich mit der WEP-Prüf-Durchlaufzeit (DLZ)
+  aus Satz 1 verknüpft: Produktionsplanung muss diese Durchlaufzeit bei
+  der Auftragseinplanung berücksichtigen, damit freigegebenes Material
+  rechtzeitig (inkl. Vortrocknung) verfügbar ist
+
+---
+
+**Status 7.5.4 Verfahren: Alle Unterabschnitte (7.5.4.1.1–7.5.4.6)
+abgeschlossen.**

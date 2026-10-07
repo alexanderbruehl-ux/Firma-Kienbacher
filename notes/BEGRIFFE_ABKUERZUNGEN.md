@@ -43,6 +43,8 @@ AKV) sind bewusst **nicht** enthalten.
 - **QS** — Qualitätssicherung Produktion
 - **RPP** — Robust Production Processes, Team innerhalb der
   Qualitätsmanagement-Abteilung
+- **WEP** — Wareneingangsprüfung, eigene Organisationseinheit innerhalb
+  der Qualitätsmanagement-Abteilung
 - **Schichtlogbuch** — Dokumentationsmittel für die Schichtübergabe
 - **SFK** — Sicherheitsfachkraft
 - **SVP** — Sicherheitsvertrauensperson
