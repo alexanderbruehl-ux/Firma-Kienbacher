@@ -5,13 +5,15 @@ fehlte dort komplett, siehe OFFENE_ROLLEN.md). Allgemeine AKV-Punkte sind
 über `FUEHRUNG_HAUPTPROZESS.md` abgedeckt; hier stehen nur die
 Endfertigung-spezifischen Ausprägungen.
 
-Noch **nicht** im working/*.docx eingearbeitet.
-
 Diese Rolle gehört zur Gruppe **Führungsrollen im Hauptprozess** (siehe
-`FUEHRUNG_HAUPTPROZESS.md`). Besonderheit: Teamleitung Endfertigung = 
-Teamleitung Produktionskoordination in Personalunion (siehe
-OFFENE_ROLLEN.md, Rolle 1 „Produktionskoordination"), daher **keine**
-regelmäßige operative Mitarbeit wie bei Teamleitung Montage.
+`FUEHRUNG_HAUPTPROZESS.md`). Besonderheit: Teamleitung Endfertigung =
+Produktionskoordination in Personalunion (siehe OFFENE_ROLLEN.md, Rolle 1
+„Produktionskoordination"), daher **keine** regelmäßige operative
+Mitarbeit wie bei Teamleitung Montage. **Wichtig:** Produktionskoordination
+ist selbst **keine eigene Teamleitungsfunktion**, sondern die
+Vertretungsfunktion des Produktionsleiters (Organisation/Personal) — nur
+Endfertigung ist eine Teamleitungsfunktion; beide werden von derselben
+Person wahrgenommen.
 
 ---
 
