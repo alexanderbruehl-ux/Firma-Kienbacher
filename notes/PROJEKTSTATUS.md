@@ -239,14 +239,44 @@ inhaltlichen Stand.**
     allgemeingültige, fachüblich bekannte Abkürzungen ohne
     dokumentspezifische Zuspitzung (z. B. ASchG, AKV) bewusst
     ausgeschlossen
-- `scripts/build.js`/`working/*.docx`: noch nicht auf dem Stand aller in
-  diesem Durchgang fertiggestellten Rollen (Produktionskoordination,
-  Werker, Boxenbauer, Produktionslogistiker, Produktionsplanung,
-  Digitale Prozessentwicklung, PQB, Alle Mitarbeiter, Automatisierung,
-  Prozesstechnik und Bemusterung, QS) — Neu-Generierung und SharePoint-
-  Sync nur auf explizite Anfrage (siehe Arbeitsregel oben)
+- `scripts/build.js`/`working/*.docx`: ✅ komplett auf aktuellen
+  Notizen-Stand neu aufgebaut (alle 19 Rollen, 7.5.1/7.5.2/7.5.4, drei
+  neue Abschnitte) — siehe Meilenstein „Markup-Review" unten für den
+  seither laufenden Korrekturdurchgang
+- **Meilenstein „Markup-Review" (Alexander liest das generierte
+  working/*.docx selbst durch und markiert/schickt Korrekturen
+  einzeln):** ✅ Durchgang laut Alexander abgeschlossen
+  ("Ich glaube wir sind durch"). Dabei u. a. korrigiert:
+  - mehrfach dieselbe falsche QMB-Zuordnung (keine Korrespondenzfunktion
+    auf Schicht-/Team-Ebene) in Produktionsleiter Themenblock 5,
+    Themenblock J, QS Themenblock 4, OFFENE_ROLLEN.md
+  - Teamleitung Lager: organisatorisch dem Abteilungsleiter SCM/Logistik
+    unterstellt, nicht dem Produktionsleiter (Ausnahme in Themenblock D
+    und Teamleiter-Begriffsdefinition ergänzt)
+  - Produktionskoordination fälschlich als eigene Teamleitungsfunktion
+    bezeichnet (Endfertigung) korrigiert
+  - Werkzeugbau: fehlerhafte/falsch zugeordnete Punkte entfernt
+    (Rüst-/Werkzeugwechselprozesse gehört zu Einsteller/Rüster,
+    Dokumentation von Werkzeugänderungen gehört zu Produkt-/
+    Projekttechnik), Kundenwerkzeug-Kennzeichnung um RFID/NFC/QR-Codes
+    ergänzt, Kundeninformation bei Schäden korrigiert (läuft über
+    Produkt-/Projekttechnik, nicht direkt durch Werkzeugbau)
+  - interne Meta-Hinweise (Verweis auf notes/*.md, ENTWURF-Zwischenstand-
+    Fußzeile) aus dem Dokumentinhalt entfernt — ein freigegebenes
+    QM-Dokument stellt eine gültige Vorgabe dar, keinen Zwischenstand
+  - 7.5.4-Einleitung erstmals reviewt: undefinierter Begriff
+    „Produktdatenblätter" und nicht existierender Flow-Chart-Verweis
+    entfernt
+  - 7.5.4.1.1 Grobplanung: neue Rolle **Logistikplanung** eingeführt
+    (eigene Planungsfunktion innerhalb SCM/Logistik, prüft
+    Kundenbestellungen auf terminliche Machbarkeit vor FOSS-Übergabe)
+  - diverse überfüllte Aufzählungspunkte gegliedert (Instandhaltung
+    Ersatzteilhaltung, Werkzeugbau Verschleißteile-Management),
+    Formulierungen präzisiert, exakte App-Menülabels entfernt
+  - gesamtes Dokument auf Blocksatz umgestellt
+  - Produktionslogistiker: Stammdatenpflege-Mitwirkung ergänzt
 - Ein zweiter Durchgang über alle Rollen (Review/Konsistenzprüfung,
-  Formulierungen) steht noch aus
+  Formulierungen) ist mit diesem Markup-Review-Durchgang erfolgt
 - **Review des bisher unveränderten Original-Rohtexts** (7.5.1 Ziel,
   7.5.2 Geltungsbereich, 7.5.4 Verfahren) — **✅ vollständig
   abgeschlossen.** 7.5.1/7.5.2 siehe `ZIEL_GELTUNGSBEREICH.md` (inkl.
@@ -273,13 +303,21 @@ inhaltlichen Stand.**
 
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
-- **QMB/QS-Korrespondenzstruktur** (zweistufig):
-  - Schicht-/Team-Ebene: Schichtführer/Teamleiter ↔ **QMB**
+- **QS-Korrespondenzstruktur** (korrigiert — **QMB hat keine
+  Korrespondenzfunktion auf Schicht-/Team-Ebene**, dieser frühere Ansatz
+  wurde im Markup-Review mehrfach als Fehler identifiziert und
+  durchgängig bereinigt, siehe Meilenstein unten):
+  - Schicht-/Team-Ebene: Teamleitung ↔ **PQB**
   - Gesamtheitliche Ebene: Produktionsleitung ↔ **QS (Qualitätssicherung Produktion)**
   - Ablauf bei Korrekturmaßnahmen: QS stellt Bedarf fest → Produktionsleitung
     entscheidet über konkrete Maßnahme → QS prüft Wirksamkeit und gibt frei
     (z. B. Entsperren von Teilen/Prozessen). Damit ist ein Vier-Augen-Prinzip
     zwischen Produktions- und Qualitätsseite auf beiden Ebenen etabliert.
+  - **QMB** hat in diesem internen Ablauf keine Rolle — vertritt
+    ausschließlich extern (Kunden, Lieferanten, Netzwerkpartner) und
+    tritt intern nur über den Produktionsleiter in Erscheinung
+    (8D-Beauftragung bei externer Reklamationsrelevanz, siehe
+    PRODUKTIONSLEITER.md Themenblock 5/8)
 - **Dreiteilige Vertretungsstruktur des Produktionsleiters** (siehe OFFENE_ROLLEN.md
   für Details der einzelnen Vertretungsfunktionen):
   1. Organisation/Personal → Produktionskoordination
