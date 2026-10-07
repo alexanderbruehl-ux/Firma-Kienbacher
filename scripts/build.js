@@ -715,7 +715,7 @@ const doc = new Document({
         blockHeading("4. Vertretungsfunktion des Produktionsleiters (Qualität)"),
         akvLabel("Aufgabe:"),
         bullet("Vertritt den Produktionsleiter in allen qualitätsrelevanten Fragen: fehlerhafte Teile im Haus, Reklamationen, Sperren, Nacharbeit, Maschinen abstellen/stoppen"),
-        bullet("Korrespondenzfunktion zur Produktionsleitung auf Gesamtebene (analog QMB ↔ Schichtführer/Teamleitung auf Schicht-/Team-Ebene)"),
+        bullet("Korrespondenzfunktion zur Produktionsleitung auf Gesamtebene"),
         akv("Kompetenz:", "Befugnis, die Produktion/den Versand zu stoppen, um Qualitätsprobleme zu korrigieren."),
 
         blockHeading("5. Organisatorische Sonderstellung"),
