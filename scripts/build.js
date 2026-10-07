@@ -121,7 +121,6 @@ const doc = new Document({
         akv("Nachfolge-Prozess:", "Transportabwicklung/Spedition (externer Weitertransport zum Kunden) sowie Fakturierung/Rechnungsstellung."),
 
         h("7.5.3 Verantwortung und Befugnisse", HeadingLevel.HEADING_2),
-        note("Struktur je Rolle: AKV-Prinzip (Aufgaben / Kompetenzen / Verantwortung), gegliedert nach Themenblöcken. Details und Diskussionsstand siehe notes/*.md."),
 
         // ============ 7.5.3.1 PRODUKTIONSLEITER ============
         roleHeading("7.5.3.1 Produktionsleiter"),
