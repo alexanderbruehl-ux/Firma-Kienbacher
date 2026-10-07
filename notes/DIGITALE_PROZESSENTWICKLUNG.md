@@ -72,5 +72,4 @@ Werkzeugbau-/Bemusterungsaufträge bei Werkzeugänderungen. Projektmitarbeit
 
 **Aufgabe:**
 - Konzeption von Poka-Yoke-/Fehlervermeidungslösungen (z. B.
-  ad-hoc-Hilfsmittel via 3D-Druck); Gegenstück zur laufenden
-  Verifizierung ("Dummy-Prüfung"), die bei den Teamleitungen liegt
+  ad-hoc-Hilfsmittel via 3D-Druck)
