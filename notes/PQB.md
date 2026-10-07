@@ -22,7 +22,7 @@ Produktion)** koordiniert übergreifend und ist organisatorisch
 **Aufgabe:**
 - Durchführung von fertigungsbegleitenden Qualitätsprüfungen
 - Dokumentation der Prüf- und Messergebnisse im Prüfdaten-System
-  (Q Studio)
+  (Q-Studio)
 - Erfassen von festgestellten Fehlern
 
 ---
