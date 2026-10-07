@@ -504,7 +504,7 @@ const doc = new Document({
         blockHeading("1. Fertigungsbegleitende Qualitätsprüfung und Dokumentation"),
         akvLabel("Aufgabe:"),
         bullet("Durchführung von fertigungsbegleitenden Qualitätsprüfungen"),
-        bullet("Dokumentation der Prüf- und Messergebnisse im Prüfdaten-System (Q Studio)"),
+        bullet("Dokumentation der Prüf- und Messergebnisse im Prüfdaten-System (Q-Studio)"),
         bullet("Erfassen von festgestellten Fehlern"),
 
         blockHeading("2. Reklamationsbearbeitung und Maßnahmenverfolgung"),
