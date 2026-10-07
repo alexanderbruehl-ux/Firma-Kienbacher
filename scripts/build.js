@@ -629,7 +629,7 @@ const doc = new Document({
         bullet("Nutzung ausschließlich für den vom Kunden vorgesehenen Zweck"),
         bullet("Doppelte Kennzeichnung: Typenschild sowie zusätzliche, dauerhafte Werkzeug-Beschriftung (eingeschweißter Zettel bzw. RFID/NFC/QR-Codes)"),
         bullet("Verwaltung der Werkzeugstammdaten im ERP-System (FOSS): eindeutige Werkzeugnummer, Kundenzuordnung, Änderungsstand, Wartungs-/Reparaturhistorie"),
-        bullet("Schutz vor Fremdzugriff: trockene, gesicherte Verwahrung in verschlossenen Hallenbereichen"),
+        bullet("Schutz vor Fremdzugriff: trockene, gesicherte Verwahrung in definierten Hallenbereichen"),
         bullet("Information des Kunden und gemeinsame Abstimmung weiterer Maßnahmen bei Verlust, Beschädigung oder technischen Problemen (Nichteignung)"),
         bullet("Bei Erreichen/Überschreiten der vereinbarten Schusszahl: Anfrage an den Kunden zur Freigabe weiterer Wartungs-/Reparaturkosten und Kostenübernahme"),
         akv("Kompetenz:", "Keine eigenständige Entscheidung über Kostenübernahme oder Weiterverwendung des Werkzeugs jenseits der vereinbarten Schusszahl – diese Entscheidung liegt beim Kunden."),

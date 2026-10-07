@@ -89,7 +89,7 @@ stehenden Werkzeugen.
   Werkzeugnummer, Kundenzuordnung, Änderungsstand,
   Wartungs-/Reparaturhistorie
 - Schutz vor Fremdzugriff: trockene, gesicherte Verwahrung in
-  verschlossenen Hallenbereichen
+  definierten Hallenbereichen
 - Information des Kunden und gemeinsame Abstimmung weiterer Maßnahmen
   bei Verlust, Beschädigung oder technischen Problemen (Nichteignung)
 - Bei Erreichen/Überschreiten der vereinbarten Schusszahl: Anfrage an
