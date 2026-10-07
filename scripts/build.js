@@ -332,7 +332,7 @@ const doc = new Document({
 
         // ============ 7.5.3.5 ENDFERTIGUNG ============
         roleHeading("7.5.3.5 Teamleitung Endfertigung"),
-        note("Führungsrolle im Hauptprozess (siehe oben). Teamleitung Endfertigung = Teamleitung Produktionskoordination in Personalunion, daher keine regelmäßige operative Mitarbeit wie bei Teamleitung Montage."),
+        note("Führungsrolle im Hauptprozess (siehe oben). Teamleitung Endfertigung = Produktionskoordination in Personalunion, daher keine regelmäßige operative Mitarbeit wie bei Teamleitung Montage."),
 
         blockHeading("1. Aufgabenbereich Fertigungsschritte"),
         p("Endfertigung übernimmt Fertigungsschritte, die nicht bereits im Spritzguss integriert sind – insbesondere nachträgliches Entgraten/Schleifen von Spritzgussteilen, Stanzen sowie Kleben von Zusatzteilen (unlösbares Fügen). Abgrenzung zu Montage: Montage komplettiert/fügt lösbar (z. B. Verschrauben), Endfertigung führt Fertigungsschritte aus bzw. fügt unlösbar. Der Aufgabenumfang ist dynamisch, da Fertigungsschritte nach Möglichkeit vorgelagert in den Spritzguss integriert werden."),
