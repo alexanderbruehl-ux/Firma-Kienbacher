@@ -495,7 +495,7 @@ const doc = new Document({
         bullet("Mitwirkung bei der Betreuung des digitalen Verbesserungsvorschlagswesens „Gut+ Vorschläge“ (App im Arbeitsplatz-Portal „Kienformation-Center“)"),
 
         blockHeading("6. Konzeption von Poka-Yoke-/Fehlervermeidungslösungen"),
-        akv("Aufgabe:", "Konzeption von Poka-Yoke-/Fehlervermeidungslösungen (z. B. ad-hoc-Hilfsmittel via 3D-Druck); Gegenstück zur laufenden Verifizierung („Dummy-Prüfung“), die bei den Teamleitungen liegt."),
+        akv("Aufgabe:", "Konzeption von Poka-Yoke-/Fehlervermeidungslösungen (z. B. ad-hoc-Hilfsmittel via 3D-Druck)."),
 
         // ============ 7.5.3.13 PQB ============
         roleHeading("7.5.3.13 Qualitätsprüfer/in (PQB)"),
