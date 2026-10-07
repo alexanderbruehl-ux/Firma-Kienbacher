@@ -208,9 +208,55 @@ Rollenzuordnung in 7.5.4 müssen **alle** bereits bestehenden Rollen
 gegengeprüft werden (nicht nur die naheliegendste), um Widersprüche zu
 bestehenden AKV-Inhalten zu vermeiden.
 
-## 7.5.4.5 Begleitende Produktionsarbeiten
+## 7.5.4.5 Abweichungsmanagement im laufenden Betrieb (vormals "Begleitende Produktionsarbeiten")
 
-*Noch zu bearbeiten.*
+**Alter Text (Version k, unverändert):**
+> "Störungen werden, wenn möglich, sogleich behoben. Vom QMB / PL wird
+> dann geprüft, ob Korrekturmaßnahmen notwendig sind, um
+> Wiederholungsfehler zu vermeiden. Laufende Qualitätskontrollen werden
+> vom PQB nach geregelter Häufigkeit lt. Arbeits- und Prüfanweisung
+> durchgeführt und protokolliert. Interne Reklamationen werden über den
+> Reklamationsbericht dokumentiert; der interne Reklamationskoordinator
+> führt die Maßnahmenverfolgung nach dem 8D-Verfahren durch. Eine
+> geregelte Wartung u. Instandhaltung (siehe Wartungslisten) dient als
+> vorbeugende Maßnahme zur Produktionssicherheit (6A-32-1). Der
+> Teamleader ist für die Auslieferqualität, für die Auswertung der
+> Produktionsvorkommnisse verantwortlich u. hat bei Bedarf Maßnahmen
+> einzuleiten."
+
+**Neuer Text:**
+> Störungen werden, wenn möglich, sogleich behoben. Die QS prüft
+> anschließend, ob Korrekturmaßnahmen notwendig sind, um
+> Wiederholungsfehler zu vermeiden. Laufende Qualitätskontrollen werden
+> vom PQB nach geregelter Häufigkeit lt. Arbeits- und Prüfanweisung
+> durchgeführt und protokolliert. Reklamationen mit externer Relevanz
+> werden über einen 8D-Report bearbeitet: Der Auftrag dazu ergeht vom
+> QMB an den Produktionsleiter, die QS unterstützt bei der
+> Durchführung. Eine geregelte Wartung und Instandhaltung dient als
+> vorbeugende Maßnahme zur Produktionssicherheit. Die Teamleitung
+> Spritzguss-Produktion ist für die Auslieferqualität sowie die
+> Auswertung der Produktionsvorkommnisse verantwortlich und hat bei
+> Bedarf Maßnahmen einzuleiten.
+
+**Korrekturen/Klärungen (gegen alle bestehenden Rollen geprüft):**
+- **"QMB / PL" → "QS"** beim Korrekturmaßnahmen-Check: Per
+  `QS.md` ist es QS, die den Bedarf feststellt (nicht QMB), während
+  die Produktionsleitung entscheidet
+- **"Interner Reklamationskoordinator" entfernt** — diese Rolle
+  existiert nicht. Geklärter Ablauf: Reklamationen mit **externer
+  Relevanz** werden im Auftrag des QMB vom **Produktionsleiter**
+  bearbeitet (8D-Report), **QS unterstützt**. Abgrenzung zu
+  Teamleitung/PQB (die allgemein auch Maßnahmenverfolgung bei
+  Q-Abweichungen machen, siehe `PQB.md`): die externe Relevanz/der
+  Kundenbezug. `QS.md` bleibt unverändert (Formulierung dort passt
+  bereits).
+- "(siehe Wartungslisten)" und alter Dokumentcode "(6A-32-1)" entfernt
+- "Teamleader" → "Teamleitung Spritzguss-Produktion" (konsistent mit
+  "exemplarisch für Spritzguss"-Rahmen aus 7.5.4.4)
+- **Überschrift geändert:** "Begleitende Produktionsarbeiten" (vage) →
+  "Abweichungsmanagement im laufenden Betrieb" (präziser,
+  etablierter QM-Begriff, deckt Störungen/Qualitätsabweichungen/
+  Reklamationen einheitlich ab)
 
 ## 7.5.4.6 Material
 
