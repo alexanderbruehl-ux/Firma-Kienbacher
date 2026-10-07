@@ -16,6 +16,7 @@ function h(text, level) {
 function p(text, opts = {}) {
   return new Paragraph({
     spacing: { after: 120 },
+    alignment: AlignmentType.JUSTIFIED,
     children: [new TextRun({ text, font: FONT, ...opts })],
   });
 }
@@ -24,6 +25,7 @@ function bullet(text, level = 0) {
   return new Paragraph({
     numbering: { reference: "bullets", level },
     spacing: { after: 60 },
+    alignment: AlignmentType.JUSTIFIED,
     children: [new TextRun({ text, font: FONT })],
   });
 }
@@ -47,6 +49,7 @@ function blockHeading(text) {
 function akv(label, text) {
   return new Paragraph({
     spacing: { after: 80 },
+    alignment: AlignmentType.JUSTIFIED,
     children: [
       new TextRun({ text: label + " ", bold: true, font: FONT, size: 20 }),
       new TextRun({ text, font: FONT, size: 20 }),
@@ -58,6 +61,7 @@ function akv(label, text) {
 function akvLabel(label) {
   return new Paragraph({
     spacing: { before: 40, after: 40 },
+    alignment: AlignmentType.JUSTIFIED,
     children: [new TextRun({ text: label, bold: true, font: FONT, size: 20 })],
   });
 }
@@ -65,6 +69,7 @@ function akvLabel(label) {
 function note(text) {
   return new Paragraph({
     spacing: { after: 100 },
+    alignment: AlignmentType.JUSTIFIED,
     children: [new TextRun({ text, italics: true, font: FONT, size: 18 })],
   });
 }
