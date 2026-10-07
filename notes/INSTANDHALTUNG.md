@@ -1,11 +1,8 @@
 # Rolle: Teamleitung Instandhaltung — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **in Bearbeitung** — Normrahmen recherchiert und abgestimmt,
-betriebsspezifische Details (Ersatzteilhaltung, Fremdfirmen,
-Dokumentationssystem) werden von Alexander noch ergänzt. Variable
-Detailangaben wie Teamgröße oder konkrete Kennzahlen-Zielwerte sind
-bewusst nicht Teil dieses Dokuments (siehe `PROJEKTSTATUS.md`,
-Methodik).
+Status: **inhaltlich abgeschlossen.** Variable Detailangaben wie
+Teamgröße oder konkrete Kennzahlen-Zielwerte sind bewusst nicht Teil
+dieses Dokuments (siehe `PROJEKTSTATUS.md`, Methodik).
 
 Kein Punkt aus Version k (neue Rolle, siehe OFFENE_ROLLEN.md). Gehört zur
 Gruppe **Unterstützungsprozesse** (siehe
@@ -64,7 +61,7 @@ vorgesetzte Stelle.
 
 ---
 
-## Themenblock 2: Abgrenzung zu Hersteller und Automatisierung
+## Themenblock 2: Abgrenzung zu Hersteller, Fremdfirmen und Automatisierung
 
 Instandhaltung deckt Wartung/Reparatur im Rahmen der eigenen Kapazitäten
 und Fachkenntnisse ab. Bei Reparaturen, die spezielles Herstellerwissen/
@@ -72,16 +69,12 @@ und Fachkenntnisse ab. Bei Reparaturen, die spezielles Herstellerwissen/
 Anlagenreparaturen), erfolgt eine Beauftragung/Koordination mit dem
 jeweiligen Anlagenhersteller.
 
+Für Infrastrukturthemen außerhalb der eigenen Fachkenntnisse (z. B.
+Klimaanlagen, Heizung) werden Wartung und Reparatur durch externe
+Fremdfirmen durchgeführt, die von der Instandhaltung regelmäßig
+beauftragt werden.
+
 Bei automatisierten Anlagen: mechanische/elektrische Instandhaltung liegt
 bei Instandhaltung, Programmierung/Konfiguration und tiefergehende
 automatisierungstechnische Themen liegen bei der Rolle Automatisierung
 (siehe OFFENE_ROLLEN.md).
-
----
-
-## Noch zu ergänzen (Alexander)
-
-- Ersatzteilhaltung: eigenes Lager, Umfang, Verantwortlichkeit
-- Umgang mit Fremdfirmen über Hersteller hinaus (z. B. externe
-  Instandhaltungsdienstleister)
-- Dokumentation: welches System/Tool für Wartungspläne und -historie
