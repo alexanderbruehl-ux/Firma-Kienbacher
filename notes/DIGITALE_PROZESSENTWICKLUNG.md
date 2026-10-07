@@ -62,8 +62,9 @@ Werkzeugbau-/Bemusterungsaufträge bei Werkzeugänderungen. Projektmitarbeit
 - Konzeptionelle und koordinierende Funktion für das betriebliche
   KVP-/Lean-Programm (Methodik, Workshops, Wertstromanalysen); operative
   Umsetzung erfolgt durch die einzelnen Teamleitungen
-- Betreuung des digitalen Verbesserungsvorschlagswesens „Gut+
-  Vorschläge" (App im Arbeitsplatz-Portal „Kienformation-Center")
+- Mitwirkung bei der Betreuung des digitalen
+  Verbesserungsvorschlagswesens „Gut+ Vorschläge" (App im
+  Arbeitsplatz-Portal „Kienformation-Center")
 
 ---
 

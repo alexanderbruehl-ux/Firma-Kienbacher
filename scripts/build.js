@@ -492,7 +492,7 @@ const doc = new Document({
         blockHeading("5. Lean-/KVP-Koordination"),
         akvLabel("Aufgabe:"),
         bullet("Konzeptionelle und koordinierende Funktion für das betriebliche KVP-/Lean-Programm (Methodik, Workshops, Wertstromanalysen); operative Umsetzung erfolgt durch die einzelnen Teamleitungen"),
-        bullet("Betreuung des digitalen Verbesserungsvorschlagswesens „Gut+ Vorschläge“ (App im Arbeitsplatz-Portal „Kienformation-Center“)"),
+        bullet("Mitwirkung bei der Betreuung des digitalen Verbesserungsvorschlagswesens „Gut+ Vorschläge“ (App im Arbeitsplatz-Portal „Kienformation-Center“)"),
 
         blockHeading("6. Konzeption von Poka-Yoke-/Fehlervermeidungslösungen"),
         akv("Aufgabe:", "Konzeption von Poka-Yoke-/Fehlervermeidungslösungen (z. B. ad-hoc-Hilfsmittel via 3D-Druck); Gegenstück zur laufenden Verifizierung („Dummy-Prüfung“), die bei den Teamleitungen liegt."),
