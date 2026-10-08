@@ -93,6 +93,11 @@ const doc = new Document({
         children: [new TextRun({ text: "Noch nicht Teil der Verfahrensanweisung 7V-5-1 — Basis für die Konsolidierung der QS-Rollenbeschreibung.", italics: true, font: FONT, size: 18 })],
       }),
 
+      h("Grundsätzliches"),
+      bullet("QS ist keine Serienfunktion für wiederkehrende, zyklische Prüfungen — das ist Aufgabe der PQB"),
+      bullet("QS ist auch nicht für die Freigabe einzelner Produktionsaufträge zuständig"),
+      bullet("QS agiert als übergeordnete, weiter und umfassender erfahrene und geschulte Q-Instanz"),
+
       h("Aufgaben"),
       ...AUFGABEN.map(bullet),
 
