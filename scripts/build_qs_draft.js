@@ -53,6 +53,7 @@ const AUFGABEN = [
   "Kontrolle des Bestands und der Abarbeitung des Sperrlagers (Nacharbeits-Aufträge)",
   "Organisation der erforderlichen Nacharbeit in Abstimmung mit der Produktionsplanung und -steuerung (PPS) bzgl. verfügbarem Personal",
   "Rückstellmusterkontrolle: Prüfung nach jeder abgeschlossenen Produktion, ob das Rückstellmuster (letztes Stück) den Qualitätsanforderungen entspricht — bei i. O. Ablage im RM-Regal, bei NIO Rückverfolgung des ersten Auftretens der Abweichung",
+  "Laufende persönliche Betreuung/Beratung der anwesenden PQB",
 ];
 
 const VERANTWORTLICHKEIT = [
