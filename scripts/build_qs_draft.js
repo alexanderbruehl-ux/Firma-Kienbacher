@@ -40,6 +40,7 @@ const AUFGABEN = [
   "Mitwirkung als Fachabteilung bei Unterweisungen (neben HR, SVP, SFK)",
   "Einbindung bei multidisziplinären, automatisierungsbedingten Prozessänderungen",
   "Kontrolle, Unterstützung und Einschulung neuen Personals (Qualitätsthemen)",
+  "Kontrolle aller laufenden Aufträge: Teile- und Maschinenzustand, Ausschussquote, korrekte Ausschuss-Trennung direkt an der Maschine, korrekte Buchungen, ordnungsgemäße Auftragsvorbereitung (Erststück, Rückstellmuster, vollständig ausgefüllte Dokumente, gekennzeichnete Ausschussbehälter)",
 ];
 
 const VERANTWORTLICHKEIT = [
