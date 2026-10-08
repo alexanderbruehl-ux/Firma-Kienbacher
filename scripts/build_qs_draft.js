@@ -49,6 +49,7 @@ const AUFGABEN = [
   "Kontrolle des Schichtlogbuchs auf Vollständigkeit (inkl. Vorkommnisse der 2. und 3. Schicht); Kontrolle der PQB-Einträge und der Schichtführer-Einträge",
   "Überblick über die Zuordnung des Personals zu den Maschinen, um den bestmöglichen Einsatz (Qualifikation und Produktivität) mit zu beurteilen",
   "Durchsicht des täglichen Ausschussberichts je Auftrag/Bauteil",
+  "Kontrolle und Verifizierung der Buchungscodes auf Korrektheit; bei Auffälligkeiten Rückfrage und Korrektur",
 ];
 
 const VERANTWORTLICHKEIT = [
