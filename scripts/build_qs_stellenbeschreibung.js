@@ -50,6 +50,7 @@ const MINDESTANFORDERUNGEN = [
   "Einschlägige Berufserfahrung in der Qualitätssicherung oder Produktion eines Fertigungsbetriebs",
   "Grundlegende Kenntnisse im Reklamations-/Problemlösungsmanagement (z. B. 8D)",
   "Gute EDV-Anwenderkenntnisse (ERP-/MES-Systeme)",
+  "Kenntnis aller Bauteile (Produktportfolio, Qualitätsanforderungen, typische Fehlerbilder)",
 ];
 
 const doc = new Document({
