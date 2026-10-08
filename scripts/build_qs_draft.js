@@ -46,6 +46,7 @@ const AUFGABEN = [
   "Prüfung der Anweisungen auf Aktualität (hat sich im Prozess etwas geändert?)",
   "Kontrolle von Auffälligkeiten bei den Bauteilen; Besprechung von Werkzeugthemen (z. B. notwendige Reparaturen wie Grate, Verschmutzungen, Spritzprobleme) mit Schichtführer/Einsteller/Rüster und bei Bedarf mit Werkzeugbau",
   "Festlegung von FGAs (Freigabeauftrag) nach Werkzeugwartung/-reparatur aufgrund von Qualitätsthemen",
+  "Kontrolle des Schichtlogbuchs auf Vollständigkeit (inkl. Vorkommnisse der 2. und 3. Schicht); Kontrolle der PQB-Einträge und der Schichtführer-Einträge",
 ];
 
 const VERANTWORTLICHKEIT = [
