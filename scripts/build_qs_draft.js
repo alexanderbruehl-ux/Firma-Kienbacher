@@ -50,6 +50,7 @@ const AUFGABEN = [
   "Überblick über die Zuordnung des Personals zu den Maschinen, um den bestmöglichen Einsatz (Qualifikation und Produktivität) mit zu beurteilen",
   "Durchsicht des täglichen Ausschussberichts je Auftrag/Bauteil",
   "Kontrolle und Verifizierung der Buchungscodes auf Korrektheit; bei Auffälligkeiten Rückfrage und Korrektur",
+  "Kontrolle des Bestands und der Abarbeitung des Sperrlagers (NA-Aufträge)",
 ];
 
 const VERANTWORTLICHKEIT = [
