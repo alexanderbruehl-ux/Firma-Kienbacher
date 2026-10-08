@@ -39,6 +39,7 @@ const AUFGABEN = [
   "Prüfung nach Störungsbehebung, ob Korrekturmaßnahmen notwendig sind, um Wiederholungsfehler zu vermeiden",
   "Mitwirkung als Fachabteilung bei Unterweisungen (neben HR, SVP, SFK)",
   "Einbindung bei multidisziplinären, automatisierungsbedingten Prozessänderungen",
+  "Kontrolle, Unterstützung und Einschulung neuen Personals (Qualitätsthemen)",
 ];
 
 const VERANTWORTLICHKEIT = [
