@@ -55,6 +55,7 @@ const AUFGABEN = [
   "Rückstellmusterkontrolle: Prüfung nach jeder abgeschlossenen Produktion, ob das Rückstellmuster (letztes Stück) den Qualitätsanforderungen entspricht — bei i. O. Ablage im RM-Regal, bei NIO Rückverfolgung des ersten Auftretens der Abweichung",
   "Laufende persönliche Betreuung/Beratung der anwesenden PQB",
   "Fachlicher Austausch vor Ort zu allen relevanten Tagesthemen",
+  "Aktualisierung der Qualifikationsmatrix; dokumentierte Durchführung von Mitarbeiterschulungen (z. B. bei neuen Mitarbeitern oder Qualitätsproblemen)",
 ];
 
 const VERANTWORTLICHKEIT = [
