@@ -48,6 +48,7 @@ const AUFGABEN = [
   "Festlegung von FGAs (Freigabeauftrag) nach Werkzeugwartung/-reparatur aufgrund von Qualitätsthemen",
   "Kontrolle des Schichtlogbuchs auf Vollständigkeit (inkl. Vorkommnisse der 2. und 3. Schicht); Kontrolle der PQB-Einträge und der Schichtführer-Einträge",
   "Überblick über die Zuordnung des Personals zu den Maschinen, um den bestmöglichen Einsatz (Qualifikation und Produktivität) mit zu beurteilen",
+  "Durchsicht des täglichen Ausschussberichts je Auftrag/Bauteil",
 ];
 
 const VERANTWORTLICHKEIT = [
