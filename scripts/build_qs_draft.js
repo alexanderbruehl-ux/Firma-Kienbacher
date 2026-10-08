@@ -58,6 +58,7 @@ const AUFGABEN = [
   "Aktualisierung der Qualifikationsmatrix; dokumentierte Durchführung von Mitarbeiterschulungen (z. B. bei neuen Mitarbeitern oder Qualitätsproblemen)",
   "Beratende Begleitung aktueller Bemusterungsaufträge gegenüber Bemusterer und Technik: Sichtung der Qualitätsanforderungen der zu bemusternden Teile und Prüfung am Bauteil",
   "Anlage des Rückstellmusters im System (FOSS)",
+  "Stichprobenprüfung an laufenden Bauteilen (visuell) als nächste Instanz nach PQB; Beauftragung von Bauteil-Messungen bei vermuteten Qualitätsabweichungen (zusätzlich zur 2-Stunden-Kontrolle der PQB)",
 ];
 
 const VERANTWORTLICHKEIT = [
