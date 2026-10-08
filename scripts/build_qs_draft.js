@@ -42,6 +42,7 @@ const AUFGABEN = [
   "Kontrolle, Unterstützung und Einschulung neuen Personals (Qualitätsthemen)",
   "Kontrolle aller laufenden Aufträge: Teile- und Maschinenzustand, Ausschussquote, korrekte Ausschuss-Trennung direkt an der Maschine, korrekte Buchungen, ordnungsgemäße Auftragsvorbereitung (Erststück, Rückstellmuster, vollständig ausgefüllte Dokumente, gekennzeichnete Ausschussbehälter)",
   "Kontrolle, ob alle Gebinde (interne Gebinde oder Ausliefergebinde) korrekt laut Auftrag vorbereitet, gebucht und bezettelt sind",
+  "Kontrolle, ob Arbeitsanweisungen und Verpackungsvorschriften am mobilen PC geöffnet/verfügbar sind",
 ];
 
 const VERANTWORTLICHKEIT = [
