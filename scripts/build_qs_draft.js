@@ -60,6 +60,7 @@ const AUFGABEN = [
   "Anlage des Rückstellmusters im System (FOSS)",
   "Stichprobenprüfung an laufenden Bauteilen (visuell) als nächste Instanz nach PQB; Beauftragung von Bauteil-Messungen bei vermuteten Qualitätsabweichungen (zusätzlich zur 2-Stunden-Kontrolle der PQB)",
   "Bei SPAs (Sonderaufträgen) und speziellen Aufträgen (z. B. FGAs): Freigabe im Zweifelsfall durch QS anstelle der PQB",
+  "Anstoß zur Anpassung von Arbeitsanweisungen und Verpackungsvorschriften; Durchführung von Packversuchen und Erarbeitung von Arbeitsabläufen inkl. Hilfsmittel/Ausstattung in Zusammenarbeit mit Projekttechnik und Verpackungsmanagement",
 ];
 
 const VERANTWORTLICHKEIT = [
