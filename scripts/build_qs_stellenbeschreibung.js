@@ -96,14 +96,6 @@ const doc = new Document({
       h("Mindestanforderungen an die Stelle"),
       p("Die folgenden Punkte stellen das Mindestniveau dar, unterhalb dessen die Stelle nicht ordnungsgemäß ausgeübt werden kann:"),
       ...MINDESTANFORDERUNGEN.map((t) => bullet(t)),
-
-      new Paragraph({
-        spacing: { before: 300 },
-        children: [new TextRun({
-          text: "Hinweis: Die Abschnitte „Erforderliche Qualifikationen“, „Erforderliche Kompetenzen“ und „Mindestanforderungen“ sind ein erster Vorschlag und noch von Alexander zu prüfen/anzupassen (konkrete Ausbildungs-/Erfahrungsschwellen liegen außerhalb dessen, was sich aus dem bisherigen Dokument ableiten lässt).",
-          italics: true, font: FONT, size: 18, color: "CC0000",
-        })],
-      }),
     ],
   }],
 });
