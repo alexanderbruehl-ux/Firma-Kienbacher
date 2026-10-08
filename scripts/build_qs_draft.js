@@ -56,6 +56,7 @@ const AUFGABEN = [
   "Laufende persönliche Betreuung/Beratung der anwesenden PQB",
   "Fachlicher Austausch vor Ort zu allen relevanten Tagesthemen",
   "Aktualisierung der Qualifikationsmatrix; dokumentierte Durchführung von Mitarbeiterschulungen (z. B. bei neuen Mitarbeitern oder Qualitätsproblemen)",
+  "Beratende Begleitung aktueller Bemusterungsaufträge gegenüber Bemusterer und Technik: Sichtung der Qualitätsanforderungen der zu bemusternden Teile und Prüfung am Bauteil",
 ];
 
 const VERANTWORTLICHKEIT = [
