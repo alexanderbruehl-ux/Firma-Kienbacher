@@ -44,6 +44,7 @@ const AUFGABEN = [
   "Kontrolle, ob alle Gebinde (interne Gebinde oder Ausliefergebinde) korrekt laut Auftrag vorbereitet, gebucht und bezettelt sind",
   "Kontrolle, ob Arbeitsanweisungen und Verpackungsvorschriften am mobilen PC geöffnet/verfügbar sind",
   "Prüfung der Anweisungen auf Aktualität (hat sich im Prozess etwas geändert?)",
+  "Kontrolle von Auffälligkeiten bei den Bauteilen; Besprechung von Werkzeugthemen (z. B. notwendige Reparaturen wie Grate, Verschmutzungen, Spritzprobleme) mit Schichtführer/Einsteller/Rüster und bei Bedarf mit Werkzeugbau",
 ];
 
 const VERANTWORTLICHKEIT = [
