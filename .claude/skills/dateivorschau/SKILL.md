@@ -2,16 +2,19 @@
 name: dateivorschau
 description: >-
   Projektuebergreifender Standard dieses Nutzers (Alexander Bruehl) fuer JEDE
-  Dateilieferung von PPTX/DOCX/XLSX/PDF/Bildern, in jedem Projekt/Repo - nicht
-  nur auf Nachfrage. Baut daraus eine eigenstaendige HTML-Vorschau -
-  vollstaendiger, scrollbarer Lese-Inhalt direkt aus der Datei (ganzes DOCX,
-  alle PPTX-Folien, kein Rendering-Dienst noetig), bei mehreren Dateien mit
-  Ordnerbaum-Navigation zum Auswaehlen - und veroeffentlicht sie als Artifact,
-  weil Claude Code/Cowork selbst keine Office-Dateien inline anzeigen. Nutze
-  diese Skill immer, wenn eine oder mehrere .docx/.pptx/.xlsx/.pdf/Bild-Dateien
-  an den Nutzer geliefert werden, auch ohne explizite Bitte um eine Vorschau -
-  das Fehlen einer brauchbaren Vorschau war wiederholt ein Problem fuer diesen
-  Nutzer.
+  fuer Menschen relevante Datei (PPTX/DOCX/XLSX/PDF/Bilder - Berichte,
+  Vorlagen, Listen, Uebersichten, alles zum Lesen/Pruefen), die in einem
+  Projekt/Repo entsteht oder geliefert wird - nicht nur auf Nachfrage.
+  Ausdruecklich NICHT fuer Quellcode-, Skript- oder Konfigurationsdateien
+  (.py/.js/.ts/.json/.yaml/.sh/...) - die zaehlen fuer diesen Nutzer nicht als
+  "relevant". Baut aus den relevanten Dateien eine eigenstaendige
+  HTML-Vorschau - vollstaendiger, scrollbarer Lese-Inhalt direkt aus der Datei
+  (ganzes DOCX, alle PPTX-Folien, kein Rendering-Dienst noetig), bei mehreren
+  Dateien mit Ordnerbaum-Navigation zum Auswaehlen - und veroeffentlicht sie
+  als Artifact, weil Claude Code/Cowork selbst keine Office-Dateien inline
+  anzeigen. Nutze diese Skill immer bei .docx/.pptx/.xlsx/.pdf/Bild-Dateien,
+  auch ohne explizite Bitte um eine Vorschau - das Fehlen einer brauchbaren
+  Vorschau war wiederholt ein Problem fuer diesen Nutzer.
 ---
 
 # Eine allgemeine Datei-Vorschau bauen
@@ -73,6 +76,22 @@ Artifact-Link: dort blockiert die Plattform von der Seite selbst
 ausgeloeste Downloads. Fuer eine Artifact-Ansicht bleibt nur die
 Ansicht selbst (Bilder/PDFs sichtbar), kein funktionierender Download-Button
 fuer andere Dateitypen - das ehrlich so benennen, keinen toten Button zeigen.
+
+## Was zaehlt als "relevante Datei" (und was nicht)
+
+"Relevant" heisst hier: **fuer Menschen relevant** - etwas, das jemand lesen,
+pruefen, ausdrucken oder weitergeben will. Das umfasst Word/Excel/PowerPoint/
+PDF/Bilder: Berichte, Stellen-/Rollenbeschreibungen, Listen, Vorlagen,
+Uebersichten, Auswertungen und Ähnliches.
+
+**Ausdruecklich nicht gemeint sind Code-Dateien** - Quellcode (`.py`, `.js`,
+`.ts`, `.go`, ...), Konfigurationsdateien (`.json`, `.yaml`, `.toml`, `.env`,
+...), Skripte, Build-/Infrastruktur-Dateien. Auch wenn solche Dateien im
+selben Projekt neu entstehen (z. B. das Werkzeug, das diese Vorschau selbst
+erzeugt), loesen sie diese Skill nicht aus - sie sind technische Arbeitsmittel,
+kein Lieferobjekt fuer den Nutzer. Diese Skill greift erst, sobald aus der
+Arbeit ein fuer Menschen lesbares Ergebnis entsteht (z. B. das generierte
+.docx), nicht fuer den Code, der es erzeugt hat.
 
 ## Standard-Ausgabeweg: als Artifact veroeffentlichen
 
