@@ -1,8 +1,15 @@
-"""Baut aus beliebigen Dateien eine eigenstaendige HTML-Vorschau mit
-Ordnerbaum-Navigation, vollstaendiger Lese-Ansicht je Datei und
-Download-Button.
+"""Baut aus beliebigen Dateien (oder ganzen Projektordnern) eine
+eigenstaendige HTML-Vorschau mit Ordnerbaum-Navigation, vollstaendiger
+Lese-Ansicht je Datei und Download-Button.
 
     python vorschau_erzeugen.py datei1.pptx datei2.png ... --out vorschau.html
+    python vorschau_erzeugen.py notes working source --out vorschau.html --titel "Dateien fuer Projekt: ..."
+
+Argumente koennen einzelne Dateien oder Ordner sein. Ein Ordner wird
+rekursiv nach fuer Menschen relevanten Dateien durchsucht (PPTX/DOCX/XLSX/
+PDF/Bilder) - Quellcode, Skripte, `node_modules`, `.git` und Aehnliches
+werden uebersprungen, damit das Projekt vollstaendig abgebildet wird statt
+nur der gerade frisch gelieferten Dateien.
 
 Kein Renderversuch ueber eine externe Office-Suite (LibreOffice haengt sich
 in vielen Sandbox-Umgebungen ohne Fehlermeldung auf, auch bei trivialen
@@ -56,6 +63,9 @@ except ImportError:
 
 BILD_TYPEN = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
 PDF_TYPEN = {".pdf"}
+DOKUMENT_TYPEN = {".pptx", ".ppt", ".docx", ".doc", ".xlsx", ".xls"}
+RELEVANTE_ENDUNGEN = BILD_TYPEN | PDF_TYPEN | DOKUMENT_TYPEN
+AUSSCHLUSS_ORDNER = {".git", "node_modules", "__pycache__", ".claude", ".venv", "venv"}
 EMU_PER_PT = 12700
 DOCX_ZEICHEN_LIMIT = 200_000
 
@@ -72,6 +82,32 @@ TYP_LABEL = {
 
 def esc(t: str) -> str:
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def sammle_relevante_dateien(pfade: list[Path]) -> list[Path]:
+    """Loest Ordner-Argumente rekursiv in relevante Dateien auf (Einzeldateien
+    bleiben unveraendert), dedupliziert und ueberspringt Code-/Systemordner."""
+    gesammelt: list[Path] = []
+    gesehen: set[Path] = set()
+
+    def hinzufuegen(datei: Path) -> None:
+        resolved = datei.resolve()
+        if resolved not in gesehen:
+            gesehen.add(resolved)
+            gesammelt.append(datei)
+
+    for pfad in pfade:
+        if pfad.is_dir():
+            for datei in sorted(pfad.rglob("*")):
+                if not datei.is_file():
+                    continue
+                if any(teil in AUSSCHLUSS_ORDNER for teil in datei.parts):
+                    continue
+                if datei.suffix.lower() in RELEVANTE_ENDUNGEN:
+                    hinzufuegen(datei)
+        else:
+            hinzufuegen(pfad)
+    return gesammelt
 
 
 def _shape_rgb(fill_or_line) -> str | None:
@@ -428,14 +464,20 @@ TEMPLATE = '''<meta charset="utf-8">
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("dateien", type=Path, nargs="+")
+    parser.add_argument("dateien", type=Path, nargs="+",
+                        help="Dateien und/oder Ordner (Ordner werden rekursiv nach relevanten Dateien durchsucht)")
     parser.add_argument("--out", type=Path, default=Path("vorschau.html"))
     parser.add_argument("--titel", default="Dateien")
     args = parser.parse_args()
 
-    html = bauen(args.dateien, args.titel)
+    dateien = sammle_relevante_dateien(args.dateien)
+    if not dateien:
+        print("Keine relevanten Dateien gefunden.")
+        return 1
+
+    html = bauen(dateien, args.titel)
     args.out.write_text(html, encoding="utf-8")
-    print(f"Vorschau erzeugt: {args.out} ({len(html)} Bytes, {len(args.dateien)} Dateien)")
+    print(f"Vorschau erzeugt: {args.out} ({len(html)} Bytes, {len(dateien)} Dateien)")
     return 0
 
 
