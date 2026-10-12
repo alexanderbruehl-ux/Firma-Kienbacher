@@ -68,6 +68,13 @@ function bullet(text) {
   });
 }
 
+function note(text) {
+  return new Paragraph({
+    spacing: { after: 160 },
+    children: [new TextRun({ text, italics: true, font: FONT, size: 20, color: "5C6169" })],
+  });
+}
+
 const verantwortung = [
   "Wirtschaftlicher Einsatz von Personal und Ressourcen",
   "Personalverantwortung für die Mitarbeiter der Produktion inkl. Werkzeugbau und Instandhaltung",
@@ -144,6 +151,12 @@ const doc = new Document({
 
         h("Kompetenzen"),
         ...kompetenzen.map(bullet),
+
+        h("Qualifikation"),
+        note("Platzhalter – Ausbildung, Berufserfahrung, fachliche Qualifikation noch mit Alexander abzustimmen."),
+
+        h("Mindestanforderungen"),
+        note("Platzhalter – Mindestvoraussetzungen (z. B. Kenntnisse, Zertifikate, Erfahrung) noch mit Alexander abzustimmen."),
 
         h3("Noch offen – Diskussion ausständig (Version k, unverändert)", true),
         ...offen.map(bullet),

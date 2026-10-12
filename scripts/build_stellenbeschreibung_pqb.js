@@ -61,6 +61,13 @@ function bullet(text) {
   });
 }
 
+function note(text) {
+  return new Paragraph({
+    spacing: { after: 160 },
+    children: [new TextRun({ text, italics: true, font: FONT, size: 20, color: "5C6169" })],
+  });
+}
+
 const aufgaben = [
   "Durchführung von fertigungsbegleitenden Qualitätsprüfungen",
   "Dokumentieren der Prüf- und Messergebnisse in Q Studio",
@@ -99,6 +106,12 @@ const doc = new Document({
 
         h("Aufgaben"),
         ...aufgaben.map(bullet),
+
+        h("Qualifikation"),
+        note("Platzhalter – Ausbildung, Berufserfahrung, fachliche Qualifikation noch mit Alexander abzustimmen."),
+
+        h("Mindestanforderungen"),
+        note("Platzhalter – Mindestvoraussetzungen (z. B. Kenntnisse, Zertifikate, Erfahrung) noch mit Alexander abzustimmen."),
       ],
     },
   ],

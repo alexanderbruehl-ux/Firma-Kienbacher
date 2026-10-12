@@ -117,8 +117,14 @@ const doc = new Document({
         bullet("2. Produktionsleitung entscheidet, was konkret gemacht wird"),
         bullet("3. QS prüft das Ergebnis und gibt bei Erfüllung der Anforderungen frei (z.B.: Entsperren von Teilen/Prozessen)"),
 
+        h("Qualifikation"),
+        note("Platzhalter – Ausbildung, Berufserfahrung, fachliche Qualifikation noch mit Alexander abzustimmen."),
+
+        h("Mindestanforderungen"),
+        note("Platzhalter – Mindestvoraussetzungen (z. B. Kenntnisse, Zertifikate, Erfahrung) noch mit Alexander abzustimmen."),
+
         h("Noch offen / zu klären"),
-        bullet("Qualifikationsanforderungen, Berichtslinie (disziplinarisch), Stellvertretung der Rolle selbst"),
+        bullet("Qualifikation und Mindestanforderungen (siehe oben), Berichtslinie (disziplinarisch), Stellvertretung der Rolle selbst"),
         bullet("Finale Abstimmung mit Alexander zu allen obigen Punkten"),
       ],
     },
