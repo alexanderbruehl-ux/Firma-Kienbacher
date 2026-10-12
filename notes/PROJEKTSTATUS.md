@@ -47,7 +47,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
 | **NEU: Produktionskoordination (Organisation/Personal)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 | **NEU: Prozesstechnik und Bemusterung** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
-| **NEU: QS (Qualitätssicherung Produktion)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
+| **NEU: QS (Qualitätssicherung Produktion)** | 🔶 Entwurf (als 7.5.3.9a) in `working/*.docx` auf Basis von `OFFENE_ROLLEN.md` — noch nicht im Detail mit Alexander abgestimmt |
 | **NEU: Endfertigung** (Bereich, geführt durch Teamleitung Endfertigung = Produktionskoordination) | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
 
 Details zu den neuen/umbenannten Rollen: siehe `OFFENE_ROLLEN.md`.
