@@ -3,8 +3,13 @@
 **Kanonischer Arbeits-Branch: `claude/modest-euler-g7v1lp`**
 
 Dieses Repo wird für mehrere, voneinander unabhängige Aufgaben genutzt. Für
-das Projekt „Revision der Verfahrensanweisung 7V-5-1 Auftragsabwicklung in
-der Produktion" (Ordner `notes/`, `scripts/`, `working/`) gilt:
+das Projekt „QM-Dokumente überarbeiten" (Revision der Verfahrensanweisung
+7V-5-1 Auftragsabwicklung in der Produktion; Ordner `notes/`, `scripts/`,
+`working/`, `source/`) gilt:
+
+- **Projektname** (z. B. für Fenstertitel wie bei der Dateivorschau):
+  „QM-Dokumente überarbeiten" — nicht der Dokumenttitel „7V-5-1
+  Auftragsabwicklung in der Produktion" und nicht der Repo-Name.
 
 - Der einzige gültige, aktuelle Stand liegt auf Branch
   `claude/modest-euler-g7v1lp`. Bitte **IMMER zuerst**
