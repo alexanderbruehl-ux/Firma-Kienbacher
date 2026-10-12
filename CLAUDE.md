@@ -23,20 +23,10 @@ der Produktion" (Ordner `notes/`, `scripts/`, `working/`) gilt:
   gehören zu anderen, abgeschlossenen oder überholten Aufgaben und
   sollten für dieses QM-Projekt nicht als Grundlage verwendet werden.
 
-## Allgemeines Prinzip (gilt projektübergreifend für Alexander Brühl)
+## Projektübergreifendes Prinzip
 
-Dieses Repo ist ein Beispiel für ein wiederkehrendes Problem: Wird eine
-neue Claude-Code-Session gestartet, ohne eine bestehende Session
-fortzusetzen, entsteht ein neuer, unabhängiger Branch — ohne Bezug zum
-zuletzt bearbeiteten Stand. Das führt zu doppelter/parallel verlaufender
-Arbeit (siehe `claude/restore-deleted-project-06650i`).
-
-**Für jedes neue Projekt/Repo von Alexander Brühl gilt die gleiche Regel:**
-Bevor an einem neuen oder unklaren Projekt gearbeitet wird, soll Claude
-von sich aus prüfen, ob es bereits ähnliche/verwandte Repos, Branches
-oder Sessions gibt (z. B. über `list_repos`, `git branch -a`,
-`list_sessions`), und den Nutzer proaktiv darauf hinweisen, statt
-stillschweigend einen neuen, isolierten Stand zu beginnen. Ein
-entsprechender Skill-Hinweis ("Dedup-Check bei Projektstart") ist unter
-`.claude/skills/` in diesem Repo hinterlegt und sollte bei Bedarf in
-andere Projekte von Alexander übertragen werden.
+Die allgemeine Regel gegen unbemerktes Auseinanderdriften von Branches/
+Sessions (für alle Projekte von Alexander Brühl, nicht nur dieses) liegt
+nicht hier, sondern account-weit im Skill `project-continuity-check`
+(im Profil gespeichert) sowie zusammengefasst in diesem Artifact:
+https://claude.ai/artifact/46iz8v6ydL9jgAeh5GhFpE
