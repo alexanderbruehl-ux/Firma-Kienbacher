@@ -334,7 +334,18 @@ def _baum_rendern(baum: dict) -> str:
     return "".join(teile)
 
 
-def bauen(pfade: list[Path], titel: str) -> str:
+def ableiten_name(titel: str) -> str:
+    """Kurzer Artifact-Name (Browser-Tab/Galerie) aus der Seitenueberschrift
+    ableiten: das generische Praefix "Dateien fuer Projekt: " abschneiden,
+    denn der Artifact-Name soll der Projektname selbst sein, kein Label plus
+    Doppelpunkt plus Erklaerung."""
+    praefix = "Dateien für Projekt: "
+    if titel.startswith(praefix):
+        return titel[len(praefix):].strip()
+    return titel
+
+
+def bauen(pfade: list[Path], titel: str, artifact_name: str | None = None) -> str:
     panels = []
     namen = []
     for i, p in enumerate(pfade):
@@ -381,6 +392,7 @@ def bauen(pfade: list[Path], titel: str) -> str:
 
     return TEMPLATE.format(
         titel=esc(titel),
+        name=esc(artifact_name or ableiten_name(titel)),
         klasse_browser=klasse_browser,
         navigation=navigation,
         panels="\n".join(panels),
@@ -389,7 +401,7 @@ def bauen(pfade: list[Path], titel: str) -> str:
 
 
 TEMPLATE = '''<meta charset="utf-8">
-<title>{titel}</title>
+<title>{name}</title>
 <meta name="description" content="Vollstaendige Lese-Ansicht, zum Herunterladen fuer Original-Bearbeitung im jeweiligen Programm." />
 <style>
   :root {{ --bg:#EFEEEA; --panel:#FFFFFF; --ink:#1B1F22; --muted:#6B6F73; --accent:#0079A7; --accent-ink:#00435C; --line:#D8DBDD; }}
@@ -467,7 +479,11 @@ def main() -> int:
     parser.add_argument("dateien", type=Path, nargs="+",
                         help="Dateien und/oder Ordner (Ordner werden rekursiv nach relevanten Dateien durchsucht)")
     parser.add_argument("--out", type=Path, default=Path("vorschau.html"))
-    parser.add_argument("--titel", default="Dateien")
+    parser.add_argument("--titel", default="Dateien",
+                        help='Seitenueberschrift (H1), z. B. "Dateien für Projekt: <Projektname>"')
+    parser.add_argument("--name", default=None,
+                        help="Kurzer Artifact-Name (Browser-Tab/Galerie) - nur der Projektname, "
+                             "ohne Praefix. Weggelassen: wird aus --titel abgeleitet.")
     args = parser.parse_args()
 
     dateien = sammle_relevante_dateien(args.dateien)
@@ -475,7 +491,7 @@ def main() -> int:
         print("Keine relevanten Dateien gefunden.")
         return 1
 
-    html = bauen(dateien, args.titel)
+    html = bauen(dateien, args.titel, args.name)
     args.out.write_text(html, encoding="utf-8")
     print(f"Vorschau erzeugt: {args.out} ({len(html)} Bytes, {len(dateien)} Dateien)")
     return 0

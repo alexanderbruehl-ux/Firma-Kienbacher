@@ -30,14 +30,19 @@ daraus eine Vorschau:
 ## Werkzeug
 
 ```
-python werkzeuge/vorschau_erzeugen.py datei1.pptx datei2.png ... --out vorschau.html --titel "..."
-python werkzeuge/vorschau_erzeugen.py notes working source --out vorschau.html --titel "Dateien für Projekt: ..."
+python werkzeuge/vorschau_erzeugen.py datei1.pptx datei2.png ... --out vorschau.html --titel "..." --name "..."
+python werkzeuge/vorschau_erzeugen.py notes working source --out vorschau.html --titel "Dateien für Projekt: <Projektname>"
 ```
 
 Argumente koennen einzelne Dateien **oder Ordner** sein. Ein Ordner wird
 rekursiv nach relevanten Dateien durchsucht (`node_modules`, `.git` und
 Aehnliches werden uebersprungen) - damit zeigt die Vorschau **das ganze
 Projekt**, nicht nur die gerade frisch gelieferten Dateien.
+
+`--titel` ist die Seitenueberschrift (H1), `--name` der kurze Artifact-Name
+(Browser-Tab/Galerie). Ohne `--name` wird er automatisch aus `--titel`
+abgeleitet (Praefix "Dateien für Projekt: " abgeschnitten) - bei einer
+Einzeldatei-Vorschau ohne dieses Praefix am besten `--name` explizit setzen.
 
 - **Bilder** (`png`, `jpg`, `jpeg`, `gif`, `webp`, `svg`) werden direkt als
   `<img>` eingebettet - vollstaendige Ansicht, kein Ausschnitt.
@@ -116,13 +121,23 @@ Projekt, auch ohne explizite Nachfrage:
 2. `--titel` immer im Format `"Dateien für Projekt: <Projektname>"` setzen,
    mit dem tatsaechlichen Namen des aktuellen Projekts (z. B. aus der
    CLAUDE.md oder dem Projektkontext) - nicht dem Repo-Namen und nicht dem
-   Namen einer einzelnen Datei. Die Fenster-Ueberschrift uebernimmt diesen
-   Titel direkt.
-3. Die erzeugte HTML-Datei pruefen: sie darf (und wird im Normalfall) kein
+   Namen einer einzelnen Datei. Das ist die **Seitenueberschrift (H1)**,
+   nicht der Artifact-Name (siehe naechster Punkt).
+3. **Artifact-Name getrennt davon sauber halten.** Der Browser-Tab-/
+   Galerie-Name eines Artifacts ist ein **Eigenname**, kein generisches
+   Label plus Doppelpunkt plus Erklaerung ("Dateien für Projekt: X" waere
+   als Artifact-Name zu unspezifisch/generisch-plus-angehaengt). Das
+   Werkzeug trennt das automatisch: der `<title>`-Tag (= Artifact-Name) wird
+   aus `--titel` abgeleitet, indem das Praefix "Dateien für Projekt: "
+   abgeschnitten wird - er lautet dann schlicht der Projektname. Bei
+   Einzeldateien-Vorschauen (kein Projekt-Scan) stattdessen `--name` mit
+   einem kurzen, spezifischen Namen setzen (z. B. der Dokumenttitel), falls
+   `--titel` selbst nicht schon ein passender Name ist.
+4. Die erzeugte HTML-Datei pruefen: sie darf (und wird im Normalfall) kein
    eigenes `<!DOCTYPE>`, `<html>`, `<head>` oder `<body>` enthalten - das
    Werkzeug erzeugt bereits ein Fragment, kompatibel mit dem
    Artifact-Skelett. Falls doch vorhanden, vor dem Publizieren entfernen.
-4. Mit dem **Artifact**-Werkzeug veroeffentlichen (`action: "quickstart"`
+5. Mit dem **Artifact**-Werkzeug veroeffentlichen (`action: "quickstart"`
    mit passendem `intent` vor der ersten Veroeffentlichung eines neuen
    Artifacts, danach `action: "publish"` mit `file_path` auf die
    Scratchpad-HTML). Das ist der Schritt, der die Vorschau tatsaechlich
@@ -131,12 +146,12 @@ Projekt, auch ohne explizite Nachfrage:
    Ansicht. Spaetere Lieferungen in diesem Projekt aktualisieren dieselbe
    Artifact-URL (gleicher `file_path`/`url`), statt staendig neue Links zu
    erzeugen.
-5. Die eigentlichen Originaldateien (DOCX/PPTX/...), die neu zur Lieferung
+6. Die eigentlichen Originaldateien (DOCX/PPTX/...), die neu zur Lieferung
    gehoeren, zusaetzlich wie gewohnt per `SendUserFile` mitschicken, damit
    der Nutzer sie herunterladen, oeffnen und bearbeiten kann - das Artifact
    ersetzt das Original nicht, es macht nur den Inhalt auf einen Blick
    sichtbar.
-6. Dem Nutzer kurz mitteilen, dass Download-Buttons innerhalb der
+7. Dem Nutzer kurz mitteilen, dass Download-Buttons innerhalb der
    Artifact-Ansicht inaktiv sind (siehe oben) und die Originaldateien dafuer
    extra mitgeschickt wurden.
 
