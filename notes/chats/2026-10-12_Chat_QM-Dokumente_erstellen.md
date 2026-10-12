@@ -50,3 +50,36 @@ Gedächtnisstand. Maßgeblich ist `notes/PROJEKTSTATUS.md` auf Branch
 
 - Entscheidung offen: 7V-5-1 finalisieren/freigeben, Feinplanungs-
   Anweisung erstellen, oder neues QM-Dokument.
+
+---
+
+## Fortsetzung (neue Session, 15:07)
+
+**Alexander (15:07):** Ich möchte für Kienbacher an einem Projekt arbeiten
+
+**Claude:** Gefragt, um welches Projekt es geht und ob das Repo
+„Firma-Kienbacher" eingebunden werden soll.
+
+**Alexander (15:08):** Ja
+
+**Claude:** Repo eingebunden und geklont; gemäß CLAUDE.md auf Branch
+`claude/modest-euler-g7v1lp` gewechselt, `notes/PROJEKTSTATUS.md` und
+dieses Chat-Protokoll gelesen (Live-Stand statt Gedächtnis). Stand
+zusammengefasst: 7V-5-1 inhaltlich komplett, Word-Dokument neu aufgebaut,
+Markup-Review abgeschlossen, QS-Entwürfe in `working/`. Erneut die drei
+Optionen angeboten (finalisieren/freigeben, Feinplanungs-Anweisung
+7.5.4.2, neues Projekt).
+
+**Alexander (15:09):** Pushe zuerst diesen Chat für eine Auswertung
+
+## Hinweis zur Auswertung
+
+- Ablauf dieser Session entspricht dem Skill `project-continuity-check`
+  (Schritt 0): erst Live-Stand aus Git gelesen, dann Aussage zum Stand.
+- Die neue Session startete ohne Repo; es musste erst eingebunden und
+  geklont werden, bevor der Stand geprüft werden konnte.
+
+## Offen (unverändert)
+
+- Entscheidung offen: 7V-5-1 finalisieren/freigeben, Feinplanungs-
+  Anweisung erstellen, oder neues Projekt.
