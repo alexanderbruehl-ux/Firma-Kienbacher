@@ -46,6 +46,9 @@ der Produktionsleiter-Block abgeschlossen ist (siehe PROJEKTSTATUS.md).
 - Ablauf Korrekturmaßnahmen: **QS stellt Bedarf fest** → Produktionsleitung
   entscheidet Maßnahme → **QS prüft und gibt frei** (z. B. Entsperren von
   Teilen/Prozessen) — siehe PRODUKTIONSLEITER.md, Themenblock 5
+- **Entwurf als eigenes Stellenbeschreibungs-Dokument angelegt:**
+  `stellenbeschreibungen/Stellenbeschreibung_QS_ENTWURF.docx` (siehe
+  Struktur-Entscheidung in PROJEKTSTATUS.md). Nicht Teil von `working/*.docx`.
 
 ## 4. Digitale Prozessentwicklung & Lean Management (ersetzt „Arbeitsvorbereitung", bisher 7.5.3.8)
 

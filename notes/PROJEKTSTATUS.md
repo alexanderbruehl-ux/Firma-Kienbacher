@@ -29,6 +29,15 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   raten, unternehmensspezifische Begriffe klären bevor sie ins Dokument kommen.
 - Alexander ergänzt nach dem gemeinsamen Grobentwurf noch weitere
   unternehmensspezifische Details selbst.
+- **Dokumentstruktur (Entscheidung):** Stellenbeschreibungen/Rollenbeschreibungen
+  sind **separate Dokumente**, eigener Ordner `stellenbeschreibungen/`, ein
+  `.docx` je Rolle — für **alle** Rollen, nicht nur neue. Sie werden NICHT in
+  `working/7V-5-1_*.docx` (die QM-Verfahrensanweisung) eingearbeitet, auch
+  nicht als Entwurf. 7V-5-1 Abschnitt 7.5.3.x bleibt die kurze Originalliste
+  je Rolle wie in Version k (Verweis auf die jeweilige Stellenbeschreibung
+  erfolgt ggf. später dort). Die AKV-Detailausarbeitung des Produktionsleiters
+  wurde entsprechend aus 7.5.3.1 wieder entfernt und liegt jetzt in
+  `stellenbeschreibungen/Stellenbeschreibung_Produktionsleiter_ENTWURF.docx`.
 
 ## Bearbeitungsstand
 
