@@ -30,3 +30,10 @@ Sessions (für alle Projekte von Alexander Brühl, nicht nur dieses) liegt
 nicht hier, sondern account-weit im Skill `project-continuity-check`
 (im Profil gespeichert) sowie zusammengefasst in diesem Artifact:
 https://claude.ai/artifact/46iz8v6ydL9jgAeh5GhFpE
+
+Ebenso projektübergreifend (nicht nur dieses Projekt betreffend): der
+Standard, jede für Menschen relevante Dateilieferung (DOCX/PPTX/XLSX/PDF/
+Bilder — nicht Code) zusätzlich als Artifact-Vorschau sichtbar zu machen,
+liegt account-weit im Skill `dateivorschau` (im Profil gespeichert) sowie
+zusammengefasst in diesem Artifact:
+https://claude.ai/artifact/RD8VYYvhiiyKhmiFys8sSH
