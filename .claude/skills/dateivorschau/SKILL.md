@@ -1,7 +1,17 @@
 ---
 name: dateivorschau
-description: Projektuebergreifender Standard dieses Nutzers (Alexander Bruehl) fuer JEDE Dateilieferung von PPTX/DOCX/XLSX/PDF/Bildern, in jedem Projekt/Repo - nicht nur auf Nachfrage. Baut daraus eine eigenstaendige HTML-Vorschau mit echtem Inhaltsauszug (erste Folie bzw. Textauszug aus der tatsaechlichen Datei, kein Rendering-Dienst noetig) und veroeffentlicht sie als Artifact, weil Claude Code/Cowork selbst keine Office-Dateien inline anzeigen. Nutze diese Skill immer, wenn eine oder mehrere .docx/.pptx/.xlsx/.pdf/Bild-Dateien an den Nutzer geliefert werden, auch ohne explizite Bitte um eine Vorschau - das Fehlen einer brauchbaren Vorschau war wiederholt ein Problem fuer diesen Nutzer.
-user-invocable: false
+description: >-
+  Projektuebergreifender Standard dieses Nutzers (Alexander Bruehl) fuer JEDE
+  Dateilieferung von PPTX/DOCX/XLSX/PDF/Bildern, in jedem Projekt/Repo - nicht
+  nur auf Nachfrage. Baut daraus eine eigenstaendige HTML-Vorschau -
+  vollstaendiger, scrollbarer Lese-Inhalt direkt aus der Datei (ganzes DOCX,
+  alle PPTX-Folien, kein Rendering-Dienst noetig), bei mehreren Dateien mit
+  Ordnerbaum-Navigation zum Auswaehlen - und veroeffentlicht sie als Artifact,
+  weil Claude Code/Cowork selbst keine Office-Dateien inline anzeigen. Nutze
+  diese Skill immer, wenn eine oder mehrere .docx/.pptx/.xlsx/.pdf/Bild-Dateien
+  an den Nutzer geliefert werden, auch ohne explizite Bitte um eine Vorschau -
+  das Fehlen einer brauchbaren Vorschau war wiederholt ein Problem fuer diesen
+  Nutzer.
 ---
 
 # Eine allgemeine Datei-Vorschau bauen
