@@ -1,5 +1,6 @@
-"""Baut aus beliebigen Dateien eine eigenstaendige HTML-Uebersicht mit
-Download-Button je Datei.
+"""Baut aus beliebigen Dateien eine eigenstaendige HTML-Vorschau mit
+Ordnerbaum-Navigation, vollstaendiger Lese-Ansicht je Datei und
+Download-Button.
 
     python vorschau_erzeugen.py datei1.pptx datei2.png ... --out vorschau.html
 
@@ -9,15 +10,17 @@ Dateien - und ein eingebettetes docProps/thumbnail.jpeg ist meist nur ein
 leerer Platzhalter, kein echtes Abbild). Stattdessen:
 
 - Bilder und PDFs werden inline angezeigt, weil Browser das nativ koennen.
-- PPTX: die erste Folie wird aus den tatsaechlichen Shapes (Position, Farbe,
-  Text) als kleine Facsimile-Vorschau nachgebaut - echte Werte aus der
+- PPTX: jede Folie wird aus den tatsaechlichen Shapes (Position, Farbe, Text)
+  nachgebaut und untereinander scrollbar dargestellt - echte Werte aus der
   Datei, kein Rendering-Dienst noetig.
-- DOCX: ein Textauszug (Ueberschriften/Absaetze) aus dem Dokumentkoerper.
+- DOCX: der komplette Dokumentkoerper (Absaetze, Ueberschriften, Tabellen) in
+  Original-Reihenfolge, scrollbar, reine Lese-Ansicht.
 - Alles andere (XLSX, ZIP, ...) bekommt eine Karte mit Dateityp und Groesse.
+- Bei mehreren Dateien: Ordnerbaum links (bzw. Auswahlliste auf schmalen
+  Bildschirmen) zum Umschalten zwischen den Dateien.
 
-Bearbeiten, Drucken und die vollstaendige Ansicht passieren im jeweiligen
-Originalprogramm, nicht im Browser - die Vorschau ist ein Anhaltspunkt, kein
-Ersatz.
+Bearbeiten und Drucken passieren im jeweiligen Originalprogramm, nicht im
+Browser - die Vorschau ist eine vollstaendige Lese-Ansicht, kein Editor.
 
 Funktioniert nur als eigenstaendige Datei (lokal geoeffnet oder per Datei
 weitergegeben) - in einer eingebetteten/sandboxed Ansicht (z. B. ein
@@ -32,6 +35,7 @@ from __future__ import annotations
 import argparse
 import base64
 import mimetypes
+import os
 from pathlib import Path
 
 try:
@@ -43,6 +47,9 @@ except ImportError:
 
 try:
     import docx as docx_lib
+    from docx.oxml.ns import qn
+    from docx.table import Table as DocxTable
+    from docx.text.paragraph import Paragraph as DocxParagraph
     _DOCX_VERFUEGBAR = True
 except ImportError:
     _DOCX_VERFUEGBAR = False
@@ -50,6 +57,7 @@ except ImportError:
 BILD_TYPEN = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
 PDF_TYPEN = {".pdf"}
 EMU_PER_PT = 12700
+DOCX_ZEICHEN_LIMIT = 200_000
 
 TYP_LABEL = {
     ".pptx": "PowerPoint", ".ppt": "PowerPoint",
@@ -73,23 +81,7 @@ def _shape_rgb(fill_or_line) -> str | None:
         return None
 
 
-def pptx_vorschau_html(pfad: Path) -> str | None:
-    """Baut die erste Folie aus den echten Shapes nach - Position, Farbe und
-    Text kommen direkt aus der Datei, kein Rendering-Dienst noetig."""
-    if not _PPTX_VERFUEGBAR:
-        return None
-    try:
-        prs = Presentation(str(pfad))
-        if not prs.slides:
-            return None
-        slide = prs.slides[0]
-        sb_w, sb_h = prs.slide_width, prs.slide_height
-        if not sb_w or not sb_h:
-            return None
-        breite_pt = sb_w / EMU_PER_PT
-    except Exception:
-        return None
-
+def _slide_html(slide, sb_w: int, sb_h: int, breite_pt: float) -> str:
     def pct(v, ganz):
         return round((v or 0) / ganz * 100, 3)
 
@@ -136,14 +128,57 @@ def pptx_vorschau_html(pfad: Path) -> str | None:
             if zeilen:
                 teile.append(f'<div style="{basis}overflow:hidden;">{"".join(zeilen)}</div>')
 
-    aspekt = round(sb_w / sb_h, 4)
-    inhalt = "\n".join(teile)
-    return (f'<div class="preview pptx-preview" style="container-type:inline-size;">'
-           f'<div class="pptx-slide" style="aspect-ratio:{aspekt};">{inhalt}</div></div>')
+    return "".join(teile)
+
+
+def pptx_vorschau_html(pfad: Path) -> str | None:
+    """Baut jede Folie aus den echten Shapes nach - Position, Farbe und Text
+    kommen direkt aus der Datei, kein Rendering-Dienst noetig. Alle Folien
+    werden untereinander scrollbar dargestellt."""
+    if not _PPTX_VERFUEGBAR:
+        return None
+    try:
+        prs = Presentation(str(pfad))
+        if not prs.slides:
+            return None
+        sb_w, sb_h = prs.slide_width, prs.slide_height
+        if not sb_w or not sb_h:
+            return None
+        breite_pt = sb_w / EMU_PER_PT
+        aspekt = round(sb_w / sb_h, 4)
+    except Exception:
+        return None
+
+    folien = []
+    for i, slide in enumerate(prs.slides, start=1):
+        try:
+            inhalt = _slide_html(slide, sb_w, sb_h, breite_pt)
+        except Exception:
+            inhalt = ""
+        folien.append(
+            f'<div class="pptx-folie-nr">Folie {i}</div>'
+            f'<div class="pptx-slide" style="aspect-ratio:{aspekt};" '
+            f'container-type="inline-size">{inhalt}</div>'
+        )
+    if not folien:
+        return None
+    return f'<div class="preview pptx-preview" style="container-type:inline-size;">{"".join(folien)}</div>'
+
+
+def _docx_block_items(dok):
+    body = dok.element.body
+    for child in body.iterchildren():
+        if child.tag == qn("w:p"):
+            yield DocxParagraph(child, dok)
+        elif child.tag == qn("w:tbl"):
+            yield DocxTable(child, dok)
 
 
 def docx_vorschau_html(pfad: Path) -> str | None:
-    """Textauszug (Ueberschriften/Absaetze) aus dem Dokumentkoerper."""
+    """Der komplette Dokumentkoerper (Absaetze, Ueberschriften, Tabellen) in
+    Original-Reihenfolge - vollstaendige Lese-Ansicht, keine Kuerzung
+    (ausser bei sehr langen Dokumenten, als Schutz vor unhandlichen
+    Dateigroessen)."""
     if not _DOCX_VERFUEGBAR:
         return None
     try:
@@ -153,20 +188,33 @@ def docx_vorschau_html(pfad: Path) -> str | None:
 
     bloecke = []
     zeichen = 0
-    for para in dok.paragraphs:
-        text = para.text.strip()
-        if not text:
-            continue
-        ist_ueberschrift = para.style is not None and "Heading" in (para.style.name or "")
-        tag = "h3" if ist_ueberschrift else "p"
-        bloecke.append(f'<{tag}>{esc(text)}</{tag}>')
-        zeichen += len(text)
-        if zeichen > 700:
-            bloecke.append('<p class="fade-hint">&hellip;</p>')
+    gekuerzt = False
+    for item in _docx_block_items(dok):
+        if zeichen > DOCX_ZEICHEN_LIMIT:
+            gekuerzt = True
             break
+        if isinstance(item, DocxParagraph):
+            text = item.text.strip()
+            if not text:
+                continue
+            ist_ueberschrift = item.style is not None and "Heading" in (item.style.name or "")
+            tag = "h3" if ist_ueberschrift else "p"
+            bloecke.append(f'<{tag}>{esc(text)}</{tag}>')
+            zeichen += len(text)
+        else:
+            zeilen = []
+            for zeile in item.rows:
+                zellen = "".join(f'<td>{esc(z.text.strip())}</td>' for z in zeile.cells)
+                zeilen.append(f'<tr>{zellen}</tr>')
+                zeichen += sum(len(z.text) for z in zeile.cells)
+            if zeilen:
+                bloecke.append(f'<table>{"".join(zeilen)}</table>')
     if not bloecke:
         return None
-    return f'<div class="preview docx-preview"><div class="docx-page">{"".join(bloecke)}</div></div>'
+    if gekuerzt:
+        bloecke.append('<p class="fade-hint">&hellip; Dokument sehr lang, hier gekuerzt - '
+                       'fuer den vollstaendigen Inhalt Original herunterladen.</p>')
+    return f'<div class="docx-page">{"".join(bloecke)}</div>'
 
 
 def groesse_lesbar(bytes_zahl: int) -> str:
@@ -178,7 +226,22 @@ def groesse_lesbar(bytes_zahl: int) -> str:
     return f"{wert:.1f} GB"
 
 
-def datei_karte(pfad: Path) -> str:
+def rel_anzeige(pfad: Path) -> str:
+    """Pfad relativ zum aktuellen Arbeitsverzeichnis, fuer die
+    Ordnerbaum-Gruppierung. Liegt die Datei ausserhalb (z. B. /tmp), wird
+    nur der Dateiname verwendet - kein Baum mit '..'-Eintraegen."""
+    try:
+        rel = os.path.relpath(pfad, Path.cwd())
+    except ValueError:
+        return pfad.name
+    if rel.startswith(".."):
+        return pfad.name
+    return rel.replace(os.sep, "/")
+
+
+def datei_panel(index: int, pfad: Path, aktiv: bool) -> tuple[str, str]:
+    """Baut das Panel (Viewer-Ansicht) einer Datei. Gibt (anzeigename,
+    panel_html) zurueck."""
     ext = pfad.suffix.lower()
     daten = pfad.read_bytes()
     b64 = base64.b64encode(daten).decode()
@@ -186,6 +249,7 @@ def datei_karte(pfad: Path) -> str:
     typ_label = TYP_LABEL.get(ext, ext.lstrip(".").upper() or "Datei")
     groesse = groesse_lesbar(len(daten))
     data_url = f"data:{mime};base64,{b64}"
+    anzeigename = rel_anzeige(pfad)
 
     vorschau = None
     if ext in BILD_TYPEN:
@@ -195,30 +259,102 @@ def datei_karte(pfad: Path) -> str:
     elif ext == ".pptx":
         vorschau = pptx_vorschau_html(pfad)
     elif ext == ".docx":
-        vorschau = docx_vorschau_html(pfad)
+        inhalt = docx_vorschau_html(pfad)
+        if inhalt:
+            vorschau = f'<div class="preview docx-preview">{inhalt}</div>'
 
     if vorschau is None:
         vorschau = f'<div class="preview no-preview"><span class="file-badge">{esc(typ_label)}</span></div>'
 
-    return f'''
-<article class="card">
-  {vorschau}
-  <div class="meta">
+    aktiv_klasse = " active" if aktiv else ""
+    panel = f'''
+<section class="file-panel{aktiv_klasse}" id="panel-{index}">
+  <div class="panel-header">
     <h2>{esc(pfad.name)}</h2>
     <p class="sub">{esc(typ_label)} &middot; {groesse}</p>
+    <a class="btn" href="{data_url}" download="{esc(pfad.name)}">Herunterladen</a>
   </div>
-  <a class="btn" href="{data_url}" download="{esc(pfad.name)}">Herunterladen</a>
-</article>'''
+  {vorschau}
+</section>'''
+    return anzeigename, panel
+
+
+def _baum_einfuegen(baum: dict, teile: list[str], index: int) -> None:
+    if len(teile) == 1:
+        baum.setdefault("__dateien__", []).append((teile[0], index))
+        return
+    unterordner = baum.setdefault("__ordner__", {}).setdefault(teile[0], {})
+    _baum_einfuegen(unterordner, teile[1:], index)
+
+
+def _baum_rendern(baum: dict) -> str:
+    teile = []
+    for name, unterbaum in sorted(baum.get("__ordner__", {}).items()):
+        teile.append(f'<li class="folder"><span class="folder-label">{esc(name)}</span>'
+                     f'<ul>{_baum_rendern(unterbaum)}</ul></li>')
+    for name, index in sorted(baum.get("__dateien__", []), key=lambda t: t[0].lower()):
+        teile.append(f'<li><button type="button" class="tree-file" data-target="panel-{index}">'
+                     f'{esc(name)}</button></li>')
+    return "".join(teile)
 
 
 def bauen(pfade: list[Path], titel: str) -> str:
-    karten = "\n".join(datei_karte(p) for p in pfade)
-    return TEMPLATE.format(titel=esc(titel), karten=karten)
+    panels = []
+    namen = []
+    for i, p in enumerate(pfade):
+        name, panel = datei_panel(i, p, aktiv=(i == 0))
+        namen.append(name)
+        panels.append(panel)
+
+    if len(pfade) <= 1:
+        navigation = ""
+        klasse_browser = "browser single"
+    else:
+        baum = {}
+        for i, name in enumerate(namen):
+            _baum_einfuegen(baum, name.split("/"), i)
+        baum_html = _baum_rendern(baum)
+
+        optionen = "".join(
+            f'<option value="panel-{i}"{" selected" if i == 0 else ""}>{esc(name)}</option>'
+            for i, name in enumerate(namen)
+        )
+        navigation = f'''
+    <select id="dateiauswahl" class="mobile-nav" aria-label="Datei auswaehlen">{optionen}</select>
+    <nav class="tree"><ul>{baum_html}</ul></nav>'''
+        klasse_browser = "browser"
+
+    script = ""
+    if len(pfade) > 1:
+        script = '''
+<script>
+  function zeigeDatei(id) {
+    document.querySelectorAll('.file-panel').forEach(function (p) { p.classList.toggle('active', p.id === id); });
+    document.querySelectorAll('.tree-file').forEach(function (b) { b.classList.toggle('active', b.dataset.target === id); });
+    var auswahl = document.getElementById('dateiauswahl');
+    if (auswahl) { auswahl.value = id; }
+  }
+  document.querySelectorAll('.tree-file').forEach(function (btn) {
+    btn.addEventListener('click', function () { zeigeDatei(btn.dataset.target); });
+  });
+  var auswahl = document.getElementById('dateiauswahl');
+  if (auswahl) { auswahl.addEventListener('change', function (e) { zeigeDatei(e.target.value); }); }
+  var ersterTreeFile = document.querySelector('.tree-file');
+  if (ersterTreeFile) { ersterTreeFile.classList.add('active'); }
+</script>'''
+
+    return TEMPLATE.format(
+        titel=esc(titel),
+        klasse_browser=klasse_browser,
+        navigation=navigation,
+        panels="\n".join(panels),
+        script=script,
+    )
 
 
 TEMPLATE = '''<meta charset="utf-8">
 <title>{titel}</title>
-<meta name="description" content="Dateien im Original herunterladen - zum Oeffnen, Bearbeiten und Drucken im jeweiligen Programm." />
+<meta name="description" content="Vollstaendige Lese-Ansicht, zum Herunterladen fuer Original-Bearbeitung im jeweiligen Programm." />
 <style>
   :root {{ --bg:#EFEEEA; --panel:#FFFFFF; --ink:#1B1F22; --muted:#6B6F73; --accent:#0079A7; --accent-ink:#00435C; --line:#D8DBDD; }}
   @media (prefers-color-scheme: dark) {{
@@ -227,45 +363,66 @@ TEMPLATE = '''<meta charset="utf-8">
   :root[data-theme="dark"] {{ --bg:#14171A; --panel:#1D2124; --ink:#EDEFF1; --muted:#9BA0A5; --accent:#4DB8E0; --accent-ink:#7FD1EE; --line:#33383C; }}
   * {{ box-sizing:border-box; }}
   body {{ margin:0; padding-inline:16px; padding-block:24px; background:var(--bg); color:var(--ink); font-family:Arial, Helvetica, sans-serif; }}
-  .wrap {{ max-width:960px; margin:0 auto; }}
+  .wrap {{ max-width:1180px; margin:0 auto; }}
   h1 {{ font-size:clamp(20px,4vw,28px); color:var(--accent-ink); margin:0 0 6px; text-wrap:balance; }}
-  .sub-page {{ color:var(--muted); font-size:14px; margin:0 0 24px; max-width:65ch; }}
-  .grid {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:16px; }}
-  .card {{ background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 6px 20px -14px rgba(0,0,0,.3); }}
-  .preview {{ background:var(--bg); display:flex; align-items:center; justify-content:center; min-height:140px; border-bottom:1px solid var(--line); overflow:hidden; }}
-  .img-preview img {{ width:100%; height:140px; object-fit:contain; }}
-  .pdf-preview embed {{ width:100%; height:180px; }}
-  .no-preview {{ padding:20px; }}
-  .pptx-preview {{ padding:10px; align-items:stretch; }}
-  .pptx-slide {{ position:relative; width:100%; background:#FFFFFF; border:1px solid var(--line); border-radius:4px; overflow:hidden; color:#1B1F22; font-family:Arial, Helvetica, sans-serif; }}
-  .docx-preview {{ align-items:flex-start; padding:14px; height:180px; }}
+  .sub-page {{ color:var(--muted); font-size:14px; margin:0 0 20px; max-width:70ch; }}
+  .browser {{ display:grid; grid-template-columns:240px 1fr; gap:18px; align-items:start; }}
+  .browser.single {{ grid-template-columns:1fr; }}
+  .mobile-nav {{ display:none; width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--line); background:var(--panel); color:var(--ink); font-size:14px; margin-bottom:12px; }}
+  .tree {{ background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 6px; max-height:75vh; overflow:auto; }}
+  .tree ul {{ list-style:none; margin:0; padding-left:14px; }}
+  .tree > ul {{ padding-left:4px; }}
+  .tree li {{ margin:2px 0; }}
+  .folder-label {{ display:block; padding:6px 8px; font-size:13px; font-weight:700; color:var(--muted); }}
+  .tree-file {{ display:block; width:100%; text-align:left; background:none; border:none; padding:7px 8px; border-radius:6px; font-size:13px; color:var(--ink); cursor:pointer; word-break:break-word; }}
+  .tree-file:hover {{ background:var(--bg); }}
+  .tree-file.active {{ background:var(--accent); color:#FFFFFF; }}
+  .viewer {{ min-width:0; }}
+  .file-panel {{ display:none; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }}
+  .file-panel.active {{ display:block; }}
+  .panel-header {{ padding:16px 18px 14px; border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; }}
+  .panel-header h2 {{ font-size:16px; margin:0; word-break:break-word; color:var(--ink); flex:1 1 auto; }}
+  .panel-header .sub {{ font-size:12px; color:var(--muted); margin:0; }}
+  .btn {{ padding:8px 14px; border-radius:6px; background:var(--accent); color:#FFFFFF; font-weight:700; font-size:13px; text-decoration:none; white-space:nowrap; }}
+  .preview {{ background:var(--bg); }}
+  .img-preview {{ padding:14px; text-align:center; }}
+  .img-preview img {{ max-width:100%; max-height:75vh; object-fit:contain; }}
+  .pdf-preview embed {{ width:100%; height:75vh; display:block; }}
+  .no-preview {{ padding:28px; text-align:center; }}
+  .pptx-preview {{ padding:14px; max-height:75vh; overflow:auto; display:flex; flex-direction:column; gap:10px; }}
+  .pptx-folie-nr {{ font-size:12px; color:var(--muted); font-weight:700; }}
+  .pptx-slide {{ position:relative; width:100%; background:#FFFFFF; border:1px solid var(--line); border-radius:4px; overflow:hidden; color:#1B1F22; font-family:Arial, Helvetica, sans-serif; flex:none; }}
+  .docx-preview {{ padding:16px; max-height:75vh; overflow:auto; }}
   .docx-page {{
-    width:100%; height:100%; overflow:hidden; position:relative;
-    background:#FFFFFF; border:1px solid var(--line); border-radius:4px;
-    padding:12px 14px; font-family:Georgia, 'Times New Roman', serif; color:#1B1F22;
+    width:100%; background:#FFFFFF; border:1px solid var(--line); border-radius:4px;
+    padding:20px 24px; font-family:Georgia, 'Times New Roman', serif; color:#1B1F22;
   }}
-  .docx-page h3 {{ font-size:13px; margin:0 0 6px; }}
-  .docx-page p {{ font-size:11px; line-height:1.4; margin:0 0 6px; color:#3A3D40; }}
+  .docx-page h3 {{ font-size:16px; margin:18px 0 8px; }}
+  .docx-page h3:first-child {{ margin-top:0; }}
+  .docx-page p {{ font-size:14px; line-height:1.55; margin:0 0 10px; color:#2A2D30; }}
+  .docx-page table {{ border-collapse:collapse; width:100%; margin:0 0 14px; font-size:13px; }}
+  .docx-page td {{ border:1px solid #C7CACD; padding:5px 8px; vertical-align:top; }}
   .docx-page .fade-hint {{ color:var(--muted); font-style:italic; }}
-  .docx-page::after {{
-    content:""; position:absolute; left:0; right:0; bottom:0; height:36px;
-    background:linear-gradient(to bottom, transparent, #FFFFFF);
-  }}
   .file-badge {{ display:inline-block; padding:6px 12px; border-radius:6px; background:var(--accent); color:#FFFFFF; font-size:12px; font-weight:700; letter-spacing:.02em; }}
-  .meta {{ padding:12px 14px 4px; flex:1; }}
-  .meta h2 {{ font-size:14px; margin:0 0 4px; word-break:break-word; color:var(--ink); }}
-  .meta .sub {{ font-size:12px; color:var(--muted); margin:0; }}
-  .btn {{ margin:12px 14px 14px; text-align:center; padding:9px 14px; border-radius:6px; background:var(--accent); color:#FFFFFF; font-weight:700; font-size:13px; text-decoration:none; }}
   footer {{ margin-top:28px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }}
+  @media (max-width: 680px) {{
+    .browser {{ grid-template-columns:1fr; }}
+    .tree {{ display:none; }}
+    .mobile-nav {{ display:block; }}
+  }}
 </style>
 <div class="wrap">
   <header>
     <h1>{titel}</h1>
-    <p class="sub-page">Original-Dateien zum Herunterladen. Oeffnen, Bearbeiten und Drucken passiert im jeweiligen Programm (PowerPoint, Word, Bildbetrachter, ...), nicht in dieser Seite.</p>
+    <p class="sub-page">Vollstaendige Lese-Ansicht zum Durchscrollen. Bearbeiten und Drucken passiert im jeweiligen Originalprogramm - dafuer die Datei ueber den Button herunterladen.</p>
   </header>
-  <div class="grid">{karten}</div>
+  <div class="{klasse_browser}">
+    {navigation}
+    <div class="viewer">{panels}</div>
+  </div>
   <footer>Kienbacher &middot; Datei-Vorschau</footer>
 </div>
+{script}
 '''
 
 
