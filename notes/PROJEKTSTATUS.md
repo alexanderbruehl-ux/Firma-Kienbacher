@@ -29,15 +29,15 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
   raten, unternehmensspezifische Begriffe klären bevor sie ins Dokument kommen.
 - Alexander ergänzt nach dem gemeinsamen Grobentwurf noch weitere
   unternehmensspezifische Details selbst.
-- **Dokumentstruktur (Entscheidung):** Stellenbeschreibungen/Rollenbeschreibungen
-  sind **separate Dokumente**, eigener Ordner `stellenbeschreibungen/`, ein
-  `.docx` je Rolle — für **alle** Rollen, nicht nur neue. Sie werden NICHT in
-  `working/7V-5-1_*.docx` (die QM-Verfahrensanweisung) eingearbeitet, auch
-  nicht als Entwurf. 7V-5-1 Abschnitt 7.5.3.x bleibt die kurze Originalliste
-  je Rolle wie in Version k (Verweis auf die jeweilige Stellenbeschreibung
-  erfolgt ggf. später dort). Die AKV-Detailausarbeitung des Produktionsleiters
-  wurde entsprechend aus 7.5.3.1 wieder entfernt und liegt jetzt in
-  `stellenbeschreibungen/Stellenbeschreibung_Produktionsleiter_ENTWURF.docx`.
+- **Dokumentstruktur (Entscheidung):** `working/7V-5-1_*.docx` (die
+  QM-Verfahrensanweisung) ist und bleibt die fortlaufend aktualisierte
+  **Basis** — Überarbeitungen (z. B. die AKV-Gliederung von 7.5.3.1
+  Produktionsleiter) werden dort direkt eingearbeitet, nicht zurückgesetzt.
+  **Zusätzlich** werden pro Rolle eigenständige Stellenbeschreibungen
+  abgeleitet, eigener Ordner `stellenbeschreibungen/`, ein `.docx` je Rolle
+  — als separates Dokument, das die Basis ergänzt, sie aber nicht ersetzt.
+  Für Rollen, die noch nicht im Detail besprochen wurden (z. B. PQB), wird
+  der Inhalt dafür unverändert aus 7V-5-1 übernommen.
 
 ## Bearbeitungsstand
 
@@ -51,7 +51,7 @@ Organisationszustand anzupassen und die IATF-16949-Konformität sicherzustellen.
 | 6 Produktionslogistiker | ⬜ Noch nicht begonnen |
 | 7 Produktionsplanung | ⬜ Noch nicht begonnen |
 | 8 Arbeitsvorbereitung → **Digitale Prozessentwicklung & Lean Management** (Umbenennung + inhaltliche Neuausrichtung bereits beschlossen) | ⬜ Noch nicht begonnen |
-| 9 Qualitätsprüfer/in (PQB) | ⬜ Noch nicht begonnen (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
+| 9 Qualitätsprüfer/in (PQB) | 🔶 Stellenbeschreibung als eigenes Dokument angelegt (`stellenbeschreibungen/Stellenbeschreibung_PQB_ENTWURF.docx`), Inhalt unverändert aus Version k — AKV-Diskussion noch ausständig (Verhältnis zu neuer Rolle „QS" ist bereits geklärt, siehe OFFENE_ROLLEN.md) |
 | 10 Lager (Materialvorbereitung) | ⬜ Noch nicht begonnen (Führung: Teamleitung Lager) |
 | 11 Alle Mitarbeiter | ⬜ Noch nicht begonnen |
 | **NEU: Produktionskoordination (Organisation/Personal)** | ⬜ Rolle identifiziert, noch nicht ausgearbeitet |
