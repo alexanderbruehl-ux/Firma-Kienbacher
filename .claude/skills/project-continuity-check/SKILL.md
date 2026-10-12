@@ -1,27 +1,27 @@
 ---
 name: project-continuity-check
 description: >-
-  Use this BEFORE starting substantial work in any git repository or on any new project idea —
-  especially at the very start of a session, whenever the user mentions starting, creating,
-  setting up, resuming, or continuing a project or repo, or whenever it's even slightly unclear
-  whether related prior work on this topic already exists somewhere. Trigger proactively, even if
-  the user doesn't explicitly ask for a check — phrases like "let's start a new project for X",
-  "create a repo for Y", "I want to build Z", "leg mir ein neues Projekt/Repo an", opening an
-  unfamiliar repo for the first time in a session, or picking up a task that feels like it might
-  already exist elsewhere all qualify. The cost of skipping this check is silent, costly
-  duplication — a new session starts isolated work on something that was already underway
-  elsewhere, and the two diverge until a confusing, hard-to-untangle mess is discovered later.
-  This has happened repeatedly to this user; treat it as a standing priority, not an optional
-  nicety.
+  Use this BEFORE starting substantial work in any git repository or new project idea — at the
+  start of a session, whenever the user mentions starting/creating/resuming a project or repo, or
+  whenever it's unclear if related prior work exists. Applies equally when this session has direct
+  access to the user's own local PC, not just cloud git sessions — unpushed local work forks from
+  the shared GitHub state exactly like a stray cloud branch does. Trigger even without an explicit
+  ask: "let's start a new project for X", "create a repo for Y", "leg mir ein neues Projekt an",
+  opening an unfamiliar repo, opening a repo on the user's local machine, or picking up a task that
+  might already exist elsewhere. Skipping this causes silent, costly duplication — isolated work
+  starts on something already underway elsewhere, diverging until a hard-to-untangle mess surfaces
+  later. This has happened repeatedly to this user; treat it as a standing priority.
 ---
 
 # Project Continuity Check
 
 ## Why this exists
 
-Each new Claude Code / Claude session that touches a git repository tends to create its own isolated branch. If that session doesn't know a related branch, repo, or session already has newer or more complete work, it quietly starts from scratch — or from a stale snapshot — and builds forward independently. Nobody notices until much later, when two divergent versions of "the same project" have to be reconciled, and work gets lost or duplicated in the process.
+GitHub (or whichever remote the project uses) is the single central sync instance across every way this user works — cloud sessions, a session on their phone, and sessions with direct access to their own local PC and the software on it. Any of these can independently touch the same project. The moment one of them holds state the others can't see — a cloud session on its own branch, or a local working copy with commits or edits that haven't been pushed yet — that copy is, functionally, a fork, whether or not it ever gets a distinct branch name.
 
-This is not a one-off bug to patch — it is a structural risk any time: a new repo is created, an existing repo is opened without context, or the user picks up a project from a different device or a different conversation. The fix is a cheap, proactive habit: look before you leap, every time, not just when something has already gone wrong.
+Each new Claude Code / Claude session that touches a git repository tends to create its own isolated branch, or — when working directly on the user's local machine — simply accumulates local changes that stay local. If that session doesn't know a related branch, repo, or local working copy already has newer or more complete work, it quietly starts from scratch — or from a stale snapshot — and builds forward independently. Nobody notices until much later, when two (or more) divergent versions of "the same project" have to be reconciled, and work gets lost or duplicated in the process.
+
+This is not a one-off bug to patch — it is a structural risk any time: a new repo is created, an existing repo is opened without context, the user picks up a project from a different device or a different conversation, or work happens locally on the user's own machine instead of through a cloud session. The fix is the same cheap, proactive habit everywhere: look before you leap, and push what you have before you leave it, every time, not just when something has already gone wrong.
 
 ## When you're about to create a brand-new project/repo
 
@@ -37,6 +37,14 @@ Before scaffolding anything:
 2. If there's no `CLAUDE.md`, or it's silent on this, run `git branch -a` and `git log --all --oneline -20` (or the equivalent) to see whether other branches have recent activity. A repo with several `claude/<adjective>-<noun>-<hash>`-style branches is a strong signal that multiple independent sessions have touched this project before — don't assume the branch you happen to be on is the only or the latest one.
 3. Compare timestamps and content breadth across candidate branches (a quick `git log -1 --format=%ci <branch>` per branch, or a `git diff --stat` between the two most plausible candidates) rather than assuming whichever branch you started on is current. Shallower, older-looking branches are not automatically wrong, but a branch that is a strict subset of another's content, or that still contains known-fixed errors, is a strong tell that it is the stale one.
 4. If you find a genuine fork — real, divergent work on both sides — don't silently pick one. Tell the user what you found (branch names, what's unique to each, how recent each is) and let them decide, the same way you would flag any other consequential, hard-to-reverse decision.
+
+## Working directly on the user's local machine is not exempt
+
+When this session has direct access to the user's own computer and its installed software (rather than an isolated cloud checkout), the same risk shows up in a different shape — and it needs the same proactive check, every time:
+
+1. **At the start of local work**, before editing anything, check whether the local working copy is in sync with GitHub: `git fetch`, then compare local `HEAD` against `origin/<branch>`. If local is behind, there's newer work upstream (from a cloud session, another local session, or the user on another device) that hasn't been pulled in yet — surface this before proceeding, the same way you'd surface a stray branch. If local is ahead with unpushed commits, that's work from a previous local session that the rest of the world — any cloud session, any other device — cannot see yet; say so plainly.
+2. **Don't let local work sit unpushed.** Push promptly after meaningful changes rather than batching everything for "later" — every commit that stays local-only for an extended stretch is, in effect, a silent fork that only resolves itself if nothing else touches the project in the meantime. If a push genuinely can't happen right now (offline, mid-experiment, explicit instruction to hold off), say so explicitly, so the user knows this state exists and is unprotected until it's pushed.
+3. **Treat "local, not yet on GitHub" as the same category of risk as "a divergent branch nobody mentioned"** — because it is one. The fix in both cases is the same: make the shared remote (GitHub) reflect reality as soon as possible, and be explicit the moment it doesn't.
 
 ## Making future sessions less likely to fork in the first place
 
