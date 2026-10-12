@@ -1,20 +1,18 @@
 ---
 name: dateivorschau
 description: >-
-  Projektuebergreifender Standard dieses Nutzers (Alexander Bruehl) fuer JEDE
-  fuer Menschen relevante Datei (PPTX/DOCX/XLSX/PDF/Bilder - Berichte,
-  Vorlagen, Listen, Uebersichten, alles zum Lesen/Pruefen), die in einem
-  Projekt/Repo entsteht oder geliefert wird - nicht nur auf Nachfrage.
-  Ausdruecklich NICHT fuer Quellcode-, Skript- oder Konfigurationsdateien
-  (.py/.js/.ts/.json/.yaml/.sh/...) - die zaehlen fuer diesen Nutzer nicht als
-  "relevant". Baut aus den relevanten Dateien eine eigenstaendige
-  HTML-Vorschau - vollstaendiger, scrollbarer Lese-Inhalt direkt aus der Datei
-  (ganzes DOCX, alle PPTX-Folien, kein Rendering-Dienst noetig), bei mehreren
-  Dateien mit Ordnerbaum-Navigation zum Auswaehlen - und veroeffentlicht sie
-  als Artifact, weil Claude Code/Cowork selbst keine Office-Dateien inline
-  anzeigen. Nutze diese Skill immer bei .docx/.pptx/.xlsx/.pdf/Bild-Dateien,
-  auch ohne explizite Bitte um eine Vorschau - das Fehlen einer brauchbaren
-  Vorschau war wiederholt ein Problem fuer diesen Nutzer.
+  Projektuebergreifender Standard dieses Nutzers (Alexander Bruehl): bei jeder
+  fuer Menschen relevanten Datei (PPTX/DOCX/XLSX/PDF/Bilder - Berichte,
+  Vorlagen, Listen, Uebersichten), die in einem Projekt entsteht oder
+  geliefert wird - nicht nur auf Nachfrage, nicht fuer Quellcode, Skripte
+  oder Konfigurationsdateien. Baut eine eigenstaendige HTML-Vorschau: vollstaendiger
+  scrollbarer Lese-Inhalt direkt aus der Datei (ganzes DOCX, alle PPTX-Folien,
+  kein Rendering-Dienst noetig), zeigt alle relevanten Dateien des aktuellen
+  Projekts zur Auswahl per Ordnerbaum (Ueberschrift "Dateien fuer Projekt: "
+  plus Projektname), veroeffentlicht als Artifact, weil Claude Code/Cowork
+  Office-Dateien nicht inline anzeigen. Immer nutzen bei
+  .docx/.pptx/.xlsx/.pdf/Bild-Dateien, auch ungefragt - fehlende Vorschau war
+  wiederholt ein Problem fuer diesen Nutzer.
 ---
 
 # Eine allgemeine Datei-Vorschau bauen
@@ -33,7 +31,13 @@ daraus eine Vorschau:
 
 ```
 python werkzeuge/vorschau_erzeugen.py datei1.pptx datei2.png ... --out vorschau.html --titel "..."
+python werkzeuge/vorschau_erzeugen.py notes working source --out vorschau.html --titel "Dateien für Projekt: ..."
 ```
+
+Argumente koennen einzelne Dateien **oder Ordner** sein. Ein Ordner wird
+rekursiv nach relevanten Dateien durchsucht (`node_modules`, `.git` und
+Aehnliches werden uebersprungen) - damit zeigt die Vorschau **das ganze
+Projekt**, nicht nur die gerade frisch gelieferten Dateien.
 
 - **Bilder** (`png`, `jpg`, `jpeg`, `gif`, `webp`, `svg`) werden direkt als
   `<img>` eingebettet - vollstaendige Ansicht, kein Ausschnitt.
@@ -102,24 +106,37 @@ Rohbytes, das ist kein Fehler, sondern Absicht des Code-Browsers). Deshalb
 gilt bei **jeder** Lieferung einer oder mehrerer solcher Dateien, in jedem
 Projekt, auch ohne explizite Nachfrage:
 
-1. `vorschau_erzeugen.py` wie oben auf alle gelieferten Dateien anwenden,
-   Ausgabe in eine Scratchpad-Datei (z. B. `vorschau.html`).
-2. Die erzeugte HTML-Datei pruefen: sie darf (und wird im Normalfall) kein
+1. `vorschau_erzeugen.py` **nicht nur auf die gerade erzeugten/gelieferten
+   Dateien** anwenden, sondern auf die eigenen Ordner des aktuellen
+   Projekts (z. B. `notes`, `working`, `source` - je nachdem, was dieses
+   Repo/Projekt als seine Dateien definiert; `scripts`/Code-Ordner weglassen,
+   das Werkzeug filtert Code ohnehin per Endung heraus). So sieht der Nutzer
+   **alle** relevanten Projektdateien zur Auswahl, nicht nur die heute
+   gelieferten. Ausgabe in eine Scratchpad-Datei (z. B. `vorschau.html`).
+2. `--titel` immer im Format `"Dateien für Projekt: <Projektname>"` setzen,
+   mit dem tatsaechlichen Namen des aktuellen Projekts (z. B. aus der
+   CLAUDE.md oder dem Projektkontext) - nicht dem Repo-Namen und nicht dem
+   Namen einer einzelnen Datei. Die Fenster-Ueberschrift uebernimmt diesen
+   Titel direkt.
+3. Die erzeugte HTML-Datei pruefen: sie darf (und wird im Normalfall) kein
    eigenes `<!DOCTYPE>`, `<html>`, `<head>` oder `<body>` enthalten - das
    Werkzeug erzeugt bereits ein Fragment, kompatibel mit dem
    Artifact-Skelett. Falls doch vorhanden, vor dem Publizieren entfernen.
-3. Mit dem **Artifact**-Werkzeug veroeffentlichen (`action: "quickstart"`
+4. Mit dem **Artifact**-Werkzeug veroeffentlichen (`action: "quickstart"`
    mit passendem `intent` vor der ersten Veroeffentlichung eines neuen
    Artifacts, danach `action: "publish"` mit `file_path` auf die
    Scratchpad-HTML). Das ist der Schritt, der die Vorschau tatsaechlich
    **inline sichtbar** macht - `SendUserFile` mit einer HTML-Datei oeffnet
    beim Nutzer nur einen Browser-Download-Dialog, keine eingebettete
-   Ansicht.
-4. Die eigentlichen Originaldateien (DOCX/PPTX/...) zusaetzlich wie gewohnt
-   per `SendUserFile` mitschicken, damit der Nutzer sie herunterladen,
-   oeffnen und bearbeiten kann - das Artifact ersetzt das Original nicht,
-   es macht nur den Inhalt auf einen Blick sichtbar.
-5. Dem Nutzer kurz mitteilen, dass Download-Buttons innerhalb der
+   Ansicht. Spaetere Lieferungen in diesem Projekt aktualisieren dieselbe
+   Artifact-URL (gleicher `file_path`/`url`), statt staendig neue Links zu
+   erzeugen.
+5. Die eigentlichen Originaldateien (DOCX/PPTX/...), die neu zur Lieferung
+   gehoeren, zusaetzlich wie gewohnt per `SendUserFile` mitschicken, damit
+   der Nutzer sie herunterladen, oeffnen und bearbeiten kann - das Artifact
+   ersetzt das Original nicht, es macht nur den Inhalt auf einen Blick
+   sichtbar.
+6. Dem Nutzer kurz mitteilen, dass Download-Buttons innerhalb der
    Artifact-Ansicht inaktiv sind (siehe oben) und die Originaldateien dafuer
    extra mitgeschickt wurden.
 
