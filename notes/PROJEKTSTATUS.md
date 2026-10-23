@@ -301,6 +301,43 @@ inhaltlichen Stand.**
     Mitarbeiterqualifikationsmatrix-Abgleich) — siehe
     `VERFAHREN_7_5_4.md`, 7.5.4.2
 
+## Abgeleitete Dokumente: Stellen-/Rollenbeschreibungen (PQB, QS)
+
+Eigener Arbeitsstrang, parallel zur Verfahrensanweisung 7V-5-1 entstanden
+(~30 Commits), bisher **nicht** in diesem Status vermerkt gewesen — hiermit
+nachgetragen.
+
+- **Grundsatz (von Alexander festgelegt): Stellen-/Rollenbeschreibungen sind
+  abgeleitete Dokumente aus der Verfahrensanweisung 7V-5-1 und dürfen
+  inhaltlich/strukturell nicht mit ihr vermischt werden.** Sie bleiben
+  eigenständige Dokumente in `working/*.docx`, werden nicht Teil von
+  `7V-5-1_Auftragsabwicklung_Produktion_ENTWURF.docx` und nicht über
+  `scripts/build.js` mitgeneriert. Jedes der vier Dokumente markiert sich
+  selbst entsprechend als „Arbeitsentwurf — noch nicht Teil der
+  Verfahrensanweisung 7V-5-1".
+- **Zwei Dokumenttypen pro Rolle**, auf Basis der jeweiligen `notes/*.md`:
+  - **Rollenbeschreibung** = druckfertige Arbeitsliste (Grundsätzliches,
+    Aufgaben, Verantwortlichkeit/Kompetenz) ohne Qualifikationsteil
+  - **Stellenbeschreibung** = dieselbe inhaltliche Basis, zusätzlich um
+    Qualifikationen/Kompetenzen/Mindestanforderungen ergänzt
+- **Stand je Rolle:**
+  - **QS**: ✅ Stellenbeschreibung — Qualifikationen/Kompetenzen/
+    Mindestanforderungen von Alexander bestätigt (inkl. Ergänzung „Kenntnis
+    aller Bauteile"). Rollenbeschreibung als separate, druckbare Arbeitsliste
+    erstellt und schrittweise um ~20 Einzelpunkte „von AIDA" ergänzt
+    (u. a. Rückstellmusterkontrolle, Qualifikationsmatrix/MA-Schulungen,
+    Sperrlager-Kontrolle, Buchungscode-Kontrolle, Schichtlogbuch-Kontrolle);
+    nach Refactor der `QS.md`-Basis neu generiert.
+  - **PQB**: 🔶 Rollen- und Stellenbeschreibung erstellt (Basis: `PQB.md`),
+    bisher **keine** gesonderte Bestätigung/Review durch Alexander
+    dokumentiert (im Unterschied zu QS) — bei Bedarf gegenprüfen.
+- Dateien: `working/QS_Rollenbeschreibung_Arbeitsentwurf.docx`,
+  `working/QS_Stellenbeschreibung_Arbeitsentwurf.docx`,
+  `working/PQB_Rollenbeschreibung_Arbeitsentwurf.docx`,
+  `working/PQB_Stellenbeschreibung_Arbeitsentwurf.docx`
+- **Offen:** ob/wie dieser Arbeitsstrang auf weitere Rollen ausgeweitet wird,
+  ist noch nicht entschieden.
+
 ## Bereits geklärte, generelle Struktur-Entscheidungen
 
 - **QS-Korrespondenzstruktur** (korrigiert — **QMB hat keine
