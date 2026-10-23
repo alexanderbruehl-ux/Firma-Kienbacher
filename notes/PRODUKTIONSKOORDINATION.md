@@ -20,7 +20,7 @@ sowie Umsetzungsunterstützung; die Entscheidung liegt beim
 Produktionsleiter)*:
 - Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal
   „Kienformation-Center")
-- Personalauswahl und -entwicklung
+- Mitwirkung bei der Personalauswahl und -entwicklung
 - Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im
   Lernmanagementsystem (LMS)
 - Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur
