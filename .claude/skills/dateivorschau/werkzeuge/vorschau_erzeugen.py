@@ -210,11 +210,41 @@ def _docx_block_items(dok):
             yield DocxTable(child, dok)
 
 
+def _ist_listenpunkt(para: "DocxParagraph") -> bool:
+    """Erkennt Aufzaehlungs-/Nummerierungs-Absaetze: massgeblich ist das
+    tatsaechliche OOXML-Element <w:numPr> (direkt oder ueber die
+    Absatzvorlage gesetzt) - funktioniert unabhaengig vom Namen der
+    verwendeten Absatzformatvorlage (z. B. auch bei Word-Dokumenten, die
+    Listen ohne die Vorlage "List Paragraph" formatieren). Der Vorlagen-
+    name ("List ..." ) dient nur als Rueckfallebene."""
+    try:
+        pPr = para._p.find(qn("w:pPr"))
+        if pPr is not None and pPr.find(qn("w:numPr")) is not None:
+            return True
+        if para.style is not None:
+            style = para.style
+            gesehen = set()
+            while style is not None and id(style) not in gesehen:
+                gesehen.add(id(style))
+                style_pPr = style.element.find(qn("w:pPr"))
+                if style_pPr is not None and style_pPr.find(qn("w:numPr")) is not None:
+                    return True
+                style = getattr(style, "base_style", None)
+    except Exception:
+        pass
+    if para.style is not None and para.style.name and "List" in para.style.name:
+        return True
+    return False
+
+
 def docx_vorschau_html(pfad: Path) -> str | None:
-    """Der komplette Dokumentkoerper (Absaetze, Ueberschriften, Tabellen) in
-    Original-Reihenfolge - vollstaendige Lese-Ansicht, keine Kuerzung
-    (ausser bei sehr langen Dokumenten, als Schutz vor unhandlichen
-    Dateigroessen)."""
+    """Der komplette Dokumentkoerper (Absaetze, Ueberschriften, Listen,
+    Tabellen) in Original-Reihenfolge - vollstaendige Lese-Ansicht, keine
+    Kuerzung (ausser bei sehr langen Dokumenten, als Schutz vor unhandlichen
+    Dateigroessen). Aufzaehlungs-/Nummerierungs-Absaetze werden zu echten
+    <ul>-Bloecken gruppiert statt als flache <p>-Absaetze zu erscheinen -
+    sonst geht bei listenlastigen Dokumenten (z. B. Rollenbeschreibungen)
+    die komplette sichtbare Struktur verloren."""
     if not _DOCX_VERFUEGBAR:
         return None
     try:
@@ -225,6 +255,14 @@ def docx_vorschau_html(pfad: Path) -> str | None:
     bloecke = []
     zeichen = 0
     gekuerzt = False
+    liste_offen = False
+
+    def liste_schliessen():
+        nonlocal liste_offen
+        if liste_offen:
+            bloecke.append("</ul>")
+            liste_offen = False
+
     for item in _docx_block_items(dok):
         if zeichen > DOCX_ZEICHEN_LIMIT:
             gekuerzt = True
@@ -234,10 +272,18 @@ def docx_vorschau_html(pfad: Path) -> str | None:
             if not text:
                 continue
             ist_ueberschrift = item.style is not None and "Heading" in (item.style.name or "")
-            tag = "h3" if ist_ueberschrift else "p"
-            bloecke.append(f'<{tag}>{esc(text)}</{tag}>')
+            if not ist_ueberschrift and _ist_listenpunkt(item):
+                if not liste_offen:
+                    bloecke.append("<ul>")
+                    liste_offen = True
+                bloecke.append(f"<li>{esc(text)}</li>")
+            else:
+                liste_schliessen()
+                tag = "h3" if ist_ueberschrift else "p"
+                bloecke.append(f"<{tag}>{esc(text)}</{tag}>")
             zeichen += len(text)
         else:
+            liste_schliessen()
             zeilen = []
             for zeile in item.rows:
                 zellen = "".join(f'<td>{esc(z.text.strip())}</td>' for z in zeile.cells)
@@ -245,6 +291,7 @@ def docx_vorschau_html(pfad: Path) -> str | None:
                 zeichen += sum(len(z.text) for z in zeile.cells)
             if zeilen:
                 bloecke.append(f'<table>{"".join(zeilen)}</table>')
+    liste_schliessen()
     if not bloecke:
         return None
     if gekuerzt:
@@ -448,6 +495,8 @@ TEMPLATE = '''<meta charset="utf-8">
   .docx-page h3 {{ font-size:16px; margin:18px 0 8px; }}
   .docx-page h3:first-child {{ margin-top:0; }}
   .docx-page p {{ font-size:14px; line-height:1.55; margin:0 0 10px; color:#2A2D30; }}
+  .docx-page ul {{ margin:0 0 12px; padding-left:22px; }}
+  .docx-page li {{ font-size:14px; line-height:1.55; margin:0 0 5px; color:#2A2D30; }}
   .docx-page table {{ border-collapse:collapse; width:100%; margin:0 0 14px; font-size:13px; }}
   .docx-page td {{ border:1px solid #C7CACD; padding:5px 8px; vertical-align:top; }}
   .docx-page .fade-hint {{ color:var(--muted); font-style:italic; }}
