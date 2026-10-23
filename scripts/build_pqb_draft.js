@@ -39,7 +39,7 @@ const doc = new Document({
       }),
       new Paragraph({
         spacing: { after: 200 },
-        children: [new TextRun({ text: "Basis: PQB.md (inhaltlich abgeschlossen). Noch nicht Teil der Verfahrensanweisung 7V-5-1.", italics: true, font: FONT, size: 18 })],
+        children: [new TextRun({ text: "Noch nicht Teil der Verfahrensanweisung 7V-5-1.", italics: true, font: FONT, size: 18 })],
       }),
 
       h("Grundsätzliches"),
