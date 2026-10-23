@@ -68,10 +68,9 @@ abgegrenzt bleibt:
   Planung und Teamleitungen selbst geregelt.
 - **Sicherstellen der Verfügbarkeit von Material, Maschinen, Dokumenten und
   Informationen am Arbeitsplatz** ist **nicht** Teil dieser Funktion — das
-  liegt bei den jeweiligen Linienfunktionen (Stammdatenpflege, Lager,
-  Instandhaltung, Automatisierung je nach Thema). Die Produktionskoordination
-  wird hier höchstens anlassbezogen/projekthaft hinzugezogen, nicht
-  routinemäßig.
+  liegt bei den jeweiligen Prozesseignern/Führungskräften im Serienprozess.
+  Die Produktionskoordination wird hier höchstens anlassbezogen/projekthaft
+  hinzugezogen, nicht routinemäßig.
 - **Laufende Steuerungs-, Optimierungs- und Verbesserungsaufgaben im eigenen
   Bereich** sind grundsätzlich Aufgabe der jeweiligen Führungskraft selbst
   (Prozesseigner-Prinzip) — die Produktionskoordination wird nur
