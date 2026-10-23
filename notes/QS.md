@@ -1,7 +1,15 @@
 # Rolle: QS (Qualitätssicherung Produktion) — AKV-Ausarbeitung (Zwischenstand)
 
-Status: **inhaltlich abgeschlossen.** Kein Punkt aus Version k (neue
-Rolle, siehe `OFFENE_ROLLEN.md`, Rolle 3). Vertretung des
+Status: **inhaltlich abgeschlossen.**
+
+**Wichtig:** Diese Funktion kann als eigenständige Vollzeitstelle oder als
+Teilaufgabenbereich in Kombination mit anderen Aufgaben-/
+Verantwortungsbereichen ausgeübt werden — in Pfarrkirchen eigenständige
+Vollzeitstelle, in Losenstein Teilbereich (2/3) in Kombination mit
+Produktionskoordination (1/3).
+
+Kein Punkt aus Version k (neue Rolle, siehe `OFFENE_ROLLEN.md`, Rolle 3).
+Vertretung des
 Produktionsleiters, Bereich 3 von 3 (Qualität) — siehe
 `PRODUKTIONSLEITER.md`, Abschnitt „Vertretung" für die Gesamtstruktur
 der drei Vertretungsbereiche. Gehört zur Ebene A des Organisationsteams

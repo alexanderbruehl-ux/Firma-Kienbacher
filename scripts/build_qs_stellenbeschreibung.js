@@ -70,8 +70,16 @@ const doc = new Document({
         children: [new TextRun({ text: "Stellenbeschreibung: QS (Qualitätssicherung Produktion)", bold: true, font: FONT, size: 28 })],
       }),
       new Paragraph({
-        spacing: { after: 200 },
+        spacing: { after: 160 },
         children: [new TextRun({ text: "Arbeitsentwurf.", italics: true, font: FONT, size: 18 })],
+      }),
+      new Paragraph({
+        spacing: { after: 200 },
+        alignment: AlignmentType.JUSTIFIED,
+        children: [new TextRun({
+          text: "Diese Funktion kann als eigenständige Vollzeitstelle oder als Teilaufgabenbereich in Kombination mit anderen Aufgaben-/Verantwortungsbereichen (z. B. Produktionskoordination) ausgeübt werden.",
+          bold: true, font: FONT, size: 20,
+        })],
       }),
 
       h("Organisatorische Einordnung"),
