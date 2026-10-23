@@ -34,12 +34,8 @@ const doc = new Document({
         children: [new TextRun({ text: "PQB (Qualitätsprüfer/in) — Rollenbeschreibung", bold: true, font: FONT, size: 28 })],
       }),
       new Paragraph({
-        spacing: { after: 100 },
-        children: [new TextRun({ text: "Arbeitsentwurf zum Ausdrucken", italics: true, font: FONT, size: 20 })],
-      }),
-      new Paragraph({
         spacing: { after: 200 },
-        children: [new TextRun({ text: "Noch nicht Teil der Verfahrensanweisung 7V-5-1.", italics: true, font: FONT, size: 18 })],
+        children: [new TextRun({ text: "Arbeitsentwurf zum Ausdrucken", italics: true, font: FONT, size: 20 })],
       }),
 
       h("Grundsätzliches"),
