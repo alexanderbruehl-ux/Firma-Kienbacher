@@ -71,7 +71,7 @@ const doc = new Document({
       }),
       new Paragraph({
         spacing: { after: 200 },
-        children: [new TextRun({ text: "Arbeitsentwurf — Basis: konsolidierte Rollenbeschreibung inkl. Ergänzungen von AIDA. Noch nicht Teil der Verfahrensanweisung 7V-5-1.", italics: true, font: FONT, size: 18 })],
+        children: [new TextRun({ text: "Arbeitsentwurf. Noch nicht Teil der Verfahrensanweisung 7V-5-1.", italics: true, font: FONT, size: 18 })],
       }),
 
       h("Organisatorische Einordnung"),
