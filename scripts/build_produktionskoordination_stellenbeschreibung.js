@@ -32,7 +32,6 @@ function bullet(text, level = 0) {
 // GRUNDSAETZLICHES/AUFGABEN/VERANTWORTLICHKEIT, die direkt aus den
 // bereits abgestimmten notes/*.md übernommen sind).
 const QUALIFIKATIONEN = [
-  "Abgeschlossene kaufmännische oder technische Ausbildung mit Bezug zu Personal-/Organisationsthemen (z. B. HR, Betriebswirtschaft, Produktionstechnik mit Personalverantwortung)",
   "Grundkenntnisse im Arbeitsrecht und in der Personalentwicklung",
   "Sicherer Umgang mit den eingesetzten IT-Systemen (Kienformation-Center, Lernmanagementsystem/LMS)",
   "Mehrjährige Erfahrung im Produktionsumfeld bzw. in produktionsnahen Personal-/Organisationsthemen",
