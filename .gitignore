@@ -2,6 +2,8 @@
 *.pdf.bak
 node_modules/
 *.log
+__pycache__/
+*.pyc
 
 # Rendering-Zwischendateien (falls beim Prüfen erzeugt)
 page-*.jpg
