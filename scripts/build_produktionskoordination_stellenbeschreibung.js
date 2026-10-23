@@ -28,9 +28,6 @@ function bullet(text, level = 0) {
   });
 }
 
-// Entwurf — noch nicht mit Alexander abgestimmt (im Unterschied zu
-// GRUNDSAETZLICHES/AUFGABEN/VERANTWORTLICHKEIT, die direkt aus den
-// bereits abgestimmten notes/*.md übernommen sind).
 const QUALIFIKATIONEN = [
   "Grundkenntnisse im Arbeitsrecht und in der Personalentwicklung",
   "Sicherer Umgang mit den eingesetzten IT-Systemen (Kienformation-Center, Lernmanagementsystem/LMS)",
@@ -89,7 +86,6 @@ const doc = new Document({
       ...VERANTWORTLICHKEIT.map((t) => bullet(t)),
 
       h("Erforderliche Qualifikationen"),
-      p("Entwurf — noch nicht mit Alexander abgestimmt:"),
       ...QUALIFIKATIONEN.map((t) => bullet(t)),
 
       h("Erforderliche Kompetenzen"),
