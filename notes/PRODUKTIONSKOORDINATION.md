@@ -18,18 +18,18 @@ Gesamtstruktur der drei Vertretungsbereiche.
 **Aufgabe** *(jeweils als Vorschlag/Konzept und Vorbereitung zur Umsetzung
 sowie Umsetzungsunterstützung; die Entscheidung liegt beim
 Produktionsleiter)*:
-- Mitwirkung bei der Personalauswahl und -entwicklung
 - Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im
   Lernmanagementsystem (LMS)
 - Organisation bzw. eigenständige Durchführung von Schulungen bei
   fehlender Qualifikation
+- Beobachtung und Nachverfolgung von Abweichungen bei
+  Personalzykluszeiten (Datenauswertung)
+- Sicherstellen, dass fehlende Prozessdokumentation ergänzt wird
+- Mitwirkung bei der Personalauswahl und -entwicklung
 - Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur
   Flexibilisierung und Effizienzsteigerung)
 - Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal
   „Kienformation-Center")
-- Beobachtung und Nachverfolgung von Abweichungen bei
-  Personalzykluszeiten (Datenauswertung)
-- Sicherstellen, dass fehlende Prozessdokumentation ergänzt wird
 
 **Charakter:** überwiegend wiederkehrend zu bestimmten Zeitpunkten (z. B.
 vor Betriebsurlauben, Weihnachtsschließtagen), selten anlassbezogen.

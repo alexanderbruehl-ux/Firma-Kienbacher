@@ -12,14 +12,14 @@ const GRUNDSAETZLICHES = [
 ];
 
 const AUFGABEN = [
-  "Mitwirkung bei der Personalauswahl und -entwicklung",
   "Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im Lernmanagementsystem (LMS)",
   "Organisation bzw. eigenständige Durchführung von Schulungen bei fehlender Qualifikation",
-  "Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur Flexibilisierung und Effizienzsteigerung)",
-  "Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal „Kienformation-Center“)",
   "Beobachtung und Nachverfolgung von Abweichungen bei Personalzykluszeiten (Datenauswertung)",
   "Sicherstellen, dass fehlende Prozessdokumentation ergänzt wird",
   "Mitwirkung bei anlassbezogenen Problemlösungs-/Optimierungsprojekten, insbesondere bei Themen mit Ursache „Mensch“ (Abgrenzung zu Maschine/Material/Methode) — z. B. Nichteinhaltung von Zykluszeiten (Effizienz) oder Abweichungen aufgrund von Können/Wollen/Disziplin (Qualität)",
+  "Mitwirkung bei der Personalauswahl und -entwicklung",
+  "Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur Flexibilisierung und Effizienzsteigerung)",
+  "Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal „Kienformation-Center“)",
 ];
 
 const VERANTWORTLICHKEIT = [
