@@ -3,9 +3,14 @@
 Status: **inhaltlich abgeschlossen.**
 
 Kein Punkt aus Version k (neue Rolle, siehe `OFFENE_ROLLEN.md`, Rolle 1).
-= Teamleitung Endfertigung in Personalunion (eine Person, zwei Funktionen);
-siehe `ENDFERTIGUNG.md` für die operative Führung des Bereichs Endfertigung.
-Hier wird nur die Vertretungsfunktion (Organisation/Personal) behandelt.
+
+**Wichtig:** Diese Rolle bildet keine vollständige Funktion (1 Person) ab,
+sondern einen Teilaufgaben-/Verantwortungsbereich. Sie wird in der Praxis
+immer durch weitere Aufgaben-/Verantwortungsbereiche ergänzt — in
+Pfarrkirchen durch die Teamleitung Endfertigung in Personalunion (eine
+Person, zwei Funktionen; siehe `ENDFERTIGUNG.md` für die operative Führung
+des Bereichs Endfertigung), in Losenstein durch QS. Hier wird nur die
+Vertretungsfunktion (Organisation/Personal) behandelt.
 
 Vertretung des Produktionsleiters, Bereich 1 von 3 (Organisation/Personal)
 — siehe `PRODUKTIONSLEITER.md`, Abschnitt „Vertretung" für die

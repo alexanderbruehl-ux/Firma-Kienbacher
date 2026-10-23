@@ -64,10 +64,18 @@ const doc = new Document({
         children: [new TextRun({ text: "Stellenbeschreibung: Produktionskoordination (Organisation/Personal)", bold: true, font: FONT, size: 28 })],
       }),
       new Paragraph({
-        spacing: { after: 200 },
+        spacing: { after: 160 },
         children: [new TextRun({
           text: "Arbeitsentwurf.",
           italics: true, font: FONT, size: 18,
+        })],
+      }),
+      new Paragraph({
+        spacing: { after: 200 },
+        alignment: AlignmentType.JUSTIFIED,
+        children: [new TextRun({
+          text: "Diese Stellenbeschreibung bildet keine vollständige Funktion (1 Person) ab, sondern einen Teilaufgaben-/Verantwortungsbereich. Sie wird in der Praxis durch weitere Aufgaben-/Verantwortungsbereiche ergänzt (z. B. QS, operative Teamleitung).",
+          bold: true, font: FONT, size: 20,
         })],
       }),
 
