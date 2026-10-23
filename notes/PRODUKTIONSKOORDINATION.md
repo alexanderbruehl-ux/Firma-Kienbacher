@@ -23,8 +23,13 @@ Produktionsleiter)*:
 - Mitwirkung bei der Personalauswahl und -entwicklung
 - Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im
   Lernmanagementsystem (LMS)
+- Organisation bzw. eigenständige Durchführung von Schulungen bei
+  fehlender Qualifikation
 - Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur
   Flexibilisierung und Effizienzsteigerung)
+- Beobachtung und Nachverfolgung von Abweichungen bei
+  Personalzykluszeiten (Datenauswertung)
+- Sicherstellen, dass fehlende Prozessdokumentation ergänzt wird
 
 **Charakter:** überwiegend wiederkehrend zu bestimmten Zeitpunkten (z. B.
 vor Betriebsurlauben, Weihnachtsschließtagen), selten anlassbezogen.
@@ -41,4 +46,30 @@ Anpassung/Umsetzung zentraler HR-Vorgaben auf die konkreten Abläufe und
 Bedürfnisse des Produktionsbereichs). Grundsätzliche HR-Zuständigkeiten
 (z. B. arbeitsrechtliche Themen, Vertragsgestaltung, zentrale
 Personalprozesse) bleiben unberührt.
+
+---
+
+## Themenblock 3: Abgrenzung zu Planung und Linienfunktionen
+
+Geklärt im Zuge der standortübergreifenden Diskussion der Rolle (Pfarrkirchen/
+Losenstein), damit die Funktion unabhängig vom konkreten Standort einheitlich
+abgegrenzt bleibt:
+
+- **Planung und kurzfristige Korrektur der Planung bei betrieblichen
+  Abweichungen** (Personal, Maschinen, Material) ist **nicht** Teil dieser
+  Funktion — das obliegt der Produktionsplanung und -steuerung. Normale
+  betriebliche Abweichungen (Krankheit, Maschinenstörung, Werkzeugbruch,
+  Fehler) sind Teil des laufenden operativen Geschäfts und werden von
+  Planung und Teamleitungen selbst geregelt.
+- **Sicherstellen der Verfügbarkeit von Material, Maschinen, Dokumenten und
+  Informationen am Arbeitsplatz** ist **nicht** Teil dieser Funktion — das
+  liegt bei den jeweiligen Linienfunktionen (Stammdatenpflege, Lager,
+  Instandhaltung, Automatisierung je nach Thema). Die Produktionskoordination
+  wird hier höchstens anlassbezogen/projekthaft hinzugezogen, nicht
+  routinemäßig.
+- **Laufende Steuerungs-, Optimierungs- und Verbesserungsaufgaben im eigenen
+  Bereich** sind grundsätzlich Aufgabe der jeweiligen Führungskraft selbst
+  (Prozesseigner-Prinzip) — die Produktionskoordination wird nur
+  hinzugezogen, wenn eine Abweichung das normale Maß übersteigt und
+  strukturelle Unterstützung braucht.
 
