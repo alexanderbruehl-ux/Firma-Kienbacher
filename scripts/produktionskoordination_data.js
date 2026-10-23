@@ -7,13 +7,18 @@ const GRUNDSAETZLICHES = [
   "Alle Aufgaben erfolgen als Vorschlag/Konzept sowie als Vorbereitung und Unterstützung der Umsetzung — die Entscheidung liegt beim Produktionsleiter",
   "Ergänzende, praxisnahe Funktion zur Personalabteilung (HR) — ersetzt diese nicht. Verbindet zentrale HR-Konzepte und -Methoden mit dem betrieblichen Praxisbezug der Produktion",
   "Grundsätzliche HR-Zuständigkeiten (z. B. arbeitsrechtliche Themen, Vertragsgestaltung, zentrale Personalprozesse) bleiben bei HR und sind nicht Teil dieser Funktion",
+  "Planung und kurzfristige Korrektur der Planung bei betrieblichen Abweichungen ist nicht Teil dieser Funktion — das obliegt der Produktionsplanung und -steuerung",
+  "Sicherstellen der Verfügbarkeit von Material, Maschinen, Dokumenten und Informationen am Arbeitsplatz ist nicht Teil dieser Funktion — das liegt bei den jeweiligen Linienfunktionen",
 ];
 
 const AUFGABEN = [
   "Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal „Kienformation-Center“)",
   "Mitwirkung bei der Personalauswahl und -entwicklung",
   "Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im Lernmanagementsystem (LMS)",
+  "Organisation bzw. eigenständige Durchführung von Schulungen bei fehlender Qualifikation",
   "Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur Flexibilisierung und Effizienzsteigerung)",
+  "Beobachtung und Nachverfolgung von Abweichungen bei Personalzykluszeiten (Datenauswertung)",
+  "Sicherstellen, dass fehlende Prozessdokumentation ergänzt wird",
   "Mitwirkung bei anlassbezogenen Problemlösungs-/Optimierungsprojekten, insbesondere bei Themen mit Ursache „Mensch“ (Abgrenzung zu Maschine/Material/Methode) — z. B. Nichteinhaltung von Zykluszeiten (Effizienz) oder Abweichungen aufgrund von Können/Wollen/Disziplin (Qualität)",
 ];
 
