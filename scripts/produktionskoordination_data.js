@@ -11,7 +11,7 @@ const GRUNDSAETZLICHES = [
 
 const AUFGABEN = [
   "Urlaubsplanung (Abwesenheitsübersicht im digitalen Arbeitsplatz-Portal „Kienformation-Center“)",
-  "Personalauswahl und -entwicklung",
+  "Mitwirkung bei der Personalauswahl und -entwicklung",
   "Erstellung von Schulungsprogrammen und Qualifizierungsunterlagen im Lernmanagementsystem (LMS)",
   "Konzeptionelle Erarbeitung von Arbeitszeitmodellen (z. B. zur Flexibilisierung und Effizienzsteigerung)",
   "Mitwirkung bei anlassbezogenen Problemlösungs-/Optimierungsprojekten, insbesondere bei Themen mit Ursache „Mensch“ (Abgrenzung zu Maschine/Material/Methode) — z. B. Nichteinhaltung von Zykluszeiten (Effizienz) oder Abweichungen aufgrund von Können/Wollen/Disziplin (Qualität)",
