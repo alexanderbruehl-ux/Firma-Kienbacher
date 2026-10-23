@@ -8,7 +8,7 @@ const GRUNDSAETZLICHES = [
   "Ergänzende, praxisnahe Funktion zur Personalabteilung (HR) — ersetzt diese nicht. Verbindet zentrale HR-Konzepte und -Methoden mit dem betrieblichen Praxisbezug der Produktion",
   "Grundsätzliche HR-Zuständigkeiten (z. B. arbeitsrechtliche Themen, Vertragsgestaltung, zentrale Personalprozesse) bleiben bei HR und sind nicht Teil dieser Funktion",
   "Planung und kurzfristige Korrektur der Planung bei betrieblichen Abweichungen ist nicht Teil dieser Funktion — das obliegt der Produktionsplanung und -steuerung",
-  "Sicherstellen der Verfügbarkeit von Material, Maschinen, Dokumenten und Informationen am Arbeitsplatz ist nicht Teil dieser Funktion — das liegt bei den jeweiligen Linienfunktionen",
+  "Sicherstellen der Verfügbarkeit von Material, Maschinen, Dokumenten und Informationen am Arbeitsplatz ist nicht Teil dieser Funktion — das liegt bei den jeweiligen Prozesseignern/Führungskräften im Serienprozess",
 ];
 
 const AUFGABEN = [
