@@ -43,11 +43,11 @@ const doc = new Document({
       }),
       new Paragraph({
         spacing: { after: 100 },
-        children: [new TextRun({ text: "Arbeitsentwurf zum Ausdrucken — Review/Ergänzung gemeinsam mit AIDA", italics: true, font: FONT, size: 20 })],
+        children: [new TextRun({ text: "Arbeitsentwurf zum Ausdrucken", italics: true, font: FONT, size: 20 })],
       }),
       new Paragraph({
         spacing: { after: 200 },
-        children: [new TextRun({ text: "Noch nicht Teil der Verfahrensanweisung 7V-5-1 — Basis für die Konsolidierung der QS-Rollenbeschreibung.", italics: true, font: FONT, size: 18 })],
+        children: [new TextRun({ text: "Noch nicht Teil der Verfahrensanweisung 7V-5-1.", italics: true, font: FONT, size: 18 })],
       }),
 
       h("Grundsätzliches"),

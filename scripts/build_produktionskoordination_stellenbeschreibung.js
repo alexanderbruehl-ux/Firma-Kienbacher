@@ -66,7 +66,7 @@ const doc = new Document({
       new Paragraph({
         spacing: { after: 200 },
         children: [new TextRun({
-          text: "Arbeitsentwurf. Behandelt ausschließlich die Vertretungsfunktion (Organisation/Personal); die separate Funktion als Teamleitung Endfertigung (Personalunion) ist bewusst nicht Teil dieser Stellenbeschreibung. Noch nicht Teil der Verfahrensanweisung 7V-5-1.",
+          text: "Arbeitsentwurf. Noch nicht Teil der Verfahrensanweisung 7V-5-1.",
           italics: true, font: FONT, size: 18,
         })],
       }),
