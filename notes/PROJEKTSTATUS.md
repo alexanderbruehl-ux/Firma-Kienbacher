@@ -399,3 +399,4 @@ Neuprojekten/Änderungen (technisch prozessgestaltend).
 ## Weitere Notizen
 
 - `ABGLEICH_7V-3-1_N_UND_BEGRIFFE.md`: von Alexander bestätigte Begriffe (12.11.2026), offene Unstimmigkeiten zwischen 7V-5-1 und 7V-3-1 Vers. N, Checkliste „Übernahme in die Serie“.
+- `working/IMH_-_6_Vers._N_Aenderungen_Bruehl.docx` und `working/6V-1-1_Vers_F_Aenderungen_Bruehl.docx` (Ausgangsfassungen in `source/`, Skripte `scripts/imh6_aendern.py`, `scripts/6v11_aendern.py`): Änderungen mit Änderungsverfolgung zur jährlichen Unterweisung über gefährliche Arbeitsstoffe und PSA (ASchG § 14) und zur PSA-Ausgabe, Stand 11.11.2026, zur Freigabe bei der LTG HRM. Entstanden im Projekt Unterweisung Gefahrstoffe/PSA (privates Repo `Kienbacher-intern`). Offen: Beide Entwürfe weisen Planung (Fälligkeit in BMD PI) und Dokumentation der LTG HRM zu; inzwischen legen die unterweisenden Führungskräfte die Formulare selbst in DocuWare ab und HR ist nicht beteiligt. Klärung derzeit zurückgestellt.
