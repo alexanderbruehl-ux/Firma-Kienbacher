@@ -42,12 +42,13 @@ als Erstes eingebunden.
 ## Grundregel: Datenschutz – dieses Repo ist öffentlich
 
 Dieses Repo ist auf GitHub **öffentlich** (für jeden im Internet lesbar).
-**Datenschutzrelevante Inhalte der Firma Kienbacher gehören nicht hierher**,
-sondern in ein **eigenes privates Repo** (wird gerade angelegt; Name hier
-nachtragen, sobald es existiert). Datenschutzrelevant ist alles mit
-personenbezogenen Daten von Mitarbeitenden, z. B. Namen mit Personalnummer,
-Teilnehmer- und Ausgabelisten, Kontaktdaten (E-Mail, Telefon), Schicht- und
-Abwesenheitsdaten, Gesundheits- oder HR-Daten. Im Zweifel ins private Repo.
+**Schützenswerte Inhalte der Firma Kienbacher gehören nicht hierher**,
+sondern ins **private Repo `Kienbacher-intern`** (Personaldaten,
+Kundendaten, …). Dazu gehört alles mit personenbezogenen Daten von
+Mitarbeitenden, z. B. Namen mit Personalnummer, Teilnehmer- und
+Ausgabelisten, Kontaktdaten (E-Mail, Telefon), Schicht- und
+Abwesenheitsdaten, Gesundheits- oder HR-Daten, sowie Kundendaten. Im
+Zweifel ins private Repo.
 Rohdaten aus BMD (Sozialversicherungsnummer, Adresse, Bankdaten) gehören in
 gar kein Repo.
 
