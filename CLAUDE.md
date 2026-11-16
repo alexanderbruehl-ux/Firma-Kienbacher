@@ -46,6 +46,19 @@ Jedes Projekt bekommt einen eigenen Ordner auf dem kanonischen Branch
 - Visualisierung letzter Arbeitstag 2026: `letzter-arbeitstag/` (Stand und
   offene Punkte in `letzter-arbeitstag/README.md`)
 
+## Grundregel: Microsoft 365 nur lesen (Planner, Teams, Outlook)
+
+In **Planner, Teams und Outlook wird ohne ausdrückliche Zustimmung von
+Alexander nichts verändert** — keine Aufgaben anlegen/ändern/abhaken,
+keine Kommentare, keine Nachrichten oder Antworten posten, keine Mails
+senden/entwerfen/verschieben/löschen, keine Termine anlegen/ändern/
+zusagen. Lesen ist erlaubt.
+
+Diese Regel gilt **immer**, auch wenn eine Session, ein Branch oder eine
+Einstellung auf automatische Freigabe („Auto"/„Automatically approve")
+steht. Die Zustimmung muss im Chat für die konkrete Änderung gegeben
+werden; eine frühere Zustimmung gilt nicht für spätere Änderungen.
+
 ## Projektübergreifendes Prinzip
 
 Die allgemeine Regel gegen unbemerktes Auseinanderdriften von Branches/
