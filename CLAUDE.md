@@ -62,8 +62,8 @@ Jedes Projekt bekommt einen eigenen Ordner auf dem kanonischen Branch
 - QM-Dokumente überarbeiten (7V-5-1): `notes/`, `scripts/`, `working/`, `source/`
 - Visualisierung letzter Arbeitstag 2026: `letzter-arbeitstag/` (Stand und
   offene Punkte in `letzter-arbeitstag/README.md`)
-- Organisation seltener Ereignisse in der Produktion: `seltene-ereignisse/`
-  (Stand in `seltene-ereignisse/README.md`)
+- Organisation seltener Ereignisse in der Produktion: liegt im privaten Repo
+  `Kienbacher-intern` (Ordner `seltene-ereignisse/`)
 
 ## Grundregel: Microsoft 365 nur lesen (Planner, Teams, Outlook)
 
