@@ -8,7 +8,7 @@ einer Tradition und braucht deshalb eine besondere Kommunikation.
 
 | Datei | Inhalt | Stand |
 |---|---|---|
-| `Letzter_Arbeitstag_2026.pptx` / `.pdf` | Aushang, allgemeine Variante | 03.11.2026 – Jausenort noch „Pausenraum & Besprechungscontainer Produktion" |
+| `Letzter_Arbeitstag_2026.pptx` / `.pdf` | Aushang, allgemeine Variante | 03.11.2026 – Jausenort „Pausenraum & Besprechungscontainer Produktion" (bewusst so, siehe unten) |
 | `Letzter_Arbeitstag_2026_LOS.pptx` / `.pdf` | Aushang Standort Losenstein (LOS) | 05.11.2026 – Jausenort geändert auf „Aufenthaltsraum" |
 
 ## Verlauf
@@ -17,10 +17,12 @@ einer Tradition und braucht deshalb eine besondere Kommunikation.
 - 05.11.2026: LOS-Variante: Ort für Übergabe & Jause → „Aufenthaltsraum".
   PDF von Alexander selbst an Philipp Winklehner (Leiter Operations) geschickt.
 
-## Offen
+## Wichtig: Jausenort je Variante unterschiedlich
 
-- Klären, ob die allgemeine Variante (ohne „_LOS") ebenfalls den neuen Ort
-  bekommen soll bzw. welche Variante die gültige ist.
+Die beiden Varianten haben **absichtlich unterschiedliche Jausenorte**. Die
+Änderung auf „Aufenthaltsraum" betrifft **nur LOS**. Die allgemeine Variante
+behält „Pausenraum & Besprechungscontainer Produktion". Eine Angleichung
+wäre inhaltlich falsch (Entscheidung Alexander Brühl, 16.11.2026).
 
 ## Vorschau
 
