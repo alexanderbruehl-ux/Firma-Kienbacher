@@ -39,6 +39,22 @@ im Chat, in einem Artifact oder im Scratchpad liegen, gelten als nicht
 gesichert. Ist eine Session ohne verbundenes Repo gestartet, wird dieses Repo
 als Erstes eingebunden.
 
+## Grundregel: Datenschutz – dieses Repo ist öffentlich
+
+Dieses Repo ist auf GitHub **öffentlich** (für jeden im Internet lesbar).
+**Datenschutzrelevante Inhalte der Firma Kienbacher gehören nicht hierher**,
+sondern in ein **eigenes privates Repo** (wird gerade angelegt; Name hier
+nachtragen, sobald es existiert). Datenschutzrelevant ist alles mit
+personenbezogenen Daten von Mitarbeitenden, z. B. Namen mit Personalnummer,
+Teilnehmer- und Ausgabelisten, Kontaktdaten (E-Mail, Telefon), Schicht- und
+Abwesenheitsdaten, Gesundheits- oder HR-Daten. Im Zweifel ins private Repo.
+Rohdaten aus BMD (Sozialversicherungsnummer, Adresse, Bankdaten) gehören in
+gar kein Repo.
+
+Die übrigen Repos von Alexander (`Privat`, `Fahrzeugreparaturen`,
+`Privat-Meisterwerke`) gehören ihm privat und haben **nichts mit Kienbacher
+zu tun** – dort keine Kienbacher-Inhalte ablegen.
+
 Jedes Projekt bekommt einen eigenen Ordner auf dem kanonischen Branch
 `claude/modest-euler-g7v1lp`, keinen eigenen Branch:
 

@@ -395,3 +395,7 @@ konzeptionell zur Gruppe Unterstützungsprozesse (neben Werkzeugbau,
 Instandhaltung) — ähnliche Logik der Ressourcen-/Technikbereitstellung;
 zusätzlich enge Vernetzung mit Prozesstechnik und Bemusterung bei
 Neuprojekten/Änderungen (technisch prozessgestaltend).
+
+## Weitere Notizen
+
+- `ABGLEICH_7V-3-1_N_UND_BEGRIFFE.md`: von Alexander bestätigte Begriffe (12.11.2026), offene Unstimmigkeiten zwischen 7V-5-1 und 7V-3-1 Vers. N, Checkliste „Übernahme in die Serie“.
