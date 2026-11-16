@@ -28,6 +28,24 @@ das Projekt „QM-Dokumente überarbeiten" (Revision der Verfahrensanweisung
   gehören zu anderen, abgeschlossenen oder überholten Aufgaben und
   sollten für dieses QM-Projekt nicht als Grundlage verwendet werden.
 
+## Grundregel: Alles gehört ins Repo
+
+Alles, was in einer Session für Alexander Brühl erarbeitet oder geändert
+wird (Dokumente, Präsentationen, PDFs, Notizen, Skripte), wird **grundsätzlich
+in dieses Repo committet und gepusht**, und zwar ungefragt und zeitnah nach jeder
+sinnvollen Änderung. Nur so kann sowohl online (Cloud-Sessions, Handy) als
+auch lokal am PC am selben Stand weitergearbeitet werden. Dateien, die nur
+im Chat, in einem Artifact oder im Scratchpad liegen, gelten als nicht
+gesichert. Ist eine Session ohne verbundenes Repo gestartet, wird dieses Repo
+als Erstes eingebunden.
+
+Jedes Projekt bekommt einen eigenen Ordner auf dem kanonischen Branch
+`claude/modest-euler-g7v1lp`, keinen eigenen Branch:
+
+- QM-Dokumente überarbeiten (7V-5-1): `notes/`, `scripts/`, `working/`, `source/`
+- Visualisierung letzter Arbeitstag 2026: `letzter-arbeitstag/` (Stand und
+  offene Punkte in `letzter-arbeitstag/README.md`)
+
 ## Projektübergreifendes Prinzip
 
 Die allgemeine Regel gegen unbemerktes Auseinanderdriften von Branches/
