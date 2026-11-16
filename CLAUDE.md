@@ -52,7 +52,12 @@ In **Planner, Teams und Outlook wird ohne ausdrückliche Zustimmung von
 Alexander nichts verändert** — keine Aufgaben anlegen/ändern/abhaken,
 keine Kommentare, keine Nachrichten oder Antworten posten, keine Mails
 senden/entwerfen/verschieben/löschen, keine Termine anlegen/ändern/
-zusagen. Lesen ist erlaubt.
+zusagen.
+
+**Lesen ist immer erlaubt, ohne Rückfrage** — Mails, Kalender, Teams-
+Kanäle/Chats, Planner-Aufgaben, SharePoint/OneDrive, auch über den
+Browser (z. B. Planner-Aufgabe öffnen und lesen), wenn der Connector
+etwas nicht liefert.
 
 Diese Regel gilt **immer**, auch wenn eine Session, ein Branch oder eine
 Einstellung auf automatische Freigabe („Auto"/„Automatically approve")
