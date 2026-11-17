@@ -42,3 +42,5 @@ schreib(h, y.replace('Zu Kap. 06 Management von Ressourcen', 'Zu Kap. 06 Managem
 print(f'6V-1-1: „B.)/C.)“ -> „B)/C)“, {k}x DocuWare, Kopfzeile „Management der Ressourcen“')
 
 # Nachtrag: Überschrift 6.2.6 kurz (ASchG) in Inhaltsverzeichnis und Text, Tippfehler „6.3.3.“ im Inhaltsverzeichnis
+
+# Nachtrag 17.11.2026: 6V-1-1 Überschrift 6.2.4 c) „Bewusstseinsergänzung“ -> „Bewusstseinsbildung“ (per sed im entpackten Dokument)
